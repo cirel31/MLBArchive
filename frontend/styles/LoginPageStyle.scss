@@ -1,0 +1,19 @@
+.loginContents {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+
+  align-items: center;
+  width: 100%;
+}
+
+.loginItem {
+  display: flex;
+  justify-content: center;
+
+}
+
+.oauthLogo {
+  width: 250px;
+
+}
