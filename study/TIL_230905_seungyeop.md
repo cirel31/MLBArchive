@@ -16,12 +16,7 @@
 # OAuth 작동 원리
 
 - [https://inpa.tistory.com/entry/WEB-📚-OAuth-20-개념-💯-정리](https://inpa.tistory.com/entry/WEB-%F0%9F%93%9A-OAuth-20-%EA%B0%9C%EB%85%90-%F0%9F%92%AF-%EC%A0%95%EB%A6%AC)
-
-![1.PNG](https://prod-files-secure.s3.us-west-2.amazonaws.com/f056899b-90df-4908-b818-3d2a431b080c/38006313-bf9e-464a-a922-c93d81ee64be/1.png)
-
-![2.PNG](https://prod-files-secure.s3.us-west-2.amazonaws.com/f056899b-90df-4908-b818-3d2a431b080c/eda60cbe-7f40-4d80-b794-408bd30fed92/2.png)
-
-- 현재 프론트엔드에서 Access Token 발급까지 완료됨(Refresh Token도 같이 발급되는지 도현님한테 물어보자)
+- 현재 프론트엔드에서 Access Token 발급까지 완료됨
 
 ## 인증 과정
 
