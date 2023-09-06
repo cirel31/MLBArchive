@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Fielding {
 
-    @Id
+    @Id @GeneratedValue
     @Column(name = "fielding_stat_id")
     private Long id;
 
