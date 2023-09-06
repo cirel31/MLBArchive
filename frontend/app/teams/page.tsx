@@ -90,19 +90,6 @@ const TeamsPage = () => {
       return team;
     }));
   };
-  const handleMouseLeave = (id:number) => {
-    const updatedTeams = teamList.map(team =>
-      team.id === id ? {...team, rotationX: 0, rotationY: 0} : team
-    );
-    setTeamList(updatedTeams);
-  }
-
-  const handleTouchEnd = (id:number) => {
-    const updatedTeams = teamList.map(team =>
-      team.id === id ? {...team, rotationX: 0, rotationY: 0} : team
-    );
-    setTeamList(updatedTeams);
-  }
   const handleTouchMove = (id: number, event: React.TouchEvent<HTMLDivElement>) => {
     const div = event.currentTarget.getBoundingClientRect();
     const x = event.touches[0].clientX - (div.left + div.width / 2);
@@ -117,6 +104,13 @@ const TeamsPage = () => {
     }));
   };
 
+  const handlePointerLeave = (id:number) => {
+    const updatedTeams = teamList.map(team =>
+      team.id === id ? {...team, rotationX: 0, rotationY: 0} : team
+    );
+    setTeamList(updatedTeams);
+  }
+
   return (
     <>
       <div className='teamList'>
@@ -130,8 +124,8 @@ const TeamsPage = () => {
           >
             <div
               key={team.id}
-              onMouseLeave={() => handleMouseLeave(team.id)}
-              onTouchEnd={() => handleTouchEnd(team.id)}
+              onMouseLeave={() => handlePointerLeave(team.id)}
+              onTouchEnd={() => handlePointerLeave(team.id)}
               onMouseMove={(event) => handleMouseMove(team.id, event)}
               onTouchMove={(event) => handleTouchMove(team.id, event)}
             >

@@ -8,26 +8,15 @@ import naver_btn_light from "../../assets/btn/naver_btn_light.png"
 
 const LoginPage = () => {
 
-  // const API_KEY_KAKAO = process.env.KAKAO_CLIENT_ID
-  // const REDIRECT_URI_KAKAO = 'http://localhost:3000/oauth/kakao'
-  // const OAUTH_KAKAO = `https://kauth.kakao.com/oauth/authorize?client_id=${API_KEY_KAKAO}&redirect_uri=${REDIRECT_URI_KAKAO}&response_type=code`;
-  //
-  // const API_KEY_GOOGLE = process.env.GOOGLE_CLIENT_ID
-  // const REDIRECT_URI_GOOGLE = 'http://localhost:3000/oauth/google'
-  // const OAUTH_GOOGLE = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${API_KEY_GOOGLE}&response_type=token&redirect_uri=${REDIRECT_URI_GOOGLE}&scope=https://www.googleapis.com/auth/userinfo.email`
-  //
-  // const API_KEY_NAVER = process.env.NAVER_CLIENT_ID
-  // const REDIRECT_URI_NAVER = 'http://localhost:3000/oauth/naver'
-
-  const API_KEY_KAKAO = '95c1afd6556eaccfc74b8b91ddc4dfd8'
+  const API_KEY_KAKAO = process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID
   const REDIRECT_URI_KAKAO = 'http://localhost:3000/oauth/kakao'
   const OAUTH_KAKAO = `https://kauth.kakao.com/oauth/authorize?client_id=${API_KEY_KAKAO}&redirect_uri=${REDIRECT_URI_KAKAO}&response_type=code`;
 
-  const API_KEY_GOOGLE = '290380345753-n9nji0qbbk82nufhgi52u22t6fdj1d4f.apps.googleusercontent.com'
+  const API_KEY_GOOGLE = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
   const REDIRECT_URI_GOOGLE = 'http://localhost:3000/oauth/google'
   const OAUTH_GOOGLE = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${API_KEY_GOOGLE}&response_type=token&redirect_uri=${REDIRECT_URI_GOOGLE}&scope=https://www.googleapis.com/auth/userinfo.email`
 
-  const API_KEY_NAVER = 'Iz4VmbwNjHx920gMOY0p'
+  const API_KEY_NAVER = process.env.NEXT_PUBLIC_NAVER_CLIENT_ID
   const REDIRECT_URI_NAVER = 'http://localhost:3000/oauth/naver'
 
   const [naverScriptLoaded, setNaverScriptLoaded] = useState(false);
@@ -78,6 +67,7 @@ const LoginPage = () => {
           ref={naverRef}
           style={{display:'none'}}
         >
+          네이버 로그인
         </button>
         <button
           onClick={() => {
