@@ -19,67 +19,14 @@ const LoginPage = () => {
   const API_KEY_NAVER = process.env.NEXT_PUBLIC_NAVER_CLIENT_ID
   const REDIRECT_URI_NAVER = 'http://localhost:3000/oauth/naver'
 
-  const [naverScriptLoaded, setNaverScriptLoaded] = useState(false);
+  const OAUTH_NAVER = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${API_KEY_NAVER}&redirect_uri=${REDIRECT_URI_NAVER}`
 
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js';
-    script.onload = () => {
-      setNaverScriptLoaded(true);
-    };
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-
-  const initializeNaverLogin = () => {
-    const naverLogin = new naver.LoginWithNaverId({
-      clientId: API_KEY_NAVER,
-      callbackUrl: REDIRECT_URI_NAVER,
-      isPopup: false,
-      loginButton: { color: 'green', type: 2},
-      callbackHandle: true,
-    })
-    naverLogin.init()
-  }
-
-  let naver:any;
-  useEffect(() => {
-     naver = window?.naver
-    if (naverScriptLoaded) {
-      initializeNaverLogin();
-    }
-  }, [naverScriptLoaded]);
-
-  const naverRef = useRef<HTMLButtonElement>(null)
-  if (naverRef.current) {
-    const firstChild = naverRef.current.children[0] as HTMLElement;
-  }
   return (
     <div className="loginContents">
-      <div className="loginItem">
-        <button
-          id='naverIdLogin'
-          ref={naverRef}
-          style={{display:'none'}}
-        >
-          네이버 로그인
-        </button>
-        <button
-          onClick={() => {
-            if (naverRef.current && naverRef.current.children.length > 0) {
-              const firstChild = naverRef.current.children[0] as HTMLElement;
-              firstChild.click();
-            }
-          }}
-        >
-          <Image src={naver_btn_light} alt="네이버 로그인" className="oauthLogo" />
-        </button>
-      </div>
+      <a href={OAUTH_NAVER} className="loginItem">
+        <Image src={naver_btn_light} alt="네이버 로그인" className="oauthLogo" />
+      </a>
       <a href={OAUTH_KAKAO} className="loginItem">
         <Image src={kakao_btn} alt="카카오 로그인" className="oauthLogo" />
       </a>

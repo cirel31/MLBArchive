@@ -1,21 +1,17 @@
 'use client'
-import {useEffect, useState} from "react";
-import {useSearchParams} from "next/navigation";
+import {useState} from "react";
 import axios from "axios";
 
 const KakaoLoginPage = () => {
-
-  const params = useSearchParams()
-  const paramString = params.toString();
-  const oauthToken = paramString.slice(5);
-  console.log(oauthToken)
+  const code = window.location.href.split("code=")[1]?.split("&")[0]
+  console.log(code)
   const [isLoading, setIsLoading] = useState(true);
   const baseURL = '';
   const subURL = '';
-  useEffect(() => {
-    axios.get(`${baseURL}${subURL}?code=${oauthToken}`)
-      .then
-  })
+  // useEffect(() => {
+  //   axios.get(`${baseURL}${subURL}?code=${oauthToken}`)
+  //     .then
+  // })
   return (
     <>
       <div>

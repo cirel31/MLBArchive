@@ -1,10 +1,8 @@
 'use client'
-import {useEffect, useState} from "react";
+import {useState} from "react";
 const GoogleLoginPage = () => {
-  useEffect(() => {
-    const oauthToken = window.location.hash.split("access_token=")[1]?.split("&")[0];
-    console.log(oauthToken);
-  }, []);
+  const oauthToken = window.location.hash.split("access_token=")[1]?.split("&")[0];
+  console.log(oauthToken);
   const [isLoading, setIsLoading] = useState(true);
   const baseURL = '';
   const subURL = '';
