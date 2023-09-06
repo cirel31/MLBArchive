@@ -1,0 +1,30 @@
+.searchAlphabet {
+  display: grid;
+  grid-template-columns:  repeat(26, 1fr);
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 90%;
+  margin: auto auto 2rem;
+}
+
+.alphabet {
+  margin: 0.5rem;
+  &:hover {
+    background-color: wheat;
+  }
+}
+
+.clicked_alphabet {
+  background-color: darkorange;
+}
+
+.playerContent {
+  display: grid;
+  grid-template-columns:  repeat(2, 1fr);
+}
+
+.profile {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}

@@ -7,6 +7,11 @@ import google_btn_dark from "../../assets/btn/google_btn_dark.png"
 import naver_btn_light from "../../assets/btn/naver_btn_light.png"
 
 const LoginPage = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+  useEffect(() => {
+
+  }, [])
 
   const API_KEY_KAKAO = process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID
   const REDIRECT_URI_KAKAO = 'http://localhost:3000/oauth/kakao'
