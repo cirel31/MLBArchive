@@ -2,6 +2,7 @@ package com.example.ssafy301.teamStat.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TeamStat {
 
-    @Id
+    @Id @GeneratedValue
     @Column(name = "teamstat_id")
     private Long id;
 
