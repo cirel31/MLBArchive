@@ -1,4 +1,9 @@
 .main-content01 {
   display: grid;
-  grid-template-columns:  repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.mainphoto {
+  width: 1000px;
+  padding: 0 auto;
 }
