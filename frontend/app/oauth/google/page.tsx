@@ -1,8 +1,11 @@
 'use client'
 import {useState} from "react";
 const GoogleLoginPage = () => {
-  const oauthToken = window.location.hash.split("access_token=")[1]?.split("&")[0];
-  console.log(oauthToken);
+  let code;
+  if (typeof window !== 'undefined') {
+    code = window.location.href.split("code=")[1]?.split("&")[0];
+  }
+  console.log(code)
   const [isLoading, setIsLoading] = useState(true);
   const baseURL = '';
   const subURL = '';

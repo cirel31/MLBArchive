@@ -1,0 +1,14 @@
+.chooseSearchType {
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+}
+
+.chooseSearchButton {
+  width: 10vw;
+  background-color: orange;
+  margin: 0 auto;
+}
+
+.chooseResult {
+  margin: auto;
+}
