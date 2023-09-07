@@ -19,13 +19,11 @@ const LoginPage = () => {
 
   const API_KEY_GOOGLE = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID
   const REDIRECT_URI_GOOGLE = 'http://localhost:3000/oauth/google'
-  const OAUTH_GOOGLE = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${API_KEY_GOOGLE}&response_type=token&redirect_uri=${REDIRECT_URI_GOOGLE}&scope=https://www.googleapis.com/auth/userinfo.email`
+  const OAUTH_GOOGLE = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${API_KEY_GOOGLE}&redirect_uri=${REDIRECT_URI_GOOGLE}&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email`
 
   const API_KEY_NAVER = process.env.NEXT_PUBLIC_NAVER_CLIENT_ID
   const REDIRECT_URI_NAVER = 'http://localhost:3000/oauth/naver'
-
-  const OAUTH_NAVER = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${API_KEY_NAVER}&redirect_uri=${REDIRECT_URI_NAVER}`
-
+  const OAUTH_NAVER = `https://nid.naver.com/oauth2.0/authorize?client_id=${API_KEY_NAVER}&redirect_uri=${REDIRECT_URI_NAVER}&response_type=code`
 
   return (
     <div className="loginContents">

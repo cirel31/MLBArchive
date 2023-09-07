@@ -3,7 +3,10 @@ import {useState} from "react";
 import axios from "axios";
 
 const KakaoLoginPage = () => {
-  const code = window.location.href.split("code=")[1]?.split("&")[0]
+  let code;
+  if (typeof window !== 'undefined') {
+    code = window.location.href.split("code=")[1]?.split("&")[0];
+  }
   console.log(code)
   const [isLoading, setIsLoading] = useState(true);
   const baseURL = '';
