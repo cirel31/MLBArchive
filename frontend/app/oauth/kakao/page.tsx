@@ -8,13 +8,12 @@ const KakaoLoginPage = () => {
     code = window.location.href.split("code=")[1]?.split("&")[0];
   }
   console.log(code)
-  const [isLoading, setIsLoading] = useState(true);
-  const baseURL = '';
-  const subURL = '';
+  // const dispatch = useDispatch()
   // useEffect(() => {
-  //   axios.get(`${baseURL}${subURL}?code=${oauthToken}`)
-  //     .then
-  // })
+  //   if (code) {
+  //     dispatch(fetchUserData(code))
+  //   }
+  // }, [code])
   return (
     <>
       <div>
