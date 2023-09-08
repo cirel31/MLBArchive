@@ -1,13 +1,20 @@
 'use client'
 import {useEffect, useState} from "react";
-import axios from "axios";
+import {useDispatch} from "react-redux";
+import {fetchUserData} from "@/app/redux/features/userSlice";
 
 const NaverLoginPage = () => {
-  let code;
+  let code: string | null = null;
   if (typeof window !== 'undefined') {
     code = window.location.href.split("code=")[1]?.split("&")[0];
   }
   console.log(code)
+  // const dispatch = useDispatch()
+  // useEffect(() => {
+  //   if (code) {
+  //     dispatch(fetchUserData(code))
+  //   }
+  // }, [code])
   return (
     <>
       <div>

@@ -1,15 +1,19 @@
 'use client'
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {useDispatch} from "react-redux";
+import {fetchUserData} from "@/app/redux/features/userSlice";
 const GoogleLoginPage = () => {
-  let code;
+  let code:string | null = null;
   if (typeof window !== 'undefined') {
     code = window.location.href.split("code=")[1]?.split("&")[0];
   }
   console.log(code)
-  const [isLoading, setIsLoading] = useState(true);
-  const baseURL = '';
-  const subURL = '';
-
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (code) {
+      dispatch(fetchUserData(code))
+    }
+  }, [code])
   return (
     <>
       <div>
