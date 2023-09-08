@@ -20,12 +20,20 @@ interface FetchUserDataResponse {
   accessToken: string
   refreshToken: string
 }
-
-function* fetchUserDataSaga(action: PayloadAction<string>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
+interface FetchUserDataPayload {
+  code: string;
+  state: string;
+}
+function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   try {
-    const code = action.payload
-    yield put(fetchUserData(code))
-    const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${loginURL}?code=${code}`)
+    const code = action.payload.code
+    const state = action.payload.state
+    const accessKey = {
+      code : code,
+      state : state
+    }
+    yield put(fetchUserData(accessKey))
+    const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${loginURL}?code=${code}?state=${state}`)
     if (response.data) {
       yield put(fetchUserDataSuccess(response.data))
     }
