@@ -12,6 +12,7 @@ import com.example.ssafy301.user.Role;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "USERS")
 public class User {
 
     @Id

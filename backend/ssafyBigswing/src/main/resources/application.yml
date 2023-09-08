@@ -1,7 +1,8 @@
 spring:
-  profile:
-    active: local
-    include: oauth
+  server:
+    tomcat:
+      max-http-post-size: 100MB
+      max-swallow-size: 100MB
   h2:
     console:
       enabled: true
@@ -20,20 +21,4 @@ spring:
       data-locations: classpath*:db/h2/data.sql
 logging:
   level:
-    org:
-      springframework:
-        orm:
-          jpa: DEBUG
-server:
-  servlet:
-    encoding:
-      force-response: true
-jwt:
-  secretKey: 'dasdasf234fuhvertsv34789yhiuFDSIUFGYDTE5r~~~~~~';
-    access:
-      expiration: 3600000 # 1시간(60분) (1000L(ms -> s) * 60L(s -> m) * 60L(m -> h))
-      header: Authorization
-
-    refresh:
-      expiration: 1209600000 #  (1000L(ms -> s) * 60L(s -> m) * 60L(m -> h) * 24L(h -> 하루) * 14(2주))
-      header: Authorization-refresh
+    com.example : DEBUG
