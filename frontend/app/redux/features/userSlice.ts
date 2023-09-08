@@ -10,6 +10,7 @@ interface UserData {
 }
 interface UserState {
   isLoading: boolean;
+  isLoggedIn: boolean;
   userData: UserData | null;
   accessToken: string | null;
   refreshToken: string | null;
@@ -18,6 +19,7 @@ interface UserState {
 
 const initialState: UserState = {
   isLoading: true,
+  isLoggedIn: false,
   userData: null,
   accessToken: null,
   refreshToken: null,
@@ -33,6 +35,7 @@ export const userSlice = createSlice({
     },
     fetchUserDataSuccess: (state, action: PayloadAction<{userData: UserData; accessToken: string; refreshToken: string}>) => {
       state.isLoading = false
+      state.isLoggedIn = true
       state.userData = action.payload.userData
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
@@ -40,9 +43,15 @@ export const userSlice = createSlice({
     fetchUserDataError: (state, action: PayloadAction<Error>) => {
       state.isLoading = false
       state.error = action.payload
+    },
+    fetchUserLogout: (state) => {
+      state.isLoggedIn = false
+      state.userData = null
+      state.accessToken = null
+      state.refreshToken = null
     }
   }
 })
 
-export const { fetchUserData, fetchUserDataSuccess, fetchUserDataError } = userSlice.actions
+export const { fetchUserData, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout } = userSlice.actions
 export default userSlice.reducer

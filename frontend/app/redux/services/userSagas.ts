@@ -1,10 +1,11 @@
 import { call, put, takeLatest, CallEffect, PutEffect } from "@redux-saga/core/effects";
 import axios, { AxiosResponse } from "axios";
-import { fetchUserData, fetchUserDataSuccess, fetchUserDataError } from "@/app/redux/features/userSlice";
+import { fetchUserData, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout } from "@/app/redux/features/userSlice";
 import {PayloadAction} from "@reduxjs/toolkit";
 
 const baseURL = ''
-const subURL = ''
+const loginURL = ''
+const logoutURL = ''
 
 // ./features/userSlice.ts
 interface UserData {
@@ -17,13 +18,14 @@ interface UserData {
 interface FetchUserDataResponse {
   userData: UserData
   accessToken: string
+  refreshToken: string
 }
 
 function* fetchUserDataSaga(action: PayloadAction<string>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   try {
     const code = action.payload
     yield put(fetchUserData(code))
-    const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${subURL}?code=${code}`)
+    const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${loginURL}?code=${code}`)
     if (response.data) {
       yield put(fetchUserDataSuccess(response.data))
     }
@@ -33,6 +35,12 @@ function* fetchUserDataSaga(action: PayloadAction<string>): Generator<CallEffect
   }
 }
 
+function* fetchUserLogoutSaga(): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
+  yield put(fetchUserLogout())
+  const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${logoutURL}`)
+}
+
 export function* watchFetchUserData() {
   yield takeLatest(fetchUserData.type, fetchUserDataSaga)
+  yield takeLatest(fetchUserLogout.type, fetchUserLogoutSaga)
 }
