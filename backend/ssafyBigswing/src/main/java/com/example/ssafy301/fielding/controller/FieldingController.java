@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/fielding")
+@RequestMapping("/api/fielding")
 public class FieldingController {
 
     private final FieldingService fieldingService;
