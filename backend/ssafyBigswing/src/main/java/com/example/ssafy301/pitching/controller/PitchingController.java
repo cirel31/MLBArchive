@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/pitching")
+@RequestMapping("/api/pitching")
 public class PitchingController {
 
     private final PitchingService pitchingService;
