@@ -3,9 +3,9 @@ import axios, { AxiosResponse } from "axios";
 import { fetchUserData, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout } from "@/app/redux/features/userSlice";
 import {PayloadAction} from "@reduxjs/toolkit";
 
-const baseURL = ''
-const loginURL = ''
-const logoutURL = ''
+const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL
+const loginURL = process.env.NEXT_PUBLIC_SERVER_LOGIN_URL
+const logoutURL = process.env.NEXT_PUBLIC_SERVER_LOGOUT_URL
 
 // ./features/userSlice.ts
 interface UserData {
