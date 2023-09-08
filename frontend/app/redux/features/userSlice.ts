@@ -25,12 +25,15 @@ const initialState: UserState = {
   refreshToken: null,
   error: null,
 }
-
+interface FetchUserDataPayload {
+  code: string;
+  state: string;
+}
 export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    fetchUserData: (state, action: PayloadAction<string>) => {
+    fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
       state.isLoading = true
     },
     fetchUserDataSuccess: (state, action: PayloadAction<{userData: UserData; accessToken: string; refreshToken: string}>) => {
