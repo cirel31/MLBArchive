@@ -4,8 +4,9 @@ import { configureStore } from "@reduxjs/toolkit";
 // import { createFilter } from 'redux-persist-transform-filter';
 import counterReducer from "./features/counterSlice"
 import userReducer from "./features/userSlice"
-import { watchFetchUserData } from "@/app/redux/services/userSagas";
+import searchReducer from "./features/searchTeamSlice"
 import createSagaMiddleware from "@redux-saga/core";
+import rootSaga from "@/app/redux/services/rootSaga";
 
 
 // redux-persist 삭제로 인한 해당 코드 주석처리
@@ -38,7 +39,8 @@ const sessionSaverMiddleware = (store: any) => (next: any) => (action: any) => {
 export const store = configureStore({
   reducer: {
     counterReducer,
-    user: userReducer
+    user: userReducer,
+    search: searchReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>
@@ -47,8 +49,9 @@ export const store = configureStore({
       .concat(sessionSaverMiddleware)
 })
 
+sagaMiddleware.run(rootSaga)
 
-sagaMiddleware.run(watchFetchUserData)
 export type RootState = ReturnType<typeof store.getState>
+
 export type AppDispatch = typeof store.dispatch
 // export const persistor = persistStore(store)

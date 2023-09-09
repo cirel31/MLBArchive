@@ -28,11 +28,11 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
   try {
     const code = action.payload.code
     const state = action.payload.state
-    const accessKey = {
-      code : code,
-      state : state
-    }
-    yield put(fetchUserData(accessKey))
+    // const accessKey = {
+    //   code : code,
+    //   state : state
+    // }
+    // yield put(fetchUserData(accessKey))
     const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${loginURL}?code=${code}?state=${state}`)
     if (response.data) {
       yield put(fetchUserDataSuccess(response.data))
