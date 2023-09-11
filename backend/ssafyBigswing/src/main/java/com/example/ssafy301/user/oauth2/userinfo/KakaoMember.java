@@ -18,11 +18,11 @@ public class KakaoMember implements OauthMember{
     public class KakaoAccount{
         private Profile profile;
         private String email;
-
         @Getter
         @JsonIgnoreProperties(ignoreUnknown = true)
         public class Profile{
             private String nickname;
+            private String image;
         }
     }
 
@@ -35,9 +35,15 @@ public class KakaoMember implements OauthMember{
     public String getNickName() {
         return kakao_account.profile.nickname;
     }
+    @Override
+    public String getProfileImage(){return kakao_account.profile.image;}
 
     @Override
     public SocialType getOauthProvider() {
         return SocialType.KAKAO;
+    }
+    @Override
+    public void setNickName(String Temp){
+        kakao_account.profile.nickname = Temp;
     }
 }

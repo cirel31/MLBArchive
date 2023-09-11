@@ -18,6 +18,7 @@ public class NaverMember implements OauthMember{
     public class Response{
         private String email;
         private String name;
+        private String profile_image;
     }
 
     @Override
@@ -29,9 +30,15 @@ public class NaverMember implements OauthMember{
     public String getNickName() {
         return response.name;
     }
+    @Override
+    public String getProfileImage(){return response.profile_image;}
 
     @Override
     public SocialType getOauthProvider() {
         return SocialType.NAVER;
+    }
+    @Override
+    public void setNickName(String Temp){
+        response.name = Temp;
     }
 }

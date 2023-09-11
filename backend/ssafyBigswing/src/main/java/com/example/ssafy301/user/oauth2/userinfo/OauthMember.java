@@ -6,4 +6,6 @@ public interface OauthMember {
     public String getEmail();
     public String getNickName();
     SocialType getOauthProvider();
+    public String getProfileImage();
+    public void setNickName(String Temp);
 }

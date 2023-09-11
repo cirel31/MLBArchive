@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
+import java.time.LocalDate;
 import java.util.Optional;
 
 @Slf4j
@@ -26,11 +26,15 @@ public class OAuthService {
 
         OauthMember oauthMember = requestOauthInfoService.request(oauthParams);
         log.debug("전달받은 유저정보:: " + oauthMember.getEmail());
-
+        if(oauthMember.getNickName()==null){
+            oauthMember.setNickName(oauthMember.getEmail());
+        }
         // 획득한 회원정보로 검증할 User 객체 생성
         User accessUser = User.builder()
                 .email(oauthMember.getEmail())
                 .nickname(oauthMember.getNickName())
+                .profileImage(oauthMember.getProfileImage())
+                .signupDate(LocalDate.now())
                 .build();
 
         // 획득된 회원정보 DB 조회

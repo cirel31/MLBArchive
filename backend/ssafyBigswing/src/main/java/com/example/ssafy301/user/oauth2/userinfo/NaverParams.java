@@ -29,4 +29,11 @@ public class NaverParams implements OauthParams{
     public String getAuthorizationCode() {
         return authorizationCode;
     }
+    public void setAuthorizationCode(String authorizationCode) {
+        this.authorizationCode = authorizationCode;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
 }

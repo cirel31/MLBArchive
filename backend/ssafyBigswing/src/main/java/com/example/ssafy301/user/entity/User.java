@@ -1,12 +1,13 @@
 package com.example.ssafy301.user.entity;
+
+import com.example.ssafy301.user.SocialType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import jakarta.persistence.*;
+
 import java.time.LocalDate;
-import com.example.ssafy301.user.SocialType;
-import com.example.ssafy301.user.Role;
 @Entity
 @Getter
 @Builder
@@ -33,15 +34,8 @@ public class User {
     private LocalDate signupDate;
 
     @Enumerated(EnumType.STRING)
-    private Role role;
-
-    public void authorizeUser() {
-        this.role = Role.USER;
-    }
-    @Enumerated(EnumType.STRING)
     private SocialType socialType; // KAKAO, NAVER, GOOGLE
 
-    private String socialId; // 로그인한 소셜 타입의 식별자 값 (일반 로그인인 경우 null)
 
     private String refreshToken; // 리프레시 토큰
 

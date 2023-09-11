@@ -35,8 +35,12 @@ public class LoginController {
         return ResponseEntity.ok().headers(headers).body("Response with header using ResponseEntity");
     }
 
-    @PostMapping("/login/naver")
-    public ResponseEntity<String> handleNaverLogin(@RequestBody NaverParams naverParams){
+    @GetMapping("/login/naver")
+    public ResponseEntity<String> handleNaverLogin(@RequestParam("code") String code,
+                                                   @RequestParam("state") String state){
+        NaverParams naverParams = new NaverParams();
+        naverParams.setAuthorizationCode(code);
+        naverParams.setState(state);
         log.debug("넘겨받은 naver 인증키 :: " + naverParams.getAuthorizationCode());
 
         String accessToken = oauthService.getMemberByOauthLogin(naverParams);
