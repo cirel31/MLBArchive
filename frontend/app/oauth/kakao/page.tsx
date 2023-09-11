@@ -28,6 +28,7 @@ const KakaoLoginPage = () => {
         })
         .catch((error) => {
           console.log(error)
+          console.log(accessKey)
         })
       console.log(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}?code=${code}&state=${state}`)
       // dispatch(fetchUserData(code))
