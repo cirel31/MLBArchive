@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+body {
+  overflow-x: hidden;
+  font-family: "Noto Serif KR", serif;
+  /* background: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* color: white; */
+}
+
+.title div {
+  opacity: 0;
+  /* 또는 display: none; */
+}
+
+section {
+  position: relative;
+  width: 100vw;
+}
+/* section.top {
+  min-height: 160vh;
+  justify-content: center;
+  left: 32%;
+  top: 66%;
+} */
+
+section.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  min-height: 150vh;
+  margin-top: 200px;
+}
+
+section.bottom h1.title {
+  position: relative;
+  /* color: white; */
+  text-align: center;
+  padding-top: 35vh;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+section.bottom h1.title div {
+  display: inline-block;
+  letter-spacing: -7px;
+}
+
+section.bottom {
+  /* background: url(image/bg.jfif) center bottom / 100% no-repeat; */
+  min-height: 160vh;
+}
+section.bottom .contWrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
+section.bottom .contWrap ul li {
+  display: inline-block;
+  margin: 0 2%;
+  width: 130px;
+  height: 200px;
+  border-radius: 6px 6px 6px 6px;
+  box-sizing: border-box;
+  padding: 10px;
+  /* background: linear-gradient(45deg, #1f0a5e, #9f83f3); */
+}
+
+section.bottom .contWrap ul li img {
+  width: 130px;
+  transition: transform 0.3s; /* 부드러운 전환 효과를 위한 CSS 트랜지션 추가 */
+}
+
+section.bottom .contWrap ul li img:hover {
+  transform: scale(1.1); /* 마우스 호버 시 크기를 확대합니다. */
+}
+
+section.bottom .contWrap ul li p {
+  font-size: 20px;
+  color: white;
+  border-bottom: 2px dashed white;
+}
+section.bottom .contWrap h2 {
+  text-align: center;
+  /* color: white; */
+  margin-top: 30px;
+  font-weight: 100;
+}
+
+/* ################################################## */
+
+section.bottom2 {
+  margin-top: 500px;
+}
+
+.cardItem {
+  position: absolute;
+  width: 210px;
+  height: 130px;
+  padding: 15px;
+  /* margin: 10px; */
+  border-radius: 10px;
+  /* box-shadow: 100px 130px 100px rgba(0, 0, 0, 0.3); */
+  font-size: 1rem;
+  text-align: right;
+}
+
+.buttonWrap {
+  position: absolute;
+  /* bottom: 20px; */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.buttonWrap button {
+  position: relative;
+  z-index: 100;
+  margin: 0 5px;
+  background: black;
+  color: #fff;
+  padding: 8px 20px;
+  transition: all 0.3s ease-out;
+}
+
+.buttonWrap button:hover {
+  background-color: #fad7f8;
+}
+
+h1 {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  font-weight: 100;
+}

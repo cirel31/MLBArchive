@@ -1,5 +1,9 @@
 import Link from "next/link";
 import "../styles/MainPageStyle.scss";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Home() {
   return (
