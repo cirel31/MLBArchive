@@ -3,7 +3,7 @@ package com.example.ssafy301.matchDetail.service;
 import com.example.ssafy301.common.api.exception.NotFoundException;
 import com.example.ssafy301.common.api.status.FailCode;
 import com.example.ssafy301.matchDetail.domain.MatchDetail;
-import com.example.ssafy301.matchDetail.dto.MatchDetailDto;
+import com.example.ssafy301.match.dto.MatchDetailDto;
 import com.example.ssafy301.matchDetail.repository.MatchDetailRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

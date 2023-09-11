@@ -1,5 +1,5 @@
 package com.example.ssafy301.user.repository;
-import com.example.ssafy301.user.entity.User;
+import com.example.ssafy301.user.domain.User;
 import com.example.ssafy301.user.SocialType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;

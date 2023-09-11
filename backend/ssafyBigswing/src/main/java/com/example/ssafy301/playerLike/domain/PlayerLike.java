@@ -1,9 +1,8 @@
 package com.example.ssafy301.playerLike.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.example.ssafy301.player.domain.Player;
+import com.example.ssafy301.user.domain.User;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,7 +21,13 @@ public class PlayerLike {
     @Column(name = "playerlike_id")
     private Long id;
 
-    private Long userId;
-    private Long playerId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "player_id")
+    private Player player;
+
     private LocalDateTime likedDate;
 }

@@ -1,6 +1,6 @@
 package com.example.ssafy301.user.jwt;
 
-import com.example.ssafy301.user.entity.User;
+import com.example.ssafy301.user.domain.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

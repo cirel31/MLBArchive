@@ -1,9 +1,8 @@
 package com.example.ssafy301.teamLike.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.example.ssafy301.team.domain.Team;
+import com.example.ssafy301.user.domain.User;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,8 +21,13 @@ public class TeamLike {
     @Column(name = "teamlike_id")
     private Long id;
 
-    private Long userId;
-    private Long teamId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id")
+    private Team team;
 
     // 좋아요 누른 시간
     private LocalDateTime likedDate;
