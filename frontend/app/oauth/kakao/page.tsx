@@ -1,17 +1,38 @@
 'use client'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
+import {useDispatch} from "react-redux";
+import {fetchUserData} from "@/app/redux/features/userSlice";
 
 const KakaoLoginPage = () => {
-  const code = window.location.href.split("code=")[1]?.split("&")[0]
+  let state: string | null = null;
+  let code: string | null = null;
+  if (typeof window !== 'undefined') {
+    code = window.location.href.split("code=")[1]?.split("&")[0];
+    state = window.location.href.split("state=")[1]?.split("&")[0];
+  }
   console.log(code)
-  const [isLoading, setIsLoading] = useState(true);
-  const baseURL = '';
-  const subURL = '';
-  // useEffect(() => {
-  //   axios.get(`${baseURL}${subURL}?code=${oauthToken}`)
-  //     .then
-  // })
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (code) {
+      const SERVER_BASE_URL = process.env.NEXT_PUBLIC_SERVER_BASE_URL
+      const SERVER_KAKAO_URL = process.env.NEXT_PUBLIC_OAUTH_KAKAO_SERVER_URL
+      const accessKey = {
+        code : code,
+        state : state
+      }
+      console.log("useEffect 실행됌", accessKey)
+      axios.get(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}?code=${code}?state=${state}`)
+        .then((response) => {
+          console.log(response.data)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+      console.log(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}?code=${code}?state=${state}`)
+      // dispatch(fetchUserData(code))
+    }
+  }, [code])
   return (
     <>
       <div>
