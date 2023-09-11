@@ -20,14 +20,14 @@ const NaverLoginPage = () => {
       state : state
     }
     console.log("useEffect 실행됌", accessKey)
-    axios.get(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}?state=${state}`)
+    axios.get(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}&state=${state}`)
       .then((response) => {
         console.log(response.data)
       })
       .catch((error) => {
         console.log(error)
       })
-    console.log(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}?state=${state}`)
+    console.log(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}&state=${state}`)
       // dispatch(fetchUserData(accessKey))
   }, [code])
   return (
