@@ -8,21 +8,23 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/login")
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/auth")
 @RequiredArgsConstructor
 @Slf4j
 public class LoginController {
     @Autowired
-    private OAuthService oauthService;
+    private final OAuthService oauthService;
 
-    @PostMapping("/oauth/kakao")
-    public ResponseEntity<String> handleKakaoLogin(@RequestBody KakaoParams kakaoParams){
+    @GetMapping("/login/kakao")
+    public ResponseEntity<String> handleKakaoLogin(@RequestParam("code") String code,
+                                                   @RequestParam("state") String state){
+        KakaoParams kakaoParams = new KakaoParams();
+        kakaoParams.setAuthorizationCode(code);  // setAuthorizationCode 메서드가 없다면 생성해야 합니다.
+        kakaoParams.setState(state);              // setState 메서드가 없다면 생성해야 합니다.
         log.debug("넘겨받은 Kakao 인증키 :: " + kakaoParams.getAuthorizationCode());
 
         String accessToken = oauthService.getMemberByOauthLogin(kakaoParams);
@@ -33,7 +35,7 @@ public class LoginController {
         return ResponseEntity.ok().headers(headers).body("Response with header using ResponseEntity");
     }
 
-    @PostMapping("/oauth/naver")
+    @PostMapping("/login/naver")
     public ResponseEntity<String> handleNaverLogin(@RequestBody NaverParams naverParams){
         log.debug("넘겨받은 naver 인증키 :: " + naverParams.getAuthorizationCode());
 

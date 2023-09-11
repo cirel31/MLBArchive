@@ -21,7 +21,7 @@ logging:
 kakao:
   client-id: 58eed44d11c6af52c6a68c04e0535346
   client-secret: bBPBGpVCVBztPXD2OW5HeBNtTUUNU5YY
-  redirect-uri: http://localhost:8080/api/auth/login/kakao
+  redirect-uri: http://localhost:3000/api/auth/login/kakao
   token-uri: https://kauth.kakao.com/oauth/token
   user-info-uri: https://kapi.kakao.com/v2/user/me
 

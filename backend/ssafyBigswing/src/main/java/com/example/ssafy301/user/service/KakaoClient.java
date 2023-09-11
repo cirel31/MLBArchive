@@ -55,6 +55,7 @@ public class KakaoClient implements OauthClient{
         log.debug("현재 httpEntity 상태:: " + tokenRequest);
 
         // 토큰 수신
+        //log.debug("아니 왜 안돼 시발 :: "+tokenRequest);
         KakaoToken accessToken = rt.postForObject(url, tokenRequest, KakaoToken.class);
         log.debug("accessToken :: " + accessToken);
 
