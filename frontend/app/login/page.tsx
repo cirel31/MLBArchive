@@ -8,6 +8,7 @@ import naver_btn_light from "../../assets/btn/naver_btn_light.png"
 
 const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [STATE, SETSTATE] = useState('')
   const generateState = () => {
     const characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
@@ -21,11 +22,11 @@ const LoginPage = () => {
   }
 
   useEffect(() => {
-
+    SETSTATE(generateState())
   }, [])
 
   const BASE_URL = process.env.NEXT_PUBLIC_CLIENT_BASE_URL
-  const STATE = generateState()
+
   const API_KEY_KAKAO = process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID
   const REDIRECT_URI_KAKAO = process.env.NEXT_PUBLIC_OAUTH_KAKAO_URL
   const OAUTH_KAKAO = `https://kauth.kakao.com/oauth/authorize?client_id=${API_KEY_KAKAO}&redirect_uri=${BASE_URL}${REDIRECT_URI_KAKAO}&response_type=code&state=${STATE}`;

@@ -38,7 +38,7 @@ import {fetchTeamDataRequest} from "@/app/redux/features/searchTeamSlice";
 
 const TeamsPage = () => {
   const router = useRouter()
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
   type TeamType = {
     id: number;
     name: string;
@@ -114,9 +114,9 @@ const TeamsPage = () => {
     setTeamList(updatedTeams);
   }
 
-  const searchTeamData = (key) => {
+  const searchTeamData = (key:any) => {
     dispatch(fetchTeamDataRequest(key));
-    router.push(`/teams/${key}`)
+    // router.push(`/teams/${key}`)
     
   }
   return (

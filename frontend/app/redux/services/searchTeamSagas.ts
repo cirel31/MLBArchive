@@ -8,6 +8,7 @@ function* fetchTeamDataSaga(action: PayloadAction<string>): Generator<PutEffect 
   try {
     const response = yield call(axios.get, `/api/team/data/${action.payload}`, );
     yield put(fetchTeamDataSuccess(response.data));
+    console.log("SAGA 테스트1")
   } catch (error) {
     yield put(fetchTeamDataError(error as Error));
   }
