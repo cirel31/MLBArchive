@@ -23,9 +23,15 @@ public enum FailCode {
     // 좋아요 관련
     NO_PLAYER_LIKE(NOT_FOUND, "좋아하는 선수가 없습니다"),
     NO_TEAM_LIKE(NOT_FOUND, "좋아하는 팀이 없습니다"),
-    
+
+    // 팀 관련
+    NO_SEASONROSTER(BAD_REQUEST, "해당 팀 혹은 시즌의 선수가 존재하지 않습니다."),
+    NO_TEAM(BAD_REQUEST, "해당 팀은 존재하지 않습니다"),
+    NO_TEAM_STAT(BAD_REQUEST, "입력하신 팀과 관련된 스탯이 존재하지 않습니다."),
+
     // 선수 관련
     NO_PLAYER(BAD_REQUEST, "해당 선수는 존재하지 않습니다.");
+
 
     private final HttpStatus status;
     private final String message;

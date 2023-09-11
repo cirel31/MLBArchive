@@ -1,4 +1,4 @@
-package com.example.ssafy301.user.entity;
+package com.example.ssafy301.user.domain;
 
 import com.example.ssafy301.user.SocialType;
 import jakarta.persistence.*;

@@ -2,7 +2,7 @@ package com.example.ssafy301.matchDetail.controller;
 
 import com.example.ssafy301.common.api.ResponseEntity;
 import com.example.ssafy301.common.api.status.SuccessCode;
-import com.example.ssafy301.matchDetail.dto.MatchDetailDto;
+import com.example.ssafy301.match.dto.MatchDetailDto;
 import com.example.ssafy301.matchDetail.service.MatchDetailService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

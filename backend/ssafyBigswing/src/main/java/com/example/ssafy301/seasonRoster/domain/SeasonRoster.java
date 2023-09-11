@@ -1,8 +1,8 @@
 package com.example.ssafy301.seasonRoster.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.example.ssafy301.player.domain.Player;
+import com.example.ssafy301.team.domain.Team;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,9 +17,13 @@ public class SeasonRoster {
     @Column(name = "sr_id")
     private Long id;
 
-    @Column(name = "player_id")
-    private Long playerId;
-    @Column(name = "team_id")
-    private Long teamId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "player_id")
+    private Player player;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id")
+    private Team team;
+
     private int season;
 }

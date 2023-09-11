@@ -1,8 +1,7 @@
 package com.example.ssafy301.match.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.example.ssafy301.matchDetail.domain.MatchDetail;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -52,4 +51,8 @@ public class Match {
 
     @Column(name = "current_inning")
     private int currentInning;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "match_detail_id")
+    private MatchDetail matchDetail;
 }

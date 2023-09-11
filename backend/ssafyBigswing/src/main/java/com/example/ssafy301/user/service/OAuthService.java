@@ -1,6 +1,6 @@
 package com.example.ssafy301.user.service;
 
-import com.example.ssafy301.user.entity.User;
+import com.example.ssafy301.user.domain.User;
 import com.example.ssafy301.user.jwt.JwtProvider;
 import com.example.ssafy301.user.oauth2.userinfo.OauthMember;
 import com.example.ssafy301.user.oauth2.userinfo.OauthParams;
