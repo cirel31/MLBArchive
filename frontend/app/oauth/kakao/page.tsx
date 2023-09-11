@@ -22,14 +22,22 @@ const KakaoLoginPage = () => {
         state : state
       }
       console.log("useEffect 실행됌", accessKey)
-      axios.get(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}?code=${code}?state=${state}`)
+      axios.post(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}`,
+          // ?code=${code}?state=${state}
+        accessKey,
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
         .then((response) => {
-          console.log(response.data)
+          console.log("엑시오스 성공", response.data)
         })
         .catch((error) => {
           console.log(error)
+          console.log(accessKey)
         })
-      console.log(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}?code=${code}?state=${state}`)
+      // console.log(`${SERVER_BASE_URL}${SERVER_KAKAO_URL}?code=${code}?state=${state}`)
       // dispatch(fetchUserData(code))
     }
   }, [code])
