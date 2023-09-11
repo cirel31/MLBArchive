@@ -7,6 +7,7 @@ interface UserData {
   profileImage: string;
   // 만약 서버에서 profileImage를 Bolb 객체로 준다면
   // profileImage: Blob;
+  followList: any;
 }
 interface UserState {
   isLoading: boolean;
@@ -37,15 +38,6 @@ export const userSlice = createSlice({
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
       state.isLoading = true
     },
-    fetchUserDataKakao: (state, action: PayloadAction<FetchUserDataPayload>) => {
-      state.isLoading = true
-    },
-    fetchUserDataNaver: (state, action: PayloadAction<FetchUserDataPayload>) => {
-      state.isLoading = true
-    },
-    fetchUserDataGoogle: (state, action: PayloadAction<FetchUserDataPayload>) => {
-      state.isLoading = true
-    },
     fetchUserDataSuccess: (state, action: PayloadAction<{userData: UserData; accessToken: string; refreshToken: string}>) => {
       state.isLoading = false
       state.isLoggedIn = true
@@ -57,6 +49,18 @@ export const userSlice = createSlice({
       state.isLoading = false
       state.error = action.payload
     },
+    addFollowPlayer: (state, action: PayloadAction<any>) => {
+
+    },
+    removeFollowPlayer: (state, action: PayloadAction<any>) => {
+
+    },
+    addFollowTeam: (state, action: PayloadAction<any>) => {
+
+    },
+    removeFollowTeam: (state, action: PayloadAction<any>) => {
+
+    },
     fetchUserLogout: (state) => {
       state.isLoggedIn = false
       state.userData = null
@@ -66,5 +70,14 @@ export const userSlice = createSlice({
   }
 })
 
-export const { fetchUserData, fetchUserDataKakao, fetchUserDataNaver, fetchUserDataGoogle, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout } = userSlice.actions
+export const {
+  fetchUserData,
+  fetchUserDataSuccess,
+  fetchUserDataError,
+  fetchUserLogout ,
+  addFollowPlayer,
+  addFollowTeam,
+  removeFollowPlayer,
+  removeFollowTeam,
+} = userSlice.actions
 export default userSlice.reducer

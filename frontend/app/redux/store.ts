@@ -2,11 +2,11 @@ import { configureStore } from "@reduxjs/toolkit";
 // import { persistStore, persistReducer } from 'redux-persist';
 // import storageSession from 'redux-persist/lib/storage/session';
 // import { createFilter } from 'redux-persist-transform-filter';
-import counterReducer from "./features/counterSlice"
-import userReducer from "./features/userSlice"
-import searchReducer from "./features/searchTeamSlice"
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "@/app/redux/services/rootSaga";
+import userReducer from "./features/userSlice"
+import searchReducer from "./features/searchTeamSlice"
+import playerDetailReducer from "./features/playerDetailSlice"
 
 
 // redux-persist 삭제로 인한 해당 코드 주석처리
@@ -38,9 +38,9 @@ const sessionSaverMiddleware = (store: any) => (next: any) => (action: any) => {
 
 export const store = configureStore({
   reducer: {
-    counterReducer,
     user: userReducer,
     search: searchReducer,
+    playerDetail: playerDetailReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>
