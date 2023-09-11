@@ -28,12 +28,22 @@ const initialState: UserState = {
 interface FetchUserDataPayload {
   code: string;
   state: string;
+  kind: string;
 }
 export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
+      state.isLoading = true
+    },
+    fetchUserDataKakao: (state, action: PayloadAction<FetchUserDataPayload>) => {
+      state.isLoading = true
+    },
+    fetchUserDataNaver: (state, action: PayloadAction<FetchUserDataPayload>) => {
+      state.isLoading = true
+    },
+    fetchUserDataGoogle: (state, action: PayloadAction<FetchUserDataPayload>) => {
       state.isLoading = true
     },
     fetchUserDataSuccess: (state, action: PayloadAction<{userData: UserData; accessToken: string; refreshToken: string}>) => {
@@ -56,5 +66,5 @@ export const userSlice = createSlice({
   }
 })
 
-export const { fetchUserData, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout } = userSlice.actions
+export const { fetchUserData, fetchUserDataKakao, fetchUserDataNaver, fetchUserDataGoogle, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout } = userSlice.actions
 export default userSlice.reducer

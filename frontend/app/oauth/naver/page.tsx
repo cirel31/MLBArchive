@@ -1,7 +1,7 @@
 'use client'
 import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
-import {fetchUserData} from "@/app/redux/features/userSlice";
+import {fetchUserDataNaver} from "@/app/redux/features/userSlice";
 import axios from "axios";
 
 const NaverLoginPage = () => {
@@ -16,9 +16,11 @@ const NaverLoginPage = () => {
     const SERVER_BASE_URL = process.env.NEXT_PUBLIC_SERVER_BASE_URL
     const SERVER_NAVER_URL = process.env.NEXT_PUBLIC_OAUTH_NAVER_SERVER_URL
     const accessKey = {
-      code : code,
-      state : state
+      code: code,
+      state: state,
+      kind: 'naver',
     }
+    console.log("kind", accessKey.kind)
     console.log("useEffect 실행됌", accessKey)
     axios.get(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}?state=${state}`)
       .then((response) => {
@@ -28,7 +30,7 @@ const NaverLoginPage = () => {
         console.log(error)
       })
     console.log(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}?state=${state}`)
-      // dispatch(fetchUserData(accessKey))
+      // dispatch(fetchUserDataNaver(accessKey))
   }, [code])
   return (
     <>
