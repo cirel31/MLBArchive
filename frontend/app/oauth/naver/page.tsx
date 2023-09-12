@@ -2,6 +2,7 @@
 import {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import axios from "axios";
+import {fetchUserData} from "@/app/redux/features/userSlice";
 
 const NaverLoginPage = () => {
   let code: string | null = null;
@@ -12,24 +13,12 @@ const NaverLoginPage = () => {
   }
   const dispatch = useDispatch()
   useEffect(() => {
-    const SERVER_BASE_URL = process.env.NEXT_PUBLIC_SERVER_BASE_URL
-    const SERVER_NAVER_URL = process.env.NEXT_PUBLIC_OAUTH_NAVER_SERVER_URL
     const accessKey = {
-      code: code,
-      state: state,
+      code: code ?? "",
+      state: state ?? "",
       kind: 'naver',
     }
-    console.log("kind", accessKey.kind)
-    console.log("useEffect 실행됌", accessKey)
-    axios.get(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}&state=${state}`)
-      .then((response) => {
-        console.log(response.data)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-    console.log(`${SERVER_BASE_URL}${SERVER_NAVER_URL}?code=${code}&state=${state}`)
-      // dispatch(fetchUserData(accessKey))
+    dispatch(fetchUserData(accessKey))
   }, [code])
   return (
     <>

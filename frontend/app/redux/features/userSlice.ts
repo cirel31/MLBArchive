@@ -7,7 +7,6 @@ interface UserData {
   profileImage: string;
   // 만약 서버에서 profileImage를 Bolb 객체로 준다면
   // profileImage: Blob;
-  followList: any;
 }
 interface UserState {
   isLoading: boolean;
@@ -16,6 +15,7 @@ interface UserState {
   accessToken: string | null;
   refreshToken: string | null;
   error: Error | null;
+  followList: any;
 }
 
 const initialState: UserState = {
@@ -25,6 +25,7 @@ const initialState: UserState = {
   accessToken: null,
   refreshToken: null,
   error: null,
+  followList: null,
 }
 interface FetchUserDataPayload {
   code: string;
@@ -45,9 +46,16 @@ export const userSlice = createSlice({
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
     },
-    fetchUserDataError: (state, action: PayloadAction<Error>) => {
+    fetchDataError: (state, action: PayloadAction<Error>) => {
       state.isLoading = false
       state.error = action.payload
+      console.log(state.error)
+    },
+    fetchFollowData: (state, action: PayloadAction<any>) => {
+
+    },
+    fetchFollowDataSuccess: (state, action) => {
+      state.followList = action.payload
     },
     addFollowPlayer: (state, action: PayloadAction<any>) => {
 
@@ -73,8 +81,10 @@ export const userSlice = createSlice({
 export const {
   fetchUserData,
   fetchUserDataSuccess,
-  fetchUserDataError,
+  fetchDataError,
   fetchUserLogout ,
+  fetchFollowData,
+  fetchFollowDataSuccess,
   addFollowPlayer,
   addFollowTeam,
   removeFollowPlayer,

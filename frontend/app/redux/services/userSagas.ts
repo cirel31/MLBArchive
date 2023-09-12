@@ -1,7 +1,8 @@
 import { call, put, takeLatest, CallEffect, PutEffect } from "@redux-saga/core/effects";
 import axios, { AxiosResponse } from "axios";
 import {
-  fetchUserData, fetchUserDataSuccess, fetchUserDataError, fetchUserLogout,
+  fetchUserData, fetchUserDataSuccess, fetchDataError, fetchUserLogout,
+  fetchFollowData, fetchFollowDataSuccess,
   addFollowTeam, removeFollowTeam, addFollowPlayer, removeFollowPlayer,
 } from "@/app/redux/features/userSlice";
 import {PayloadAction} from "@reduxjs/toolkit";
@@ -40,11 +41,32 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
 
     const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${oauthURL}${kind}?code=${code}?state=${state}`)
     if (response.data) {
-      yield put(fetchUserDataSuccess(response.data))
+      console.log(response.data)
+      // yield put(fetchUserDataSuccess(response.data))
     }
   }
   catch (error) {
-    yield put(fetchUserDataError(error as Error))
+    yield put(fetchDataError(error as Error))
+  }
+}
+function* fetchFollowDataSaga(action: PayloadAction<any>) {
+  try {
+    const userId = action.payload.userId
+    const accessToken = action.payload.accessToken
+    const response: AxiosResponse<any> = yield call(
+      axios.get,
+      `${baseURL}/follow?userId=${userId}`,
+      {
+        headers: {
+          Authorization: accessToken
+        }
+      })
+    if (response.data) {
+      yield put(fetchFollowDataSuccess(response.data))
+    }
+  }
+  catch (error) {
+    yield put(fetchDataError(error as Error))
   }
 }
 
@@ -67,7 +89,7 @@ function* addFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffect 
     }
   }
   catch (error) {
-    yield put(fetchUserDataError(error as Error))
+    yield put(fetchDataError(error as Error))
   }
 }
 function* removeFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
@@ -89,7 +111,7 @@ function* removeFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffe
     }
   }
   catch (error) {
-    yield put(fetchUserDataError(error as Error))
+    yield put(fetchDataError(error as Error))
   }
 }
 
@@ -112,7 +134,7 @@ function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | 
     }
   }
   catch (error) {
-    yield put(fetchUserDataError(error as Error))
+    yield put(fetchDataError(error as Error))
   }
 }
 function* removeFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
@@ -134,7 +156,7 @@ function* removeFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect
     }
   }
   catch (error) {
-    yield put(fetchUserDataError(error as Error))
+    yield put(fetchDataError(error as Error))
   }
 }
 
