@@ -5,9 +5,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "@/app/redux/services/rootSaga";
 import userReducer from "./features/userSlice"
-import searchReducer from "./features/searchTeamSlice"
+import searchTeamReducer from "./features/searchTeamSlice"
 import playerDetailReducer from "./features/playerDetailSlice"
-
+import searchPlayerReducer from "./features/searchPlayerSlice"
 
 // redux-persist 삭제로 인한 해당 코드 주석처리
 // const saveSubsetFilter = createFilter(
@@ -39,8 +39,9 @@ const sessionSaverMiddleware = (store: any) => (next: any) => (action: any) => {
 export const store = configureStore({
   reducer: {
     user: userReducer,
-    search: searchReducer,
+    searchTeam: searchTeamReducer,
     playerDetail: playerDetailReducer,
+    searchPlayer: searchPlayerReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>
