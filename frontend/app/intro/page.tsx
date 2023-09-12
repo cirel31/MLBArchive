@@ -99,9 +99,9 @@ function Intro() {
             </li>
           </ul>
         </div>
-        <button type="button" className="topBtn">
+        {/* <button type="button" className="topBtn">
           TOP
-        </button>
+        </button> */}
       </section>
       <TeamMarks />
     </>

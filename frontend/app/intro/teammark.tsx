@@ -119,6 +119,16 @@ function CardComponent() {
     // JSX로 컴포넌트 렌더링
     <div>
       <div>
+        <section className="bottom">
+          <h1 className="title">
+            <div>직</div>
+            <div>접</div>
+            <div>선</div>
+            <div>수</div>
+            <div>선</div>
+            <div>택</div>
+          </h1>
+        </section>
         <section className="bottom2">
           <div className="cardItem">
             <Image src={teamcard} alt="" />
