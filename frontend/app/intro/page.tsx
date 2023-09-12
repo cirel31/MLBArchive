@@ -21,13 +21,13 @@ function Intro() {
     // const cards = document.querySelectorAll(
     //   ".cardItem"
     // ) as NodeListOf<HTMLElement>;
-    const button1 = document.querySelectorAll("button")[0] as HTMLButtonElement;
-    const button2 = document.querySelectorAll("button")[1] as HTMLButtonElement;
+    const button1 = document.querySelectorAll("button")[1] as HTMLButtonElement;
+    const button2 = document.querySelectorAll("button")[2] as HTMLButtonElement;
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
 
     window.addEventListener("scroll", function () {
-      resize();
+      // resize();
       const scroll = this.scrollY;
 
       if (image) {

@@ -1,112 +1,104 @@
-import React, { useEffect, useState, useCallback } from "react";
-import gsap, { Power4 } from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import "../../styles/intro.css";
-import teammark from "../../assets/intro/Group 135.png";
+import React, { useState, useEffect } from "react";
+import { gsap, Power3, Power4 } from "gsap"; // GSAP 라이브러리 가져오기
 import Image from "next/image";
+import teamcard from "../../assets/intro/Group 135.png";
+import "../../styles/intro.css";
 
-function Intro() {
-  gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(gsap);
 
-  const [cardItems, setCardItems] = useState<HTMLElement[] | null>(
-    Array.from(document.querySelectorAll(".cardItem"))
-  );
-  const [initialCardPositions, setInitialCardPositions] = useState<DOMRect[]>(
-    []
-  );
-  const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
+function CardComponent() {
+  const [cards, setCards] = useState([]);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    setCardItems(document.querySelectorAll(".cardItem"));
+    const _cards = document.querySelectorAll(".cardItem");
+
+    const _button1 = document.querySelectorAll("button")[0];
+    const _button2 = document.querySelectorAll("button")[1];
+
+    _button1.addEventListener("click", cardRandom);
+    _button2.addEventListener("click", cardSetting);
+
+    window.addEventListener("resize", resize);
+
+    // 페이지 로딩 시나 새로고침 시 카드 초기 위치 설정
+    window.addEventListener("load", cardSetting);
+
+    setCards(_cards);
+
+    return () => {
+      _button1.removeEventListener("click", cardRandom);
+      _button2.removeEventListener("click", cardSetting);
+      window.removeEventListener("resize", resize);
+      window.removeEventListener("load", cardSetting);
+    };
+  }, []);
+
+  function resize() {
+    // 창크기 변경시 업데이트
+    setWindowHeight(window.innerHeight);
+    setWindowWidth(window.innerWidth);
     cardSetting();
-  }, []);
-
-  useEffect(() => {
-    // 초기 카드 위치를 저장
-    if (cardItems) {
-      const positions: DOMRect[] = [];
-      cardItems.forEach(function (item) {
-        const rect = item.getBoundingClientRect();
-        positions.push(rect);
-      });
-      setInitialCardPositions(positions);
-    }
-  }, [cardItems]);
-
-  const handleRandomButtonClick = useCallback(() => {
-    console.log("랜덤 버튼이 클릭되었습니다.");
-
-    if (cardItems) {
-      cardItems.forEach(function (item, i) {
-        gsap.to(item, {
-          duration: 1,
-          top: Math.random() * window.innerHeight,
-          left: Math.random() * window.innerWidth,
-          rotation: Math.random() * 180,
-          ease: Power4.easeInOut,
-          delay: i * 0.1,
-        });
-      });
-    }
-  }, []);
-
-  const handleResetButtonClick = useCallback(() => {
-    console.log("리셋 버튼이 클릭되었습니다.");
-
-    if (cardItems && initialCardPositions.length === cardItems.length) {
-      cardItems.forEach(function (item, i) {
-        const initialPosition = initialCardPositions[i];
-        gsap.to(item, {
-          duration: 1,
-          top: initialPosition.top,
-          left: initialPosition.left,
-          rotation: 0,
-          ease: Power4.easeInOut,
-          delay: i * 0.1,
-        });
-      });
-    }
-  }, [cardItems, initialCardPositions]);
+  }
 
   function cardSetting() {
-    if (cardItems) {
-      cardItems.forEach(function (item, i) {
-        gsap.to(item, {
-          duration: 1,
-          top: windowHeight / 2 - i * 40,
-          left: windowWidth / 2 + i * 40 - 200,
-          rotation: 0,
-          ease: Power4.easeInOut,
-          delay: i * 0.2,
-        });
+    cards.forEach(function (item, i) {
+      gsap.to(item, 1, {
+        top: windowHeight / 2 - i * 40,
+        left: windowWidth / 2 + i * 40 - 200,
+        rotation: 0,
+        ease: Power3.easeInOut,
+        delay: i * 0.2,
       });
-    }
+    });
+  }
+
+  function cardRandom() {
+    cards.forEach(function (item, i) {
+      gsap.to(item, 1, {
+        top: Math.random() * windowHeight,
+        left: Math.random() * windowWidth,
+        rotation: Math.random() * 180,
+        ease: Power4.easeInOut,
+        delay: i * 0.1,
+      });
+      console.log("random");
+    });
   }
 
   return (
-    <>
+    // JSX로 컴포넌트 렌더링
+    <div>
       <div>
         <section className="bottom2">
-          <Image className="cardItem" src={teammark} alt="" />
-          <Image className="cardItem" src={teammark} alt="" />
-          <Image className="cardItem" src={teammark} alt="" />
-          <Image className="cardItem" src={teammark} alt="" />
-          <Image className="cardItem" src={teammark} alt="" />
-          <Image className="cardItem" src={teammark} alt="" />
-          <Image className="cardItem" src={teammark} alt="" />
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
         </section>
         <div className="buttonWrap">
-          <button type="button" onClick={handleRandomButtonClick}>
+          <button type="button" onClick={cardRandom}>
             Random
           </button>
-          <button type="button" onClick={handleResetButtonClick}>
+          <button type="button" onClick={cardSetting}>
             Reset
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Intro;
+export default CardComponent;
