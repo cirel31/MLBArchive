@@ -53,6 +53,7 @@ section.bottom {
 }
 section.bottom .contWrap {
   margin: 0 auto;
+  /* margin-left: 10px; */
   width: 100%;
   max-width: 700px;
 }
@@ -92,10 +93,12 @@ section.bottom .contWrap h2 {
 
 section.bottom2 {
   margin-top: 500px;
+  position: relative;
 }
 
 .cardItem {
   position: absolute;
+  top: -500px;
   width: 210px;
   height: 130px;
   padding: 15px;

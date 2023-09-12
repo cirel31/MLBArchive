@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { gsap, Power3, Power4 } from "gsap"; // GSAP 라이브러리 가져오기
 import Image from "next/image";
 import teamcard from "../../assets/intro/Group 135.png";
@@ -10,6 +10,10 @@ function CardComponent() {
   const [cards, setCards] = useState([]);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [scrolling, setScrolling] = useState(false); // 스크롤 중 여부
+
+  // useRef 훅을 함수 컴포넌트 내에서 선언
+  const initialPositions = useRef([]);
 
   useEffect(() => {
     const _cards = document.querySelectorAll(".cardItem");
@@ -20,10 +24,25 @@ function CardComponent() {
     _button1.addEventListener("click", cardRandom);
     _button2.addEventListener("click", cardSetting);
 
-    window.addEventListener("resize", resize);
+    window.addEventListener("resize", () => {
+      // 스크롤 중인 경우 창 크기 변경을 하지 않음
+      if (!scrolling) {
+        const newHeight = window.innerHeight;
+        const newWidth = window.innerWidth;
+
+        if (newHeight !== windowHeight || newWidth !== windowWidth) {
+          setWindowHeight(newHeight);
+          setWindowWidth(newWidth);
+          cardSetting();
+        }
+      }
+    });
 
     // 페이지 로딩 시나 새로고침 시 카드 초기 위치 설정
-    window.addEventListener("load", cardSetting);
+    window.addEventListener("load", () => {
+      cardSetting();
+      saveInitialPositions(); // 초기 위치 저장
+    });
 
     setCards(_cards);
 
@@ -36,35 +55,59 @@ function CardComponent() {
   }, []);
 
   function resize() {
-    // 창크기 변경시 업데이트
-    setWindowHeight(window.innerHeight);
-    setWindowWidth(window.innerWidth);
-    cardSetting();
+    // 스크롤 중인 경우 창 크기 변경을 하지 않음
+    if (!scrolling) {
+      const newHeight = window.innerHeight;
+      const newWidth = window.innerWidth;
+
+      if (newHeight !== windowHeight || newWidth !== windowWidth) {
+        setWindowHeight(newHeight);
+        setWindowWidth(newWidth);
+        cardSetting();
+      }
+    }
   }
 
   function cardSetting() {
     cards.forEach(function (item, i) {
-      gsap.to(item, 1, {
-        top: windowHeight / 2 - i * 40,
-        left: windowWidth / 2 + i * 40 - 200,
-        rotation: 0,
-        ease: Power3.easeInOut,
-        delay: i * 0.2,
-      });
+      if (initialPositions.current[i]) {
+        gsap.to(item, 1, {
+          top: initialPositions.current[i].top,
+          left: initialPositions.current[i].left,
+          rotation: 0,
+          ease: Power3.easeInOut,
+          delay: i * 0.2,
+        });
+      }
     });
   }
 
   function cardRandom() {
+    // 스크롤 이벤트를 임시로 비활성화
+    setScrolling(true);
+
     cards.forEach(function (item, i) {
       gsap.to(item, 1, {
-        top: Math.random() * windowHeight,
+        top: Math.random() * -windowHeight,
         left: Math.random() * windowWidth,
         rotation: Math.random() * 180,
         ease: Power4.easeInOut,
         delay: i * 0.1,
+        onComplete: () => {
+          // 카드 랜덤 이동이 완료되면 스크롤 이벤트 다시 활성화
+          setScrolling(false);
+        },
       });
       console.log("random");
     });
+  }
+
+  // 카드의 초기 위치 저장 함수
+  function saveInitialPositions() {
+    initialPositions.current = Array.from(cards).map((item) => ({
+      top: parseFloat(item.style.top),
+      left: parseFloat(item.style.left),
+    }));
   }
 
   return (
@@ -72,6 +115,53 @@ function CardComponent() {
     <div>
       <div>
         <section className="bottom2">
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+        </section>
+        <section className="bottom2">
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
+          <div className="cardItem">
+            <Image src={teamcard} alt="" />
+          </div>
           <div className="cardItem">
             <Image src={teamcard} alt="" />
           </div>
