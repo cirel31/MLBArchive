@@ -7,7 +7,7 @@ import sample_img from "../../assets/intro/mark.png";
 import teammark from "../../assets/intro/Group 135.png";
 import member_img from "../../assets/intro/Group 134.png";
 import Image from "next/image";
-import TeamMarks from "@/app/intro/teammark";
+import TeamMarks from "./teammark";
 
 function Intro() {
   useEffect(() => {

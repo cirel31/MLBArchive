@@ -3,6 +3,7 @@ import { gsap, Power3, Power4 } from "gsap"; // GSAP 라이브러리 가져오�
 import Image from "next/image";
 import teamcard from "../../assets/intro/Group 135.png";
 import "../../styles/intro.css";
+import { Tween } from "react-gsap";
 
 gsap.registerPlugin(gsap);
 
@@ -70,15 +71,19 @@ function CardComponent() {
 
   function cardSetting() {
     cards.forEach(function (item, i) {
-      if (initialPositions.current[i]) {
-        gsap.to(item, 1, {
-          top: initialPositions.current[i].top,
-          left: initialPositions.current[i].left,
-          rotation: 0,
-          ease: Power3.easeInOut,
-          delay: i * 0.2,
-        });
-      }
+      // const top = -windowHeight / 2 - i * 40;
+      // const left = windowWidth / 2 + i * 40 - 200;
+      const top = -windowWidth / 2 + 100;
+      const left = windowWidth / 2;
+      const rotation = 0;
+
+      gsap.to(item, 1, {
+        top,
+        left,
+        rotation,
+        ease: Power3.easeInOut,
+        delay: i * 0.2,
+      });
     });
   }
 
