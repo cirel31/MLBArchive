@@ -1,4 +1,25 @@
-.main-content01 {
+// .main-content01 {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
+
+// .mainphoto {
+//   width: 1000px;
+//   padding: 0 auto;
+// }
+
+.grid-container {
   display: grid;
-  grid-template-columns:  repeat(2, 1fr);
+  grid-template-columns: 10% 20% auto;
 }
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+// .main {
+//   margin-top: 100px;
+// }
