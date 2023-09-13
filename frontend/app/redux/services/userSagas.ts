@@ -35,11 +35,14 @@ interface FetchUserDataPayload {
 }
 function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   try {
+    console.log("사가 접근 확인")
     const code = action.payload.code
     const state = action.payload.state
     const kind = action.payload.kind
-
+    console.log(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
     const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${oauthURL}${kind}?code=${code}?state=${state}`)
+
+    console.log('응답확인', response)
     if (response.data) {
       console.log(response.data)
       yield put(fetchUserDataSuccess(response.data))

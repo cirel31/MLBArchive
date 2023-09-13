@@ -38,6 +38,7 @@ export const userSlice = createSlice({
   reducers: {
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
       state.isLoading = true
+      console.log("슬라이스 접근 확인")
     },
     fetchUserDataSuccess: (state, action: PayloadAction<{userData: any; accessToken: string; refreshToken: string}>) => {
       state.isLoading = false
@@ -47,7 +48,7 @@ export const userSlice = createSlice({
       state.refreshToken = action.payload.refreshToken
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
-      state.isLoading = false
+      // state.isLoading = false
       console.log(action.payload.message)
     },
     fetchFollowData: (state, action: PayloadAction<any>) => {
