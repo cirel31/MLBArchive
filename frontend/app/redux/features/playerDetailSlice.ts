@@ -16,21 +16,35 @@ interface PlayerData {
   // profileImage: Blob;
 }
 interface PlayerState {
-  playerData: PlayerData | null,
+  playerData: any,
+  playerActive: any,
+  playerHitting: any,
+  playerPitching: any,
+  playerFielding: any,
   error: Error | null,
 }
 const initialState: PlayerState = {
   playerData: null,
+  playerActive: null,
+  playerHitting: null,
+  playerPitching: null,
+  playerFielding: null,
   error: null,
 }
 export const playerDetailSlice = createSlice({
   name: 'playerDetail',
   initialState,
   reducers: {
-    fetchPlayerDetailData: (state, action: PayloadAction<number>) => {
+    fetchPlayerDetailData: (state, action: PayloadAction<any>) => {
+      console.log(action.payload)
     },
-    fetchPlayerDataSuccess: (state, action: PayloadAction<PlayerData>) => {
-      state.playerData = action.payload
+    fetchPlayerDataSuccess: (state, action: PayloadAction<any>) => {
+      const {activeYears, ...restData} = action.payload.info
+      state.playerData = restData
+      state.playerActive = activeYears
+      state.playerHitting = action.payload.hitting
+      state.playerPitching = action.payload.pitching
+      state.playerFielding = action.payload.fielding
     },
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload
