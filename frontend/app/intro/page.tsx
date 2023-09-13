@@ -8,7 +8,7 @@ import teammark from "../../assets/intro/Group 135.png";
 import member_img from "../../assets/intro/Group 134.png";
 import Image from "next/image";
 import TeamMarks from "./teammark";
-import intro_img from "../../assets/intro/intro.png";
+import intro_img from "../../assets/intro/intro_pull.png";
 
 function Intro() {
   useEffect(() => {
