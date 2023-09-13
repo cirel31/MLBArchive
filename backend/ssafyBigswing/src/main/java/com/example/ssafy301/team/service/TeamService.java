@@ -20,17 +20,36 @@ public class TeamService {
     private final TeamRepository teamRepository;
 
     // 모든 팀 리스트
+    // DB에는 현재 존재하는 팀의 정보만 들어있음
     public List<TeamDto> getAllTeams() {
+//        int currentYear = LocalDate.now().getYear();
+//
+//        // 현재 년도를 기준으로 모든 SeasonRoster 정보를 가져온 뒤
+//        List<SeasonRoster> seasonRostersBySeason = seasonRosterRepository.getSeasonRostersBySeason(currentYear);
+//
+//        // 겹치지 않는 teamId만 HashSet에 담아줌
+//        Set<Long> currentSeasonTeamIds = new HashSet<>();
+//        seasonRostersBySeason
+//                .forEach(seasonRoster -> currentSeasonTeamIds.add(seasonRoster.getTeam().getId()));
+//
+//        // 해당 teamId를 바탕으로 기본 팀 정보를 가져옴
+//        List<TeamDto> currentTeams = new ArrayList<>();
+//        currentSeasonTeamIds
+//                .forEach(teamId -> currentTeams.add(this.getTeamDetail(teamId)));
+//
+//        return currentTeams;
+
         List<Team> all = teamRepository.findAll();
-        return all.stream().map((team) ->
-                new TeamDto(team))
+        List<TeamDto> result = all.stream()
+                .map(team -> new TeamDto(team))
                 .collect(Collectors.toList());
+
+        return result;
     }
 
     // 팀의 구체적인 정보
-    //
-    public TeamDto getTeamDetail(Long id) {
-        Team team = teamRepository.findById(id).orElseThrow(() -> new NotFoundException(FailCode.NO_TEAM));
+    public TeamDto getTeamDetail(Long teamId) {
+        Team team = teamRepository.findById(teamId).orElseThrow(() -> new NotFoundException(FailCode.NO_TEAM));
         return new TeamDto(team);
     }
 }
