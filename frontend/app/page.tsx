@@ -4,20 +4,22 @@ import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
-
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="mainphoto">
-        <img
-          src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/xqq7yvk8nshiq4jvkmqq.jpg"
-          alt=""
-        />
-      </div>
+  // 8x8 그리드의 내용을 배열에 저장
 
-      <Link href={"/login"}>
-        <div>로그인 페이지</div>
-      </Link>
-    </main>
+  return (
+    <div className="main">
+      <div className="grid-container">
+        <div className="grid-item">1</div>
+        <div className="grid-item">2</div>
+        <div className="grid-item">3</div>
+        <div className="grid-item">4</div>
+        <div className="grid-item">5</div>
+        <div className="grid-item">6</div>
+        <div className="grid-item">7</div>
+        <div className="grid-item">8</div>
+        <div className="grid-item">9</div>
+      </div>
+    </div>
   );
 }

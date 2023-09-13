@@ -1,6 +1,8 @@
 .appbar {
   height: 4vw;
-  background-color: rgb(11, 47, 116);
+  background-color: rgb(6, 31, 77);
   margin-bottom: 3rem;
   color: white;
+  position: fixed;
+  z-index: 10;
 }

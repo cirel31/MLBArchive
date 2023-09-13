@@ -8,6 +8,7 @@ import teammark from "../../assets/intro/Group 135.png";
 import member_img from "../../assets/intro/Group 134.png";
 import Image from "next/image";
 import TeamMarks from "./teammark";
+import intro_img from "../../assets/intro/intro.png";
 
 function Intro() {
   useEffect(() => {
@@ -57,7 +58,7 @@ function Intro() {
     <>
       <div className="starBg"></div>
       <section className="top">
-        <Image src={sample_img} className="title" alt="엑박" />
+        <Image src={intro_img} className="title" alt="엑박" />
       </section>
 
       <section className="bottom">
