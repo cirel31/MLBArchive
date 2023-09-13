@@ -1,25 +1,28 @@
-import Link from "next/link";
+"use client";
+import { useRouter } from "next/navigation";
 import "../styles/MainPageStyle.scss";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 export default function Home() {
-  // 8x8 그리드의 내용을 배열에 저장
-
   return (
-    <div className="main">
-      <div className="grid-container">
-        <div className="grid-item">1</div>
-        <div className="grid-item">2</div>
-        <div className="grid-item">3</div>
-        <div className="grid-item">4</div>
-        <div className="grid-item">5</div>
-        <div className="grid-item">6</div>
-        <div className="grid-item">7</div>
-        <div className="grid-item">8</div>
-        <div className="grid-item">9</div>
+    <main
+      className="flex min-h-screen flex-col items-center justify-between p-24"
+      style={{
+        height: "100px",
+        overflow: "auto",
+      }}
+      onClick={() => handleLoginPage()}
+      onScroll={() => {
+        console.log("Scrolled");
+        handleLoginPage();
+      }}
+    >
+      <div style={{ height: "1000px" }}>
+        시작페이지
+        <div style={{ height: "1000px" }}>Scroll content</div>
       </div>
-    </div>
+    </main>
   );
 }

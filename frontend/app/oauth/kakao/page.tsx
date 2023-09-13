@@ -1,17 +1,27 @@
 'use client'
-import {useState} from "react";
-import axios from "axios";
+import {useEffect} from "react";
+import {useDispatch} from "react-redux";
+import {fetchUserData} from "@/app/redux/features/userSlice";
 
 const KakaoLoginPage = () => {
-  const code = window.location.href.split("code=")[1]?.split("&")[0]
-  console.log(code)
-  const [isLoading, setIsLoading] = useState(true);
-  const baseURL = '';
-  const subURL = '';
-  // useEffect(() => {
-  //   axios.get(`${baseURL}${subURL}?code=${oauthToken}`)
-  //     .then
-  // })
+  let state: string | null = null;
+  let code: string | null = null;
+  if (typeof window !== 'undefined') {
+    code = window.location.href.split("code=")[1]?.split("&")[0];
+    state = window.location.href.split("state=")[1]?.split("&")[0];
+  }
+  const dispatch = useDispatch()
+  useEffect(() => {
+    if (code) {
+      const accessKey = {
+        code : code ?? "",
+        state : state ?? "",
+        kind: 'kakao',
+      }
+      console.log("useEffect")
+      dispatch(fetchUserData(accessKey))
+    }
+  }, [code])
   return (
     <>
       <div>

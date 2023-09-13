@@ -33,6 +33,8 @@ import TorontoBlueJays from "../../assets/teamlogo/TorontoBlueJays.svg";
 import WashingtonNationals from "../../assets/teamlogo/WashingtonNationals.svg";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { fetchTeamDataRequest } from "@/app/redux/features/searchTeamSlice";
 
 const TeamsPage = () => {
   const router = useRouter();
@@ -295,6 +297,10 @@ const TeamsPage = () => {
     setTeamList(updatedTeams);
   };
 
+  const searchTeamData = (key: any) => {
+    dispatch(fetchTeamDataRequest(key));
+    // router.push(`/teams/${key}`)
+  };
   return (
     <>
       <div className="teamList">
