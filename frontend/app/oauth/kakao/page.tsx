@@ -18,6 +18,7 @@ const KakaoLoginPage = () => {
         state : state ?? "",
         kind: 'kakao',
       }
+      console.log("useEffect")
       dispatch(fetchUserData(accessKey))
     }
   }, [code])
