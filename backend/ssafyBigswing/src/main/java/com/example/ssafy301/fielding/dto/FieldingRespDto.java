@@ -8,7 +8,6 @@ import lombok.Data;
 public class FieldingRespDto {
 
     private Long id;
-    private Long playerId;
     private int season;
     private int error;
     private int assist;
@@ -18,7 +17,6 @@ public class FieldingRespDto {
 
     public FieldingRespDto(Fielding fielding) {
         this.id = fielding.getId();
-        this.playerId = fielding.getPlayerId();
         this.season = fielding.getSeason();
         this.error = fielding.getError();
         this.assist = fielding.getAssist();

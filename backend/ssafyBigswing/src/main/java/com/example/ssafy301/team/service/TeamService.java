@@ -28,6 +28,7 @@ public class TeamService {
     }
 
     // 팀의 구체적인 정보
+    //
     public TeamDto getTeamDetail(Long id) {
         Team team = teamRepository.findById(id).orElseThrow(() -> new NotFoundException(FailCode.NO_TEAM));
         return new TeamDto(team);

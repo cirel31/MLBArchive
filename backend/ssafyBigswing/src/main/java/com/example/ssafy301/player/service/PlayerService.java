@@ -21,6 +21,5 @@ public class PlayerService {
         Player player = playerRepository.findById(playerId).orElseThrow(() -> new NotFoundException(FailCode.NO_PLAYER));
         return new PlayerDto(player);
     }
-
     // 선수 검색
 }
