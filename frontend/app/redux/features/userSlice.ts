@@ -1,17 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface UserData {
-  id: number;
-  nickname: string;
-  email: string;
-  profileImage: string;
-  // 만약 서버에서 profileImage를 Bolb 객체로 준다면
-  // profileImage: Blob;
-}
+// interface UserData {
+//   id: number;
+//   nickname: string;
+//   email: string;
+//   profileImage: string;
+//   // 만약 서버에서 profileImage를 Bolb 객체로 준다면
+//   // profileImage: Blob;
+// }
 interface UserState {
   isLoading: boolean;
   isLoggedIn: boolean;
-  userData: UserData | null;
+  userData: any;
   accessToken: string | null;
   refreshToken: string | null;
   error: Error | null;
@@ -38,8 +38,9 @@ export const userSlice = createSlice({
   reducers: {
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
       state.isLoading = true
+      console.log("슬라이스 접근 확인")
     },
-    fetchUserDataSuccess: (state, action: PayloadAction<{userData: UserData; accessToken: string; refreshToken: string}>) => {
+    fetchUserDataSuccess: (state, action: PayloadAction<{userData: any; accessToken: string; refreshToken: string}>) => {
       state.isLoading = false
       state.isLoggedIn = true
       state.userData = action.payload.userData
@@ -47,9 +48,8 @@ export const userSlice = createSlice({
       state.refreshToken = action.payload.refreshToken
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
-      state.isLoading = false
-      state.error = action.payload
-      console.log(state.error)
+      // state.isLoading = false
+      console.log(action.payload.message)
     },
     fetchFollowData: (state, action: PayloadAction<any>) => {
 
