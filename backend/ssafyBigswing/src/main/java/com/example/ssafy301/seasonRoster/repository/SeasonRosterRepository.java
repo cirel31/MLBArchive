@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface SeasonRosterRepository extends JpaRepository<SeasonRoster, Long> {
-
     List<SeasonRoster> getSeasonRostersByTeamIdAndSeason(Long teamId, int season);
+
+    List<SeasonRoster> getSeasonRostersBySeason(int season);
 }

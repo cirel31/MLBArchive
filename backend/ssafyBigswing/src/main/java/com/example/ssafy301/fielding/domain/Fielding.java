@@ -1,5 +1,6 @@
 package com.example.ssafy301.fielding.domain;
 
+import com.example.ssafy301.player.domain.Player;
 import com.example.ssafy301.player.domain.Position;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +19,10 @@ public class Fielding {
     @Column(name = "fielding_stat_id")
     private Long id;
 
-    private Long playerId;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "player_id")
+    private Player player;
+
     private int season;
     private int error;
     private int assist;

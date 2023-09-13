@@ -1,5 +1,6 @@
 package com.example.ssafy301.user.domain;
 
+import com.example.ssafy301.common.domain.util.BaseTimeEntity;
 import com.example.ssafy301.user.SocialType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

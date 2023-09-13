@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -30,5 +30,5 @@ public class TeamLike {
     private Team team;
 
     // 좋아요 누른 시간
-    private LocalDateTime likedDate;
+    private LocalDate likedDate;
 }

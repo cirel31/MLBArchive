@@ -1,21 +1,23 @@
 package com.example.ssafy301.playerLike.dto;
 
+import com.example.ssafy301.player.domain.Player;
 import com.example.ssafy301.playerLike.domain.PlayerLike;
+import com.example.ssafy301.user.domain.User;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Data
 public class PlayerLikeDto {
     private Long id;
-    private Long userId;
-    private Long playerId;
-    private LocalDateTime likedDate;
+    private User user;
+    private Player player;
+    private LocalDate likedDate;
 
     public PlayerLikeDto(PlayerLike playerLike) {
         this.id = playerLike.getId();
-        this.userId = playerLike.getUserId();
-        this.playerId = playerLike.getPlayerId();
+        this.user = playerLike.getUser();
+        this.player = playerLike.getPlayer();
         this.likedDate = playerLike.getLikedDate();
     }
 }

@@ -7,7 +7,6 @@ import lombok.Data;
 public class HittingRespDto {
 
     private Long id;
-    private Long playerId;
     private int season;
     private int gamesPlayed;
     private float battingAvg;
@@ -24,7 +23,6 @@ public class HittingRespDto {
 
     public HittingRespDto(Hitting hitting) {
         this.id = hitting.getId();
-        this.playerId = hitting.getPlayerId();
         this.season = hitting.getSeason();
         this.gamesPlayed = hitting.getGamesPlayed();
         this.battingAvg = hitting.getBattingAvg();
