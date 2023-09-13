@@ -2,7 +2,10 @@ package com.example.ssafy301.team.service;
 
 import com.example.ssafy301.common.api.exception.NotFoundException;
 import com.example.ssafy301.common.api.status.FailCode;
+import com.example.ssafy301.seasonRoster.domain.SeasonRoster;
+import com.example.ssafy301.seasonRoster.repository.SeasonRosterRepository;
 import com.example.ssafy301.team.domain.Team;
+import com.example.ssafy301.team.dto.TeamDetailDto;
 import com.example.ssafy301.team.dto.TeamDto;
 import com.example.ssafy301.team.repository.TeamRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +21,7 @@ import java.util.stream.Collectors;
 public class TeamService {
 
     private final TeamRepository teamRepository;
+    private final SeasonRosterRepository seasonRosterRepository;
 
     // 모든 팀 리스트
     // DB에는 현재 존재하는 팀의 정보만 들어있음
@@ -48,8 +52,16 @@ public class TeamService {
     }
 
     // 팀의 구체적인 정보
-    public TeamDto getTeamDetail(Long teamId) {
+    public TeamDetailDto getTeamDetail(Long teamId) {
         Team team = teamRepository.findById(teamId).orElseThrow(() -> new NotFoundException(FailCode.NO_TEAM));
-        return new TeamDto(team);
+        
+        // 해당 팀이 활동한 연도도 보내주자
+        List<Integer> activeYears = seasonRosterRepository.getSeasonRostersByTeamId(teamId)
+                .stream()
+                .map(SeasonRoster::getSeason) // SeasonRoster에서 연도만 추출
+                .distinct() // 중복 제거
+                .collect(Collectors.toList()); // List<Integer>로 변환
+
+        return new TeamDetailDto(team, activeYears);
     }
 }
