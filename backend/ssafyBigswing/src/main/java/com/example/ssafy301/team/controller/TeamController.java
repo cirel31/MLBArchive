@@ -2,6 +2,7 @@ package com.example.ssafy301.team.controller;
 
 import com.example.ssafy301.common.api.ResponseEntity;
 import com.example.ssafy301.common.api.status.SuccessCode;
+import com.example.ssafy301.team.dto.TeamDetailDto;
 import com.example.ssafy301.team.dto.TeamDto;
 import com.example.ssafy301.team.service.TeamService;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +27,7 @@ public class TeamController {
     // 특정 팀의 기본 정보 가져오기
     @GetMapping("/detail/{teamId}")
     public ResponseEntity getTeamDetail(@PathVariable("teamId") Long teamId){
-        TeamDto result = teamService.getTeamDetail(teamId);
+        TeamDetailDto result = teamService.getTeamDetail(teamId);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS,result);
     }
 }

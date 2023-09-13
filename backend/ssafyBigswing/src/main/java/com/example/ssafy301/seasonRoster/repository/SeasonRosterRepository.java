@@ -11,4 +11,8 @@ public interface SeasonRosterRepository extends JpaRepository<SeasonRoster, Long
     List<SeasonRoster> getSeasonRostersByTeamIdAndSeason(Long teamId, int season);
 
     List<SeasonRoster> getSeasonRostersBySeason(int season);
+
+    List<SeasonRoster> getSeasonRostersByTeamId(Long teamId);
+
+    List<SeasonRoster> getSeasonRostersByPlayerId(Long playerId);
 }
