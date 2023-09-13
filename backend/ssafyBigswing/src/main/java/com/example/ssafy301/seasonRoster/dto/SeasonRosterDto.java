@@ -11,14 +11,14 @@ import lombok.Data;
 public class SeasonRosterDto {
 
     private Long id;
-    private Player player;
-    private Team team;
+    private Long playerId;
+    private String playerName;
     private int season;
 
     public SeasonRosterDto(SeasonRoster seasonRoster) {
         this.id = seasonRoster.getId();
-        this.player = seasonRoster.getPlayer();
-        this.team = seasonRoster.getTeam();
+        this.playerId = seasonRoster.getPlayer().getId();
+        this.playerName = seasonRoster.getPlayer().getName();
         this.season = seasonRoster.getSeason();
     }
 }
