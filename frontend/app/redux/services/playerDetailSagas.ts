@@ -6,8 +6,8 @@ import {fetchPlayerDetailData, fetchPlayerDataSuccess, fetchPlayerDataError} fro
 
 function* fetchPlayerDetailSaga(action: PayloadAction<string>): Generator<PutEffect | CallEffect, void, any> {
   try {
-    const response = yield call(axios.get, `/api/team/data/${action.payload}`, );
-    yield put(fetchPlayerDataSuccess(response.data));
+    // const response = yield call(axios.get, `/api/team/data/${action.payload}`, );
+    // yield put(fetchPlayerDataSuccess(response.data));
     console.log("PD SAGA 테스트1")
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));

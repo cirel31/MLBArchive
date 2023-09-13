@@ -41,7 +41,7 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
     const kind = action.payload.kind
     console.log(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
     const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
-    
+
     console.log('응답확인', response)
     if (response.data) {
       console.log(response.data)
