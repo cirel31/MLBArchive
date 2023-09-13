@@ -1,28 +1,36 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
-  searchResult: [],
+  firstLetterList: [],
+  wordParseResult: [],
 }
 export const searchPlayerResultSlice: any = createSlice({
   name: 'searchPlayer',
   initialState,
   reducers: {
-    fetchPlayerListData: (state, action: PayloadAction<any>) => {
-      console.log("아직 갱신되지 않은 state")
+    fetchPlayerWordData: (state, action: PayloadAction<string>) => {
       console.log(action.payload)
     },
-    fetchPlayerListDataSuccess: (state, action: PayloadAction<any>) => {
-      state.searchResult = action.payload
+    fetchPlayerWordDataSuccess: (state, action: PayloadAction<any>) => {
+      state.wordParseResult = action.payload
     },
-    fetchPlayerListDataError: (state, action: PayloadAction<Error>) => {
+    fetchPlayerLetterData: (state, action: PayloadAction<string>) => {
+
+    },
+    fetchPlayerLetterDataSuccess: (state, action: PayloadAction<any>) => {
+      state.firstLetterList = action.payload
+    },
+    fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
       console.log(action.payload)
     },
   }
 })
 
 export const {
-  fetchPlayerListData,
-  fetchPlayerListDataSuccess,
-  fetchPlayerListDataError
+  fetchPlayerWordData,
+  fetchPlayerWordDataSuccess,
+  fetchPlayerLetterData,
+  fetchPlayerLetterDataSuccess,
+  fetchPlayerDataError
 } = searchPlayerResultSlice.actions
 export default searchPlayerResultSlice.reducer

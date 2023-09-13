@@ -42,7 +42,7 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
     const response: AxiosResponse<FetchUserDataResponse> = yield call(axios.get,`${baseURL}${oauthURL}${kind}?code=${code}?state=${state}`)
     if (response.data) {
       console.log(response.data)
-      // yield put(fetchUserDataSuccess(response.data))
+      yield put(fetchUserDataSuccess(response.data))
     }
   }
   catch (error) {
