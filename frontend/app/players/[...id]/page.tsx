@@ -66,7 +66,12 @@ const PlayerDetailPage = () => {
         />
         <button onClick={seasonSearchBTN}>조회</button>
       </div>
-      {playerData &&
+      {(playerData.data.status === 204 && (
+        <div>
+          {playerData.data.message}
+        </div>
+      ))}
+      {playerData.info &&
         <div>
           <div>
             {playerData.info.map((key:any, value:any) => (

@@ -28,9 +28,9 @@ const sagaMiddleware = createSagaMiddleware()
 const sessionSaverMiddleware = (store: any) => (next: any) => (action: any) => {
   let result = next(action);
   if (typeof window !== 'undefined') {
-    const userState = store.getState().user;
+    const userState = store.getState().user.refreshToken;
     if (userState) {
-      sessionStorage.setItem('user', JSON.stringify(userState));
+      sessionStorage.setItem('refreshToken', JSON.stringify(userState));
     }
   }
   return result;
