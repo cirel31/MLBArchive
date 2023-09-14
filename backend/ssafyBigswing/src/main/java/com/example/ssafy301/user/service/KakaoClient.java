@@ -19,7 +19,6 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class KakaoClient implements OauthClient{
     private static final String GRANT_TYPE = "authorization_code";
-
     @Value("${kakao.token-uri}")
     private String token_url;
     @Value("${kakao.user-info-uri}")
@@ -58,6 +57,7 @@ public class KakaoClient implements OauthClient{
         //log.debug("아니 왜 안돼 시발 :: "+tokenRequest);
         KakaoToken accessToken = rt.postForObject(url, tokenRequest, KakaoToken.class);
         log.debug("accessToken :: " + accessToken);
+
 
         return accessToken.getAccess_token();
     }

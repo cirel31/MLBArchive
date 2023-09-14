@@ -14,8 +14,8 @@ public class PlayerLikeDto {
 
     public PlayerLikeDto(PlayerLike playerLike) {
         this.id = playerLike.getId();
-        this.userId = playerLike.getUserId();
-        this.playerId = playerLike.getPlayerId();
+        //this.userId = playerLike.getUserId();
+        //this.playerId = playerLike.getPlayerId();
         this.likedDate = playerLike.getLikedDate();
     }
 }

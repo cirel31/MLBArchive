@@ -42,5 +42,8 @@ google:
   client-secret: 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
   redirect-uri: http://localhost:3000/oauth/google
   token-uri: https://oauth2.googleapis.com/token
-  user-info-uri: https://www.googleapis.com/oauth2/v2/userInfo
+  user-info-uri: https://www.googleapis.com/oauth2/v2/userinfo
   scope: profile, email
+
+jwt:
+  refreshTokenExpirationMs: 604800000  # 7일로 설정

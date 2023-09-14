@@ -1,8 +1,9 @@
 package com.example.ssafy301.user.oauth2.userinfo;
-import lombok.Getter;
+
+import lombok.Data;
 
 
-@Getter
+@Data
 public class GoogleToken {
     private String access_token;
     private String token_type;
