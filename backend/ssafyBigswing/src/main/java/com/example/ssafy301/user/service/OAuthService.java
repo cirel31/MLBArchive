@@ -1,6 +1,7 @@
 package com.example.ssafy301.user.service;
 
 import com.example.ssafy301.user.domain.User;
+import com.example.ssafy301.user.dto.UserDTO;
 import com.example.ssafy301.user.jwt.JwtProvider;
 import com.example.ssafy301.user.oauth2.userinfo.OauthMember;
 import com.example.ssafy301.user.oauth2.userinfo.OauthParams;
@@ -9,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -21,10 +23,11 @@ public class OAuthService {
     private final RequestOauthInfoService requestOauthInfoService;
     private final JwtProvider jwtProvider;
 
-    public String getMemberByOauthLogin(OauthParams oauthParams) {
+    public UserDTO getMemberByOauthLogin(OauthParams oauthParams) {
         log.debug("------ Oauth 로그인 시도 ------");
 
         OauthMember oauthMember = requestOauthInfoService.request(oauthParams);
+        log.debug("진짜 유저 정보이다: " + oauthMember);
         log.debug("전달받은 유저정보:: " + oauthMember.getEmail());
         if(oauthMember.getNickName()==null){
             oauthMember.setNickName(oauthMember.getEmail());
@@ -35,6 +38,7 @@ public class OAuthService {
                 .nickname(oauthMember.getNickName())
                 .profileImage(oauthMember.getProfileImage())
                 .signupDate(LocalDate.now())
+                .socialType(oauthMember.getOauthProvider())
                 .build();
 
         // 획득된 회원정보 DB 조회
@@ -42,7 +46,6 @@ public class OAuthService {
         User result = resultOptional.orElse(null);
 
         String accessJwt = null;
-
         if (result == null) {
             log.debug("------ 회원가입 필요한 회원 ------");
             log.debug("회원가입 요청 :: " + accessUser.getNickname());
@@ -51,12 +54,27 @@ public class OAuthService {
             userRepository.save(accessUser);
 
             log.debug("회원가입 완료 :: " + accessUser.getNickname());
+            log.debug("회원가입 완료 :: " + accessUser.getEmail());
+            log.debug("회원가입 완료 :: " + accessUser.getSignupDate());
+            log.debug("회원가입 완료 :: " + accessUser.getRefreshToken());
+            log.debug("회원가입 완료 :: " + accessUser.getSocialType());
+            log.debug("회원가입 완료 :: " + accessUser.getId());
+
+
         }
 
         log.debug("------ JWT 발급 ------");
         accessJwt = jwtProvider.createToken(accessUser);
-
+        String refreshToken = jwtProvider.createRefreshToken(accessUser);
+        // DB에 리프레시 토큰 저장 (이 부분은 옵션이며, 리프레시 토큰을 DB에 저장해야할 경우에만 필요합니다.)
+        if (result == null) { // 새로운 유저의 경우
+            accessUser.updateRefreshToken(refreshToken);
+            userRepository.save(accessUser);
+        } else { // 기존 유저의 경우
+            result.updateRefreshToken(refreshToken);
+            userRepository.save(result);
+        }
         log.debug("------ JWT 발급완료 ------");
-        return accessJwt;
+        return new UserDTO(oauthMember.getEmail(), oauthMember.getNickName(), oauthMember.getProfileImage(), oauthMember.getOauthProvider(), refreshToken, accessJwt);
     }
 }

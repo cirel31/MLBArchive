@@ -6,6 +6,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.xml.bind.DatatypeConverter;
@@ -16,6 +17,9 @@ import java.util.Date;
 @Component
 public class JwtProvider {
     private String secretKey ="dasdasf234fuhvertsv34789yhiuFDSIUFGYDTE5r~~~~~~";
+
+    @Value("${jwt.refreshTokenExpirationMs}")
+    private long refreshTokenExpirationMs;
 
     /*
      * 토큰 생성 메소드 jwt에 저장할 회원정보를 파라미터로 전달
@@ -56,5 +60,32 @@ public class JwtProvider {
                     .getBody();
             return true;  //유효하다면 true 반환
 
+    }
+    public String createRefreshToken(User user) {
+        Date now = new Date();
+        Date expiryDate = new Date(now.getTime() + refreshTokenExpirationMs);
+
+        Claims claims = Jwts.claims().setSubject(Long.toString(user.getId()));
+
+        return Jwts.builder()
+                .setClaims(claims)
+                .setIssuedAt(now)
+                .setExpiration(expiryDate)
+                .signWith(SignatureAlgorithm.HS256, secretKey)
+                .compact();
+    }
+
+    public Date getExpirationDateFromToken(String token) {
+        Claims claims = Jwts.parser()
+                .setSigningKey(DatatypeConverter.parseBase64Binary(secretKey))
+                .parseClaimsJws(token)
+                .getBody();
+
+        return claims.getExpiration();
+    }
+
+    public boolean isTokenExpired(String token) {
+        Date expiration = getExpirationDateFromToken(token);
+        return expiration.before(new Date());
     }
 }
