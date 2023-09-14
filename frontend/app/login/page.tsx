@@ -1,11 +1,12 @@
-"use client"
-import {useEffect, useRef, useState} from "react";
-import "../../styles/LoginPageStyle.scss"
-import Image from 'next/image'
-import kakao_btn from "../../assets/btn/kakao_btn_login.png"
-import google_btn_dark from "../../assets/btn/google_btn_dark.png"
-import naver_btn_light from "../../assets/btn/naver_btn_light.png"
+"use client";
+import { useEffect, useRef, useState } from "react";
+import "../../styles/LoginPageStyle.scss";
+import Image from "next/image";
+import kakao_btn from "../../assets/btn/kakao_btn_login.png";
+import google_btn_dark from "../../assets/btn/google_btn_dark.png";
+import naver_btn_light from "../../assets/btn/naver_btn_light.png";
 import intro from "../../assets/intro/intro_pull.png";
+
 import {useDispatch, useSelector} from "react-redux";
 import {fetchReUserData} from "@/app/redux/features/userSlice";
 
