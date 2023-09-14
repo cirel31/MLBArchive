@@ -3,6 +3,9 @@ import sample from "../../assets/player/sample_profile_img.jpg"
 import Image, {StaticImageData} from "next/image";
 import {useState} from "react";
 import "../../styles/SearchPlayerPageStyle.scss"
+import {useDispatch, useSelector} from "react-redux";
+import {fetchPlayerLetterData} from "@/app/redux/features/searchPlayerSlice";
+import {useRouter} from "next/navigation";
 
 type PlayerType = {
   id: number
@@ -13,6 +16,9 @@ type PlayerType = {
   teamCode: string
 };
 const AllPlayers = () => {
+  const dispatch = useDispatch()
+  const router = useRouter()
+  const searchLetter = useSelector((state: any) => state.searchPlayer.firstLetterList)
   const [isActive, setIsActive] = useState([
     false, false, false, false, false, false,
     false, false, false, false, false, false,
@@ -30,8 +36,12 @@ const AllPlayers = () => {
     setIsActive(updatedIsActive);
     const selectedAlphabet = alphabets[idx]
     console.log(selectedAlphabet)
+    dispatch(fetchPlayerLetterData(selectedAlphabet))
   }
 
+  const handleDetailPage = (id:string) => {
+    router.push(`players/${id}`)
+  }
 
 
   return (
@@ -48,17 +58,16 @@ const AllPlayers = () => {
         ))}
       </div>
       <div>
-        {players.map((player) => (
-          <div key={player.id} className='playerContent'>
-            <Image src={player.profile_img} alt={player.firstName} className='profile'/>
+        {searchLetter.map((player: any) => (
+          <div key={player.id} className='playerContent' onClick={() => handleDetailPage(player.id)}>
+            <Image src={player.img} alt={player.name} className='profile'/>
             <div>
-              <p>{player.firstName} {player.lastName}</p>
+              <p>{player.name}</p>
               <p>{player.team} {player.number}</p>
             </div>
           </div>
-        )) }
+        ))}
       </div>
-
     </>
   )
 }

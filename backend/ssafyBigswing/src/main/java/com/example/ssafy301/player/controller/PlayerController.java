@@ -2,7 +2,7 @@ package com.example.ssafy301.player.controller;
 
 import com.example.ssafy301.common.api.ResponseEntity;
 import com.example.ssafy301.common.api.status.SuccessCode;
-import com.example.ssafy301.player.dto.PlayerDto;
+import com.example.ssafy301.player.dto.PlayerDetailDto;
 import com.example.ssafy301.player.service.PlayerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +20,7 @@ public class PlayerController {
     // 선수 상세보기
     @GetMapping("/detail/{playerId}")
     public ResponseEntity getDetailPlayer(@PathVariable("playerId") Long playerId) {
-        PlayerDto result = playerService.getDetailPlayer(playerId);
+        PlayerDetailDto result = playerService.getDetailPlayer(playerId);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 }

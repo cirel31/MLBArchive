@@ -29,7 +29,7 @@ export const searchTeamSlice = createSlice({
       fetchTeamDataSuccess: (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.teamData = action.payload;
-        console.log("SAGA 테스트: 데이터 받아오기")
+        console.log("SAGA 테스트: 팀 데이터 받아오기")
       },
       fetchTeamDataError: (state, action: PayloadAction<Error>) => {
         state.loading = false;

@@ -1,4 +1,4 @@
-package com.example.ssafy301.matchDetail.domain;
+package com.example.ssafy301.match.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

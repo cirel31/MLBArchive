@@ -1,6 +1,6 @@
 .searchAlphabet {
   display: grid;
-  grid-template-columns:  repeat(26, 1fr);
+  grid-template-columns: repeat(26, 1fr);
   overflow-x: auto;
   white-space: nowrap;
   width: 90%;
@@ -20,7 +20,12 @@
 
 .playerContent {
   display: grid;
-  grid-template-columns:  repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  border: 5px solid #5663a7;
+  border-radius: 20px;
+  width: 600px;
+  padding: 10px;
+  margin: 20px;
 }
 
 .profile {

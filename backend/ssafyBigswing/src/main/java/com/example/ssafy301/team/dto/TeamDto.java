@@ -1,7 +1,6 @@
 package com.example.ssafy301.team.dto;
 
 import com.example.ssafy301.team.domain.Team;
-import jakarta.persistence.Column;
 import lombok.Data;
 
 import java.time.LocalDateTime;
