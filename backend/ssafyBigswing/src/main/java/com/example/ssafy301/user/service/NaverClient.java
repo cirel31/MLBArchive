@@ -57,7 +57,7 @@ public class NaverClient implements OauthClient{
         // 토큰 수신
         KakaoToken accessToken = rt.postForObject(url, tokenRequest, KakaoToken.class);
         log.debug("accessToken :: " + accessToken);
-
+        accessToken.getRefresh_token();
         return accessToken.getAccess_token();
     }
 
@@ -66,7 +66,6 @@ public class NaverClient implements OauthClient{
         String url = user_url;
 
         log.debug("넘어온 토큰은:: " + accessToken);
-
         // 요청 객체 생성
         RestTemplate rt = new RestTemplate();
 

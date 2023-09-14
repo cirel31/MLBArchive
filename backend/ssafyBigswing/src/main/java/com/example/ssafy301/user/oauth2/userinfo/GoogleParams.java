@@ -28,4 +28,12 @@ public class GoogleParams implements OauthParams{
         return authorizationCode;
     }
 
+    public void setAuthorizationCode(String authorizationCode) {
+        this.authorizationCode = authorizationCode;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
 }

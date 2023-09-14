@@ -1,9 +1,7 @@
 package com.example.ssafy301.pitching.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.example.ssafy301.player.domain.Player;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +18,10 @@ public class Pitching {
     @Column(name = "pitching_stat_id")
     private Long id;
 
-    private Long playerId;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "player_id")
+    private Player player;
+
     private int season;
     private int gamesPlayed;
     private float inningsPlayed;

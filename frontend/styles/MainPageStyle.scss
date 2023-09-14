@@ -1,4 +1,54 @@
-.main-content01 {
+// .main-content01 {
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+// }
+
+// .mainphoto {
+//   width: 1000px;
+//   padding: 0 auto;
+// }
+body {
+}
+.grid-container {
   display: grid;
-  grid-template-columns:  repeat(2, 1fr);
+  grid-template-columns: 10% 20% auto;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+// .main {
+//   margin-top: 100px;
+// }
+
+.gametime {
+  border: 1px solid #eeebeb;
+  background: #eeebeb;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 250px;
+  margin-top: 10px;
+}
+
+.teamrank {
+  width: 770px;
+  border: 1px solid #eeebeb;
+  background: #eeebeb;
+  border-radius: 10px;
+  margin: 20px;
+  height: 1000px;
+}
+
+.rank {
+  width: 400px;
+  border: 1px solid #eeebeb;
+  background: #eeebeb;
+  border-radius: 10px;
+  margin: 20px;
+  // margin-top: 40px;
 }

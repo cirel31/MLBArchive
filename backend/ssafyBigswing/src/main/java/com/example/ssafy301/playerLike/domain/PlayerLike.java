@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -29,5 +29,5 @@ public class PlayerLike {
     @JoinColumn(name = "player_id")
     private Player player;
 
-    private LocalDateTime likedDate;
+    private LocalDate likedDate;
 }

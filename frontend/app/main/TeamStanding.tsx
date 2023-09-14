@@ -1,12 +1,12 @@
 const TeamStanding = () => {
-  
   return (
     <>
-      <div style={{height: '500px'}}>
-        팀별 순위 페이지
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="teamrank">팀랭킹</div>
+        <div className="rank">선수랭킹</div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default TeamStanding
+export default TeamStanding;

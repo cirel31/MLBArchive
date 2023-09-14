@@ -46,4 +46,6 @@ public class KakaoMember implements OauthMember{
     public void setNickName(String Temp){
         kakao_account.profile.nickname = Temp;
     }
+//    @Override
+//    public String getRefrechToken(){};
 }

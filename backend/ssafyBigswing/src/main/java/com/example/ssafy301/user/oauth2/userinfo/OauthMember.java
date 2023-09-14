@@ -8,4 +8,7 @@ public interface OauthMember {
     SocialType getOauthProvider();
     public String getProfileImage();
     public void setNickName(String Temp);
+
+    //public String getRefrechToken();
+    //public SocialType getSocialType();
 }
