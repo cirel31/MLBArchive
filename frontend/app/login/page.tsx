@@ -5,6 +5,8 @@ import Image from 'next/image'
 import kakao_btn from "../../assets/btn/kakao_btn_login.png"
 import google_btn_dark from "../../assets/btn/google_btn_dark.png"
 import naver_btn_light from "../../assets/btn/naver_btn_light.png"
+import {useDispatch, useSelector} from "react-redux";
+import {fetchReUserData} from "@/app/redux/features/userSlice";
 
 const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
@@ -17,12 +19,18 @@ const LoginPage = () => {
       const randomIndex = Math.floor(Math.random() * characters.length);
       result += characters.charAt(randomIndex);
     }
-
     return result;
   }
 
   useEffect(() => {
     SETSTATE(generateState())
+  }, [])
+
+  const testData = useSelector((state:any) => state.user)
+  const dispatch = useDispatch()
+  useEffect(() => {
+    console.log(testData)
+    dispatch(fetchReUserData())
   }, [])
 
   const BASE_URL = process.env.NEXT_PUBLIC_CLIENT_BASE_URL

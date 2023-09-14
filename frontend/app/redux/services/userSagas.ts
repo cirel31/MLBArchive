@@ -43,7 +43,6 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
     const response: AxiosResponse<any> = yield call(fetchUserDataAPI, code, state, kind)
     console.log('응답확인', response)
     if (response.data) {
-      console.log(response.data)
       yield put(fetchUserDataSuccess(response.data))
     }
   }
