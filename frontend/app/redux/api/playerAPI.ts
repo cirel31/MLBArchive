@@ -1,5 +1,4 @@
 import axios, { AxiosResponse } from "axios";
-import {call} from "@redux-saga/core/effects";
 
 const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
 const wordURL = process.env.NEXT_PUBLIC_PLAYERS_WORD_URL;
