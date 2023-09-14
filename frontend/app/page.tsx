@@ -1,6 +1,10 @@
-'use client'
+"use client";
 import {useRouter} from "next/navigation";
 import {useEffect} from "react";
+import "../styles/MainPageStyle.scss";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import Intro from "../app/intro/page";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchReUserData} from "@/app/redux/features/userSlice";
 
