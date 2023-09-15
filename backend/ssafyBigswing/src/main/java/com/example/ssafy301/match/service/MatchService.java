@@ -5,18 +5,22 @@ import com.example.ssafy301.common.api.status.FailCode;
 import com.example.ssafy301.match.domain.Match;
 import com.example.ssafy301.match.dto.MatchDetailDto;
 import com.example.ssafy301.match.dto.MatchDto;
+import com.example.ssafy301.match.dto.MatchSearchDto;
 import com.example.ssafy301.match.dto.QMatchDto;
 import com.example.ssafy301.match.repository.MatchRepository;
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
+import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.support.PageableExecutionUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 import static com.example.ssafy301.match.domain.QMatch.*;
@@ -57,7 +61,7 @@ public class MatchService {
 
         // 경기가 없으면 예외 발생
         if(currentMatches == null || currentMatches.size() == 0) {
-            throw new NotFoundException(FailCode.NO_MATCH);
+            throw new NotFoundException(FailCode.NO_MATCHES);
         }
 
         // 시간 순으로 정렬할 것
@@ -81,4 +85,31 @@ public class MatchService {
     }
 
     // 경기 검색
+    public Page<MatchDto> searchMatch(Pageable pageable, MatchSearchDto searchDto) {
+        JPAQuery<MatchDto> matchQuery = queryFactory
+                .select(new QMatchDto(match))
+                .from(match)
+                .where(matchTeam(searchDto),
+                        matchDateIn(searchDto))
+                .offset(pageable.getOffset())
+                .limit(pageable.getPageSize());
+
+        List<MatchDto> matchList = matchQuery.fetch();
+        // 경기가 없으면 예외발생
+        if(matchList == null || matchList.size() == 0) {
+            throw new NotFoundException(FailCode.NO_MATCHES);
+        }
+
+        return PageableExecutionUtils.getPage(matchList, pageable, matchQuery::fetchCount);
+    }
+
+    private BooleanExpression matchDateIn(MatchSearchDto searchDto) {
+        // 입력 기간 내의 경기목록
+        return match.matchDate.between(searchDto.getStart().atStartOfDay(), searchDto.getEnd().atTime(LocalTime.MAX));
+    }
+
+    private BooleanExpression matchTeam(MatchSearchDto searchDto) {
+        // 팀 이름 같은 것을 가져옴
+        return match.homeName.eq(searchDto.getTeamName()).or(match.awayName.eq(searchDto.getTeamName()));
+    }
 }

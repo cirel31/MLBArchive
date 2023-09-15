@@ -3,12 +3,12 @@ package com.example.ssafy301.match.controller;
 import com.example.ssafy301.common.api.ResponseEntity;
 import com.example.ssafy301.match.dto.MatchDetailDto;
 import com.example.ssafy301.match.dto.MatchDto;
+import com.example.ssafy301.match.dto.MatchSearchDto;
 import com.example.ssafy301.match.service.MatchService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,5 +35,10 @@ public class MatchController {
         return ResponseEntity.success(GENERAL_SUCCESS, result);
     }
     
-    // 경기 검색(Querydsl 쓸까 고민중이어서 일단 보류)
+    // 경기 검색
+    @GetMapping("/search")
+    public ResponseEntity getMathesBySearchCondition(Pageable pageable, @RequestBody MatchSearchDto matchSearchDto) {
+        Page<MatchDto> result = matchService.searchMatch(pageable, matchSearchDto);
+        return ResponseEntity.success(GENERAL_SUCCESS, result);
+    }
 }
