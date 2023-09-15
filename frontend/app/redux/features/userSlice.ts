@@ -1,13 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// interface UserData {
-//   id: number;
-//   nickname: string;
-//   email: string;
-//   profileImage: string;
-//   // 만약 서버에서 profileImage를 Bolb 객체로 준다면
-//   // profileImage: Blob;
-// }
 interface UserState {
   isLoading: boolean;
   isLoggedIn: boolean;
