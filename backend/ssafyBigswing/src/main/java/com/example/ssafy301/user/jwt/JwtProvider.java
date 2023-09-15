@@ -2,6 +2,7 @@ package com.example.ssafy301.user.jwt;
 
 import com.example.ssafy301.user.domain.User;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Setter;
@@ -50,6 +51,19 @@ public class JwtProvider {
         log.debug("해독된 토큰:: " + claims.getSubject());
         return claims.getSubject();
     }
+
+    public Claims getClaims(String token) {
+        try {
+            return Jwts.parserBuilder()
+                    .setSigningKey(DatatypeConverter.parseBase64Binary(secretKey))
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+        } catch (ExpiredJwtException e) { // Access Token
+            return e.getClaims();
+        }
+    }
+
 
     /* 유효성 확인(해독된 jwt) */
     public boolean vaildToken(String jwt) {

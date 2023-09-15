@@ -77,4 +77,18 @@ public class OAuthService {
         log.debug("------ JWT 발급완료 ------");
         return new UserDTO(oauthMember.getEmail(), oauthMember.getNickName(), oauthMember.getProfileImage(), oauthMember.getOauthProvider(), refreshToken, accessJwt);
     }
+
+    // "Bearer {AT}"에서 {AT} 추출
+    public String resolveToken(String requestAccessTokenInHeader) {
+        if (requestAccessTokenInHeader != null && requestAccessTokenInHeader.startsWith("Bearer ")) {
+            return requestAccessTokenInHeader.substring(7);
+        }
+        return null;
+    }
+
+    public Long extractID(String accessToken) {
+        String token = resolveToken(accessToken);
+        return Long.parseLong(jwtProvider.getClaims(token).get("user_id").toString());
+    }
+
 }
