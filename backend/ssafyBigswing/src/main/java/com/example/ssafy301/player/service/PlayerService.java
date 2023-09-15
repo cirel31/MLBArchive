@@ -96,6 +96,7 @@ public class PlayerService {
     }
 
     private BooleanExpression playernameContains(String content) {
-        return player.name.contains(content).or(player.korName.contains(content));
+        String lowerContent = content.toLowerCase();
+        return player.name.toLowerCase().contains(lowerContent).or(player.korName.contains(content));
     }
 }
