@@ -28,7 +28,7 @@ const GoogleLoginPage = () => {
   const userId = useSelector((state:any) => state.user.userData?.userId)
   useEffect(() => {
     if (isLoggedIn) {
-      router.push(`/user/${userId}`)
+      router.push(`/user/mypage`)
     }
   }, [isLoggedIn])
   return (
