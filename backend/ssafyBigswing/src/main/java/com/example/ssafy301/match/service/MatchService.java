@@ -86,21 +86,27 @@ public class MatchService {
 
     // 경기 검색
     public Page<MatchDto> searchMatch(Pageable pageable, MatchSearchDto searchDto) {
-        JPAQuery<MatchDto> matchQuery = queryFactory
+        List<MatchDto> matchList = queryFactory
                 .select(new QMatchDto(match))
                 .from(match)
                 .where(matchTeam(searchDto),
                         matchDateIn(searchDto))
                 .offset(pageable.getOffset())
-                .limit(pageable.getPageSize());
+                .limit(pageable.getPageSize())
+                .fetch();
 
-        List<MatchDto> matchList = matchQuery.fetch();
         // 경기가 없으면 예외발생
         if(matchList == null || matchList.size() == 0) {
             throw new NotFoundException(FailCode.NO_MATCHES);
         }
 
-        return PageableExecutionUtils.getPage(matchList, pageable, matchQuery::fetchCount);
+        JPAQuery<Long> countQuery = queryFactory
+                .select(match.count())
+                .from(match)
+                .where(matchTeam(searchDto),
+                        matchDateIn(searchDto));
+
+        return PageableExecutionUtils.getPage(matchList, pageable, countQuery::fetchOne);
     }
 
     private BooleanExpression matchDateIn(MatchSearchDto searchDto) {

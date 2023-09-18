@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -34,9 +34,9 @@ public class Player {
     private String image;
 
     @Column(name = "debut_date")
-    private LocalDateTime debutDate;
+    private LocalDate debutDate;
     @Column(name = "retire_date")
-    private LocalDateTime retireDate;
+    private LocalDate retireDate;
     private String hometown;
     private int backnumber;
 
