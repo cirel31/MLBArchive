@@ -31,8 +31,9 @@ apiGet.interceptors.request.use(
     console.log(config)
     if (isClient) {
       const token = sessionStorage.getItem("refreshToken");
+      const parsedToken = token?.substring(1, token.length - 1) ?? null
       if (token) {
-        config.headers['refreshToken'] = token;
+        config.headers['refreshToken'] = parsedToken;
       }
     }
     return config;
@@ -55,6 +56,7 @@ apiPostJson.interceptors.request.use(
   config => {
     if (isClient) {
       const token = sessionStorage.getItem("refreshToken");
+      const parsedToken = token?.substring(1, token.length - 1) ?? null
       if (token) {
         config.headers['Authorization'] = `Bearer ${token}`;
       }

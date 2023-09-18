@@ -9,7 +9,7 @@ const DATA_URL_HITTING = '/api/hitting/detail'
 const DATA_URL_PITCHING  = '/api/pitching/detail'
 const DATA_URL_FIELDING = '/api/fielding/detail'
 
-export const fetchPlayerWordDataAPI = (word: string, page: string, size: string): Promise<AxiosResponse> => {
+export const fetchPlayerWordDataAPI = async (word: string, page: string, size: string): Promise<AxiosResponse> => {
   console.log('API 경로 확인 : ', `${baseURL}${wordURL}?page${page}&size=${size}`)
   return apiGet.get(`${wordURL}?word=${word}&page=${page}&size=${size}`)
 }
