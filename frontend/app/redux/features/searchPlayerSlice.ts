@@ -8,13 +8,13 @@ export const searchPlayerResultSlice: any = createSlice({
   name: 'searchPlayer',
   initialState,
   reducers: {
-    fetchPlayerWordData: (state, action: PayloadAction<string>) => {
-      console.log(action.payload)
+    fetchPlayerWordData: (state, action: PayloadAction<any>) => {
+      console.log("암느웅머ㅜㅋㅌ추ㅏㅁㄴ유", action.payload )
     },
     fetchPlayerWordDataSuccess: (state, action: PayloadAction<any>) => {
       state.wordParseResult = action.payload
     },
-    fetchPlayerLetterData: (state, action: PayloadAction<string>) => {
+    fetchPlayerLetterData: (state, action: PayloadAction<any>) => {
 
     },
     fetchPlayerLetterDataSuccess: (state, action: PayloadAction<any>) => {

@@ -19,6 +19,7 @@ public class Player {
     @Column(name = "player_id")
     private Long id;
     private String name;
+    private String korName;
     private boolean isPlaying;
     private int height;
     private int weight;
@@ -37,6 +38,7 @@ public class Player {
     @Column(name = "retire_date")
     private LocalDateTime retireDate;
     private String hometown;
+    private int backnumber;
 
 
 

@@ -40,12 +40,23 @@ export const userSlice = createSlice({
       state.isLoading = true
       console.log("슬라이스 접근 확인")
     },
-    fetchUserDataSuccess: (state, action: PayloadAction<{userData: any; accessToken: string; refreshToken: string}>) => {
+    fetchReUserData: (state) => {
+      const refreshToken = sessionStorage.getItem("refreshToken") ?? null
+      if (refreshToken && !state.accessToken) {
+        console.log("토큰토큰")
+        console.log(refreshToken)
+      }
+    },
+    fetchUserDataSuccess: (state, action: PayloadAction<any>) => {
+      console.log(action.payload)
       state.isLoading = false
       state.isLoggedIn = true
       state.userData = action.payload.userData
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
+      console.log(initialState)
+      console.log(state)
+      console.log({...state});
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
       // state.isLoading = false
@@ -89,5 +100,6 @@ export const {
   addFollowTeam,
   removeFollowPlayer,
   removeFollowTeam,
+  fetchReUserData,
 } = userSlice.actions
 export default userSlice.reducer

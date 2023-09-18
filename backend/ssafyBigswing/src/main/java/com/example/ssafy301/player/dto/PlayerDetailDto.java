@@ -14,6 +14,7 @@ public class PlayerDetailDto {
 
     private Long id;
     private String name;
+    private String korName;
     private boolean isPlaying;
     private int height;
     private int weight;
@@ -23,11 +24,13 @@ public class PlayerDetailDto {
     private LocalDateTime debutDate;
     private LocalDateTime retireDate;
     private String hometown;
+    private int backnumber;
     private List<Integer> activeYears;
 
     public PlayerDetailDto(Player player, List<Integer> activeYears) {
         this.id = player.getId();
         this.name = player.getName();
+        this.korName = player.getKorName();
         this.isPlaying = player.isPlaying();
         this.height = player.getHeight();
         this.weight = player.getWeight();
@@ -37,6 +40,7 @@ public class PlayerDetailDto {
         this.debutDate = player.getDebutDate();
         this.retireDate = player.getRetireDate();
         this.hometown = player.getHometown();
+        this.backnumber = player.getBacknumber();
         this.activeYears = new ArrayList<>(activeYears);
     }
 }

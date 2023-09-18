@@ -1,5 +1,5 @@
-import RecentGame from "@/app/main/RecentGame";
-import TeamStanding from "@/app/main/TeamStanding";
+import RecentGame from "@/app/main/components/RecentGame";
+import TeamStanding from "@/app/main/components/TeamStanding";
 import "../../styles/MainPageStyle.scss"
 
 const MainPage = () => {
