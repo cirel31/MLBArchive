@@ -1,55 +1,36 @@
 import axios, { AxiosResponse } from "axios";
-import {apiGet, apiJsonType} from "./apiConfig"
+import {apiGet, apiJsonType, apiPostJson} from "./apiConfig"
 
 const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
 const oauthURL = process.env.NEXT_PUBLIC_OAUTH_SERVER_URL;
 const updateURL = '/api/users/update'
-const playerFollowURL = '/api/users/playerlike'
-const teamFollowURL = '/api/users/teamlike'
+const playerFollowURL = '/api/users/playerLike'
+const teamFollowURL = '/api/users/teamLike'
 const reLoadDataURL = '/api/users/user'
+const addPlayerURL = '/api/playerlike/like'
+const addTeamURL = 'api/teamlike/like'
 
 export const fetchUserDataAPI = async (code: string, state: string, kind: string): Promise<AxiosResponse> => {
   console.log(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
-  return axios.get(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`);
-}
-
-export const getNewTokenAPI = () => {
-  console.log('test')
+  return await axios.get(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`);
 }
 export const getReLoadDataAPI = async () => {
-  console.log("여기까진 되지???")
-  const response = await apiGet.get(`${reLoadDataURL}`)
-  console.log(response)
-  return response
+  return await apiGet.get(`${reLoadDataURL}`)
 }
 
-
-export const userInfoUpdateAPI = async (accessToken:string, data:any) => {
-  return apiJsonType.post(`${updateURL}`,
-    data,
-    {
-      headers: {
-        Authorization: accessToken,
-      }
-    })
+export const userInfoUpdateAPI = async (data:any) => {
+  return await apiJsonType.post(`${updateURL}`, data)
 }
-
-export const userTeamFollowAPI = async (accessToken:string, data:any) => {
-  return apiJsonType.post(`${teamFollowURL}`,
-    data,
-    {
-      headers: {
-        Authorization: accessToken,
-      }
-    })
+export const userTeamFollowAPI = async () => {
+  return await apiGet.get(`${teamFollowURL}`)
 }
-export const userPlayerFollowAPI = async (accessToken:string, data:any) => {
-  return apiJsonType.post(`${playerFollowURL}`,
-    data,
-    {
-      headers: {
-        Authorization: accessToken,
-      }
-    })
+export const userPlayerFollowAPI = async () => {
+  return await apiGet.get(`${playerFollowURL}`)
+}
+export const addTeamFollowAPI = async (data:any) => {
+  return await apiPostJson.get(`${addTeamURL}`, data)
+}
+export const addPlayerFollowAPI = async (data:any) => {
+  return await apiPostJson.get(`${addPlayerURL}`, data)
 }
 
