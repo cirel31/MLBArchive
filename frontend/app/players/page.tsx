@@ -19,6 +19,8 @@ const AllPlayers = () => {
   const dispatch = useDispatch()
   const router = useRouter()
   const searchLetter = useSelector((state: any) => state.searchPlayer.firstLetterList)
+  const [nowPage, setNowPage] = useState(1)
+  const articlePerPage = 30
   const [isActive, setIsActive] = useState([
     false, false, false, false, false, false,
     false, false, false, false, false, false,
@@ -36,7 +38,10 @@ const AllPlayers = () => {
     setIsActive(updatedIsActive);
     const selectedAlphabet = alphabets[idx]
     console.log(selectedAlphabet)
-    dispatch(fetchPlayerLetterData(selectedAlphabet))
+    const action = {
+      searchData: selectedAlphabet, nowPage: nowPage, articlePerPage: articlePerPage
+    }
+    dispatch(fetchPlayerLetterData(action))
   }
 
   const handleDetailPage = (id:string) => {

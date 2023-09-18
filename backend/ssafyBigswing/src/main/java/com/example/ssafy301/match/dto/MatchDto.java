@@ -1,6 +1,7 @@
 package com.example.ssafy301.match.dto;
 
 import com.example.ssafy301.match.domain.Match;
+import com.querydsl.core.annotations.QueryProjection;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class MatchDto {
     private String status;
     private int currentInning;
 
+    @QueryProjection
     public MatchDto(Match match) {
         this.id = match.getId();
         this.homeId = match.getHomeId();

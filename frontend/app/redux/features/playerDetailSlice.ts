@@ -39,12 +39,21 @@ export const playerDetailSlice = createSlice({
       console.log(action.payload)
     },
     fetchPlayerDataSuccess: (state, action: PayloadAction<any>) => {
-      const {activeYears, ...restData} = action.payload.info
+      const {activeYears, ...restData} = action.payload
       state.playerData = restData
       state.playerActive = activeYears
-      state.playerHitting = action.payload.hitting
-      state.playerPitching = action.payload.pitching
-      state.playerFielding = action.payload.fielding
+    },
+    fetchPlayerSeasonDetailData: (state, action: PayloadAction<any>) => {
+      console.log(action.payload)
+    },
+    fetchPlayerHittingDataSuccess: (state, action: PayloadAction<any>) => {
+      state.playerHitting = action.payload
+    },
+    fetchPlayerPitchingDataSuccess: (state, action: PayloadAction<any>) => {
+      state.playerPitching = action.payload
+    },
+    fetchPlayerFieldingDataSuccess: (state, action: PayloadAction<any>) => {
+      state.playerFielding = action.payload
     },
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload
@@ -55,6 +64,10 @@ export const playerDetailSlice = createSlice({
 export const {
   fetchPlayerDetailData,
   fetchPlayerDataSuccess,
-  fetchPlayerDataError
+  fetchPlayerDataError,
+  fetchPlayerSeasonDetailData,
+  fetchPlayerHittingDataSuccess,
+  fetchPlayerPitchingDataSuccess,
+  fetchPlayerFieldingDataSuccess,
 } = playerDetailSlice.actions
 export default playerDetailSlice.reducer
