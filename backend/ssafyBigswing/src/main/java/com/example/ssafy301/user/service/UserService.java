@@ -8,6 +8,7 @@ import com.example.ssafy301.user.domain.User;
 import com.example.ssafy301.user.dto.UserDTO;
 import com.example.ssafy301.user.dto.UserUpdateDTO;
 import com.example.ssafy301.user.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class UserService {
     @Autowired
     private UserRepository userRepository;
@@ -29,6 +31,7 @@ public class UserService {
         Optional<User> optionUser= userRepository.findByRefreshToken(refreshToken);
         User user = optionUser.orElse(null);
         if (user == null) {
+            log.debug("여기는 트라이 입니다아아아아아악");
             throw new IllegalArgumentException("No user found with the provided refreshToken");
         }
         // DTO 변환 로직 (이 부분은 User와 UserDTO의 구조에 따라 다를 수 있습니다)
