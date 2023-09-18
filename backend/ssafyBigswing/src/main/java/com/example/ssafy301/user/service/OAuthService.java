@@ -68,6 +68,7 @@ public class OAuthService {
 
         log.debug("------ JWT 발급 ------");
         accessJwt = jwtProvider.createToken(accessUser);
+        log.debug("------ JWT 발급 ------222222222222");
         String refreshToken = jwtProvider.createRefreshToken(accessUser);
         // DB에 리프레시 토큰 저장 (이 부분은 옵션이며, 리프레시 토큰을 DB에 저장해야할 경우에만 필요합니다.)
         if (result == null) { // 새로운 유저의 경우
