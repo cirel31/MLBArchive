@@ -298,7 +298,7 @@ const TeamsPage = () => {
   };
 
   const searchTeamData = (key: any) => {
-    dispatch(fetchTeamDataRequest(key));
+    // dispatch(fetchTeamDataRequest(key));
     // router.push(`/teams/${key}`)
   };
   return (
