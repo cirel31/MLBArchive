@@ -1,8 +1,10 @@
 'use client'
 import {useEffect} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
+import {useRouter} from "next/navigation";
 const GoogleLoginPage = () => {
+  const router = useRouter()
   let code: string | null = null;
   let scope: string | null = null;
   let state: string | null = null;
@@ -22,6 +24,13 @@ const GoogleLoginPage = () => {
     dispatch(fetchUserData(accessKey))
 
   }, [code])
+  const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
+  const userId = useSelector((state:any) => state.user.userData?.userId)
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push(`/user/${userId}`)
+    }
+  }, [isLoggedIn])
   return (
     <>
       <div>

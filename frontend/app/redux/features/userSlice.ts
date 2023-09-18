@@ -41,14 +41,21 @@ export const userSlice = createSlice({
     },
     fetchUserDataSuccess: (state, action: PayloadAction<any>) => {
       console.log(action.payload)
+      const email = action.payload.email
+      const nickname = action.payload.nickname
+      const image = action.payload.profileImage
+      const userId = email.split('@')[0]
       state.isLoading = false
       state.isLoggedIn = true
-      state.userData = action.payload.userData
+
+      state.userData = {
+        userId: userId,
+        email: email,
+        nickname: nickname,
+        image: image ?? 'defaultImg'
+      }
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
-      console.log(initialState)
-      console.log(state)
-      console.log({...state});
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
       // state.isLoading = false
