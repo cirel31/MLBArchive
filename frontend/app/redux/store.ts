@@ -33,6 +33,7 @@ const sessionSaverMiddleware = (store: any) => (next: any) => (action: any) => {
       sessionStorage.setItem('refreshToken', JSON.stringify(userState));
     }
   }
+  console.log(sessionStorage.getItem("refreshToken"))
   return result;
 };
 
