@@ -30,6 +30,7 @@ public class UserService {
     public UserDTO getUserByRefreshToken(String refreshToken) {
         Optional<User> optionUser= userRepository.findByRefreshToken(refreshToken);
         User user = optionUser.orElse(null);
+        log.debug("리프레시 : "+refreshToken);
         if (user == null) {
             log.debug("여기는 트라이 입니다아아아아아악");
             throw new IllegalArgumentException("No user found with the provided refreshToken");

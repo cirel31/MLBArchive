@@ -10,19 +10,20 @@ const MyPage = () => {
     dispatch(fetchReUserData())
   }, [])
   
-  const testBTN = () => {
+  const testBTN = (e) => {
+    e.preventDefault
     dispatch(fetchReUserData())
   }
   return (
     <>
       <div>
-        {Object.entries(userData as Record<string, string>).map(([key, value]) => (
+        {/* {Object.entries(userData as Record<string, string>).map(([key, value]) => (
           <div key={key}>
             {/.(jpg|png|gif)$/.test(value) ? (
               <img src={value} alt={key} />
             ) : (value)}
           </div>
-        ))}
+        ))} */}
         <p>아 지랄 자제좀;;</p>
         <button onClick={testBTN}>유저 정보 다시 받아오기 테스트</button>
       </div>
