@@ -25,7 +25,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/user")
-    public ResponseEntity<UserDTO> getUserByRefreshToken(@RequestHeader("Authorization") String refreshToken) {
+    public ResponseEntity<UserDTO> getUserByRefreshToken(@RequestHeader("refreshToken") String refreshToken) {
         try {
             UserDTO userDTO = userService.getUserByRefreshToken(refreshToken);
             return ResponseEntity.status(HttpStatus.OK).body(userDTO);
@@ -35,7 +35,7 @@ public class UserController {
     }
 
     @GetMapping("/playerLike")
-    public ResponseEntity<List<PlayerLikeDto>> getLikedPlayers(@RequestHeader("Authorization") String refreshToken) {
+    public ResponseEntity<List<PlayerLikeDto>> getLikedPlayers(@RequestHeader("refreshToken") String refreshToken) {
         try {
             List<PlayerLikeDto> likedPlayers = userService.getLikedPlayersByRefreshToken(refreshToken);
             return ResponseEntity.status(HttpStatus.OK).body(likedPlayers);
@@ -45,7 +45,7 @@ public class UserController {
     }
 
     @GetMapping("/teamLike")
-    public ResponseEntity<List<TeamLikeDto>> getLikedTeams(@RequestHeader("Authorization") String refreshToken) {
+    public ResponseEntity<List<TeamLikeDto>> getLikedTeams(@RequestHeader("refreshToken") String refreshToken) {
         List<TeamLikeDto> likedTeams = userService.getLikedTeamsByRefreshToken(refreshToken);
         return ResponseEntity.ok(likedTeams);
     }

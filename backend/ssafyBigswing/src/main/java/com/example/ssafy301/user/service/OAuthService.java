@@ -32,6 +32,9 @@ public class OAuthService {
         if(oauthMember.getNickName()==null){
             oauthMember.setNickName(oauthMember.getEmail());
         }
+        if(oauthMember.getProfileImage()==null){
+            oauthMember.setProfileimage("https://505bucket.s3.ap-northeast-2.amazonaws.com/basic_psa.jpg");
+        }
         // 획득한 회원정보로 검증할 User 객체 생성
         User accessUser = User.builder()
                 .email(oauthMember.getEmail())

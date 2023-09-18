@@ -57,4 +57,7 @@ public class GoogleMember implements OauthMember {
     public void setNickName(String Temp) {
         this.name = Temp;
     }
+
+    @Override
+    public void setProfileimage(String link){this.picture = link;}
 }

@@ -41,4 +41,7 @@ public class NaverMember implements OauthMember{
     public void setNickName(String Temp){
         response.name = Temp;
     }
+
+    @Override
+    public void setProfileimage(String link){response.profile_image = link;}
 }
