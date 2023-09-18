@@ -3,10 +3,10 @@ import axios, { AxiosResponse } from "axios";
 import {
   fetchUserData, fetchUserDataSuccess, fetchDataError, fetchUserLogout,
   fetchFollowData, fetchFollowDataSuccess,
-  addFollowTeam, removeFollowTeam, addFollowPlayer, removeFollowPlayer,
+  addFollowTeam, removeFollowTeam, addFollowPlayer, removeFollowPlayer, fetchReUserData,
 } from "@/app/redux/features/userSlice";
 import {PayloadAction} from "@reduxjs/toolkit";
-import {fetchUserDataAPI} from "@/app/redux/api/userAPI";
+import {fetchUserDataAPI, getReLoadDataAPI} from "@/app/redux/api/userAPI";
 
 const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL
 const oauthURL = process.env.NEXT_PUBLIC_OAUTH_SERVER_URL
@@ -49,6 +49,16 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
   catch (error) {
     yield put(fetchDataError(error as Error))
   }
+}
+function* fetchReUserDataSaga(action: PayloadAction<any>) {
+  try {
+    const response: AxiosResponse<any> = yield call(getReLoadDataAPI)
+    console.log(response)
+  }
+  catch (error) {
+
+  }
+
 }
 function* fetchFollowDataSaga(action: PayloadAction<any>) {
   try {
@@ -172,5 +182,5 @@ export function* watchFetchUserData() {
   yield takeLatest(removeFollowTeam.type, removeFollowTeamSaga)
   yield takeLatest(addFollowPlayer.type, addFollowPlayerSaga)
   yield takeLatest(removeFollowPlayer.type, removeFollowPlayerSaga)
-
+  yield takeLatest(fetchReUserData.type, fetchReUserDataSaga)
 }

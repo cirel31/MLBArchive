@@ -1,13 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-// interface UserData {
-//   id: number;
-//   nickname: string;
-//   email: string;
-//   profileImage: string;
-//   // 만약 서버에서 profileImage를 Bolb 객체로 준다면
-//   // profileImage: Blob;
-// }
 interface UserState {
   isLoading: boolean;
   isLoggedIn: boolean;
@@ -49,14 +41,21 @@ export const userSlice = createSlice({
     },
     fetchUserDataSuccess: (state, action: PayloadAction<any>) => {
       console.log(action.payload)
+      const email = action.payload.email
+      const nickname = action.payload.nickname
+      const image = action.payload.profileImage
+      const userId = email.split('@')[0]
       state.isLoading = false
       state.isLoggedIn = true
-      state.userData = action.payload.userData
+
+      state.userData = {
+        userId: userId,
+        email: email,
+        nickname: nickname,
+        image: image ?? 'defaultImg'
+      }
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
-      console.log(initialState)
-      console.log(state)
-      console.log({...state});
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
       // state.isLoading = false
