@@ -17,7 +17,7 @@ import java.util.Date;
 @Setter
 @Component
 public class JwtProvider {
-    private String secretKey ="dasdasf234fuhvertsv34789yhiuFDSIUFGYDTE5r~~~~~~";
+    private String secretKey ="dasdasf234fuhvertsv34789yhiuFDSIUFGYDTE5rsfdsdflkasfkljafkljasfkljafijwijfwjfiwjfij";
 
     @Value("${jwt.refreshTokenExpirationMs}")
     private long refreshTokenExpirationMs;
@@ -28,11 +28,12 @@ public class JwtProvider {
     public String createToken(User user) {
         Date now = new Date(System.currentTimeMillis());
         Long expiration = 1000 * 60 * 60L; //만료기한 설정 시 사용
-
+        log.debug("------ JWT 발급 ------3333333");
         /* 토큰이 보관할 회원ID */
         Claims claims = Jwts.claims();
+        log.debug("------ JWT 발급 ------5555555555555");
         claims.put("userId", user.getId()); //비공개 클레임 등록
-
+        log.debug("------ JWT 발급 ------44444444444444");
         return Jwts.builder().setHeaderParam("typ", "JWT") // 토큰 타입 지정
                 .setSubject("accessToken") // 토큰 제목
                 .setIssuedAt(now) // 발급시간
