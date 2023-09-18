@@ -1,6 +1,5 @@
 package com.example.ssafy301.user.domain;
 
-import com.example.ssafy301.common.domain.util.BaseTimeEntity;
 import com.example.ssafy301.user.SocialType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -42,6 +41,12 @@ public class User {
 
     public void updateRefreshToken(String updateRefreshToken) {
         this.refreshToken = updateRefreshToken;
+    }
+
+    // 수정 메서드
+    public void update(String newnickname, String newprofileimage ) {
+        this.nickname = newnickname;
+        this.profileImage = newprofileimage;
     }
 
 

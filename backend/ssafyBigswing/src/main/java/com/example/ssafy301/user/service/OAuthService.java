@@ -32,6 +32,9 @@ public class OAuthService {
         if(oauthMember.getNickName()==null){
             oauthMember.setNickName(oauthMember.getEmail());
         }
+        if(oauthMember.getProfileImage()==null){
+            oauthMember.setProfileimage("https://505bucket.s3.ap-northeast-2.amazonaws.com/basic_psa.jpg");
+        }
         // 획득한 회원정보로 검증할 User 객체 생성
         User accessUser = User.builder()
                 .email(oauthMember.getEmail())
@@ -77,4 +80,18 @@ public class OAuthService {
         log.debug("------ JWT 발급완료 ------");
         return new UserDTO(oauthMember.getEmail(), oauthMember.getNickName(), oauthMember.getProfileImage(), oauthMember.getOauthProvider(), refreshToken, accessJwt);
     }
+
+    // "Bearer {AT}"에서 {AT} 추출
+    public String resolveToken(String requestAccessTokenInHeader) {
+        if (requestAccessTokenInHeader != null && requestAccessTokenInHeader.startsWith("Bearer ")) {
+            return requestAccessTokenInHeader.substring(7);
+        }
+        return null;
+    }
+
+    public Long extractID(String accessToken) {
+        String token = resolveToken(accessToken);
+        return Long.parseLong(jwtProvider.getClaims(token).get("user_id").toString());
+    }
+
 }
