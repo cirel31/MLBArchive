@@ -8,7 +8,7 @@ const playerFollowURL = '/api/users/playerlike'
 const teamFollowURL = '/api/users/teamlike'
 const reLoadDataURL = '/api/users/user'
 
-export const fetchUserDataAPI = (code: string, state: string, kind: string): Promise<AxiosResponse> => {
+export const fetchUserDataAPI = async (code: string, state: string, kind: string): Promise<AxiosResponse> => {
   console.log(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
   return axios.get(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`);
 }
@@ -17,7 +17,10 @@ export const getNewTokenAPI = () => {
   console.log('test')
 }
 export const getReLoadDataAPI = async () => {
-  return apiGet.get(`${reLoadDataURL}`)
+  console.log("여기까진 되지???")
+  const response = await apiGet.get(`${reLoadDataURL}`)
+  console.log(response)
+  return response
 }
 
 

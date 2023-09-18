@@ -54,6 +54,9 @@ function* fetchReUserDataSaga(action: PayloadAction<any>) {
   try {
     const response: AxiosResponse<any> = yield call(getReLoadDataAPI)
     console.log(response)
+    if (response) {
+      yield put(fetchUserDataSuccess(response))
+    }
   }
   catch (error) {
 
