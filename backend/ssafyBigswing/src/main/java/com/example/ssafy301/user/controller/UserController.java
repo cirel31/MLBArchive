@@ -1,5 +1,7 @@
 package com.example.ssafy301.user.controller;
 
+import com.example.ssafy301.common.api.ResponseEntity;
+import com.example.ssafy301.common.api.status.SuccessCode;
 import com.example.ssafy301.playerLike.dto.PlayerLikeDto;
 import com.example.ssafy301.teamLike.dto.TeamLikeDto;
 import com.example.ssafy301.user.dto.UserDTO;
@@ -8,8 +10,6 @@ import com.example.ssafy301.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,34 +26,27 @@ public class UserController {
 
     @GetMapping("/user")
     public ResponseEntity<UserDTO> getUserByRefreshToken(@RequestHeader("refreshToken") String refreshToken) {
-        try {
-            UserDTO userDTO = userService.getUserByRefreshToken(refreshToken);
-            return ResponseEntity.status(HttpStatus.OK).body(userDTO);
-        } catch (IllegalArgumentException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+        UserDTO userDTO = userService.getUserByRefreshToken(refreshToken);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, userDTO);
     }
 
     @GetMapping("/playerLike")
     public ResponseEntity<List<PlayerLikeDto>> getLikedPlayers(@RequestHeader("refreshToken") String refreshToken) {
-        try {
-            List<PlayerLikeDto> likedPlayers = userService.getLikedPlayersByRefreshToken(refreshToken);
-            return ResponseEntity.status(HttpStatus.OK).body(likedPlayers);
-        } catch(RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
+        List<PlayerLikeDto> likedPlayers = userService.getLikedPlayersByRefreshToken(refreshToken);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, likedPlayers);
+
     }
 
     @GetMapping("/teamLike")
     public ResponseEntity<List<TeamLikeDto>> getLikedTeams(@RequestHeader("refreshToken") String refreshToken) {
         List<TeamLikeDto> likedTeams = userService.getLikedTeamsByRefreshToken(refreshToken);
-        return ResponseEntity.ok(likedTeams);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, likedTeams);
     }
 
     @PostMapping("/update")
     public ResponseEntity updateUser(@RequestBody UserUpdateDTO dto) {
         userService.updateUser(dto);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS);
     }
 
 

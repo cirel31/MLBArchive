@@ -29,6 +29,6 @@ public class PlayerLikeController {
     public ResponseEntity<PlayerLike> likePlayer(@RequestHeader("refreshToken") String refreshToken, @RequestBody Map<String, Long> payload) {
         Long playerId = payload.get("playerId");
         PlayerLike playerLike = playerLikeService.savePlayerLike(refreshToken, playerId);
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, playerLike);
     }
 }
