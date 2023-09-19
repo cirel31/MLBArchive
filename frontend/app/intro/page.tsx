@@ -9,8 +9,14 @@ import member_img from "../../assets/intro/Group 134.png";
 import Image from "next/image";
 import TeamMarks from "./teammark";
 import intro_img from "../../assets/intro/intro_pull.png";
+import Gallery from "./gallery";
+import dynamic from "next/dynamic";
+import Real from "./real";
 
 function Intro() {
+  const DynamicComponentWithNoSSR = dynamic(() => import("./gallery"), {
+    ssr: false,
+  });
   useEffect(() => {
     gsap.registerPlugin(ScrollToPlugin);
     const image = document.querySelector("img") as HTMLImageElement;
@@ -56,6 +62,8 @@ function Intro() {
 
   return (
     <>
+      <Real />
+      <Gallery />
       <div className="starBg"></div>
       <section className="top">
         <Image src={intro_img} className="title" alt="엑박" />
