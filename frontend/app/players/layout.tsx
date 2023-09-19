@@ -8,7 +8,7 @@ export default function PlayersLayout({
 }) {
   return (
     <>
-      <AppBar />
+      {/*<AppBar />*/}
       {children}
     </>
   )

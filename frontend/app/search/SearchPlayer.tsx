@@ -7,11 +7,10 @@ import {useRouter} from "next/navigation";
 const SearchPlayer = () => {
   const router = useRouter()
   const dispatch = useDispatch()
-  const [nowPage, setNowPage] = useState(1)
+  const [nowPage, setNowPage] = useState(0)
   const [searchData, setSearchData] = useState('')
   const playerResult = useSelector((state: any) => state.searchPlayer.wordParseResult)
   const searchPlayer = () => {
-    console.log('시;발')
     console.log(searchData)
     if (searchData.length < 2) {
       Swal.fire({
@@ -22,7 +21,6 @@ const SearchPlayer = () => {
       })
     }
     else {
-      console.log('디스패치 실행')
       const action = {
         searchData: searchData, nowPage:nowPage, articlePerPage:30
       }
@@ -46,7 +44,7 @@ const SearchPlayer = () => {
         <button onClick={searchPlayer}>
           확인
         </button>
-        {playerResult.map((player: any) => (
+        {playerResult && playerResult.map((player: any) => (
           <div key={player.id} onClick={() => router.push(`/players/${player.id}`)}>
             {player.id}
             {player.name}
