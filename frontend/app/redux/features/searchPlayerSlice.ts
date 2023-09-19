@@ -1,15 +1,15 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
-  firstLetterList: [],
-  wordParseResult: [],
+  firstLetterList: null,
+  wordParseResult: null,
 }
 export const searchPlayerResultSlice: any = createSlice({
   name: 'searchPlayer',
   initialState,
   reducers: {
     fetchPlayerWordData: (state, action: PayloadAction<any>) => {
-      console.log("암느웅머ㅜㅋㅌ추ㅏㅁㄴ유", action.payload )
+      console.log(action.payload)
     },
     fetchPlayerWordDataSuccess: (state, action: PayloadAction<any>) => {
       state.wordParseResult = action.payload

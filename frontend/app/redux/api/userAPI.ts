@@ -8,7 +8,8 @@ const playerFollowURL = '/api/users/playerLike'
 const teamFollowURL = '/api/users/teamLike'
 const reLoadDataURL = '/api/users/user'
 const addPlayerURL = '/api/playerlike/like'
-const addTeamURL = 'api/teamlike/like'
+const addTeamURL = '/api/teamlike/like'
+const logoutURL = '/api/auth/logout'
 
 export const fetchUserDataAPI = async (code: string, state: string, kind: string): Promise<AxiosResponse> => {
   console.log(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
@@ -28,9 +29,11 @@ export const userPlayerFollowAPI = async () => {
   return await apiGet.get(`${playerFollowURL}`)
 }
 export const addTeamFollowAPI = async (data:any) => {
-  return await apiPostJson.get(`${addTeamURL}`, data)
+  return await apiPostJson.post(`${addTeamURL}`, data)
 }
 export const addPlayerFollowAPI = async (data:any) => {
-  return await apiPostJson.get(`${addPlayerURL}`, data)
+  return await apiPostJson.post(`${addPlayerURL}`, data)
 }
-
+export const LogoutAPI = async () => {
+  return await apiPostJson.get(`${logoutURL}`)
+}

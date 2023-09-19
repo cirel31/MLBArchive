@@ -35,7 +35,6 @@ export const userSlice = createSlice({
     fetchReUserData: (state) => {
     },
     fetchUserDataSuccess: (state, action: PayloadAction<any>) => {
-      console.log(action.payload)
       const email = action.payload.email
       const nickname = action.payload.nickname
       const image = action.payload.profileImage
@@ -58,7 +57,6 @@ export const userSlice = createSlice({
     },
     fetchFollowDataSuccess: (state, action: PayloadAction<any>) => {
       state.followList = action.payload
-      console.log(action.payload)
     },
     addFollowPlayer: (state, action: PayloadAction<any>) => {
 

@@ -3,6 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {fetchFollowData, fetchReUserData, fetchUserLogout} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
+import FollowedTeam from "@/app/components/user/followedTeam";
+import FollowedPlayer from "@/app/components/user/followedPlayer";
 
 const MyPage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -48,8 +50,11 @@ const MyPage = () => {
               <div>{userData.nickname}</div>
               <div>{userData.email}</div>
               <img src={userData.image} alt="이미지에러"/>
-              <div>{followList?.TeamList ? (<p>팔로우 한 팀들</p>) : (<p>팔로우한 팀들이 없습니다.</p>)}</div>
-              <div>{followList?.PlayerList ? (<p>팔로우 한 선수들</p>) : (<p>팔로우한 선수들이 없습니다.</p>)}</div>
+              <FollowedTeam />
+              <FollowedPlayer />
+              <p>구분선</p>
+              {/*<div>{followList?.TeamList ? (<p>팔로우 한 팀들</p>) : (<p>팔로우한 팀들이 없습니다.</p>)}</div>*/}
+              {/*<div>{followList?.PlayerList ? (<p>팔로우 한 선수들</p>) : (<p>팔로우한 선수들이 없습니다.</p>)}</div>*/}
             </div> 
           )
         }

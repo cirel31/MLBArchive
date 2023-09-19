@@ -9,7 +9,7 @@ import {PayloadAction} from "@reduxjs/toolkit";
 import {
   addPlayerFollowAPI, addTeamFollowAPI,
   fetchUserDataAPI,
-  getReLoadDataAPI,
+  getReLoadDataAPI, LogoutAPI,
   userPlayerFollowAPI,
   userTeamFollowAPI
 } from "@/app/redux/api/userAPI";
@@ -63,7 +63,6 @@ function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Genera
 function* fetchReUserDataSaga() {
   try {
     const response: AxiosResponse<any> = yield call(getReLoadDataAPI)
-    console.log(response)
     if (response) {
       yield put(fetchUserDataSuccess(response))
     }
@@ -73,15 +72,17 @@ function* fetchReUserDataSaga() {
 }
 function* fetchFollowDataSaga() {
   try {
-    const response1: FollowDataPayload = yield call(userTeamFollowAPI)
+    console.log('아니 왜 또 시발')
+    // const response1: FollowDataPayload = yield call(userTeamFollowAPI)
     const response2: FollowDataPayload = yield call(userPlayerFollowAPI)
+    console.log(response2)
     const response = {
-      TeamList: response1.resultData,
-      PlayerList: response2.resultData,
+      // TeamList: response1.resultData,
+      // PlayerList: response2.resultData,
     }
-    if (response) {
-      yield put(fetchFollowDataSuccess(response))
-    }
+    // if (response) {
+    //   yield put(fetchFollowDataSuccess(response))
+    // }
   }
   catch (error) {
   }
@@ -115,8 +116,8 @@ function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | 
 }
 
 function* fetchUserLogoutSaga(): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
-  // const response: AxiosResponse<any> = yield call(apiGet.get,`${logoutURL}`)
-  console.log("로그아웃 확인")
+  const response: AxiosResponse<any> = yield call(LogoutAPI)
+  console.log("로그아웃 확인", response)
 }
 
 export function* watchFetchUserData() {
