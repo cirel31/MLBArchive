@@ -6,10 +6,7 @@ import com.example.ssafy301.seasonRoster.dto.SeasonRosterDto;
 import com.example.ssafy301.seasonRoster.dto.SeasonRosterReqDto;
 import com.example.ssafy301.seasonRoster.service.SeasonRosterService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +19,7 @@ public class SeasonRosterController {
     
     // 팀id와 시즌에 기반하여 팀 멤버 명단 가져오기
     @GetMapping("/list")
-    public ResponseEntity getSeasonRosterList(@RequestBody SeasonRosterReqDto seasonRosterReqDto) {
+    public ResponseEntity getSeasonRosterList(@ModelAttribute SeasonRosterReqDto seasonRosterReqDto) {
         List<SeasonRosterDto> result = seasonRosterService.getSeasonRosterList(seasonRosterReqDto);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
