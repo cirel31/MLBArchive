@@ -69,7 +69,6 @@ export const userSlice = createSlice({
       state.userData = null
       state.accessToken = null
       state.refreshToken = null
-      sessionStorage.clear()
     }
   }
 })

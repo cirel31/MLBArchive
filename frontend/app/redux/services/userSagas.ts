@@ -117,7 +117,10 @@ function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | 
 
 function* fetchUserLogoutSaga(): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   const response: AxiosResponse<any> = yield call(LogoutAPI)
-  console.log("로그아웃 확인", response)
+  if (response) {
+    console.log("로그아웃 확인", response)
+    sessionStorage.clear()
+  }
 }
 
 export function* watchFetchUserData() {

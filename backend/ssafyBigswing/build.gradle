@@ -33,6 +33,7 @@ dependencies {
     implementation 'io.jsonwebtoken:jjwt-impl:0.11.1'
     implementation 'io.jsonwebtoken:jjwt-jackson:0.11.1' // 이것은 JSON 처리를 위해 필요한 Jackson 구현체입니다.
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'org.apache.commons:commons-text:1.9'
 
     //querydsl 추가
     implementation "com.querydsl:querydsl-jpa:5.0.0:jakarta"
