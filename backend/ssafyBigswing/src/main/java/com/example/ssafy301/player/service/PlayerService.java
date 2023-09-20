@@ -115,12 +115,25 @@ public class PlayerService {
                 .from(player)
                 .fetch();
 
-        // 퍼지 문자열 검색 점수가 일정 점수 이상인 선수만 필터링
-        List<PlayerDto> filteredPlayers = allPlayers.stream()
-                .filter(playerDto -> fuzzyScore.fuzzyScore(playerDto.getName(), content.trim()) > 2)
-                .sorted(Comparator.comparingInt((PlayerDto playerDto) -> fuzzyScore.fuzzyScore(playerDto.getName(), content.trim())).reversed())
-                .collect(Collectors.toList());
+        List<PlayerDto> filteredPlayers;
+
+        // content에 한글이 포함되어 있는지 체크
+        if (content.matches(".*[가-힣].*")) {
+            // 한글이 포함된 경우 korName으로만 퍼지 검색
+            filteredPlayers = allPlayers.stream()
+                    .filter(playerDto -> fuzzyScore.fuzzyScore(playerDto.getKorName(), content.trim()) > 8)
+                    .sorted(Comparator.comparingInt((PlayerDto playerDto) -> fuzzyScore.fuzzyScore(playerDto.getKorName(), content.trim())).reversed())
+                    .collect(Collectors.toList());
+        } else {
+            // 한글이 포함되지 않은 경우 name으로만 퍼지 검색
+            filteredPlayers = allPlayers.stream()
+                    .filter(playerDto -> fuzzyScore.fuzzyScore(playerDto.getName(), content.trim()) > 8)
+                    .sorted(Comparator.comparingInt((PlayerDto playerDto) -> fuzzyScore.fuzzyScore(playerDto.getName(), content.trim())).reversed())
+                    .collect(Collectors.toList());
+        }
+
         log.debug("이름으로 검색 해보자 이말이야");
+
         // 플레이어 정보가 없다면 예외 발생
         if (filteredPlayers.isEmpty()) {
             throw new NotFoundException(FailCode.NO_PLAYERS);
