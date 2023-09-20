@@ -33,3 +33,82 @@
   height: 15vw;
   border-radius: 50%;
 }
+
+.playerCard {
+  // border: 1px solid;
+  width: 200px;
+  height: 300px;
+  justify-content: center;
+  display: flex;
+  background: linear-gradient(160deg, rgb(25, 4, 99), rgb(255, 255, 255));
+}
+
+.playerFace {
+  width: 200px;
+  height: 300px;
+  border: 20px;
+  border-style: solid;
+}
+.container {
+  position: relative; /* 컨테이너 내의 요소들을 포함하기 위해 위치 지정 */
+  width: 200px;
+  height: 200px;
+}
+
+.circle {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 45px;
+  height: 45px;
+  border: 5px solid #7687df;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 10px; /* 상단 여백 조정 */
+  left: 5px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.circle2 {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 45px;
+  height: 45px;
+  border: 5px solid #7687df;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 60px; /* 상단 여백 조정 */
+  left: 5px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.circle3 {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 45px;
+  height: 45px;
+  border: 5px solid #7687df;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 60px; /* 상단 여백 조정 */
+  left: 150px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.rectangle {
+  position: absolute;
+  border-radius: 10px;
+  width: 170px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  top: 200px;
+  left: 15px;
+  z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
+}
+
+.rectangle2 {
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  background-color: rgb(253, 254, 154);
+  text-align: center;
+  top: 260px;
+  left: 35px;
+  z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
+}
