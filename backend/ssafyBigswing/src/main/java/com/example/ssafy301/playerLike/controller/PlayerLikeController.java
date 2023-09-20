@@ -21,14 +21,14 @@ public class PlayerLikeController {
     // 좋아하는 선수 목록 가져오기
     @GetMapping("/{userId}")
     public ResponseEntity getLikePlayers(@PathVariable("userId") Long userId) {
-        List<PlayerLikeDto> likePlayerList = playerLikeService.getLikePlayerList(userId);
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, likePlayerList);
+        List<PlayerLikeDto> result = playerLikeService.getLikePlayerList(userId);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 
     @PostMapping("/like")
     public ResponseEntity<PlayerLike> likePlayer(@RequestHeader("refreshToken") String refreshToken, @RequestBody Map<String, Long> payload) {
         Long playerId = payload.get("playerId");
-        PlayerLike playerLike = playerLikeService.savePlayerLike(refreshToken, playerId);
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, playerLike);
+        PlayerLike result = playerLikeService.savePlayerLike(refreshToken, playerId);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 }

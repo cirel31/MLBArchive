@@ -30,17 +30,17 @@ public class UserController {
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, userDTO);
     }
 
-    @GetMapping("/playerLike")
+    @GetMapping("/playerlike")
     public ResponseEntity<List<PlayerLikeDto>> getLikedPlayers(@RequestHeader("refreshToken") String refreshToken) {
-        List<PlayerLikeDto> likedPlayers = userService.getLikedPlayersByRefreshToken(refreshToken);
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, likedPlayers);
+        List<PlayerLikeDto> result = userService.getLikedPlayersByRefreshToken(refreshToken);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
 
     }
 
-    @GetMapping("/teamLike")
+    @GetMapping("/teamlike")
     public ResponseEntity<List<TeamLikeDto>> getLikedTeams(@RequestHeader("refreshToken") String refreshToken) {
-        List<TeamLikeDto> likedTeams = userService.getLikedTeamsByRefreshToken(refreshToken);
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, likedTeams);
+        List<TeamLikeDto> result = userService.getLikedTeamsByRefreshToken(refreshToken);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 
     @PostMapping("/update")
