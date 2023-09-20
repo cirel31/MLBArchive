@@ -4,8 +4,8 @@ import {apiGet, apiJsonType, apiPostJson} from "./apiConfig"
 const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
 const oauthURL = process.env.NEXT_PUBLIC_OAUTH_SERVER_URL;
 const updateURL = '/api/users/update'
-const playerFollowURL = '/api/users/playerLike'
-const teamFollowURL = '/api/users/teamLike'
+const playerFollowURL = '/api/users/playerlike'
+const teamFollowURL = '/api/users/teamlike'
 const reLoadDataURL = '/api/users/user'
 const addPlayerURL = '/api/playerlike/like'
 const addTeamURL = '/api/teamlike/like'
@@ -35,5 +35,5 @@ export const addPlayerFollowAPI = async (data:any) => {
   return await apiPostJson.post(`${addPlayerURL}`, data)
 }
 export const LogoutAPI = async () => {
-  return await apiPostJson.get(`${logoutURL}`)
+  return await apiGet.get(`${logoutURL}`)
 }
