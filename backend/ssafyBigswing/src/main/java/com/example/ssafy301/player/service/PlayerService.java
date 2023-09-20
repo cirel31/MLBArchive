@@ -22,7 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.example.ssafy301.player.domain.QPlayer.*;
+import static com.example.ssafy301.player.domain.QPlayer.player;
 
 @Service
 @Transactional(readOnly = true)

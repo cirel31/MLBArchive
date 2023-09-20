@@ -21,14 +21,14 @@ public class TeamLikeController {
     // 좋아하는 팀 목록 가져오기
     @GetMapping("/{userId}")
     public ResponseEntity getLikeTeams(@PathVariable("userId") Long userId) {
-        List<TeamLikeDto> likeTeamList = teamLikeService.getLikeTeamList(userId);
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, likeTeamList);
+        List<TeamLikeDto> result = teamLikeService.getLikeTeamList(userId);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 
     @PostMapping("/like")
     public ResponseEntity<TeamLikeDto> addTeamLike(@RequestHeader("refreshToken") String refreshToken,
                                                    @RequestBody Map<String, Long> payload) {
-        TeamLike teamLike = teamLikeService.saveTeamLike(refreshToken, payload.get("teamId"));
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, new TeamLikeDto(teamLike));
+        TeamLike result = teamLikeService.saveTeamLike(refreshToken, payload.get("teamId"));
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, new TeamLikeDto(result));
     }
 }

@@ -49,22 +49,22 @@ public class OAuthService {
         User result = resultOptional.orElse(null);
 
         String accessJwt = null;
-        if (result == null) {
-            log.debug("------ 회원가입 필요한 회원 ------");
-            log.debug("회원가입 요청 :: " + accessUser.getNickname());
-
-            // oauthMember에서 전달된 데이터를 가진 User 객체 DB 저장
-            userRepository.save(accessUser);
-
-            log.debug("회원가입 완료 :: " + accessUser.getNickname());
-            log.debug("회원가입 완료 :: " + accessUser.getEmail());
-            log.debug("회원가입 완료 :: " + accessUser.getSignupDate());
-            log.debug("회원가입 완료 :: " + accessUser.getRefreshToken());
-            log.debug("회원가입 완료 :: " + accessUser.getSocialType());
-            log.debug("회원가입 완료 :: " + accessUser.getId());
-
-
-        }
+//        if (result == null) {
+//            log.debug("------ 회원가입 필요한 회원 ------");
+//            log.debug("회원가입 요청 :: " + accessUser.getNickname());
+//
+//            // oauthMember에서 전달된 데이터를 가진 User 객체 DB 저장
+//            userRepository.save(accessUser);
+//
+//            log.debug("회원가입 완료 :: " + accessUser.getNickname());
+//            log.debug("회원가입 완료 :: " + accessUser.getEmail());
+//            log.debug("회원가입 완료 :: " + accessUser.getSignupDate());
+//            log.debug("회원가입 완료 :: " + accessUser.getRefreshToken());
+//            log.debug("회원가입 완료 :: " + accessUser.getSocialType());
+//            log.debug("회원가입 완료 :: " + accessUser.getId());
+//
+//
+//        }
 
         log.debug("------ JWT 발급 ------");
         accessJwt = jwtProvider.createToken(accessUser);
@@ -79,6 +79,7 @@ public class OAuthService {
             userRepository.save(result);
         }
         log.debug("------ JWT 발급완료 ------");
+        log.debug(accessUser.getRefreshToken());
         return new UserDTO(oauthMember.getEmail(), oauthMember.getNickName(), oauthMember.getProfileImage(), oauthMember.getOauthProvider(), refreshToken, accessJwt);
     }
 
