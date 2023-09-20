@@ -14,7 +14,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class TeamStat {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "teamstat_id")
     private Long id;
 

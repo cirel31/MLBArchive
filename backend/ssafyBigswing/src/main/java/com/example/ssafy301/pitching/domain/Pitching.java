@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Pitching {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pitching_stat_id")
     private Long id;
 

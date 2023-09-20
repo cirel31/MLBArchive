@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class PlayerLike {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "playerlike_id")
     private Long id;
 

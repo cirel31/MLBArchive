@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class TeamLike {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "teamlike_id")
     private Long id;
 
