@@ -5,6 +5,9 @@ import {fetchFollowData, fetchReUserData, fetchUserLogout} from "@/app/redux/fea
 import {useRouter} from "next/navigation";
 import FollowedTeam from "@/app/components/user/followedTeam";
 import FollowedPlayer from "@/app/components/user/followedPlayer";
+import "../../../styles/MyPageStyle.scss"
+import Image from "next/image";
+import systemImg from "../../../assets/system.png"
 
 const MyPage = () => {
   const [isLoading, setIsLoading] = useState(true)
@@ -36,26 +39,22 @@ const MyPage = () => {
   return (
     <>
       <div>
-        {/*{Object.entries(userData as Record<string, string>).map(([key, value]) => (*/}
-        {/*  <div key={key}>*/}
-        {/*    {/.(jpg|png|gif)$/.test(value) ? (*/}
-        {/*      <img src={value} alt={key} />*/}
-        {/*    ) : (value)}*/}
-        {/*  </div>*/}
-        {/*))}*/}
         {userData &&
           (
-            <div>
-              <div>{userData.userId}</div>
-              <div>{userData.nickname}</div>
-              <div>{userData.email}</div>
-              <img src={userData.image} alt="이미지에러"/>
-              <FollowedTeam />
-              <FollowedPlayer />
-              <p>구분선</p>
-              {/*<div>{followList?.TeamList ? (<p>팔로우 한 팀들</p>) : (<p>팔로우한 팀들이 없습니다.</p>)}</div>*/}
-              {/*<div>{followList?.PlayerList ? (<p>팔로우 한 선수들</p>) : (<p>팔로우한 선수들이 없습니다.</p>)}</div>*/}
-            </div> 
+            <div className="myInfoContents">
+              <div className="profile">
+                <img src={userData.image} alt="이미지에러" className="profileImage"/>
+                <div>
+                  <div>{userData.nickname}</div>
+                  <div>{userData.email}</div>
+                </div>
+                <Image src={systemImg} alt="설정 이미지" width={80} height={80}/>
+              </div>
+              <div className="followList">
+                <FollowedTeam />
+                <FollowedPlayer />
+              </div>
+            </div>
           )
         }
         <div>

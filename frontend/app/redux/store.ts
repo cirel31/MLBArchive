@@ -8,7 +8,7 @@ import userReducer from "./features/userSlice"
 import searchTeamReducer from "./features/searchTeamSlice"
 import playerDetailReducer from "./features/playerDetailSlice"
 import searchPlayerReducer from "./features/searchPlayerSlice"
-
+import matchReducer from "./features/matchSlice"
 // redux-persist 삭제로 인한 해당 코드 주석처리
 // const saveSubsetFilter = createFilter(
 //   'user',
@@ -42,6 +42,7 @@ export const store = configureStore({
     searchTeam: searchTeamReducer,
     playerDetail: playerDetailReducer,
     searchPlayer: searchPlayerReducer,
+    match: matchReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>
