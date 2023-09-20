@@ -6,35 +6,29 @@ import {
   fetchPlayerLetterData, fetchPlayerLetterDataSuccess,
   fetchPlayerDataError
 } from "@/app/redux/features/searchPlayerSlice"
+import {fetchPlayerLetterDataAPI, fetchPlayerWordDataAPI} from "@/app/redux/api/playerAPI";
 
+interface PlayerDataPayload {
+  status: number
+  message: string
+  resultData: any
+}
 
-function* fetchPlayerWordDataSaga(action: PayloadAction<string>): Generator<PutEffect | CallEffect, void, any> {
+function* fetchPlayerWordDataSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
-    // 테스트 데이터 삽입
-    const response = [
-      {id: 1, name: '박찬호'},
-      {id: 2, name: '류현진'},
-      {id: 3, name: '이승엽'},
-    ]
-    // const response = yield call(axios.get, `/api/player/data/${action.payload}`, );
-    console.log("Player List SAGA 테스트1")
-    yield put(fetchPlayerWordDataSuccess(response));
+    const {searchData, nowPage, articlePerPage } = action.payload
+    const response:PlayerDataPayload = yield call(fetchPlayerWordDataAPI, searchData, nowPage, articlePerPage);
+    yield put(fetchPlayerWordDataSuccess(response.resultData));
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }
 }
 
-function* fetchPlayerLetterDataSaga(action: PayloadAction<string>): Generator<PutEffect | CallEffect, void, any> {
+function* fetchPlayerLetterDataSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
-    // 테스트 데이터 삽입
-    const response = [
-      {id: 1, name: '이강희', team: 'SSAFY', number: '24'},
-      {id: 2, name: '안동준', team: 'SSAFY', number: '33'},
-      {id: 3, name: '이승엽', team: 'SSAFY', number: '22'},
-    ]
-    // const response = yield call(axios.get, `/api/player/data/${action.payload}`, );
-    console.log("Player 초성 검색 로직 확인 중 : ", action.payload)
-    yield put(fetchPlayerLetterDataSuccess(response));
+    const {searchData, nowPage, articlePerPage } = action.payload
+    const response:PlayerDataPayload = yield call(fetchPlayerLetterDataAPI, searchData, nowPage, articlePerPage)
+    yield put(fetchPlayerLetterDataSuccess(response.resultData));
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }

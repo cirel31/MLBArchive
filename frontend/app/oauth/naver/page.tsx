@@ -1,10 +1,12 @@
 'use client'
 import {useEffect, useState} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {fetchUserData} from "@/app/redux/features/userSlice";
+import {useRouter} from "next/navigation";
 
 const NaverLoginPage = () => {
+  const router = useRouter()
   let code: string | null = null;
   let state: string | null = null;
   if (typeof window !== 'undefined') {
@@ -20,6 +22,14 @@ const NaverLoginPage = () => {
     }
     dispatch(fetchUserData(accessKey))
   }, [code])
+  const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
+  const userId = useSelector((state:any) => state.user.userData?.userId)
+  useEffect(() => {
+    console.log(isLoggedIn)
+    if (isLoggedIn) {
+      router.push(`/user/mypage`)
+    }
+  }, [isLoggedIn])
   return (
     <>
       <div>

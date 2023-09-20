@@ -46,6 +46,8 @@ public class KakaoMember implements OauthMember{
     public void setNickName(String Temp){
         kakao_account.profile.nickname = Temp;
     }
+    @Override
+    public void setProfileimage(String link){kakao_account.profile.image = link;}
 //    @Override
 //    public String getRefrechToken(){};
 }

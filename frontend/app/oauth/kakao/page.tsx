@@ -1,9 +1,11 @@
 'use client'
 import {useEffect} from "react";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
+import {useRouter} from "next/navigation";
 
 const KakaoLoginPage = () => {
+  const router = useRouter()
   let state: string | null = null;
   let code: string | null = null;
   if (typeof window !== 'undefined') {
@@ -22,6 +24,13 @@ const KakaoLoginPage = () => {
       dispatch(fetchUserData(accessKey))
     }
   }, [code])
+  const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
+  const userId = useSelector((state:any) => state.user.userData?.userId)
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push(`/user/mypage`)
+    }
+  }, [isLoggedIn])
   return (
     <>
       <div>

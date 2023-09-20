@@ -1,17 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface TeamData {
-  id: number,
-  // 추후 보여줄 데이터 ㅇㅇ
-}
-
-interface TeamState {
-  teamData: TeamData | null,
-  loading: boolean,
-  error: Error | null
-}
-
-const initialState: TeamState = {
+const initialState: any = {
   teamData: null,
   loading: false,
   error: null
@@ -29,7 +18,6 @@ export const searchTeamSlice = createSlice({
       fetchTeamDataSuccess: (state, action: PayloadAction<any>) => {
         state.loading = false;
         state.teamData = action.payload;
-        console.log("SAGA 테스트: 팀 데이터 받아오기")
       },
       fetchTeamDataError: (state, action: PayloadAction<Error>) => {
         state.loading = false;
