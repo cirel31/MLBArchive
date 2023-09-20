@@ -34,104 +34,81 @@
   border-radius: 50%;
 }
 
-@import "theme.css";
-.wip_project_card_vue {
-  width: 820px;
-  height: 400px;
-  display: grid;
+.playerCard {
+  // border: 1px solid;
+  width: 200px;
+  height: 300px;
   justify-content: center;
-  align-items: center;
-  justify-items: center;
-
-  & > div {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: 1fr;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-
-    &::-webkit-scrollbar {
-      height: 10px;  /* 스크롤바의 너비 */
-      cursor: pointer;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      height: 5px; /* 스크롤바의 길이 */
-      width: 5px;
-      background: var(--brand3_4); /* 스크롤바의 색상 */
-      border-radius: 4rem;
-      cursor: pointer;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: var(--backGround_main);  /*스크롤바 뒷 배경 색상*/
-      border-radius: 4rem;
-    }
-    .capsule_cards_vue{
-      width: 200px;
-      height: 300px;
-      background-color: var(--backGround_0);
-      border-radius: 1rem;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      perspective: 500px;
-      margin: 3%;
-      filter: drop-shadow(1px 2px 2px rgb(0, 0, 0, 0.15));
-      text-align: center;
-      text-decoration: none;
-      color: var(--font_burgundy_100);
-    }
-  }
+  display: flex;
+  background: linear-gradient(160deg, rgb(25, 4, 99), rgb(255, 255, 255));
 }
 
-.card_contents_vue{
-  & > img{
-    width: 200px;
-    height: 220px;
-    object-fit: cover;
-  }
+.playerFace {
+  width: 200px;
+  height: 300px;
+  border: 20px;
+  border-style: solid;
+}
+.container {
+  position: relative; /* 컨테이너 내의 요소들을 포함하기 위해 위치 지정 */
+  width: 200px;
+  height: 200px;
+}
 
-  .card_title_vue {
-    position: absolute;
-    width: 150px;
-    height: 40px;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    //background-color: var(--brand3_main);
-    background-color: lightgreen;
-    border-radius: 4rem;
-    top: -15px;
-    left: -20px;
-    & > p {
-      font-family: "IBM Plex Sans KR",sans-serif;
-      font-weight: 600;
-      color: white;
-      margin: 0;
-    }
-  }
-  .card_contents_info{
-    font-family: "IBM Plex Sans KR",sans-serif;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 110px 70px;
-    align-items: center;
-    justify-content: center;
-    margin: 5% 0 0 0;
-    & > p {
-      font-family: "IBM Plex Sans KR",sans-serif;
-      font-weight: 600;
-      margin: 0;
-      color: var(--font_gray_main);
-    }
-    & > h2 {
-      font-family: "IBM Plex Sans KR",sans-serif;
-      font-weight: 700;
-      margin: 0;
-    }
+.circle {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 45px;
+  height: 45px;
+  border: 5px solid #7687df;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 10px; /* 상단 여백 조정 */
+  left: 5px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
 
-  }
+.circle2 {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 45px;
+  height: 45px;
+  border: 5px solid #7687df;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 60px; /* 상단 여백 조정 */
+  left: 5px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.circle3 {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 45px;
+  height: 45px;
+  border: 5px solid #7687df;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 60px; /* 상단 여백 조정 */
+  left: 150px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.rectangle {
+  position: absolute;
+  border-radius: 10px;
+  width: 170px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  top: 200px;
+  left: 15px;
+  z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
+}
+
+.rectangle2 {
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  background-color: rgb(253, 254, 154);
+  text-align: center;
+  top: 260px;
+  left: 35px;
+  z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
