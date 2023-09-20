@@ -7,10 +7,7 @@ import com.example.ssafy301.pitching.dto.PitchingRespDto;
 import com.example.ssafy301.pitching.dto.TopPitcher;
 import com.example.ssafy301.pitching.service.PitchingService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,7 +18,7 @@ public class PitchingController {
 
     private final PitchingService pitchingService;
     @GetMapping("/detail")
-    public ResponseEntity getPitchingDetail(@RequestBody PitchingReqDto pitchingReqDto) {
+    public ResponseEntity getPitchingDetail(@ModelAttribute PitchingReqDto pitchingReqDto) {
         PitchingRespDto result = pitchingService.getPitchingStat(pitchingReqDto);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }

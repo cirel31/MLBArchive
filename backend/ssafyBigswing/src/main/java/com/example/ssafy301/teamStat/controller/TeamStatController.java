@@ -16,7 +16,7 @@ public class TeamStatController {
 
     // 구체적인 팀의 스탯 가져오기
     @GetMapping("/detail")
-    public ResponseEntity getDetailTeamStat(@RequestBody TeamStatReqDto teamStatReqDto) {
+    public ResponseEntity getDetailTeamStat(@ModelAttribute TeamStatReqDto teamStatReqDto) {
         TeamStatDto result = teamStatService.getTeamDetailStat(teamStatReqDto);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }

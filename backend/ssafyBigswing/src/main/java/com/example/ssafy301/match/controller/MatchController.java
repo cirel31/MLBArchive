@@ -37,7 +37,7 @@ public class MatchController {
     
     // 경기 검색
     @GetMapping("/search")
-    public ResponseEntity getMathesBySearchCondition(Pageable pageable, @RequestBody MatchSearchDto matchSearchDto) {
+    public ResponseEntity getMathesBySearchCondition(Pageable pageable, @ModelAttribute MatchSearchDto matchSearchDto) {
         Page<MatchDto> result = matchService.searchMatch(pageable, matchSearchDto);
         return ResponseEntity.success(GENERAL_SUCCESS, result);
     }
