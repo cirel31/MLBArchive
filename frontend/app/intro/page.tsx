@@ -62,8 +62,8 @@ function Intro() {
 
   return (
     <>
-      <Real />
-      <Gallery />
+      {/* <Real /> */}
+      {/* <Gallery /> */}
       <div className="starBg"></div>
       <section className="top">
         <Image src={intro_img} className="title" alt="엑박" />

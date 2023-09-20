@@ -1,7 +1,12 @@
 const RecentGame = () => {
   return (
     <>
-      <div className="gametime">경기일정</div>
+      <div className="gametime">
+        <div className="one_game">게임없음</div>
+        <div className="one_game">게임없음</div>
+        <div className="one_game">게임없음</div>
+        <div className="one_game">게임없음</div>
+      </div>
     </>
   );
 };

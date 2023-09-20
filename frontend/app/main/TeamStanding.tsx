@@ -1,9 +1,17 @@
+import React from "react";
+import TeamRank from "./TeamRank";
+import PlayerRank from "./PlayerRank";
+
 const TeamStanding = () => {
   return (
     <>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className="teamrank">팀랭킹</div>
-        <div className="rank">선수랭킹</div>
+        <div className="teamrank">
+          <TeamRank />
+        </div>
+        <div className="rank">
+          <PlayerRank />
+        </div>
       </div>
     </>
   );
