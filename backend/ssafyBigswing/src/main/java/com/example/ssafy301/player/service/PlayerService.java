@@ -116,12 +116,13 @@ public class PlayerService {
                 .fetch();
 
         List<PlayerDto> filteredPlayers;
-
+        log.debug("콘텐트: "+content);
         // content에 한글이 포함되어 있는지 체크
-        if (content.matches(".*[가-힣].*")) {
+        if (content.matches(".*[ㄱ-ㅎ가-힣].*")) {
             // 한글이 포함된 경우 korName으로만 퍼지 검색
+            log.debug("한글입니다하하하하");
             filteredPlayers = allPlayers.stream()
-                    .filter(playerDto -> fuzzyScore.fuzzyScore(playerDto.getKorName(), content.trim()) > 8)
+                    .filter(playerDto -> fuzzyScore.fuzzyScore(playerDto.getKorName(), content.trim()) > 1)
                     .sorted(Comparator.comparingInt((PlayerDto playerDto) -> fuzzyScore.fuzzyScore(playerDto.getKorName(), content.trim())).reversed())
                     .collect(Collectors.toList());
         } else {
