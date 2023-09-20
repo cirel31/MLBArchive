@@ -74,9 +74,10 @@ public class LoginController {
         return ResponseEntity.ok().body(userDto);
     }
 
-    @PostMapping("/logout")
+    @GetMapping("/logout")
     public ResponseEntity<?> logout(@RequestHeader("refreshToken") String refreshToken) {
         // 리프레시 토큰을 통해 해당 사용자를 찾습니다.
+        log.debug("일단 로그아웃 실행");
         userService.logoutUserByRefreshToken(refreshToken);
         return ResponseEntity.ok().body("Logged out successfully");
     }
