@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState = {
   firstLetterList: null,
   wordParseResult: null,
+  totalPage: 1,
 }
 export const searchPlayerResultSlice: any = createSlice({
   name: 'searchPlayer',
@@ -23,6 +24,9 @@ export const searchPlayerResultSlice: any = createSlice({
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
       console.log(action.payload)
     },
+    pageCheck: (state, action) => {
+      state.totalPage = action.payload
+    },
   }
 })
 
@@ -31,6 +35,7 @@ export const {
   fetchPlayerWordDataSuccess,
   fetchPlayerLetterData,
   fetchPlayerLetterDataSuccess,
-  fetchPlayerDataError
+  fetchPlayerDataError,
+  pageCheck
 } = searchPlayerResultSlice.actions
 export default searchPlayerResultSlice.reducer

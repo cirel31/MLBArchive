@@ -11,7 +11,8 @@ const PlayerDetailPage = () => {
   const router = useRouter()
   const pathURI = usePathname()
   const [seasonData, setSeasonData] = useState(new Date().getFullYear())
-  const playerData:any = useSelector((state:any) => state.playerDetail.playerData)
+  const playerData: any = useSelector((state:any) => state.playerDetail.playerData)
+  const playerScore: any = useSelector((state: any) => state.playerDetail.playerScore)
   const playerId = parseInt(pathURI.slice(9))
   const MIN_YEAR:number = 1903
   const MAX_YEAR = new Date().getFullYear()
@@ -43,7 +44,6 @@ const PlayerDetailPage = () => {
         playerId: playerId,
         season: seasonData,
       }
-      console.log(seasonData)
       dispatch(fetchPlayerDetailData(searchQuery))
     }
   }
@@ -54,7 +54,6 @@ const PlayerDetailPage = () => {
   return (
     <>
       <p>{parseInt(pathURI.slice(9))}</p>
-      <div>갸아아아아아악</div>
       <div>
         <input
           style={{border: "solid black 1px"}}
@@ -66,39 +65,72 @@ const PlayerDetailPage = () => {
         />
         <button onClick={seasonSearchBTN}>조회</button>
       </div>
-      {(playerData.data.status === 204 && (
-        <div>
-          {playerData.data.message}
-        </div>
-      ))}
-      {playerData.info &&
+      {playerData &&
         <div>
           <div>
-            {playerData.info.map((key:any, value:any) => (
-              <div key={key}>{key} : {value}</div>
-            ))}
+            {playerData.backnumber}
           </div>
           <div>
-            {playerData.hitting ? playerData.hitting.map((key:any, value:any) => (
-              <div key={key}>{key} : {value}</div>
-            )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-            }
+            {playerData.debutDate}
           </div>
           <div>
-            {playerData.pitching ? playerData.pitching.map((key:any, value:any) => (
-              <div key={key}>{key} : {value}</div>
-            )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-            }
+            {playerData.retireDate}
           </div>
           <div>
-            {playerData.fielding ? playerData.fielding.map((key:any, value:any) => (
-              <div key={key}>{key} : {value}</div>
-            )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-            }
+            {playerData.height}
+          </div>
+          <div>
+            {playerData.weight}
+          </div>
+          <div>
+            {playerData.name}
+          </div>
+          <div>
+            {playerData.mainPosition}
+          </div>
+          <div>
+            {playerData.playing}
+          </div>
+
+          <div>
+            <img src={playerData.image} alt="이미지파일이없엉..."/>
+          </div>
+          <div>
+            {playerData.mainHand}
           </div>
         </div>
       }
 
+      <div>
+        <div>
+          타석 성적
+        </div>
+        {playerScore?.playerHitting ? Object.entries(playerScore.playerHitting).map(([key, value]) => (
+          <div key={key}>{key} : {String(value)}</div>
+        )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+        }
+      </div>
+      <div>
+        <div>
+          투구 성적
+        </div>
+        {playerScore?.playerPitching ? Object.entries(playerScore.playerPitching).map(([key, value]) => (
+          <div key={key}>{key} : {String(value)}</div>
+        )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+        }
+      </div>
+      <div>
+        <div>
+          수비 성적
+        </div>
+        {playerScore?.playerFielding ? Object.entries(playerScore.playerFielding).map(([key, value]) => (
+          <div key={key}>{key} : {String(value)}</div>
+        )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+        }
+      </div>
+      <div>
+        테스트 중
+      </div>
     </>
   )
 }

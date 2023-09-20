@@ -12,6 +12,7 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
     const {teamName, start, end, nowPage, articlePerPage} = action.payload
     const response: AxiosResponse = yield call(matchDataAPI, teamName, start, end, nowPage, articlePerPage)
     console.log(response)
+
   }
   catch (error) {
 
