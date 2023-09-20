@@ -50,23 +50,28 @@ public class PlayerService {
     // 첫 영문자로 선수 검색
     public Page<PlayerDto> searchPlayerByFirstletter(Pageable pageable, char firstletter) {
 
-        JPAQuery<PlayerDto> playerQuery = queryFactory
+        List<PlayerDto> players = queryFactory
                 .select(new QPlayerDto(
                         player
                 ))
                 .from(player)
                 .where(playerNameStartsWith(firstletter))
                 .offset(pageable.getOffset())
-                .limit(pageable.getPageSize());
-        
+                .limit(pageable.getPageSize())
+                .fetch();
+
         // 플레이어 정보가 없다면 예외 발생
-        List<PlayerDto> players = playerQuery.fetch();
         if(players == null || players.isEmpty()) {
             throw new NotFoundException(FailCode.NO_PLAYERS);
         }
 
+        JPAQuery<Long> countQuery = queryFactory
+                .select(player.count())
+                .from(player)
+                .where(playerNameStartsWith(firstletter));
 
-        return PageableExecutionUtils.getPage(players, pageable, playerQuery::fetchCount);
+
+        return PageableExecutionUtils.getPage(players, pageable, countQuery::fetchOne);
     }
 
     private BooleanExpression playerNameStartsWith(char firstletter) {
@@ -75,22 +80,27 @@ public class PlayerService {
     
     // 문자열 검색으로 선수 검색
     public Page<PlayerDto> searchPlayerByName(Pageable pageable, String content) {
-        JPAQuery<PlayerDto> playerQuery = queryFactory
+        List<PlayerDto> players = queryFactory
                 .select(new QPlayerDto(
                         player
                 ))
                 .from(player)
-                .where(playernameContains(content))
+                .where(playernameContains(content.trim()))
                 .offset(pageable.getOffset())
-                .limit(pageable.getPageSize());
+                .limit(pageable.getPageSize())
+                .fetch();
 
         // 플레이어 정보가 없다면 예외 발생
-        List<PlayerDto> players = playerQuery.fetch();
         if(players == null || players.isEmpty()) {
             throw new NotFoundException(FailCode.NO_PLAYERS);
         }
 
-        return PageableExecutionUtils.getPage(players, pageable, playerQuery::fetchCount);
+        JPAQuery<Long> countQuery = queryFactory
+                .select(player.count())
+                .from(player)
+                .where(playernameContains(content.trim()));
+
+        return PageableExecutionUtils.getPage(players, pageable, countQuery::fetchOne);
     }
 
     private BooleanExpression playernameContains(String content) {

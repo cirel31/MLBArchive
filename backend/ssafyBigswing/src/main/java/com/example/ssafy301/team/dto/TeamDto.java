@@ -3,14 +3,14 @@ package com.example.ssafy301.team.dto;
 import com.example.ssafy301.team.domain.Team;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Data
 public class TeamDto {
 
     private Long id;
     private String teamName;
-    private LocalDateTime createdDate;
+    private LocalDate createdDate;
     private String teamLogo;
     private String teamLocation;
 

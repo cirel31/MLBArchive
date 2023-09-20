@@ -33,21 +33,14 @@ export const userSlice = createSlice({
       console.log("슬라이스 접근 확인")
     },
     fetchReUserData: (state) => {
-      const refreshToken = sessionStorage.getItem("refreshToken") ?? null
-      if (refreshToken && !state.accessToken) {
-        console.log("토큰토큰")
-        console.log(refreshToken)
-      }
     },
     fetchUserDataSuccess: (state, action: PayloadAction<any>) => {
-      console.log(action.payload)
       const email = action.payload.email
       const nickname = action.payload.nickname
       const image = action.payload.profileImage
       const userId = email.split('@')[0]
       state.isLoading = false
       state.isLoggedIn = true
-
       state.userData = {
         userId: userId,
         email: email,
@@ -58,25 +51,17 @@ export const userSlice = createSlice({
       state.refreshToken = action.payload.refreshToken
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
-      // state.isLoading = false
       console.log(action.payload.message)
     },
-    fetchFollowData: (state, action: PayloadAction<any>) => {
-
+    fetchFollowData: () => {
     },
-    fetchFollowDataSuccess: (state, action) => {
+    fetchFollowDataSuccess: (state, action: PayloadAction<any>) => {
       state.followList = action.payload
     },
     addFollowPlayer: (state, action: PayloadAction<any>) => {
 
     },
-    removeFollowPlayer: (state, action: PayloadAction<any>) => {
-
-    },
     addFollowTeam: (state, action: PayloadAction<any>) => {
-
-    },
-    removeFollowTeam: (state, action: PayloadAction<any>) => {
 
     },
     fetchUserLogout: (state) => {
@@ -84,6 +69,7 @@ export const userSlice = createSlice({
       state.userData = null
       state.accessToken = null
       state.refreshToken = null
+      sessionStorage.clear()
     }
   }
 })
@@ -97,8 +83,6 @@ export const {
   fetchFollowDataSuccess,
   addFollowPlayer,
   addFollowTeam,
-  removeFollowPlayer,
-  removeFollowTeam,
   fetchReUserData,
 } = userSlice.actions
 export default userSlice.reducer

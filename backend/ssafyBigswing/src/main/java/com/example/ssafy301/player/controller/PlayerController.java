@@ -25,14 +25,14 @@ public class PlayerController {
     }
     
     // 첫 영문자로 선수 검색
-    @GetMapping("/search/{firstletter}")
+    @GetMapping("/search/firstletter/{firstletter}")
     public ResponseEntity searchPlayerByFirstletter(Pageable pageable, @PathVariable("firstletter") char firstletter) {
         Page<PlayerDto> result = playerService.searchPlayerByFirstletter(pageable, firstletter);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
     
     // 2글자 이상의 문자열로 선수 검색
-    @GetMapping("/search/{content}")
+    @GetMapping("/search/content/{content}")
     public ResponseEntity searchPlayerByName(Pageable pageable, @PathVariable("content") String content) {
         Page<PlayerDto> result = playerService.searchPlayerByName(pageable, content);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);

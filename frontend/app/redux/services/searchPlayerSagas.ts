@@ -8,14 +8,17 @@ import {
 } from "@/app/redux/features/searchPlayerSlice"
 import {fetchPlayerLetterDataAPI, fetchPlayerWordDataAPI} from "@/app/redux/api/playerAPI";
 
+interface PlayerDataPayload {
+  status: number
+  message: string
+  resultData: any
+}
 
 function* fetchPlayerWordDataSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
     const {searchData, nowPage, articlePerPage } = action.payload
-    console.log(searchData, nowPage, articlePerPage)
-    // const response = yield call(fetchPlayerWordDataAPI, searchData, nowPage, articlePerPage);
-    console.log("Player List SAGA 테스트1")
-    // yield put(fetchPlayerWordDataSuccess(response));
+    const response:PlayerDataPayload = yield call(fetchPlayerWordDataAPI, searchData, nowPage, articlePerPage);
+    yield put(fetchPlayerWordDataSuccess(response.resultData));
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }
@@ -24,9 +27,8 @@ function* fetchPlayerWordDataSaga(action: PayloadAction<any>): Generator<PutEffe
 function* fetchPlayerLetterDataSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
     const {searchData, nowPage, articlePerPage } = action.payload
-    console.log("Player 초성 검색 로직 확인 중 : ", action.payload)
-    // const response = yield call(fetchPlayerLetterDataAPI, searchData, nowPage, articlePerPage)
-    // yield put(fetchPlayerLetterDataSuccess(response));
+    const response:PlayerDataPayload = yield call(fetchPlayerLetterDataAPI, searchData, nowPage, articlePerPage)
+    yield put(fetchPlayerLetterDataSuccess(response.resultData));
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }

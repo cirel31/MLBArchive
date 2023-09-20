@@ -5,7 +5,7 @@ import com.example.ssafy301.player.domain.Position;
 import com.example.ssafy301.player.domain.UseHand;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +21,8 @@ public class PlayerDetailDto {
     private Position mainPosition;
     private UseHand mainHand;
     private String image;
-    private LocalDateTime debutDate;
-    private LocalDateTime retireDate;
+    private LocalDate debutDate;
+    private LocalDate retireDate;
     private String hometown;
     private int backnumber;
     private List<Integer> activeYears;

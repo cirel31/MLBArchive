@@ -4,7 +4,7 @@ import com.example.ssafy301.team.domain.Team;
 import jakarta.persistence.Column;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +13,7 @@ public class TeamDetailDto {
 
     private Long id;
     private String teamName;
-    private LocalDateTime createdDate;
+    private LocalDate createdDate;
     private String teamLogo;
     private String teamLocation;
     private List<Integer> activeYears;

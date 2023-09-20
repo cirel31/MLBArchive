@@ -56,11 +56,12 @@ public class TeamService {
         Team team = teamRepository.findById(teamId).orElseThrow(() -> new NotFoundException(FailCode.NO_TEAM));
         
         // 해당 팀이 활동한 연도도 보내주자
-        List<Integer> activeYears = seasonRosterRepository.getSeasonRostersByTeamId(teamId)
+        List<Integer> activeYears = team
+                .getTeamStats()
                 .stream()
-                .map(SeasonRoster::getSeason) // SeasonRoster에서 연도만 추출
-                .distinct() // 중복 제거
-                .collect(Collectors.toList()); // List<Integer>로 변환
+                .map(stat ->
+                        stat.getSeason())
+                .collect(Collectors.toList());// List<Integer>로 변환
 
         return new TeamDetailDto(team, activeYears);
     }

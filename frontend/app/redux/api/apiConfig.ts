@@ -28,7 +28,6 @@ export const apiPostJson = axios.create({
 
 apiGet.interceptors.request.use(
   config => {
-    console.log(config)
     if (isClient) {
       const token = sessionStorage.getItem("refreshToken");
       const parsedToken = token?.substring(1, token.length - 1) ?? null
@@ -58,7 +57,7 @@ apiPostJson.interceptors.request.use(
       const token = sessionStorage.getItem("refreshToken");
       const parsedToken = token?.substring(1, token.length - 1) ?? null
       if (token) {
-        config.headers['Authorization'] = `Bearer ${token}`;
+        config.headers['Authorization'] = parsedToken;
       }
     }
     return config;

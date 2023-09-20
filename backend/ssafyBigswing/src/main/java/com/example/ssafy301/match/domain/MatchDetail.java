@@ -16,7 +16,6 @@ public class MatchDetail {
     @Id
     @Column(name = "match_detail_id")
     private Long id;
-    private Long matchId;
     @Column(columnDefinition = "TEXT")
     private String linescore;
     @Column(columnDefinition = "TEXT")

@@ -8,7 +8,7 @@ export default function SearchLayout({
 }) {
   return (
     <>
-      <AppBar />
+      {/*<AppBar />*/}
       {children}
     </>
   )

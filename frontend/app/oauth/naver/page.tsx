@@ -27,7 +27,7 @@ const NaverLoginPage = () => {
   useEffect(() => {
     console.log(isLoggedIn)
     if (isLoggedIn) {
-      router.push(`/user/${userId}`)
+      router.push(`/user/mypage`)
     }
   }, [isLoggedIn])
   return (
