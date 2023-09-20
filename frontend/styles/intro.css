@@ -96,13 +96,13 @@ section.bottom .contWrap h2 {
 /* ################################################## */
 
 section.bottom2 {
-  margin-top: 500px;
+  /* margin-top: 400px; */
   position: relative;
 }
 
 .cardItem {
   position: absolute;
-  top: -500px;
+  top: 300px;
   width: 210px;
   height: 130px;
   padding: 15px;
@@ -138,4 +138,6 @@ h1 {
   text-align: center;
   width: 100%;
   font-weight: 100;
+  z-index: 10;
+  letter-spacing: -7px;
 }
