@@ -5,6 +5,7 @@ import com.example.ssafy301.user.oauth2.userinfo.GoogleParams;
 import com.example.ssafy301.user.oauth2.userinfo.KakaoParams;
 import com.example.ssafy301.user.oauth2.userinfo.NaverParams;
 import com.example.ssafy301.user.service.OAuthService;
+import com.example.ssafy301.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ import org.springframework.web.bind.annotation.*;
 public class LoginController {
     @Autowired
     private final OAuthService oauthService;
+
+    @Autowired
+    private final UserService userService;
 
     @GetMapping("/login/kakao")
     public ResponseEntity<UserDTO> handleKakaoLogin(@RequestParam("code") String code,
@@ -69,4 +73,12 @@ public class LoginController {
 
         return ResponseEntity.ok().body(userDto);
     }
+
+    @PostMapping("/logout")
+    public ResponseEntity<?> logout(@RequestHeader("refreshToken") String refreshToken) {
+        // 리프레시 토큰을 통해 해당 사용자를 찾습니다.
+        userService.logoutUserByRefreshToken(refreshToken);
+        return ResponseEntity.ok().body("Logged out successfully");
+    }
+
 }

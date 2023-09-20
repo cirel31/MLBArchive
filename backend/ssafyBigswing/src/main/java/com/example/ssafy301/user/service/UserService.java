@@ -72,4 +72,15 @@ public class UserService {
         user.update(dto.getNickname(), dto.getProfileImage());
     }
 
+    @Transactional
+    public void logoutUserByRefreshToken(String refreshToken) {
+        Optional<User> userOptional = userRepository.findByRefreshToken(refreshToken);
+        User user = userOptional.orElse(null);
+        if (user == null) {
+            throw new NotFoundException(FailCode.USER_NOT_FOUND);
+        }
+        user.updateRefreshToken(null);
+        userRepository.save(user);
+    }
+
 }
