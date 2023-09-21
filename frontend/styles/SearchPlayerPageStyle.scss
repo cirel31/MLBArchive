@@ -37,7 +37,7 @@
 .playerCard {
   // border: 1px solid;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
   height: 100%;
   // justify-content: center;
   display: flex;
@@ -51,7 +51,8 @@
   border: 20px;
   border-style: solid;
   border-radius: 10px;
-  margin-left: 60px;
+  // margin-left: 60px;
+  margin: 0 auto;
 }
 .container {
   position: relative; /* 컨테이너 내의 요소들을 포함하기 위해 위치 지정 */
@@ -62,61 +63,80 @@
 }
 
 .circle {
-  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
-  width: 45px;
-  height: 45px;
-  border: 5px solid #000000;
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
   background-color: rgb(253, 253, 253);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
-  top: 10px; /* 상단 여백 조정 */
-  left: 5px; /* 왼쪽 여백 조정 */
+  // top: 10px; /* 상단 여백 조정 */
+  // left: 10px; /* 왼쪽 여백 조정 */
   text-align: center;
 }
 
 .circle2 {
-  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
-  width: 45px;
-  height: 45px;
-  border: 5px solid #000000;
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
   background-color: rgb(255, 255, 255);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
-  top: 70px; /* 상단 여백 조정 */
-  left: 5px; /* 왼쪽 여백 조정 */
+  top: 53px; /* 상단 여백 조정 */
+  left: 10px; /* 왼쪽 여백 조정 */
   text-align: center;
 }
 
 .circle3 {
-  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
-  width: 45px;
-  height: 45px;
-  border: 5px solid #000000;
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
   background-color: rgb(253, 253, 253);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
-  top: 130px; /* 상단 여백 조정 */
-  left: 5px; /* 왼쪽 여백 조정 */
+  top: 96px; /* 상단 여백 조정 */
+  left: 10px; /* 왼쪽 여백 조정 */
   text-align: center;
+}
+
+.circle4 {
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 139px; /* 상단 여백 조정 */
+  left: 10px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.circleBox {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 5px;
+  // margin: 10px;
 }
 
 .rectangle {
   position: absolute;
-  border-radius: 10px;
+  border-radius: 8px;
   width: 180px;
   // padding-right: 10px;
-  height: 90px;
+  height: 120px;
   background-color: rgb(255, 255, 255);
-  top: 180px;
+  top: 170px;
   left: 10px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 
 .rectangle2 {
   position: absolute;
-  width: 130px;
+  width: 150px;
   height: 30px;
   background-color: rgb(253, 254, 154);
   text-align: center;
-  top: 260px;
-  left: 35px;
+  top: 5px;
+  left: 25px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 .cardzone {
@@ -134,7 +154,7 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 8px;
-  box-shadow: 0 0 6px 2px rgba(255, 230, 0, 0.75),
+  box-shadow: 0 0 6px 2px rgba(34, 16, 123, 0.75),
     0 35px 25px -15px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -176,7 +196,7 @@
 .card:after {
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
   background-position: center;
-  background-size: 180%;
+  background-size: 200%;
   mix-blend-mode: color-dodge;
   opacity: 0;
   z-index: 2;
