@@ -14,18 +14,23 @@
   }
 }
 
+.totalCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
 .clicked_alphabet {
   background-color: darkorange;
 }
 
 .playerContent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: 5px solid #5663a7;
-  border-radius: 20px;
-  width: 600px;
-  padding: 10px;
-  margin: 20px;
+  display: flex;
+  margin: 0 auto;
 }
 
 .profile {
@@ -264,10 +269,9 @@
 
 body {
   font-family: "Heebo", sans-serif;
-  // display: flex;
-  justify-content: center;
   height: 100%;
   text-align: center;
+  width: 80%;
 }
 html {
   height: 100%;
@@ -276,4 +280,8 @@ html {
 h1 {
   display: block;
   margin-top: 30px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
