@@ -158,31 +158,31 @@ const AllPlayers = () => {
                     onClick={handleCardFlip}
                   >
                     <div className="face face-front">
-                      <div className="card charizard">
-                        <div className="playerCard">
-                          <div className="container">
-                            <div className="rectangle2">{player.name}</div>
-                            <img
-                              src={player.image}
-                              alt={player.name}
-                              className="playerFace"
-                            />
-                            <div className="rectangle">
-                              <div className="circleBox">
-                                <div>
-                                  <div className="circle">{player.number}</div>
-                                  <div className="circle2">2</div>
-                                </div>
-                                <div>
-                                  <div className="circle3">3</div>
-                                  <div className="circle4">4</div>
-                                </div>
-                                <p>{player.team}</p>
+                      {/* <div className="card charizard"> */}
+                      <div className="playerCard">
+                        <div className="container">
+                          <div className="rectangle2">{player.name}</div>
+                          <img
+                            src={player.image}
+                            alt={player.name}
+                            className="playerFace"
+                          />
+                          <div className="rectangle">
+                            <div className="circleBox">
+                              <div>
+                                <div className="circle">{player.number}</div>
+                                <div className="circle2">2</div>
                               </div>
+                              <div>
+                                <div className="circle3">3</div>
+                                <div className="circle4">4</div>
+                              </div>
+                              <p>{player.team}</p>
                             </div>
                           </div>
                         </div>
                       </div>
+                      {/* </div> */}
                     </div>
                     <div className="face face-back">팀마크</div>
                   </div>
