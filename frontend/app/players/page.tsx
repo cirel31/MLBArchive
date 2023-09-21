@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import sample from "../../assets/player/sample_profile_img.jpg"
 import Image, {StaticImageData} from "next/image";
 import {useState} from "react";
@@ -6,6 +6,7 @@ import "../../styles/SearchPlayerPageStyle.scss"
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPlayerLetterData, fetchPlayerWordData} from "@/app/redux/features/searchPlayerSlice";
 import {useRouter} from "next/navigation";
+import playerFace from "@/app/players/[...id]/current.png";
 
 type PlayerType = {
   id: number
@@ -100,6 +101,64 @@ const AllPlayers = () => {
           <br/>
           <button onClick={() => searchQuery(totalPage)}>끝 페이지</button>
         </div>
+      </div>
+      <div className="cardzone">
+        <main id="app">
+          <div className="card charizard">
+            <div className="playerCard">
+              <div className="container">
+                <Image src={playerFace} alt="" className="playerFace" />
+                <div className="circle">1</div>
+                <div className="circle2">2</div>
+                <div className="circle3">3</div>
+                <div className="rectangle">어쩌구</div>
+                <div className="rectangle2">선수이름</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main id="app">
+          <div className="card charizard">
+            <div className="playerCard">
+              <div className="container">
+                <Image src={playerFace} alt="" className="playerFace" />
+                <div className="circle">1</div>
+                <div className="circle2">2</div>
+                <div className="circle3">3</div>
+                <div className="rectangle">어쩌구</div>
+                <div className="rectangle2">선수이름</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main id="app">
+          <div className="card charizard">
+            <div className="playerCard">
+              <div className="container">
+                <Image src={playerFace} alt="" className="playerFace" />
+                <div className="circle">1</div>
+                <div className="circle2">2</div>
+                <div className="circle3">3</div>
+                <div className="rectangle">어쩌구</div>
+                <div className="rectangle2">선수이름</div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main id="app">
+          <div className="card charizard">
+            <div className="playerCard">
+              <div className="container">
+                <Image src={playerFace} alt="" className="playerFace" />
+                <div className="circle">1</div>
+                <div className="circle2">2</div>
+                <div className="circle3">3</div>
+                <div className="rectangle">어쩌구</div>
+                <div className="rectangle2">선수이름</div>
+              </div>
+            </div>
+          </div>
+        </main>
       </div>
     </>
   )
