@@ -13,7 +13,6 @@ const SearchPlayer = () => {
   const [searchData, setSearchData] = useState('')
   const playerResult = useSelector((state: any) => state.searchPlayer.wordParseResult)
   const totalPage = useSelector((state: any) => state.searchPlayer.totalPage)
-  // 검색 이후 전체 결과 게시물 수 전달 받아서 변수로 할당한 뒤에 최댓값 이상으로 페이지 이동하지 않게
 
   const searchQuery = (x:number) => {
     if (x === 0 || nowPage + x < 0) {

@@ -38,7 +38,15 @@ function* fetchPlayerLetterDataSaga(action: PayloadAction<any>): Generator<PutEf
   try {
     const {searchData, nowPage, articlePerPage } = action.payload
     const response:PlayerDataPayload = yield call(fetchPlayerLetterDataAPI, searchData, nowPage, articlePerPage)
-    yield put(fetchPlayerLetterDataSuccess(response.resultData));
+    if (response.resultData) {
+      yield put(fetchPlayerLetterDataSuccess(response.resultData.content));
+      yield put(pageCheck(response.resultData.totalPages));
+    }
+    else {
+      Swal.fire(response.message)
+      yield put(fetchPlayerWordDataSuccess(response.resultData));
+      yield put(pageCheck(1))
+    }
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }

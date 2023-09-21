@@ -66,6 +66,9 @@ const MyPage = () => {
           <button onClick={testBTN}>로그아웃 테스트 1</button>
         </div>
 
+        <div>
+          <button onClick={() => router.push('/user/edit')}>정보 수정</button>
+        </div>
       </div>
     </>
   )

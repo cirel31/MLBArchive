@@ -50,6 +50,24 @@ export const userSlice = createSlice({
       state.accessToken = action.payload.accessToken
       state.refreshToken = action.payload.refreshToken
     },
+    fetchReUserDataSuccess: (state, action) => {
+      console.log(action.payload.resultData)
+      const email = action.payload.resultData.email
+      const nickname = action.payload.resultData.nickname
+      const image = action.payload.resultData.profileImage
+      const userId = email.split('@')[0]
+      state.isLoading = false
+      state.isLoggedIn = true
+      state.userData = {
+        userId: userId,
+        email: email,
+        nickname: nickname,
+        image: image ?? 'defaultImg'
+      }
+      state.accessToken = action.payload.resultData.accessToken
+      state.refreshToken = action.payload.resultData.refreshToken
+
+    },
     fetchDataError: (state, action: PayloadAction<Error>) => {
       console.log(action.payload.message)
     },
@@ -83,5 +101,6 @@ export const {
   addFollowPlayer,
   addFollowTeam,
   fetchReUserData,
+  fetchReUserDataSuccess,
 } = userSlice.actions
 export default userSlice.reducer
