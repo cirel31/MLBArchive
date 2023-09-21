@@ -49,6 +49,7 @@ function Intro() {
     gsap.to(window, 2, {
       scrollTo: ".bottom2",
       delay: 5.5,
+
       ease: Power4.easeInOut,
     });
 
@@ -62,13 +63,9 @@ function Intro() {
 
   return (
     <>
-      {/* <Real /> */}
-      {/* <Gallery /> */}
-      <div className="starBg"></div>
       <section className="top">
         <Image src={intro_img} className="title" alt="엑박" />
       </section>
-
       <section className="bottom">
         <h1 className="title">
           <div>직</div>
@@ -112,7 +109,9 @@ function Intro() {
           TOP
         </button> */}
       </section>
-      <TeamMarks />
+      <div>
+        <TeamMarks />
+      </div>
     </>
   );
 }
