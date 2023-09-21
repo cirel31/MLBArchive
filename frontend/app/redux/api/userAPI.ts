@@ -32,6 +32,7 @@ export const addTeamFollowAPI = async (data:any) => {
   return await apiPostJson.post(`${addTeamURL}`, data)
 }
 export const addPlayerFollowAPI = async (data:any) => {
+  console.log(data)
   return await apiPostJson.post(`${addPlayerURL}`, data)
 }
 export const LogoutAPI = async () => {

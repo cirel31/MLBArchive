@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import "../../../styles/PlayerPage.css";
 import { SettingOutlined } from "@ant-design/icons";
 import { Input } from "antd";
+import {addFollowPlayer} from "@/app/redux/features/userSlice";
 
 const PlayerDetailPage = () => {
   const dispatch = useDispatch()
@@ -72,6 +73,9 @@ const PlayerDetailPage = () => {
       </div>
       {playerData &&
         <div>
+          <div>
+            <button onClick={() => dispatch(addFollowPlayer(playerData.id))}>팔로우</button>
+          </div>
           <div>
             {playerData.backnumber}
           </div>

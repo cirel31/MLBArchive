@@ -66,9 +66,9 @@ function* fetchReUserDataSaga() {
 function* fetchFollowDataSaga() {
   try {
     console.log('아니 왜 또 시발')
-    // const response1: FollowDataPayload = yield call(userTeamFollowAPI)
+    const response1: FollowDataPayload = yield call(userTeamFollowAPI)
     const response2: FollowDataPayload = yield call(userPlayerFollowAPI)
-    console.log(response2)
+    console.log(response1, response2)
     const response = {
       // TeamList: response1.resultData,
       // PlayerList: response2.resultData,
@@ -84,12 +84,13 @@ function* fetchFollowDataSaga() {
 function* addFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   try {
     const data = {
-      playerId: action.payload.playerId
+      playerId: action.payload
     }
     const response: AxiosResponse<any> = yield call(addPlayerFollowAPI, data)
-    if (response) {
-      yield call(fetchFollowDataSaga);
-    }
+    console.log(response)
+    // if (response) {
+    //   yield call(fetchFollowDataSaga);
+    // }
   }
   catch (error) {
   }
