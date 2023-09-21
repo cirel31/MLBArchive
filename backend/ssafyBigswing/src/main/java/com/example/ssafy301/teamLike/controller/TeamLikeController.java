@@ -26,9 +26,9 @@ public class TeamLikeController {
     }
 
     @PostMapping("/like")
-    public ResponseEntity<TeamLikeDto> addTeamLike(@RequestHeader("refreshToken") String refreshToken,
+    public ResponseEntity addTeamLike(@RequestHeader("refreshToken") String refreshToken,
                                                    @RequestBody Map<String, Long> payload) {
-        TeamLike result = teamLikeService.saveTeamLike(refreshToken, payload.get("teamId"));
-        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, new TeamLikeDto(result));
+        teamLikeService.saveTeamLike(refreshToken, payload.get("teamId"));
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS);
     }
 }
