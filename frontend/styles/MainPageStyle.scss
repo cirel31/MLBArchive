@@ -28,11 +28,14 @@ body {
 .gametime {
   border: 1px solid #eeebeb;
   background: #eeebeb;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   border-radius: 10px;
-  height: 250px;
+  height: 200px;
   margin-top: 10px;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
 }
 
 .teamrank {
@@ -51,4 +54,16 @@ body {
   border-radius: 10px;
   margin: 20px;
   // margin-top: 40px;
+}
+
+.one_game {
+  // border: 1px solid;
+  border-radius: 10px;
+  width: 30%;
+  height: 70%;
+  margin: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

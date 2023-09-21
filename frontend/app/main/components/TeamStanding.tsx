@@ -1,11 +1,10 @@
-import HitterRank from "@/app/main/components/HitterRank";
-import PitcherRank from "@/app/main/components/PitcherRank";
 import TeamRank from "@/app/main/components/TeamRank";
+import PlayerRank from "@/app/main/components/PlayerRank";
 
 const TeamStanding = () => {
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      {/* <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="teamrank">
           팀랭킹
           <TeamRank />
@@ -14,6 +13,14 @@ const TeamStanding = () => {
           선수랭킹
           <HitterRank />
           <PitcherRank />
+        </div>
+      </div> */}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className="teamrank">
+          <TeamRank />
+        </div>
+        <div className="rank">
+          <PlayerRank />
         </div>
       </div>
     </>

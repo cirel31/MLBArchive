@@ -20,7 +20,7 @@ public class TeamStatDto {
 
     public TeamStatDto(TeamStat teamStat) {
         this.id = teamStat.getId();
-        this.teamId = teamStat.getTeamId();
+        this.teamId = teamStat.getTeam().getId();
         this.season = teamStat.getSeason();
         this.winPercentage = teamStat.getWinPercentage();
         this.win = teamStat.getWin();

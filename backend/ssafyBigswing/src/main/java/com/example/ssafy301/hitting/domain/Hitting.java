@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Hitting {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "hitting_stat_id")
     private Long id;
 

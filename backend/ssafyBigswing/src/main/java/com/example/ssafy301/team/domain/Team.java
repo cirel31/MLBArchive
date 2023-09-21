@@ -1,14 +1,18 @@
 package com.example.ssafy301.team.domain;
 
+import com.example.ssafy301.teamStat.domain.TeamStat;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.util.List;
+
 
 @Entity
 @Getter
@@ -25,11 +29,14 @@ public class Team {
     private String teamName;
 
     @Column(name = "created_date")
-    private LocalDateTime createdDate;
+    private LocalDate createdDate;
 
     @Column(name = "team_logo")
     private String teamLogo;
 
     @Column(name = "team_location")
     private String teamLocation;
+
+    @OneToMany(mappedBy = "team")
+    List<TeamStat> teamStats;
 }

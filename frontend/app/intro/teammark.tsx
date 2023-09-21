@@ -71,10 +71,10 @@ function CardComponent() {
 
   function cardSetting() {
     cards.forEach(function (item, i) {
-      // const top = -windowHeight / 2 - i * 40;
-      // const left = windowWidth / 2 + i * 40 - 200;
-      const top = -windowWidth / 2 + 100;
-      const left = windowWidth / 2;
+      const top = windowHeight / 2 + i * 40;
+      const left = windowWidth / 2 + i * 40 - 200;
+      // const top = -windowWidth / 2 - 100;
+      // const left = windowWidth / 2;
       const rotation = 0;
 
       gsap.to(item, 1, {
@@ -93,13 +93,12 @@ function CardComponent() {
 
     cards.forEach(function (item, i) {
       gsap.to(item, 1, {
-        top: Math.random() * -windowHeight,
+        top: Math.random() * windowHeight,
         left: Math.random() * windowWidth,
         rotation: Math.random() * 180,
         ease: Power4.easeInOut,
         delay: i * 0.1,
         onComplete: () => {
-          // 카드 랜덤 이동이 완료되면 스크롤 이벤트 다시 활성화
           setScrolling(false);
         },
       });
@@ -118,80 +117,66 @@ function CardComponent() {
   return (
     // JSX로 컴포넌트 렌더링
     <div>
-      <div>
-        <section className="bottom2">
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-        </section>
-        <section className="bottom2">
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-          <div className="cardItem">
-            <Image src={teamcard} alt="" />
-          </div>
-        </section>
-        <div className="buttonWrap">
-          <button type="button" onClick={cardRandom}>
-            Random
-          </button>
-          <button type="button" onClick={cardSetting}>
-            Reset
-          </button>
+      <section className="bottom2">
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard} alt="" />
+        </div>
+      </section>
+
+      <div className="buttonWrap">
+        <button type="button" onClick={cardRandom}>
+          Random
+        </button>
+        <button type="button" onClick={cardSetting}>
+          Reset
+        </button>
+        <div className="bottom">
+          <h1 className="title">
+            <div>원</div>
+            <div>하</div>
+            <div>는</div>
+            <div>팀</div>
+            <div>정</div>
+            <div>보</div>
+            <div>확</div>
+            <div>인</div>
+          </h1>
         </div>
       </div>
+      <section className="bottom3"></section>
     </div>
   );
 }
