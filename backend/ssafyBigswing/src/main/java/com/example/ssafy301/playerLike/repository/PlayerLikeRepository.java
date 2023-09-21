@@ -9,4 +9,5 @@ import java.util.List;
 @Repository
 public interface PlayerLikeRepository extends JpaRepository<PlayerLike, Long> {
     List<PlayerLike> getPlayerLikesByUserId(Long userId);
+    PlayerLike getPlayerLikeByUserIdAndPlayerId(Long userId, Long PlayerId);
 }

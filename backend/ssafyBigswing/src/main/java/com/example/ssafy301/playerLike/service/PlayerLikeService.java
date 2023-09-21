@@ -41,16 +41,20 @@ public class PlayerLikeService {
         return likePlayers;
     }
 
-    public PlayerLike savePlayerLike(String refreshToken, Long playerId) {
+    public void savePlayerLike(String refreshToken, Long playerId) {
         User user = userRepository.findByRefreshToken(refreshToken).orElseThrow(() -> new NotFoundException(FailCode.USER_NOT_FOUND));
         Player player = playerRepository.findById(playerId).orElseThrow(() -> new NotFoundException(FailCode.NO_PLAYER));
+        PlayerLike check = playerLikeRepository.getPlayerLikeByUserIdAndPlayerId(user.getId(),player.getId());
+        if(check == null){
+            PlayerLike playerLike = new PlayerLike();
+            playerLike.setUser(user);
+            playerLike.setPlayer(player);
+            playerLike.setLikedDate(LocalDate.now());
+            playerLikeRepository.save(playerLike);
+        }else{
+            playerLikeRepository.delete(check);
+        }
 
-        PlayerLike playerLike = new PlayerLike();
-        playerLike.setUser(user);
-        playerLike.setPlayer(player);
-        playerLike.setLikedDate(LocalDate.now());
-
-        return playerLikeRepository.save(playerLike);
     }
 
 
