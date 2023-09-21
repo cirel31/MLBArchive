@@ -4,9 +4,10 @@ import {PayloadAction} from "@reduxjs/toolkit";
 import {
   fetchPlayerWordData, fetchPlayerWordDataSuccess,
   fetchPlayerLetterData, fetchPlayerLetterDataSuccess,
-  fetchPlayerDataError
+  fetchPlayerDataError, pageCheck
 } from "@/app/redux/features/searchPlayerSlice"
 import {fetchPlayerLetterDataAPI, fetchPlayerWordDataAPI} from "@/app/redux/api/playerAPI";
+import Swal from "sweetalert2";
 
 interface PlayerDataPayload {
   status: number
@@ -18,7 +19,16 @@ function* fetchPlayerWordDataSaga(action: PayloadAction<any>): Generator<PutEffe
   try {
     const {searchData, nowPage, articlePerPage } = action.payload
     const response:PlayerDataPayload = yield call(fetchPlayerWordDataAPI, searchData, nowPage, articlePerPage);
-    yield put(fetchPlayerWordDataSuccess(response.resultData));
+    if (response.resultData) {
+      yield put(fetchPlayerWordDataSuccess(response.resultData.content));
+      yield put(pageCheck(response.resultData.totalPages));
+    }
+    else {
+      Swal.fire(response.message)
+      yield put(fetchPlayerWordDataSuccess(response.resultData));
+      yield put(pageCheck(1))
+    }
+
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }
@@ -28,7 +38,15 @@ function* fetchPlayerLetterDataSaga(action: PayloadAction<any>): Generator<PutEf
   try {
     const {searchData, nowPage, articlePerPage } = action.payload
     const response:PlayerDataPayload = yield call(fetchPlayerLetterDataAPI, searchData, nowPage, articlePerPage)
-    yield put(fetchPlayerLetterDataSuccess(response.resultData));
+    if (response.resultData) {
+      yield put(fetchPlayerLetterDataSuccess(response.resultData.content));
+      yield put(pageCheck(response.resultData.totalPages));
+    }
+    else {
+      Swal.fire(response.message)
+      yield put(fetchPlayerWordDataSuccess(response.resultData));
+      yield put(pageCheck(1))
+    }
   } catch (error) {
     yield put(fetchPlayerDataError(error as Error));
   }

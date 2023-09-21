@@ -18,17 +18,13 @@ interface PlayerData {
 interface PlayerState {
   playerData: any,
   playerActive: any,
-  playerHitting: any,
-  playerPitching: any,
-  playerFielding: any,
+  playerScore: any,
   error: Error | null,
 }
 const initialState: PlayerState = {
   playerData: null,
   playerActive: null,
-  playerHitting: null,
-  playerPitching: null,
-  playerFielding: null,
+  playerScore: null,
   error: null,
 }
 export const playerDetailSlice = createSlice({
@@ -41,19 +37,17 @@ export const playerDetailSlice = createSlice({
     fetchPlayerDataSuccess: (state, action: PayloadAction<any>) => {
       const {activeYears, ...restData} = action.payload
       state.playerData = restData
-      state.playerActive = activeYears
+      if (activeYears.length > 0) {
+        state.playerActive = activeYears
+      }
+      else {
+        state.playerActive = null
+      }
+      console.log("스테이트 저장 확인", state.playerData)
     },
-    fetchPlayerSeasonDetailData: (state, action: PayloadAction<any>) => {
-      console.log(action.payload)
-    },
-    fetchPlayerHittingDataSuccess: (state, action: PayloadAction<any>) => {
-      state.playerHitting = action.payload
-    },
-    fetchPlayerPitchingDataSuccess: (state, action: PayloadAction<any>) => {
-      state.playerPitching = action.payload
-    },
-    fetchPlayerFieldingDataSuccess: (state, action: PayloadAction<any>) => {
-      state.playerFielding = action.payload
+    fetchPlayerScoreDataSuccess: (state, action: PayloadAction<any>) => {
+      state.playerScore = action.payload
+      console.log(state.playerScore)
     },
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
       state.error = action.payload
@@ -65,9 +59,6 @@ export const {
   fetchPlayerDetailData,
   fetchPlayerDataSuccess,
   fetchPlayerDataError,
-  fetchPlayerSeasonDetailData,
-  fetchPlayerHittingDataSuccess,
-  fetchPlayerPitchingDataSuccess,
-  fetchPlayerFieldingDataSuccess,
+  fetchPlayerScoreDataSuccess,
 } = playerDetailSlice.actions
 export default playerDetailSlice.reducer

@@ -2,7 +2,7 @@ import { call, put, takeLatest, CallEffect, PutEffect } from "@redux-saga/core/e
 import axios, { AxiosResponse } from "axios";
 import {
   fetchUserData, fetchUserDataSuccess, fetchDataError, fetchUserLogout,
-  fetchFollowData, fetchFollowDataSuccess,
+  fetchFollowData, fetchFollowDataSuccess, fetchReUserDataSuccess,
   addFollowTeam, addFollowPlayer, fetchReUserData,
 } from "@/app/redux/features/userSlice";
 import {PayloadAction} from "@reduxjs/toolkit";
@@ -13,13 +13,6 @@ import {
   userPlayerFollowAPI,
   userTeamFollowAPI
 } from "@/app/redux/api/userAPI";
-
-const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL
-const oauthURL = process.env.NEXT_PUBLIC_OAUTH_SERVER_URL
-const loginURL = process.env.NEXT_PUBLIC_SERVER_LOGIN_URL
-const logoutURL = process.env.NEXT_PUBLIC_SERVER_LOGOUT_URL
-const followTeamURL = ''
-const followPlayerURL = ''
 
 // ./features/userSlice.ts
 interface UserData {
@@ -64,7 +57,7 @@ function* fetchReUserDataSaga() {
   try {
     const response: AxiosResponse<any> = yield call(getReLoadDataAPI)
     if (response) {
-      yield put(fetchUserDataSuccess(response))
+      yield put(fetchReUserDataSuccess(response))
     }
   }
   catch (error) {
