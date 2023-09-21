@@ -36,30 +36,36 @@
 
 .playerCard {
   // border: 1px solid;
-  width: 200px;
-  height: 300px;
-  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  // justify-content: center;
   display: flex;
-  background: linear-gradient(160deg, rgb(25, 4, 99), rgb(255, 255, 255));
+  background: rgb(53, 53, 122);
+  // background: linear-gradient(160deg, rgb(25, 4, 99), rgb(255, 255, 255));
 }
 
 .playerFace {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   border: 20px;
   border-style: solid;
+  border-radius: 10px;
+  margin-left: 60px;
 }
 .container {
   position: relative; /* 컨테이너 내의 요소들을 포함하기 위해 위치 지정 */
   width: 200px;
   height: 200px;
+  // display: flex;
+  justify-content: center;
 }
 
 .circle {
   position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
   width: 45px;
   height: 45px;
-  border: 5px solid #7687df;
+  border: 5px solid #000000;
   background-color: rgb(253, 253, 253);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
   top: 10px; /* 상단 여백 조정 */
@@ -71,10 +77,10 @@
   position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
   width: 45px;
   height: 45px;
-  border: 5px solid #7687df;
+  border: 5px solid #000000;
   background-color: rgb(255, 255, 255);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
-  top: 60px; /* 상단 여백 조정 */
+  top: 70px; /* 상단 여백 조정 */
   left: 5px; /* 왼쪽 여백 조정 */
   text-align: center;
 }
@@ -83,22 +89,23 @@
   position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
   width: 45px;
   height: 45px;
-  border: 5px solid #7687df;
+  border: 5px solid #000000;
   background-color: rgb(253, 253, 253);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
-  top: 60px; /* 상단 여백 조정 */
-  left: 150px; /* 왼쪽 여백 조정 */
+  top: 130px; /* 상단 여백 조정 */
+  left: 5px; /* 왼쪽 여백 조정 */
   text-align: center;
 }
 
 .rectangle {
   position: absolute;
   border-radius: 10px;
-  width: 170px;
-  height: 80px;
+  width: 180px;
+  // padding-right: 10px;
+  height: 90px;
   background-color: rgb(255, 255, 255);
-  top: 200px;
-  left: 15px;
+  top: 180px;
+  left: 10px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 
@@ -111,4 +118,142 @@
   top: 260px;
   left: 35px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
+}
+.cardzone {
+  display: flex;
+  justify-content: center;
+}
+
+/////////////////////////////////////////////////////////////////////////
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: #211799;
+  background-image: url(https://images.pokemontcg.io/smp/SM156.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 0 6px 2px rgba(255, 230, 0, 0.75),
+    0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 20px 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card.charizard {
+  background-image: url(https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/472551/headshot/67/current);
+}
+
+// 반짝이
+.card:before,
+.card:after {
+  border-radius: 8px;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgb(0, 231, 255) 30%,
+    rgb(255, 0, 231) 70%,
+    transparent 100%
+  );
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  animation: holoGradient 15s ease infinite;
+}
+.card:after {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+  background-position: center;
+  background-size: 180%;
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  z-index: 2;
+  animation: holoSparkle 20s ease infinite;
+}
+
+.card.active:before {
+  opacity: 0.5;
+  animation: none;
+  transition: none;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 25%,
+    rgb(0, 231, 255) 45%,
+    rgb(255, 0, 231) 55%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+
+@keyframes holoSparkle {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes holoGradient {
+  3% {
+    opacity: 0;
+  }
+  5% {
+    background-position: 0% 0%;
+  }
+  7% {
+    opacity: 0.5;
+  }
+  9% {
+    background-position: 100% 100%;
+  }
+  11% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    background-position: 100% 100%;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+  // display: flex;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+html {
+  height: 100%;
+}
+
+h1 {
+  display: block;
+  margin-top: 30px;
 }
