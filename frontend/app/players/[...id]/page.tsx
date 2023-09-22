@@ -36,11 +36,11 @@ const PlayerDetailPage = () => {
    if (followCheck && playerData) {
      followCheck.map((player: {playerId : number}) => {
        if (player.playerId === playerData.id) {
-         setIsFollow(true)
+         setIsFollow(!isFollow)
        }
      })
    }
-  }, [followCheck])
+  }, [])
 
   const followBTN = () => {
     dispatch(addFollowPlayer(playerData.id))
