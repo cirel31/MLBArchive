@@ -27,9 +27,9 @@ public class Team {
 
     @Column(name = "team_name")
     private String teamName;
+    private String korName;
 
-    @Column(name = "created_date")
-    private LocalDate createdDate;
+    private String createdYear;
 
     @Column(name = "team_logo")
     private String teamLogo;
