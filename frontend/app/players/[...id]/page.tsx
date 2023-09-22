@@ -19,6 +19,12 @@ const PlayerDetailPage = () => {
   const playerId = parseInt(pathURI.slice(9))
   const MIN_YEAR:number = 1903
   const MAX_YEAR = new Date().getFullYear()
+
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   useEffect(() => {
     const searchQuery = {
       playerId: playerId,
@@ -35,6 +41,7 @@ const PlayerDetailPage = () => {
      })
    }
   }, [followCheck])
+
   const followBTN = () => {
     dispatch(addFollowPlayer(playerData.id))
     setIsFollow(!isFollow);
@@ -60,102 +67,106 @@ const PlayerDetailPage = () => {
       dispatch(fetchPlayerDetailData(searchQuery))
     }
   };
+  if (!isClient) {
+    return <div>Loading...</div>;
+  }
+  else {
+    return (
+      <>
+        <p>{parseInt(pathURI.slice(9))}</p>
+        <div>
+          <input
+            className="bg-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-blue-300"
+            type="text"
+            placeholder="검색어를 입력하세요..."
+          />
+        </div>
+        <div>
+          <input
+            style={{ border: "solid black 1px" }}
+            type="number"
+            min={MIN_YEAR}
+            max={MAX_YEAR}
+            value={seasonData}
+            onChange={(e) => setSeasonData(parseInt(e.target.value))}
+          />
+          <button onClick={seasonSearchBTN}>조회</button>
+        </div>
+        {playerData &&
+          <div>
+            <div>
+              {isFollow
+                ? <button onClick={followBTN}>언팔로우</button>
+                : <button onClick={followBTN}>팔로우</button>
+              }
+            </div>
+            <div>
+              {playerData.backnumber}
+            </div>
+            <div>
+              {playerData.debutDate}
+            </div>
+            <div>
+              {playerData.retireDate}
+            </div>
+            <div>
+              {playerData.height}
+            </div>
+            <div>
+              {playerData.weight}
+            </div>
+            <div>
+              {playerData.name}
+            </div>
+            <div>
+              {playerData.mainPosition}
+            </div>
+            <div>
+              {playerData.playing}
+            </div>
 
-  return (
-    <>
-      <p>{parseInt(pathURI.slice(9))}</p>
-      <div>
-        <input
-          className="bg-gray-200 rounded-md px-4 py-2 focus:outline-none focus:ring focus:border-blue-300"
-          type="text"
-          placeholder="검색어를 입력하세요..."
-        />
-      </div>
-      <div>
-        <input
-          style={{ border: "solid black 1px" }}
-          type="number"
-          min={MIN_YEAR}
-          max={MAX_YEAR}
-          value={seasonData}
-          onChange={(e) => setSeasonData(parseInt(e.target.value))}
-        />
-        <button onClick={seasonSearchBTN}>조회</button>
-      </div>
-      {playerData &&
-        <div>
-          <div>
-            {isFollow
-              ? <button onClick={followBTN}>언팔로우</button>
-              : <button onClick={followBTN}>팔로우</button>
-            }
+            <div>
+              <img src={playerData.image} alt="이미지파일이없엉..."/>
+            </div>
+            <div>
+              {playerData.mainHand}
+            </div>
           </div>
-          <div>
-            {playerData.backnumber}
-          </div>
-          <div>
-            {playerData.debutDate}
-          </div>
-          <div>
-            {playerData.retireDate}
-          </div>
-          <div>
-            {playerData.height}
-          </div>
-          <div>
-            {playerData.weight}
-          </div>
-          <div>
-            {playerData.name}
-          </div>
-          <div>
-            {playerData.mainPosition}
-          </div>
-          <div>
-            {playerData.playing}
-          </div>
+        }
 
+        <div>
           <div>
-            <img src={playerData.image} alt="이미지파일이없엉..."/>
+            타석 성적
           </div>
+          {playerScore?.playerHitting ? Object.entries(playerScore.playerHitting).map(([key, value]) => (
+            <div key={key}>{key} : {String(value)}</div>
+          )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+          }
+        </div>
+        <div>
           <div>
-            {playerData.mainHand}
+            투구 성적
           </div>
+          {playerScore?.playerPitching ? Object.entries(playerScore.playerPitching).map(([key, value]) => (
+            <div key={key}>{key} : {String(value)}</div>
+          )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+          }
         </div>
-      }
-
-      <div>
         <div>
-          타석 성적
+          <div>
+            수비 성적
+          </div>
+          {playerScore?.playerFielding ? Object.entries(playerScore.playerFielding).map(([key, value]) => (
+            <div key={key}>{key} : {String(value)}</div>
+          )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+          }
         </div>
-        {playerScore?.playerHitting ? Object.entries(playerScore.playerHitting).map(([key, value]) => (
-          <div key={key}>{key} : {String(value)}</div>
-        )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-        }
-      </div>
-      <div>
         <div>
-          투구 성적
+          테스트 중
         </div>
-        {playerScore?.playerPitching ? Object.entries(playerScore.playerPitching).map(([key, value]) => (
-          <div key={key}>{key} : {String(value)}</div>
-        )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-        }
-      </div>
-      <div>
-        <div>
-          수비 성적
-        </div>
-        {playerScore?.playerFielding ? Object.entries(playerScore.playerFielding).map(([key, value]) => (
-          <div key={key}>{key} : {String(value)}</div>
-        )) : <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-        }
-      </div>
-      <div>
-        테스트 중
-      </div>
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default PlayerDetailPage;
