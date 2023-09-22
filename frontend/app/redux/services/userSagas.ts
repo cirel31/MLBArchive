@@ -88,9 +88,9 @@ function* addFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffect 
     }
     const response: AxiosResponse<any> = yield call(addPlayerFollowAPI, data)
     console.log(response)
-    // if (response) {
-    //   yield call(fetchFollowDataSaga);
-    // }
+    if (response) {
+      yield call(fetchFollowDataSaga);
+    }
   }
   catch (error) {
   }

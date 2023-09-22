@@ -11,6 +11,8 @@ const PlayerDetailPage = () => {
   const dispatch = useDispatch()
   const router = useRouter()
   const pathURI = usePathname()
+  const followCheck = useSelector((state:any) => state.user.followList?.PlayerList)
+  const [isFollow, setIsFollow] = useState(false)
   const [seasonData, setSeasonData] = useState(new Date().getFullYear())
   const playerData: any = useSelector((state:any) => state.playerDetail.playerData)
   const playerScore: any = useSelector((state: any) => state.playerDetail.playerScore)
@@ -24,7 +26,19 @@ const PlayerDetailPage = () => {
     };
     dispatch(fetchPlayerDetailData(searchQuery));
   }, []);
-
+  useEffect(() => {
+   if (followCheck && playerData) {
+     followCheck.map((player: {playerId : number}) => {
+       if (player.playerId === playerData.id) {
+         setIsFollow(true)
+       }
+     })
+   }
+  }, [followCheck])
+  const followBTN = () => {
+    dispatch(addFollowPlayer(playerData.id))
+    setIsFollow(!isFollow);
+  };
   const seasonSearchBTN = () => {
     if (MIN_YEAR > seasonData) {
       Swal.fire({
@@ -46,7 +60,6 @@ const PlayerDetailPage = () => {
       dispatch(fetchPlayerDetailData(searchQuery))
     }
   };
-  const followBTN = () => {};
 
   return (
     <>
@@ -72,7 +85,10 @@ const PlayerDetailPage = () => {
       {playerData &&
         <div>
           <div>
-            <button onClick={() => dispatch(addFollowPlayer(playerData.id))}>팔로우</button>
+            {isFollow
+              ? <button onClick={followBTN}>언팔로우</button>
+              : <button onClick={followBTN}>팔로우</button>
+            }
           </div>
           <div>
             {playerData.backnumber}

@@ -12,9 +12,6 @@ import systemImg from "../../../assets/system.png"
 const MyPage = () => {
   const [isLoading, setIsLoading] = useState(true)
   const userData = useSelector((state: any) => state.user.userData)
-  useEffect(() => {
-    dispatch(fetchFollowData())
-  }, [])
   const dispatch = useDispatch()
   const router = useRouter()
   const isLoggedIn: boolean = useSelector((state:any) => state?.user?.isLoggedIn)
@@ -37,6 +34,7 @@ const MyPage = () => {
 
   const logoutBTN = () => {
     dispatch(fetchUserLogout())
+    router.push('/login')
   }
   return (
     <>
@@ -57,12 +55,12 @@ const MyPage = () => {
                 <FollowedTeam />
                 <FollowedPlayer />
               </div>
+              <div>
+                <button onClick={logoutBTN}>로그아웃</button>
+              </div>
             </div>
           )
         }
-        <div>
-          <button onClick={logoutBTN}>로그아웃 테스트 1</button>
-        </div>
       </div>
     </>
   )
