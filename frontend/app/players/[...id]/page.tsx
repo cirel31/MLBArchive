@@ -5,8 +5,6 @@ import { fetchPlayerDetailData } from "@/app/redux/features/playerDetailSlice";
 import { useRouter, usePathname } from "next/navigation";
 import Swal from "sweetalert2";
 import "../../../styles/PlayerPage.css";
-import { SettingOutlined } from "@ant-design/icons";
-import { Input } from "antd";
 import {addFollowPlayer} from "@/app/redux/features/userSlice";
 
 const PlayerDetailPage = () => {

@@ -12,7 +12,9 @@ import systemImg from "../../../assets/system.png"
 const MyPage = () => {
   const [isLoading, setIsLoading] = useState(true)
   const userData = useSelector((state: any) => state.user.userData)
-  const followList = useSelector((state:any) => state.user.followList)
+  useEffect(() => {
+    dispatch(fetchFollowData())
+  }, [])
   const dispatch = useDispatch()
   const router = useRouter()
   const isLoggedIn: boolean = useSelector((state:any) => state?.user?.isLoggedIn)
@@ -29,11 +31,11 @@ const MyPage = () => {
     }
   }, [])
 
-  const TestBTN = () => {
+  const getFollowBTN = () => {
     dispatch(fetchFollowData())
   }
 
-  const testBTN = () => {
+  const logoutBTN = () => {
     dispatch(fetchUserLogout())
   }
   return (
@@ -48,7 +50,8 @@ const MyPage = () => {
                   <div>{userData.nickname}</div>
                   <div>{userData.email}</div>
                 </div>
-                <Image src={systemImg} alt="설정 이미지" width={80} height={80}/>
+                <Image src={systemImg} alt="설정 이미지" onClick={() => router.push('/user/edit')}
+                />
               </div>
               <div className="followList">
                 <FollowedTeam />
@@ -58,16 +61,7 @@ const MyPage = () => {
           )
         }
         <div>
-          <button onClick={TestBTN}>팔로우 목록 가져오기</button>
-
-        </div>
-
-        <div>
-          <button onClick={testBTN}>로그아웃 테스트 1</button>
-        </div>
-
-        <div>
-          <button onClick={() => router.push('/user/edit')}>정보 수정</button>
+          <button onClick={logoutBTN}>로그아웃 테스트 1</button>
         </div>
       </div>
     </>
