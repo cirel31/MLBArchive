@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 @Data
 public class MatchSearchDto {
-    private String teamName;
+    private Long teamId;
     private LocalDate start;
     private LocalDate end;
 }
