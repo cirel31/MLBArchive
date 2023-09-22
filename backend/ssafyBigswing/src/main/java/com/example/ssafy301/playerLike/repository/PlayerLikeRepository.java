@@ -5,9 +5,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface PlayerLikeRepository extends JpaRepository<PlayerLike, Long> {
     List<PlayerLike> getPlayerLikesByUserId(Long userId);
-    PlayerLike getPlayerLikeByUserIdAndPlayerId(Long userId, Long PlayerId);
+    Optional<PlayerLike> findByUserIdAndPlayerId(Long userId, Long PlayerId);
 }
