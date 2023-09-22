@@ -212,7 +212,6 @@ const AllPlayers = () => {
           </span>
         </button>
       </div>
-      );
     </>
   );
 };
