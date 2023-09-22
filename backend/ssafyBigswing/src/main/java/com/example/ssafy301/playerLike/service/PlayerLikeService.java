@@ -10,16 +10,19 @@ import com.example.ssafy301.playerLike.repository.PlayerLikeRepository;
 import com.example.ssafy301.user.domain.User;
 import com.example.ssafy301.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
+@Slf4j
 public class PlayerLikeService {
 
     private final PlayerLikeRepository playerLikeRepository;
@@ -41,18 +44,24 @@ public class PlayerLikeService {
         return likePlayers;
     }
 
+    @Transactional
     public void savePlayerLike(String refreshToken, Long playerId) {
         User user = userRepository.findByRefreshToken(refreshToken).orElseThrow(() -> new NotFoundException(FailCode.USER_NOT_FOUND));
         Player player = playerRepository.findById(playerId).orElseThrow(() -> new NotFoundException(FailCode.NO_PLAYER));
-        PlayerLike check = playerLikeRepository.getPlayerLikeByUserIdAndPlayerId(user.getId(),player.getId());
-        if(check == null){
+        log.debug(user.getNickname());
+        log.debug(player.getName());
+        Optional<PlayerLike> check = playerLikeRepository.findByUserIdAndPlayerId(user.getId(), player.getId());
+        //log.debug("체크: "+check.getPlayer().getId()+" "+check.getUser().getId());
+        if(!check.isPresent()){
+            log.debug("등록 성공!");
             PlayerLike playerLike = new PlayerLike();
             playerLike.setUser(user);
             playerLike.setPlayer(player);
             playerLike.setLikedDate(LocalDate.now());
             playerLikeRepository.save(playerLike);
         }else{
-            playerLikeRepository.delete(check);
+            log.debug("제거 성공");
+            playerLikeRepository.delete(check.get());
         }
 
     }

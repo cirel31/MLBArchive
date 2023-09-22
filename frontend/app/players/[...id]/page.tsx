@@ -63,8 +63,8 @@ const PlayerDetailPage = () => {
       const searchQuery = {
         playerId: playerId,
         season: seasonData,
-      }
-      dispatch(fetchPlayerDetailData(searchQuery))
+      };
+      dispatch(fetchPlayerDetailData(searchQuery));
     }
   };
   if (!isClient) {
