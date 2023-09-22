@@ -21,16 +21,20 @@ function* fetchPlayerDetailSaga(action: PayloadAction<any>): Generator<PutEffect
     yield put(fetchPlayerDataSuccess(response.resultData));
     console.log("fetchPlayerDetailSaga 작동 확인")
     const response_hitting = yield call(fetchPlayerHittingDataAPI, playerId, season);
+    console.log(response_hitting)
     const response_pitching = yield call(fetchPlayerPitchingDataAPI, playerId, season);
+    console.log(response_pitching)
     const response_fielding = yield call(fetchPlayerFieldingDataAPI, playerId, season);
+    console.log(response_fielding)
     const responseScore = {
       playerHitting : response_hitting.resultData,
       playerPitching : response_pitching.resultData,
       playerFielding : response_fielding.resultData,
     }
+
     yield put(fetchPlayerScoreDataSuccess(responseScore))
   } catch (error) {
-    yield put(fetchPlayerDataError(error as Error));
+    // yield put(fetchPlayerDataError(error as Error));
   }
 }
 

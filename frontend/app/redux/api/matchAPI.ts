@@ -10,7 +10,7 @@ export const matchDataAPI = async (teamName: string, start: string, end: string,
   return await apiGet.get(`${searchURL}`,
     {
       params: {
-        teamName: teamName,
+        teamId: teamName,
         start: start,
         end: end,
         page: page,

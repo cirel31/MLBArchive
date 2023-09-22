@@ -47,10 +47,9 @@ export const playerDetailSlice = createSlice({
     },
     fetchPlayerScoreDataSuccess: (state, action: PayloadAction<any>) => {
       state.playerScore = action.payload
-      console.log(state.playerScore)
+      console.log('저장된 정보', state.playerScore)
     },
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
-      state.error = action.payload
     },
   }
 })

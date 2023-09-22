@@ -29,11 +29,7 @@ const LoginPage = () => {
   }, []);
 
   const testData = useSelector((state:any) => state.user)
-  const dispatch = useDispatch()
-  useEffect(() => {
-    console.log(testData)
-    dispatch(fetchReUserData())
-  }, [])
+
 
   const BASE_URL = process.env.NEXT_PUBLIC_CLIENT_BASE_URL
 
