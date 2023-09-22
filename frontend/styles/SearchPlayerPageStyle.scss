@@ -51,11 +51,9 @@
 }
 
 .playerFace {
-  width: 150px;
-  height: 200px;
-  border: 20px;
-  border-style: solid;
-  border-radius: 10px;
+  width: 130px;
+  height: 190px;
+  // border-radius: 10px;
   // margin-left: 60px;
   margin: 0 auto;
 }
@@ -117,7 +115,7 @@
 
 .circleBox {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 5px;
   // margin: 10px;
 }
@@ -127,21 +125,22 @@
   border-radius: 8px;
   width: 180px;
   // padding-right: 10px;
-  height: 120px;
+  height: 100px;
   background-color: rgb(255, 255, 255);
-  top: 170px;
+  top: 190px;
   left: 10px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 
 .rectangle2 {
-  position: absolute;
-  width: 150px;
-  height: 30px;
+  // position: absolute;
+  width: auto;
+  height: auto;
   background-color: rgb(253, 254, 154);
   text-align: center;
   // top: 5px;
-  left: 16px;
+  // left: 16px;
+  margin: 0 auto;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 .cardzone {
@@ -172,6 +171,7 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
+  margin: 10px;
   // margin: 20px 10px;
   // transition: transform 0.3s ease-in-out;
 }
@@ -280,7 +280,7 @@ body {
   font-family: "Heebo", sans-serif;
   height: 100%;
   text-align: center;
-  width: 80%;
+  // width: 80%;
 }
 html {
   height: 100%;
