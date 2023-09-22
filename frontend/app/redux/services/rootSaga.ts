@@ -1,5 +1,5 @@
 import { all } from 'redux-saga/effects';
-import {watchFetchTeamData} from './searchTeamSagas';
+import {watchFetchTeamData} from './teamSagas';
 import {watchFetchUserData} from './userSagas';
 import {watchFetchPlayerDetailData} from "@/app/redux/services/playerDetailSagas";
 import {watchFetchPlayerListData} from "@/app/redux/services/searchPlayerSagas";
