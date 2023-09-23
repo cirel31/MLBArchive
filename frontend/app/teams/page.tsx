@@ -5,8 +5,9 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 // import { fetchTeamDataRequest } from "@/app/redux/features/searchTeamSlice";
-import {teamDetailData} from "@/app/redux/features/teamSlice";
-import {teamData} from "@/app/components/team/teamData"
+import { teamDetailData } from "@/app/redux/features/teamSlice";
+import { teamData } from "@/app/components/team/teamData";
+
 const TeamsPage = () => {
   const router = useRouter();
   const [teamList, setTeamList] = useState(teamData);
@@ -54,10 +55,10 @@ const TeamsPage = () => {
     );
     setTeamList(updatedTeams);
   };
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const searchTeamData = (key: any) => {
     dispatch(teamDetailData(key));
-    router.push(`/teams/${key}`)
+    router.push(`/teams/${key}`);
   };
   return (
     <>
