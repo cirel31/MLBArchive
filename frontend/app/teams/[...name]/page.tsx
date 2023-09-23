@@ -56,8 +56,7 @@ const DetailTeamPage = () => {
   }
   return (
     <>
-      <News />
-
+      {/* <News /> */}
       <Layout>
         <Sider style={siderStyle}>
           <Image className="teamlogo" src={logoPath} alt="이미지 없음" />
@@ -66,8 +65,13 @@ const DetailTeamPage = () => {
           <Header style={headerStyle}>
             <p>아무거나 팀 이미지 하나씩 넣기</p>
           </Header>
-          <Content style={contentStyle}>팀관련데이터</Content>
-          <Footer style={footerStyle}>팀 sns바로가기 가능?</Footer>
+          <Content style={contentStyle}>
+            팀관련데이터
+            <News />
+          </Content>
+          <Footer style={footerStyle}>
+            <a href={twitterPath}>트위터 넣어 줌, {twitterPath}</a>
+          </Footer>
         </Layout>
       </Layout>
     </>

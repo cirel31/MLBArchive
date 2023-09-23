@@ -1,65 +1,48 @@
-import React, { useEffect, useState } from "react";
-import axios, { AxiosResponse } from "axios";
+import React, { useState, Fragment, useCallback } from "react";
+import NewsList from "./newsList";
+import Categories from "./category";
+import "../../../styles/News.css";
 
-type NewsItem = {
-  title: string;
-  description: string;
-  link: string;
-};
+const App = () => {
+  const [searchKeyword, setSearchKeyword] = useState(""); // 검색어 상태 추가
+  const [category, setCategory] = useState("all");
+  const onSelect = useCallback((category) => setCategory(category), []);
 
-const DetailTeamPage: React.FC = () => {
-  const [newsData, setNewsData] = useState<NewsItem[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const onSearch = (keyword) => {
+    // 검색 버튼 클릭 또는 검색어 입력 후 호출되는 함수
+    setSearchKeyword(keyword);
+    setCategory("all"); // 검색 시 카테고리를 "all"로 설정 (선택한 카테고리를 해제)
+  };
 
-  useEffect(() => {
-    const fetchNewsData = async () => {
-      try {
-        console.log("fetchNewsData 함수 호출");
-        const apiKey = "FLOc3fYEiPsAYS8J8095";
-        const teamName = "가을"; // 특정 팀의 이름 또는 키워드
-
-        const response: AxiosResponse = await axios.get(
-          "https://openapi.naver.com/v1/search/news.json",
-          {
-            headers: {
-              "X-Naver-Client-Id": apiKey,
-              "X-Naver-Client-Secret": "r8K6aviDft",
-            },
-            params: {
-              query: teamName,
-            },
-          }
-        );
-
-        console.log("뉴스 데이터 응답:", response);
-        setNewsData(response.data.items);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("뉴스 데이터를 불러오는 중에 오류 발생:", error);
-      }
-    };
-
-    fetchNewsData();
-  }, []);
-
-  if (isLoading) {
-    return <div>로딩 중...</div>;
-  }
-
-  // newsData를 사용하여 뉴스 정보를 표시
   return (
-    <>
-      {newsData.map((newsItem: NewsItem, index: number) => (
-        <div key={index} className="news-item">
-          <h2>{newsItem.title}</h2>
-          <p>{newsItem.description}</p>
-          <a href={newsItem.link} target="_blank" rel="noopener noreferrer">
-            Read More
-          </a>
-        </div>
-      ))}
-    </>
+    <div>
+      <Fragment>
+        {/* Categories 컴포넌트에 onSearch 함수 전달 */}
+        <select
+          value={category}
+          onChange={(e) => onSelect(e.target.value)}
+          className="category-select" // 스타일을 적용할 클래스 추가
+        >
+          {/* ... */}
+        </select>
+        <input
+          type="text"
+          placeholder="검색할 내용을 입력하세요."
+          onChange={(e) => setSearchKeyword(e.target.value)}
+          className="search-input" // 스타일을 적용할 클래스 추가
+        />
+        <button onClick={() => onSearch(searchKeyword)}>검색</button>
+        {/* <Categories
+          category={category}
+          onSelect={onSelect}
+          onSearch={onSearch}
+        /> */}
+
+        {/* NewsList 컴포넌트에 searchKeyword와 category를 전달 */}
+        <NewsList searchKeyword={searchKeyword} category={category} />
+      </Fragment>
+    </div>
   );
 };
 
-export default DetailTeamPage;
+export default App;

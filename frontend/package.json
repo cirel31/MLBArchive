@@ -38,6 +38,8 @@
     "react-three-fiber": "^6.0.13",
     "redux-saga": "^1.2.3",
     "sass": "^1.66.1",
+    "styled-component": "^2.8.0",
+    "styled-components": "^6.0.8",
     "sweetalert2": "^11.7.27",
     "tailwindcss": "3.3.3",
     "three": "^0.156.1",
@@ -47,5 +49,6 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/react-datepicker": "^4.15.0"
-  }
+  },
+  "proxy": "https://openapi.naver.com"
 }
