@@ -1,42 +1,9 @@
-// "use client"
-// import {useEffect, useState} from "react";
-// import {fetchTeamRankDataAPI} from "@/app/redux/api/rankAPI";
-// import {AxiosResponse} from "axios";
-
-// const TeamRank = () => {
-//   const [teamList, setTeamList] = useState([])
-//   useEffect(() => {
-//     const response: Promise<AxiosResponse> = fetchTeamRankDataAPI()
-//     response
-//       .then((response) => {
-//         setTeamList(response.data)
-//       })
-//       .catch((error) => {
-//         console.log(error)
-//       })
-//   }, [])
-
-//   return (
-//     <>
-//       <div>
-//         {teamList.length >= 5 ?
-//           teamList.map((content: any) => (
-//             <div key={content.id}>
-//               {content.name}
-//             </div>
-//           )) :
-//           <p>받아온 팀 정보 없음</p>
-//         }
-//       </div>
-//     </>
-//   )
-// }
-
-// export default TeamRank
-
-"use client";
-
-import React from "react";
+"use client"
+import React, {useEffect, useState} from "react";
+import axios from "axios";
+import {useRouter} from "next/navigation";
+import Image from "next/image";
+import {selectLogo} from "@/app/components/team/teamData";
 import { Table } from "antd";
 import type { ColumnsType, TableProps } from "antd/es/table";
 
@@ -150,11 +117,77 @@ const onChange: TableProps<DataType>["onChange"] = (
   console.log("params", pagination, filters, sorter, extra);
 };
 
-const App: React.FC = () => (
-  <>
-    <h3>Team Rank</h3>
-    <Table columns={columns} dataSource={data} onChange={onChange} />
-  </>
-);
 
-export default App;
+type League = {
+  leagueId: string;
+  divisionId: string;
+  teams: any;
+}
+const TeamRank = () => {
+  const [teamList, setTeamList] = useState<League[]>([])
+  const router = useRouter()
+  useEffect(() => {
+    axios.get('https://statsapi.mlb.com/api/v1/standings?leagueId=103,104')
+      .then((response) => {
+        const newTeamList: League[] = [];
+        for (let i = 0; i < 6; i++) {
+          const leagueData = response.data.records[i];
+          const leagueObj: League = {
+            leagueId: leagueData.league.id,
+            divisionId: leagueData.division.id,
+            teams: []
+          };
+          for (let j = 0; j < 5; j++) {
+            const teamData = leagueData.teamRecords[j];
+            console.log(teamData.leagueRecord)
+            leagueObj.teams.push({
+              rank: teamData.leagueRank,
+              teamId: teamData.team.id,
+              teamName: teamData.team.name,
+              record: teamData.leagueRecord
+            });
+          }
+          newTeamList.push(leagueObj);
+        }
+        setTeamList(newTeamList);
+      })
+      .catch(() => {
+      });
+  }, []);
+
+
+  return (
+    <>
+     <h3>Team Rank</h3>
+     <Table columns={columns} dataSource={data} onChange={onChange} />
+      <div>
+        {teamList.length > 0 ?
+          teamList.map((content: any, index1) => (
+            <div key={index1}>
+              <div>
+                {(content.leagueId === 103) && <p>아메리칸 리그</p> }
+                {(content.divisionId === 201) && <p>동부</p>}
+                {(content.divisionId === 202) && <p>중부</p>}
+                {(content.divisionId === 200) && <p>서부</p>}
+                {(content.leagueId === 104) && <p>내셔널 리그</p>}
+                {(content.divisionId === 204) && <p>동부</p>}
+                {(content.divisionId === 205) && <p>중부</p>}
+                {(content.divisionId === 203) && <p>서부</p>}
+              </div>
+              {content.teams.map((team:any, index2:number) => (
+                <div key={index2} onClick={() => router.push(`/teams/${team.teamId}`)}>
+                  {/*<Image src={selectLogo(team.teamId)} alt="로고" />*/}
+                  <p>{team.teamName}</p>
+                  <p>승: {team.record.wins}, 패: {team.record.losses}, pct: {team.record.pct}</p>
+                </div>
+              ))}
+            </div>
+          )) :
+          <p>받아온 팀 정보 없음</p>
+        }
+      </div>
+    </>
+  )
+}
+
+export default TeamRank

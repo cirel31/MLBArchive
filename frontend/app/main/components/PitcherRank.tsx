@@ -1,15 +1,22 @@
 "use client"
 import {useEffect, useState} from "react";
 import {fetchPitchingRankerDataAPI} from "@/app/redux/api/rankAPI";
-import {AxiosResponse} from "axios";
+import {useRouter} from "next/navigation";
+interface PromiseResult {
+  message: string,
+  status: number,
+  resultData: any,
+}
 
 const PitcherRank = () => {
   const [pitcher, setPitcher] = useState([])
+  const router = useRouter()
   useEffect(() => {
-    const response: Promise<AxiosResponse> = fetchPitchingRankerDataAPI()
+    const response: Promise<PromiseResult> = fetchPitchingRankerDataAPI()
     response
       .then((response) => {
-        setPitcher(response.data)
+        console.log(response.resultData)
+        setPitcher(response.resultData)
       })
       .catch((error) => {
         console.log(error)
@@ -20,9 +27,10 @@ const PitcherRank = () => {
     <>
       <div>투수 순위</div>
       <div>
-        {pitcher.length >= 5 ? 
-          pitcher.map((content: any) => (
-          <div key={content.id}>
+        {pitcher?.length >= 5 ?
+          pitcher.map((content: any, index) => (
+          <div key={index} onClick={() => router.push(`/players/${content.playerId}`)}>
+            <img src={content.image} alt="선수 이미지" />
             {content.name}
           </div>
         )) : 
