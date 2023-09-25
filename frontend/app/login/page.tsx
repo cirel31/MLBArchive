@@ -7,8 +7,11 @@ import google_btn_dark from "../../assets/btn/google_btn_dark.png";
 import naver_btn_light from "../../assets/btn/naver_btn_light.png";
 import intro from "../../assets/intro/intro_pull.png";
 
-import {useDispatch, useSelector} from "react-redux";
-import {fetchReUserData} from "@/app/redux/features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchReUserData } from "@/app/redux/features/userSlice";
+
+import { Table, Typography, Carousel } from "antd";
+const { Title } = Typography;
 
 const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,10 +31,9 @@ const LoginPage = () => {
     SETSTATE(generateState());
   }, []);
 
-  const testData = useSelector((state:any) => state.user)
+  const testData = useSelector((state: any) => state.user);
 
-
-  const BASE_URL = process.env.NEXT_PUBLIC_CLIENT_BASE_URL
+  const BASE_URL = process.env.NEXT_PUBLIC_CLIENT_BASE_URL;
 
   const API_KEY_KAKAO = process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID;
   const REDIRECT_URI_KAKAO = process.env.NEXT_PUBLIC_OAUTH_KAKAO_URL;
@@ -45,10 +47,69 @@ const LoginPage = () => {
   const REDIRECT_URI_NAVER = process.env.NEXT_PUBLIC_OAUTH_NAVER_URL;
   const OAUTH_NAVER = `https://nid.naver.com/oauth2.0/authorize?client_id=${API_KEY_NAVER}&redirect_uri=${BASE_URL}${REDIRECT_URI_NAVER}&response_type=code&state=${STATE}`;
 
+  setTimeout(function () {
+    const loginContents = document.querySelector(".loginContents");
+    if (loginContents) {
+      loginContents.style.opacity = "1";
+    }
+  }, 500); // 5초 뒤에 실행
+
+  const contentStyle: React.CSSProperties = {
+    height: "100%",
+    color: "#fff",
+    // lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
   return (
     <div>
-      <Image src={intro} className="logo" alt="" />
+      <Carousel autoplay>
+        <div>
+          <h3 style={contentStyle}>
+            <img
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/kxwcyq0fdgyidxtioowr.jpg"
+              alt=""
+            />
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <img
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/vai8x2nxjp9v9mwi87qr.jpg"
+              alt=""
+            />
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <img
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/zxifbvspc2hlnpzur3im.jpg"
+              alt=""
+            />
+          </h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>
+            <img
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/s7akxdikqbeuraalsomc.jpg"
+              alt=""
+            />
+          </h3>
+        </div>
+      </Carousel>
+
+      {/* <img
+        src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/kxwcyq0fdgyidxtioowr.jpg"
+        className="logo"
+        alt=""
+      /> */}
+
+      <div></div>
       <div className="loginContents">
+        <Image src={intro} className="logo" alt="" />
+        <p className="login_info">
+          로그인을 해야 서비스를 이용할 수 있습니다 !
+        </p>
         <a href={OAUTH_NAVER} className="loginItem">
           <Image
             src={naver_btn_light}

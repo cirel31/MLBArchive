@@ -1,5 +1,5 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Typography, Card } from "antd";
 
 interface PlayerInfo {
   backnumber: string;
@@ -9,7 +9,7 @@ interface PlayerInfo {
   weight: string;
   name: string;
   mainPosition: string;
-  playing: string;
+  playing: boolean;
   mainHand: string;
 }
 
@@ -18,6 +18,7 @@ interface Props {
 }
 
 const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
+  console.log({ playerData });
   const columns = [
     {
       title: "항목",
@@ -32,11 +33,15 @@ const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
       align: "center",
     },
   ];
+  const activityStatus = playerData.playing ? "활동 중" : "은퇴";
+  const retireDateValue =
+    playerData.retireDate !== null ? playerData.retireDate : "-";
 
   const data = [
+    { key: "playing", field: "활동여부", value: activityStatus },
     { key: "backnumber", field: "등번호", value: playerData.backnumber },
     { key: "debutDate", field: "데뷔일", value: playerData.debutDate },
-    { key: "retireDate", field: "은퇴일", value: playerData.retireDate },
+    { key: "retireDate", field: "은퇴일", value: retireDateValue },
     { key: "height", field: "키", value: playerData.height },
     { key: "weight", field: "몸무게", value: playerData.weight },
     { key: "name", field: "이름", value: playerData.name },
@@ -45,18 +50,26 @@ const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
       field: "주요 포지션",
       value: playerData.mainPosition,
     },
-    { key: "playing", field: "경기 수", value: playerData.playing },
+    // { key: "playing", field: "경기 수", value: playerData.playing },
     { key: "mainHand", field: "주요 손", value: playerData.mainHand },
   ];
 
   return (
-    <div style={{ width: "60%" }}>
-      <Table
-        dataSource={data}
-        columns={columns}
-        pagination={false} // 페이지네이션 비활성화 (모든 내용을 하나의 테이블에 표시)
-        size="large"
-      />
+    <div
+      style={{
+        width: "60%",
+        border: "2px solid #cccccc",
+        borderRadius: "10px",
+      }}
+    >
+      <Card title="Player Information">
+        <Table
+          dataSource={data}
+          columns={columns}
+          pagination={false} // 페이지네이션 비활성화 (모든 내용을 하나의 테이블에 표시)
+          size="large"
+        />
+      </Card>
     </div>
   );
 };
