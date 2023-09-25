@@ -1,44 +1,60 @@
-"use client"
-import {useEffect, useState} from "react";
-import {fetchPitchingRankerDataAPI} from "@/app/redux/api/rankAPI";
-import {useRouter} from "next/navigation";
+import { useEffect, useState } from "react";
+import { fetchPitchingRankerDataAPI } from "@/app/redux/api/rankAPI";
+import { useRouter } from "next/navigation";
+import { List } from "antd";
+import { Image } from "antd";
+import "../../../styles/MainPageStyle.scss";
+
 interface PromiseResult {
-  message: string,
-  status: number,
-  resultData: any,
+  message: string;
+  status: number;
+  resultData: any[];
 }
 
 const PitcherRank = () => {
-  const [pitcher, setPitcher] = useState([])
-  const router = useRouter()
+  const [pitcher, setPitcher] = useState([]);
+  const router = useRouter();
+
   useEffect(() => {
-    const response: Promise<PromiseResult> = fetchPitchingRankerDataAPI()
-    response
-      .then((response) => {
-        console.log(response.resultData)
-        setPitcher(response.resultData)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }, [])
+    const fetchData = async () => {
+      try {
+        const response: Promise<PromiseResult> = fetchPitchingRankerDataAPI();
+        const result = await response;
+        setPitcher(result.resultData);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
       <div>투수 순위</div>
       <div>
-        {pitcher?.length >= 5 ?
-          pitcher.map((content: any, index) => (
-          <div key={index} onClick={() => router.push(`/players/${content.playerId}`)}>
-            <img src={content.image} alt="선수 이미지" />
-            {content.name}
-          </div>
-        )) : 
-          <p>받아온 투수 정보 없음</p>
-        }
+        <List
+          dataSource={pitcher}
+          renderItem={(content: any, index: number) => (
+            <List.Item
+              key={index}
+              onClick={() => router.push(`/players/${content.playerId}`)}
+            >
+              <div>
+                <span className="rank">{index + 1}</span> {/* 순위를 표시 */}
+                <Image
+                  src={content.image}
+                  className="player_img"
+                  style={{ width: "30px" }}
+                  alt="선수 이미지"
+                />
+                {content.name}
+              </div>
+            </List.Item>
+          )}
+        />
       </div>
     </>
-  )
-}
+  );
+};
 
-export default PitcherRank
+export default PitcherRank;

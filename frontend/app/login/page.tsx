@@ -52,7 +52,7 @@ const LoginPage = () => {
     if (loginContents) {
       loginContents.style.opacity = "1";
     }
-  }, 500); // 5초 뒤에 실행
+  }, 300); // 5초 뒤에 실행
 
   const contentStyle: React.CSSProperties = {
     height: "100%",
@@ -69,14 +69,16 @@ const LoginPage = () => {
             <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/kxwcyq0fdgyidxtioowr.jpg"
               alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>
         <div>
           <h3 style={contentStyle}>
             <img
-              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/vai8x2nxjp9v9mwi87qr.jpg"
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/d0fdj3z71drh7vhdzdes.jpg"
               alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>
@@ -85,6 +87,7 @@ const LoginPage = () => {
             <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/zxifbvspc2hlnpzur3im.jpg"
               alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>
@@ -93,6 +96,7 @@ const LoginPage = () => {
             <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/s7akxdikqbeuraalsomc.jpg"
               alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>
