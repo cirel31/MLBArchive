@@ -24,8 +24,8 @@ public class MatchDetailDto {
     private String awayName;
     private String status;
     private int currentInning;
-    private String linescore;
-    private String boxscore;
+//    private String linescore;
+//    private String boxscore;
 
     public MatchDetailDto (Match match) {
         this.id = match.getId();
@@ -40,7 +40,7 @@ public class MatchDetailDto {
         this.awayName = match.getAwayName();
         this.status = match.getStatus();
         this.currentInning = match.getCurrentInning();
-        this.linescore = match.getMatchDetail().getLinescore();
-        this.boxscore = match.getMatchDetail().getBoxscore();
+//        this.linescore = match.getMatchDetail().getLinescore();
+//        this.boxscore = match.getMatchDetail().getBoxscore();
     }
 }
