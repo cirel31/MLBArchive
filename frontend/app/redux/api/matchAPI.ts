@@ -19,3 +19,7 @@ export const matchDataAPI = async (teamName: string, start: string, end: string,
     }
   )
 }
+
+export const matchDetailDataAPI = async (teamId:string) => {
+  return await apiGet.get(`${detailURL}${teamId}`)
+}

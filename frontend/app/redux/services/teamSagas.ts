@@ -10,7 +10,7 @@ function* fetchTeamDataSaga(action: PayloadAction<string>): Generator<PutEffect 
     const id = action.payload
     const response = yield call(fetchTeamDetailDataAPI, id);
     console.log(response)
-    // yield put(teamDetailDataSuccess(response.data));
+    yield put(teamDetailDataSuccess(response.ResultData));
   } catch (error) {
   }
 }

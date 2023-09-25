@@ -5,7 +5,7 @@ import {
   requestMatchData, successMatchData, requestDetailMatchData, successDetailMatchData,
   errorMatchData, errorDetailMatchData
 } from "@/app/redux/features/matchSlice"
-import {matchDataAPI} from "@/app/redux/api/matchAPI";
+import {matchDataAPI, matchDetailDataAPI} from "@/app/redux/api/matchAPI";
 
 interface MatchDataPayload {
   status: number
@@ -26,6 +26,21 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
   }
 }
 
+function* requestMatchDetailDataSaga(action: PayloadAction<any>) {
+  try {
+    const teamId = action.payload
+    const response: MatchDataPayload = yield call(matchDetailDataAPI, teamId)
+    console.log(response)
+    if (response?.resultData) {
+      yield put(successDetailMatchData(response.resultData.content))
+    }
+  }
+  catch (error) {
+
+  }
+}
+
 export function* watchMatchData() {
   yield takeLatest(requestMatchData.type, requestMatchDataSaga)
+  yield takeLatest(requestDetailMatchData.type, requestMatchDetailDataSaga)
 }
