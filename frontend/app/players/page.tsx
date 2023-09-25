@@ -12,7 +12,8 @@ import { useRouter } from "next/navigation";
 import playerFace from "@/app/players/[...id]/current.png";
 import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
-
+import { Table, Typography } from "antd";
+const { Title } = Typography;
 type PlayerType = {
   id: number;
   name: string;
@@ -75,14 +76,14 @@ const AllPlayers = () => {
     dispatch(fetchPlayerLetterData(action));
   };
   const searchQuery = (x: number) => {
-    let idx = 0
+    let idx = 0;
     if (x === 0 || nowPage + x < 0) {
       setNowPage(0);
     } else if (nowPage + x >= totalPage || x === totalPage) {
-      idx = totalPage - 1
+      idx = totalPage - 1;
       setNowPage(idx);
     } else {
-      idx = nowPage + x
+      idx = nowPage + x;
       setNowPage(idx);
     }
     const action = {
@@ -90,11 +91,10 @@ const AllPlayers = () => {
       nowPage: idx,
       articlePerPage: 30,
     };
-    if (nowPage === idx && nowPage === 0 ) {
-      Swal.fire('이미 제일 앞의 페이지 입니다.')
-    }
-    else if (nowPage === idx && nowPage === totalPage - 1 ) {
-      Swal.fire('이미 제일 뒤의 페이지 입니다.')
+    if (nowPage === idx && nowPage === 0) {
+      Swal.fire("이미 제일 앞의 페이지 입니다.");
+    } else if (nowPage === idx && nowPage === totalPage - 1) {
+      Swal.fire("이미 제일 뒤의 페이지 입니다.");
     }
     dispatch(fetchPlayerLetterData(action));
   };
@@ -133,6 +133,7 @@ const AllPlayers = () => {
 
   return (
     <>
+      <Title>Players</Title>
       <Helmet>
         <link
           rel="stylesheet"
@@ -159,9 +160,8 @@ const AllPlayers = () => {
               onClick={() => handleDetailPage(player.id)}
             >
               <div>
-                <p>
-                  {player.team} {player.number}
-                </p>
+                <p> {player.team}</p>
+                <p>{player.number}</p>
                 <main id="app">
                   <div
                     className={`card ${isFlipped ? "flipped" : ""}`}
@@ -194,7 +194,10 @@ const AllPlayers = () => {
                       </div>
                       {/* </div> */}
                     </div>
-                    <div className="face face-back">팀마크</div>
+                    <div className="face face-back">
+                      팀마크
+                      {player.team}
+                    </div>
                   </div>
                 </main>
               </div>

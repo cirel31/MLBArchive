@@ -7,7 +7,9 @@ import Swal from "sweetalert2";
 import "../../../styles/PlayerPage.css";
 import { addFollowPlayer } from "@/app/redux/features/userSlice";
 import PlayerInfo from "../[...id]/playerInfo";
-import { Button, InputNumber } from "antd";
+import { Button, InputNumber, Divider, Typography } from "antd";
+
+const { Title } = Typography;
 
 const PlayerDetailPage = () => {
   const dispatch = useDispatch();
@@ -79,95 +81,109 @@ const PlayerDetailPage = () => {
     return <div>Loading...</div>;
   } else {
     return (
-      <>
-        <p>{parseInt(pathURI.slice(9))}</p>
+      <div className="container">
+        {/* <p>{parseInt(pathURI.slice(9))}</p> */}
         {playerData && (
           <div>
             <div className="infoBox">
               <div className="playerImage">
-                <img src={playerData.image} alt="이미지파일이없엉..." />
-                <Button
+                <div className="photo_box">
+                  <Title>{playerData.name}</Title>
+                  <img
+                    style={{ margin: "0 auto" }}
+                    src={playerData.image}
+                    alt="이미지파일이없엉..."
+                  />
+                  <div>
+                    {isFollow ? (
+                      <Button
+                        className="f_button"
+                        type="primary"
+                        onClick={followBTN}
+                        style={{ color: "black" }}
+                      >
+                        언팔로우
+                      </Button>
+                    ) : (
+                      <Button
+                        className="f_button"
+                        type="primary"
+                        onClick={followBTN}
+                        style={{ color: "black" }}
+                      >
+                        팔로우
+                      </Button>
+                    )}
+                  </div>
+                </div>
+
+                <div className="scoreView">
+                  <div className="year">
+                    <InputNumber
+                      type="number"
+                      min={MIN_YEAR}
+                      max={MAX_YEAR}
+                      value={seasonData}
+                      onChange={(value) => setSeasonData(value)}
+                    />
+                    <Button onClick={seasonSearchBTN}>조회</Button>
+                  </div>
+                  <div>
+                    <div className="num">투구 성적</div>
+                    {playerScore?.playerPitching ? (
+                      Object.entries(playerScore.playerPitching).map(
+                        ([key, value]) => (
+                          <div key={key}>
+                            {key} : {String(value)}
+                          </div>
+                        )
+                      )
+                    ) : (
+                      <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+                    )}
+                  </div>
+                  <Divider />
+                  <div>
+                    <div className="num">타석 성적</div>
+                    {playerScore?.playerHitting ? (
+                      Object.entries(playerScore.playerHitting).map(
+                        ([key, value]) => (
+                          <div key={key}>
+                            {key} : {String(value)}
+                          </div>
+                        )
+                      )
+                    ) : (
+                      <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+                    )}
+                  </div>
+                  <Divider />
+                  <div>
+                    <div className="num">수비 성적</div>
+                    {playerScore?.playerFielding ? (
+                      Object.entries(playerScore.playerFielding).map(
+                        ([key, value]) => (
+                          <div key={key}>
+                            {key} : {String(value)}
+                          </div>
+                        )
+                      )
+                    ) : (
+                      <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+                    )}
+                  </div>
+                </div>
+                {/* <Button
                   onClick={() => dispatch(addFollowPlayer(playerData.id))}
                 >
                   팔로우
-                </Button>
+                </Button> */}
               </div>
               <PlayerInfo playerData={playerData} />
             </div>
           </div>
         )}
-        <div>
-          <InputNumber
-            type="number"
-            min={MIN_YEAR}
-            max={MAX_YEAR}
-            value={seasonData}
-            // onChange={(e) => setSeasonData(parseInt(e.target.value))}
-            onChange={(value) => setSeasonData(value)}
-          />
-          <Button onClick={seasonSearchBTN}>조회</Button>
-        </div>
-        <div>
-          {isFollow ? (
-            <Button onClick={followBTN}>언팔로우</Button>
-          ) : (
-            <Button onClick={followBTN}>팔로우</Button>
-          )}
-        </div>
-        <div>
-          <div>타석 성적 : &nbsp;</div>
-          <div>
-            타석 성적
-            {playerScore?.playerHitting ? (
-              Object.entries(playerScore.playerHitting).map(([key, value]) => (
-                <div key={key}>
-                  {key} : {String(value)}
-                </div>
-              ))
-            ) : (
-              <div> 해당 시즌에는 활동한 기록이 없습니다.</div>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <div>투구 성적</div>
-          {playerScore?.playerPitching ? (
-            Object.entries(playerScore.playerPitching).map(([key, value]) => (
-              <div key={key}>
-                {key} : {String(value)}
-              </div>
-            ))
-          ) : (
-            <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-          )}
-        </div>
-
-        <div>
-          <div>타석 성적</div>
-          {playerScore?.playerHitting ? (
-            Object.entries(playerScore.playerHitting).map(([key, value]) => (
-              <div key={key}>
-                {key} : {String(value)}
-              </div>
-            ))
-          ) : (
-            <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-          )}
-        </div>
-        <div>
-          <div>수비 성적</div>
-          {playerScore?.playerFielding ? (
-            Object.entries(playerScore.playerFielding).map(([key, value]) => (
-              <div key={key}>
-                {key} : {String(value)}
-              </div>
-            ))
-          ) : (
-            <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-          )}
-        </div>
-      </>
+      </div>
     );
   }
 };

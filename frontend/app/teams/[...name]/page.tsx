@@ -67,7 +67,7 @@ const DetailTeamPage = () => {
           </Header>
           <Content style={contentStyle}>
             팀관련데이터
-            <News />
+            {/* <News /> */}
           </Content>
           <Footer style={footerStyle}>
             <a href={twitterPath}>트위터 넣어 줌, {twitterPath}</a>
