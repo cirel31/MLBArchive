@@ -51,7 +51,7 @@ public class SimulationService {
                 ))
                 .from(match)
                 .where(
-                        matchTeam(likeTeam.getTeamName()),
+                        matchTeam(likeTeam.getTeamId()),
                         matchDateIn(currentYear - 1, currentYear))
                 .fetch();
 
@@ -62,14 +62,14 @@ public class SimulationService {
 
         // 그리고 내가 응원하는 팀이 진 경기를 가져오자
         List<MatchDto> loseMatches = new ArrayList<>();
-        String myTeamName = likeTeam.getTeamName();
+        Long myTeamId = likeTeam.getTeamId();
         for (MatchDto myTeamMatch : myTeamMatches) {
             // 경기에서 내가 좋아하는 팀이 홈팀인 경우, 홈팀의 점수가 더 낮을 때 loseMatches에 넣어줌
-            if(myTeamMatch.getHomeName().equals(myTeamName) && (myTeamMatch.getHomeScore() < myTeamMatch.getAwayScore())) {
+            if((myTeamMatch.getHomeId() == myTeamId) && (myTeamMatch.getHomeScore() < myTeamMatch.getAwayScore())) {
                 loseMatches.add(myTeamMatch);
             }
             // 경기에서 내가 좋아하는 팀이 어웨이팀인 경우, 어웨이팀의 점수가 더 낮을 때 loseMatches에 넣어줌
-            else if (myTeamMatch.getAwayName().equals(myTeamName) && (myTeamMatch.getAwayScore() < myTeamMatch.getHomeScore())) {
+            else if ((myTeamMatch.getAwayId() == myTeamId) && (myTeamMatch.getAwayScore() < myTeamMatch.getHomeScore())) {
                 loseMatches.add(myTeamMatch);
             }
         }
@@ -99,8 +99,8 @@ public class SimulationService {
         return match.matchDate.year().between(startYear, endYear);
     }
 
-    private BooleanExpression matchTeam(String teamName) {
-        return match.homeName.eq(teamName).or(match.awayName.eq(teamName));
+    private BooleanExpression matchTeam(Long teamId) {
+        return match.homeId.eq(teamId).or(match.awayId.eq(teamId));
     }
 
 
