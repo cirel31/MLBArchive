@@ -12,6 +12,7 @@ export const teamSlice = createSlice({
     },
     teamDetailDataSuccess: (state, action) => {
       console.log('서버로부터 성공적으로 response 받음', action.payload)
+      state.teamData = action.payload
     },
   }
 })

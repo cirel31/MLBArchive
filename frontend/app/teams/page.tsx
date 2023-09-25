@@ -4,7 +4,6 @@ import "../../styles/TeamListPage.scss";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-// import { fetchTeamDataRequest } from "@/app/redux/features/searchTeamSlice";
 import { teamDetailData } from "@/app/redux/features/teamSlice";
 import { teamData } from "@/app/components/team/teamData";
 
@@ -82,7 +81,6 @@ const TeamsPage = () => {
                 src={team.logo}
                 alt={team.name}
                 className="teamLogo"
-                // onClick={() => router.push(`/teams/${team.linkName}`)}
                 onClick={() => searchTeamData(team.id)}
               />
             </div>

@@ -106,7 +106,7 @@ const AllPlayers = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [backgroundStyle, setBackgroundStyle] = useState(null);
 
-  const handleMouseMove = (e, cardIndex) => {
+  const handleMouseMove = (e, cardIndex:any) => {
     const l = e.nativeEvent.offsetX;
     const t = e.nativeEvent.offsetY;
     const h = e.currentTarget.clientHeight;
@@ -114,7 +114,7 @@ const AllPlayers = () => {
     const lp = Math.abs(Math.floor((100 / w) * l) - 100);
     const tp = Math.abs(Math.floor((100 / h) * t) - 100);
     const bg = `background-position: ${lp}% ${tp}%;`;
-    const style = `.card.active:before { ${bg} }`;
+    const style: any = `.card.active:before { ${bg} }`;
 
     setActiveCard(cardIndex);
     setBackgroundStyle(style);

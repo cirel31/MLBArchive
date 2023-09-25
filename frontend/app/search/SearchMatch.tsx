@@ -3,14 +3,14 @@ import DatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {requestMatchData} from "@/app/redux/features/matchSlice";
+import {requestDetailMatchData, requestMatchData} from "@/app/redux/features/matchSlice";
 import {teamData} from "@/app/components/team/teamData";
 const SearchMatch = () => {
   const dispatch = useDispatch()
   const teamList = teamData
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
-  const [teamName, setTeamName] = useState('')
+  const [teamName, setTeamName] = useState('109')
   const [nowPage, setPage] = useState(0)
   const matchList = useSelector((state:any) => state.match?.matchData)
   function formatDate(date:Date) {
@@ -32,6 +32,12 @@ const SearchMatch = () => {
     }
     console.log(action)
     dispatch(requestMatchData(action))
+  }
+
+  const searchDetailMatch = (id: string) => {
+    console.log("로직 실행 확인 중")
+    dispatch(requestDetailMatchData(id))
+
   }
   return (
     <>
@@ -88,7 +94,10 @@ const SearchMatch = () => {
                   awayScore: number
                 }
               ) => (
-              <div key={match.id}>
+              <div
+                key={match.id}
+                onClick={() => searchDetailMatch(String(match.id))}
+              >
                 <div>경기 id : {match.id}</div>
                 <div>홈팀 : {match.homeName}</div>
                 <div>어웨이팀 : {match.awayName}</div>
