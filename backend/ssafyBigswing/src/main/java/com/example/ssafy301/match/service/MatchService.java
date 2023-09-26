@@ -117,7 +117,7 @@ public class MatchService {
 
     private BooleanExpression matchTeam(MatchSearchDto searchDto) {
         // 팀 이름 같은 것을 가져옴
-        return match.homeName.eq(searchDto.getTeamName()).or(match.awayName.eq(searchDto.getTeamName()));
+        return match.homeId.eq(searchDto.getTeamId()).or(match.awayId.eq(searchDto.getTeamId()));
     }
 
     public MatchDetailJsonDto getDetailMatchByMatchId(Long matchId) {
