@@ -15,16 +15,16 @@ type RecordType = {
 };
 
 type TeamData = {
-  key: string;
+  rank: string;
   teamId: string;
   teamName: string;
-  record: RecordType;
+  record: RecordType[];
 };
 
 type League = {
   leagueId: string;
   divisionId: string;
-  teams: any;
+  teams: TeamData[];
 };
 const TeamRank = () => {
   const [teamList, setTeamList] = useState<League[]>([]);
@@ -69,33 +69,35 @@ const TeamRank = () => {
     205: "중부",
     203: "서부",
   };
-  console.log("leagueMapping", leagueMapping);
-  console.log("divisionMapping", divisionMapping);
   const flatTeamData = teamList.flatMap((league) =>
-    league.teams.map((team) => ({
+    league.teams.map((team: any) => ({
       ...team,
       key: team.teamId,
       leagueId: leagueMapping[league.leagueId],
       divisionId: divisionMapping[league.divisionId],
     }))
   );
-  const columns = [
+  const columns: any = [
     {
       title: "리그 이름",
       dataIndex: "leagueId",
-      key: "leagueId",
+      render: (text:string, record: League, index:number) => (
+        <p key={index}>{record.leagueId}</p>
+      ),
     },
     {
       title: "지역 이름",
       dataIndex: "divisionId",
-      key: "divisionId",
+      render: (text:string, record: League, index:number) => (
+        <p key={index}>{record.divisionId}</p>
+      ),
     },
     {
       title: "팀 이름",
       dataIndex: "teamName",
       key: "teamName",
-      render: (text, record) => (
-        <Link href={`/team/${record.teamId}`}>{text}</Link>
+      render: (text:string, record: TeamData) => (
+        <p onClick={() => router.push(`/team/${record.teamId}`)}>{text}</p>
       ),
     },
     {
@@ -124,8 +126,8 @@ const TeamRank = () => {
       <Table
         className="TeamRank_box"
         columns={columns}
-        dataSource={teamList.flatMap((league) => league.teams)}
-        // dataSource={flatTeamData}
+        // dataSource={teamList.flatMap((league) => league.teams)}
+        dataSource={flatTeamData}
         pagination={{ pageSize: 5 }}
       />
     </div>
