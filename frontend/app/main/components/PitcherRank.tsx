@@ -3,7 +3,6 @@ import { fetchPitchingRankerDataAPI } from "@/app/redux/api/rankAPI";
 import { useRouter } from "next/navigation";
 import { List } from "antd";
 import { Image } from "antd";
-import "../../../styles/MainPageStyle.scss";
 
 interface PromiseResult {
   message: string;
@@ -29,9 +28,11 @@ const PitcherRank = () => {
   }, []);
 
   return (
-    <>
-      <div>투수 순위</div>
+    <div className="pitcher-rank-container">
+      {" "}
+      {/* 스타일을 적용할 컨테이너 */}
       <div>
+        <div>투수 순위</div>
         <List
           dataSource={pitcher}
           renderItem={(content: any, index: number) => (
@@ -40,7 +41,7 @@ const PitcherRank = () => {
               onClick={() => router.push(`/players/${content.playerId}`)}
             >
               <div>
-                <span className="rank">{index + 1}</span> {/* 순위를 표시 */}
+                <span className="rank">{index + 1}</span>
                 <Image
                   src={content.image}
                   className="player_img"
@@ -53,7 +54,7 @@ const PitcherRank = () => {
           )}
         />
       </div>
-    </>
+    </div>
   );
 };
 

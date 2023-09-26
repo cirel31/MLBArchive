@@ -76,15 +76,6 @@ const LoginPage = () => {
         <div>
           <h3 style={contentStyle}>
             <img
-              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/d0fdj3z71drh7vhdzdes.jpg"
-              alt=""
-              // style={{ width: "100%", height: "100%" }}
-            />
-          </h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>
-            <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/zxifbvspc2hlnpzur3im.jpg"
               alt=""
               // style={{ width: "100%", height: "100%" }}
