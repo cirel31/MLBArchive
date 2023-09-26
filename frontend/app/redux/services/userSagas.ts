@@ -1,5 +1,5 @@
 import { call, put, takeLatest, CallEffect, PutEffect } from "@redux-saga/core/effects";
-import axios, { AxiosResponse } from "axios";
+import { AxiosResponse } from "axios";
 import {
   fetchUserData, fetchUserDataSuccess, fetchDataError, fetchUserLogout,
   fetchFollowData, fetchFollowDataSuccess, fetchReUserDataSuccess,
@@ -13,6 +13,7 @@ import {
   userPlayerFollowAPI,
   userTeamFollowAPI
 } from "@/app/redux/api/userAPI";
+import {useRouter} from "next/navigation";
 
 // ./features/userSlice.ts
 interface UserData {
@@ -109,11 +110,24 @@ function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | 
   }
 }
 
+const pushRoute = (url:string) => {
+  return new Promise((resolve, reject) => {
+    if (typeof window === 'undefined') {
+      reject('This function can only be run on client side.');
+      return;
+    }
+    import('next/router').then(({ default: Router }) => {
+      Router.push(url).then(resolve).catch(reject);
+    });
+  });
+};
+
 function* fetchUserLogoutSaga(): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   const response: AxiosResponse<any> = yield call(LogoutAPI)
   if (response) {
     console.log("로그아웃 확인", response)
     sessionStorage.clear()
+    yield call(pushRoute, '/login');
   }
 }
 
