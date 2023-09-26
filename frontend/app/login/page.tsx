@@ -46,14 +46,13 @@ const LoginPage = () => {
   const REDIRECT_URI_NAVER = process.env.NEXT_PUBLIC_OAUTH_NAVER_URL;
   const OAUTH_NAVER = `https://nid.naver.com/oauth2.0/authorize?client_id=${API_KEY_NAVER}&redirect_uri=${BASE_URL}${REDIRECT_URI_NAVER}&response_type=code&state=${STATE}`;
 
-  useEffect(() => {
-    setTimeout(function () {
-      const loginContents = document.querySelector(".loginContents") as HTMLElement;
-      if (loginContents) {
-        loginContents.style.opacity = "1";
-      }
-    }, 500)
-  })
+  setTimeout(function () {
+    const loginContents = document.querySelector(".loginContents");
+    if (loginContents) {
+      loginContents.style.opacity = "1";
+    }
+  }, 300); // 5초 뒤에 실행
+
   const contentStyle: React.CSSProperties = {
     height: "100%",
     color: "#fff",
@@ -69,14 +68,7 @@ const LoginPage = () => {
             <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/kxwcyq0fdgyidxtioowr.jpg"
               alt=""
-            />
-          </h3>
-        </div>
-        <div>
-          <h3 style={contentStyle}>
-            <img
-              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/vai8x2nxjp9v9mwi87qr.jpg"
-              alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>
@@ -85,6 +77,7 @@ const LoginPage = () => {
             <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/zxifbvspc2hlnpzur3im.jpg"
               alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>
@@ -93,6 +86,7 @@ const LoginPage = () => {
             <img
               src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w2208/mlb/s7akxdikqbeuraalsomc.jpg"
               alt=""
+              // style={{ width: "100%", height: "100%" }}
             />
           </h3>
         </div>

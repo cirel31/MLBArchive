@@ -1,13 +1,7 @@
-// .main-content01 {
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-// }
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
 
-// .mainphoto {
-//   width: 1000px;
-//   padding: 0 auto;
-// }
 body {
+  font-family: "Noto Serif KR", serif;
 }
 .grid-container {
   display: grid;
@@ -39,23 +33,42 @@ body {
 }
 
 .teamrank {
-  width: 770px;
+  width: 57%;
   border: 1px solid #eeebeb;
   background: #eeebeb;
   border-radius: 10px;
   margin: 20px;
-  height: 1000px;
+  height: 100%;
+}
+
+.teamrank2 {
+  width: 30%;
+  border: 1px solid #eeebeb;
+  background: #eeebeb;
+  border-radius: 10px;
+  margin: 20px;
+  height: 100%;
 }
 
 .rank {
-  width: 400px;
-  border: 1px solid #eeebeb;
-  background: #eeebeb;
-  border-radius: 10px;
-  margin: 20px;
   // margin-top: 40px;
+  font-size: 50px;
+  margin: 20px;
 }
 
+.TeamRank_box {
+  font-family: "Noto Serif KR", serif;
+}
+
+.TeamRank_box2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.TeamRank_box td {
+  font-family: "Noto Serif KR", serif;
+}
 .one_game {
   // border: 1px solid;
   border-radius: 10px;
@@ -66,4 +79,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.player_rank {
+  width: 100%;
+  // margin: 20px;
+  font-size: large;
+
+  font-weight: 500;
+  // align-items: center;
+  display: flex;
+}
+
+/* HitterRank.css */
+
+.hitter-rank-container {
+  background-color: white; /* 배경색을 하얀색으로 설정 */
+  padding: 16px; /* 원하는 패딩값을 설정 */
+  border-radius: 8px; /* 필요에 따라 테이블에 모서리를 둥글게 만들 수 있습니다. */
+  width: 50%;
+}
+
+.pitcher-rank-container {
+  background-color: white; /* 배경색을 하얀색으로 설정 */
+  padding: 16px; /* 원하는 패딩값을 설정 */
+  border-radius: 8px; /* 필요에 따라 테이블에 모서리를 둥글게 만들 수 있습니다. */
+  width: 50%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200;700&family=Orbit&display=swap");
+
+.player_name {
+  font-size: 18px;
+  margin-left: 20px;
+  font-family: "Noto Serif KR", serif;
 }

@@ -6,9 +6,11 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { teamDetailData } from "@/app/redux/features/teamSlice";
 import { teamData } from "@/app/components/team/teamData";
+import axios from "axios";
 
 const TeamsPage = () => {
   const router = useRouter();
+  const { teamId } = router.query;
   const [teamList, setTeamList] = useState(teamData);
   const handleMouseMove = (
     id: number,
@@ -90,5 +92,19 @@ const TeamsPage = () => {
     </>
   );
 };
+
+export async function getServerSideProps({ params }) {
+  const { teamId } = params;
+
+  // 서버에서 팀 데이터를 가져오는 로직을 작성하세요
+  const response = await axios.get(`URL_TO_FETCH_TEAM_DATA/${teamId}`);
+  const teamData = response.data; // 팀 데이터 예시
+
+  return {
+    props: {
+      teamData,
+    },
+  };
+}
 
 export default TeamsPage;

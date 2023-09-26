@@ -118,10 +118,11 @@ const onChange: TableProps<DataType>["onChange"] = (
 
 const App: React.FC = () => (
   <>
-    <h3>Player Rank</h3>
-    <Table columns={columns} dataSource={data} onChange={onChange} />
-    <HitterRank />
-    <PitcherRank />
+    {/* <Table columns={columns} dataSource={data} onChange={onChange} /> */}
+    <div className="player_rank">
+      <HitterRank />
+      <PitcherRank />
+    </div>
   </>
 );
 
