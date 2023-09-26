@@ -1,7 +1,6 @@
 package com.example.ssafy301.match.dto;
 
 import com.example.ssafy301.match.domain.Match;
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
