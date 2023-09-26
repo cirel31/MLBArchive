@@ -15,21 +15,14 @@ const PlayerDetailPage = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const pathURI = usePathname();
-  const followCheck = useSelector(
-    (state: any) => state.user.followList?.PlayerList
-  );
+  const followCheck = useSelector((state: any) => state.user.followList?.PlayerList);
   const [isFollow, setIsFollow] = useState(false);
   const [seasonData, setSeasonData] = useState(new Date().getFullYear());
-  const playerData: any = useSelector(
-    (state: any) => state.playerDetail.playerData
-  );
-  const playerScore: any = useSelector(
-    (state: any) => state.playerDetail.playerScore
-  );
+  const playerData: any = useSelector((state: any) => state.playerDetail.playerData);
+  const playerScore: any = useSelector((state: any) => state.playerDetail.playerScore);
   const playerId = parseInt(pathURI.slice(9));
   const MIN_YEAR: number = 1903;
   const MAX_YEAR = new Date().getFullYear();
-
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -43,8 +36,6 @@ const PlayerDetailPage = () => {
     dispatch(fetchPlayerDetailData(searchQuery));
   }, []);
   useEffect(() => {
-    console.log("작동중")
-    console.log(playerData?.id)
     if (followCheck && playerData) {
       followCheck.map((player: { playerId: number }) => {
         if (player.playerId === playerData.id) {

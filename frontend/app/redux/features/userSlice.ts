@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import {useRouter} from "next/navigation";
 
 interface UserState {
   isLoading: boolean;
@@ -25,13 +24,13 @@ interface FetchUserDataPayload {
   state: string;
   kind: string;
 }
+
 export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
       state.isLoading = true
-      console.log("슬라이스 접근 확인")
     },
     fetchReUserData: (state) => {
     },
@@ -52,7 +51,6 @@ export const userSlice = createSlice({
       state.refreshToken = action.payload.refreshToken
     },
     fetchReUserDataSuccess: (state, action) => {
-      console.log(action.payload.resultData)
       const email = action.payload.resultData.email
       const nickname = action.payload.resultData.nickname
       const image = action.payload.resultData.profileImage
@@ -67,10 +65,8 @@ export const userSlice = createSlice({
       }
       state.accessToken = action.payload.resultData.accessToken
       state.refreshToken = action.payload.resultData.refreshToken
-
     },
     fetchDataError: (state, action: PayloadAction<Error>) => {
-      console.log(action.payload.message)
     },
     fetchFollowData: () => {
     },
@@ -84,11 +80,14 @@ export const userSlice = createSlice({
 
     },
     fetchUserLogout: (state) => {
+
+    },
+    successUserLogout: (state) => {
       state.isLoggedIn = false
       state.userData = null
       state.accessToken = null
       state.refreshToken = null
-    }
+    },
   }
 })
 
@@ -103,5 +102,6 @@ export const {
   addFollowTeam,
   fetchReUserData,
   fetchReUserDataSuccess,
+  successUserLogout,
 } = userSlice.actions
 export default userSlice.reducer

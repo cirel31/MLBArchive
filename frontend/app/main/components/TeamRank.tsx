@@ -41,7 +41,6 @@ const TeamRank = () => {
           };
           for (let j = 0; j < 5; j++) {
             const teamData = leagueData.teamRecords[j];
-            console.log(teamData.leagueRecord)
             leagueObj.teams.push({
               rank: teamData.leagueRank,
               teamId: teamData.team.id,
@@ -68,7 +67,7 @@ const TeamRank = () => {
     205: '중부',
     203: '서부'
   };
-  const flatTeamData = teamList.flatMap(league => league.teams.map(team => ({
+  const flatTeamData = teamList.flatMap(league => league.teams.map((team:any) => ({
     ...team,
     key: team.teamId,
     leagueId: leagueMapping[league.leagueId],
