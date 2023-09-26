@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TeamController {
 
-    private TeamService teamService;
+    private final TeamService teamService;
     
     // 현재 시즌의 전체 팀 리스트 가져오기
     @GetMapping("/list")
