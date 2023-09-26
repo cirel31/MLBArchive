@@ -1,7 +1,8 @@
 package com.example.ssafy301.match.controller;
 
 import com.example.ssafy301.common.api.ResponseEntity;
-import com.example.ssafy301.match.dto.MatchDetailDto;
+import com.example.ssafy301.match.dto.LineScoreDto;
+import com.example.ssafy301.match.dto.MatchDetailJsonDto;
 import com.example.ssafy301.match.dto.MatchDto;
 import com.example.ssafy301.match.dto.MatchSearchDto;
 import com.example.ssafy301.match.service.MatchService;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static com.example.ssafy301.common.api.status.SuccessCode.*;
+import static com.example.ssafy301.common.api.status.SuccessCode.GENERAL_SUCCESS;
 
 @RestController
 @RequiredArgsConstructor
@@ -31,10 +32,14 @@ public class MatchController {
     // 경기 결과 상세 조회
     @GetMapping("/detail/{matchId}")
     public ResponseEntity getDetailMatch(@PathVariable("matchId") Long matchId) {
-        MatchDetailDto result = matchService.getMatchById(matchId);
+        MatchDetailJsonDto result = matchService.getDetailMatchByMatchId(matchId);
         return ResponseEntity.success(GENERAL_SUCCESS, result);
     }
-    
+    @GetMapping("/linescore/{matchId}")
+    public ResponseEntity getLineScore(@PathVariable("matchId") Long matchId) {
+        LineScoreDto result = matchService.getLineScoreByMatchId(matchId);
+        return ResponseEntity.success(GENERAL_SUCCESS, result);
+    }
     // 경기 검색
     @GetMapping("/search")
     public ResponseEntity getMathesBySearchCondition(Pageable pageable, @ModelAttribute MatchSearchDto matchSearchDto) {

@@ -32,7 +32,7 @@ function* requestMatchDetailDataSaga(action: PayloadAction<any>) {
     const response: MatchDataPayload = yield call(matchDetailDataAPI, teamId)
     console.log(response)
     if (response?.resultData) {
-      yield put(successDetailMatchData(response.resultData.content))
+      yield put(successDetailMatchData(response.resultData))
     }
   }
   catch (error) {

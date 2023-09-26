@@ -50,6 +50,5 @@
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/react-datepicker": "^4.15.0"
-  },
-  "proxy": "https://openapi.naver.com"
+  }
 }
