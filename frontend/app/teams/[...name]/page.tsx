@@ -1,11 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
 import "../../../styles/TeamPage.css";
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import Image from "next/image";
 import { selectLogo, selectTwitter } from "@/app/components/team/teamData";
-import { Layout, Space } from "antd";
+import {InputNumber, Layout, Space} from "antd";
 import News from "./news";
+import {teamDetailData} from "@/app/redux/features/teamSlice";
+import TeamStat from "@/app/components/team/teamStat";
+import TeamRoster from "@/app/components/team/teamRoster";
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -41,13 +44,24 @@ const footerStyle: React.CSSProperties = {
 
 const DetailTeamPage = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const teamDetailData = useSelector((state: any) => state.team.teamData);
-  const searchId = teamDetailData?.id ?? 120;
+  const [teamId, setTeamId] = useState("");
+  const [season, setSeason] = useState(2023)
+  const [seasonData, setSeasonData] = useState(new Date().getFullYear());
+  const MIN_YEAR: number = 1903;
+  const MAX_YEAR = new Date().getFullYear();
+  const dispatch = useDispatch()
+  useEffect(() => {
+    const parsing = window.location.href.split("teams/")[1];
+    setTeamId(parsing);
+    dispatch(teamDetailData(parsing));
+  }, [teamId]);
+  const teamData = useSelector((state: any) => state.team.teamData);
+  const searchId = teamData?.id ?? 120;
   const logoPath = selectLogo(searchId);
   const twitterPath = selectTwitter(searchId);
 
   useEffect(() => {
-    if (teamDetailData) {
+    if (teamData) {
       setIsLoading(false);
     }
   });
@@ -68,9 +82,29 @@ const DetailTeamPage = () => {
           <Content style={contentStyle}>
             팀관련데이터
             {/* <News /> */}
+            {teamData &&
+              <div>
+                <div>{teamData.activeYears}</div>
+                <div>{teamData.createdYear}</div>
+                <div>{teamData.korName}</div>
+                <div>{teamData.teamName}</div>
+                <div>{teamData.teamLocation}</div>
+              </div>
+            }
+
+            <InputNumber
+              type="number"
+              min={MIN_YEAR}
+              max={MAX_YEAR}
+              value={seasonData}
+              onChange={(value) => setSeasonData(value ?? seasonData)}
+            />
+            <button onClick={() => setSeason(seasonData)}>조회</button>
+            <TeamStat teamId={teamId} season={season} />
+            <TeamRoster teamId={teamId} season={season} />
           </Content>
           <Footer style={footerStyle}>
-            <a href={twitterPath}>트위터 넣어 줌, {twitterPath}</a>
+            <a href={twitterPath}>{twitterPath}</a>
           </Footer>
         </Layout>
       </Layout>
