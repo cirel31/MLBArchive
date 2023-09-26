@@ -21,6 +21,7 @@ public enum FailCode {
     NO_MATCHES(NO_CONTENT, "입력하신 내용의 경기가 존재하지 않습니다."),
     NO_MATCH(NO_CONTENT, "말씀하신 경기는 존재하지 않습니다."),
     NO_TODAY_MATCH(NO_CONTENT, "오늘은 경기가 없습니다."),
+    NO_LOSE_MATCH(NO_CONTENT, "작년부터 지금까지 진 경기가 없습니다."),
 
     // 좋아요 관련
     NO_PLAYER_LIKE(NO_CONTENT, "좋아하는 선수가 없습니다"),

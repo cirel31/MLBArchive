@@ -11,7 +11,9 @@ import {
 import { useRouter } from "next/navigation";
 import playerFace from "@/app/players/[...id]/current.png";
 import { Helmet } from "react-helmet";
-
+import Swal from "sweetalert2";
+import { Table, Typography } from "antd";
+const { Title } = Typography;
 type PlayerType = {
   id: number;
   name: string;
@@ -74,18 +76,26 @@ const AllPlayers = () => {
     dispatch(fetchPlayerLetterData(action));
   };
   const searchQuery = (x: number) => {
+    let idx = 0;
     if (x === 0 || nowPage + x < 0) {
       setNowPage(0);
     } else if (nowPage + x >= totalPage || x === totalPage) {
-      setNowPage(totalPage - 1);
+      idx = totalPage - 1;
+      setNowPage(idx);
     } else {
-      setNowPage(nowPage + x);
+      idx = nowPage + x;
+      setNowPage(idx);
     }
     const action = {
       searchData: searchData,
-      nowPage: nowPage,
+      nowPage: idx,
       articlePerPage: 30,
     };
+    if (nowPage === idx && nowPage === 0) {
+      Swal.fire("이미 제일 앞의 페이지 입니다.");
+    } else if (nowPage === idx && nowPage === totalPage - 1) {
+      Swal.fire("이미 제일 뒤의 페이지 입니다.");
+    }
     dispatch(fetchPlayerLetterData(action));
   };
 
@@ -96,7 +106,7 @@ const AllPlayers = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [backgroundStyle, setBackgroundStyle] = useState(null);
 
-  const handleMouseMove = (e, cardIndex) => {
+  const handleMouseMove = (e, cardIndex:any) => {
     const l = e.nativeEvent.offsetX;
     const t = e.nativeEvent.offsetY;
     const h = e.currentTarget.clientHeight;
@@ -104,7 +114,7 @@ const AllPlayers = () => {
     const lp = Math.abs(Math.floor((100 / w) * l) - 100);
     const tp = Math.abs(Math.floor((100 / h) * t) - 100);
     const bg = `background-position: ${lp}% ${tp}%;`;
-    const style = `.card.active:before { ${bg} }`;
+    const style: any = `.card.active:before { ${bg} }`;
 
     setActiveCard(cardIndex);
     setBackgroundStyle(style);
@@ -115,8 +125,15 @@ const AllPlayers = () => {
     setBackgroundStyle(null);
   };
 
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleCardFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
     <>
+      <Title>Players</Title>
       <Helmet>
         <link
           rel="stylesheet"
@@ -143,34 +160,43 @@ const AllPlayers = () => {
               onClick={() => handleDetailPage(player.id)}
             >
               <div>
-                {/* <p>{player.name}</p> */}
-                <p>
-                  {player.team} {player.number}
-                </p>
+                <p> {player.team}</p>
+                <p>{player.number}</p>
                 <main id="app">
-                  <div className="card charizard">
-                    <div className="playerCard">
-                      <div className="container">
-                        <div className="rectangle2">{player.name}</div>
-                        <img
-                          src={player.image}
-                          alt={player.name}
-                          className="playerFace"
-                        />
-                        <div className="rectangle">
-                          <div className="circleBox">
-                            <div>
-                              <div className="circle">{player.number}</div>
-                              <div className="circle2">2</div>
+                  <div
+                    className={`card ${isFlipped ? "flipped" : ""}`}
+                    onClick={handleCardFlip}
+                  >
+                    <div className="face face-front">
+                      {/* <div className="card charizard"> */}
+                      <div className="playerCard">
+                        <div className="container">
+                          <div className="rectangle2">{player.name}</div>
+                          <img
+                            src={player.image}
+                            alt={player.name}
+                            className="playerFace"
+                          />
+                          <div className="rectangle">
+                            <div className="circleBox">
+                              <div>
+                                <div className="circle">{player.number}</div>
+                                <div className="circle2">2</div>
+                              </div>
+                              <div>
+                                <div className="circle3">3</div>
+                                <div className="circle4">4</div>
+                              </div>
+                              <p>{player.team}</p>
                             </div>
-                            <div>
-                              <div className="circle3">3</div>
-                              <div className="circle4">4</div>
-                            </div>
-                            <p>{player.team}</p>
                           </div>
                         </div>
                       </div>
+                      {/* </div> */}
+                    </div>
+                    <div className="face face-back">
+                      팀마크
+                      {player.team}
                     </div>
                   </div>
                 </main>

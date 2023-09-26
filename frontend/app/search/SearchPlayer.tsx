@@ -15,17 +15,26 @@ const SearchPlayer = () => {
   const totalPage = useSelector((state: any) => state.searchPlayer.totalPage)
 
   const searchQuery = (x:number) => {
+    let idx = 0
     if (x === 0 || nowPage + x < 0) {
       setNowPage(0)
     }
     else if (nowPage + x >= totalPage || x === totalPage) {
-      setNowPage(totalPage-1)
+      idx = totalPage - 1
+      setNowPage(idx)
     }
     else {
-      setNowPage(nowPage+x)
+      idx = nowPage + x
+      setNowPage(idx)
     }
     const action = {
       searchData: searchData, nowPage:nowPage, articlePerPage:30
+    }
+    if (nowPage === idx && nowPage === 0 ) {
+      Swal.fire('이미 제일 앞의 페이지 입니다.')
+    }
+    else if (nowPage === idx && nowPage === totalPage - 1 ) {
+      Swal.fire('이미 제일 뒤의 페이지 입니다.')
     }
     dispatch(fetchPlayerWordData(action))
   }

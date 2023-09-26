@@ -62,6 +62,7 @@ public class PlayerService {
                 ))
                 .from(player)
                 .where(playerNameStartsWith(firstletter))
+                .orderBy(player.id.desc())
                 .offset(pageable.getOffset())
                 .limit(pageable.getPageSize())
                 .fetch();

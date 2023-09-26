@@ -18,9 +18,10 @@ export const matchSlice = createSlice({
 
     },
     requestDetailMatchData: (state, action) => {
-
+      console.log(action.payload)
     },
     successDetailMatchData: (state, action) => {
+      console.log(action.payload)
       state.matchDetailData = action.payload
     },
     errorDetailMatchData: (state, action) => {

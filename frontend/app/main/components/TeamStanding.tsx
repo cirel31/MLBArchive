@@ -1,6 +1,7 @@
+"use client";
 import TeamRank from "@/app/main/components/TeamRank";
 import PlayerRank from "@/app/main/components/PlayerRank";
-
+import News from "../../teams/[...name]/news";
 const TeamStanding = () => {
   return (
     <>
@@ -18,10 +19,9 @@ const TeamStanding = () => {
       <div style={{ display: "flex", justifyContent: "center" }}>
         <div className="teamrank">
           <TeamRank />
-        </div>
-        <div className="rank">
           <PlayerRank />
         </div>
+        <div className="rank">{/* <News /> */}</div>
       </div>
     </>
   );

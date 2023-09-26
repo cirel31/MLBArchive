@@ -25,11 +25,11 @@ public class TeamLikeService {
     private final TeamLikeRepository teamLikeRepository;
     private final UserRepository userRepository;
 
-    // 해당 유저가 좋아하는 선수 목록 가져오기
+    // 해당 유저가 좋아하는 팀 목록 가져오기
     public List<TeamLikeDto> getLikeTeamList(Long userId) {
         List<TeamLike> teamLikes = teamLikeRepository.getTeamLikesByUserId(userId);
 
-        // 좋아요 누른 선수가 없다면 예외 발생
+        // 좋아요 누른 팀이 없다면 예외 발생
         if(teamLikes == null || teamLikes.size() == 0) {
             throw new NotFoundException(FailCode.NO_TEAM_LIKE);
         }

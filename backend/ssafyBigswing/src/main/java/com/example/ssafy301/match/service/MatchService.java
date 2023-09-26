@@ -7,6 +7,8 @@ import com.example.ssafy301.match.domain.MatchDetail;
 import com.example.ssafy301.match.dto.*;
 import com.example.ssafy301.match.repository.MatchRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.example.ssafy301.team.service.TeamService;
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -30,6 +32,7 @@ import static com.example.ssafy301.match.domain.QMatch.match;
 public class MatchService {
 
     private final MatchRepository matchRepository;
+    private final TeamService teamService;
     private final JPAQueryFactory queryFactory;
     private final ObjectMapper objectMapper;
     
@@ -115,7 +118,7 @@ public class MatchService {
 
     private BooleanExpression matchTeam(MatchSearchDto searchDto) {
         // 팀 이름 같은 것을 가져옴
-        return match.homeName.eq(searchDto.getTeamName()).or(match.awayName.eq(searchDto.getTeamName()));
+        return match.homeId.eq(searchDto.getTeamId()).or(match.awayId.eq(searchDto.getTeamId()));
     }
 
     public MatchDetailJsonDto getDetailMatchByMatchId(Long matchId) {
