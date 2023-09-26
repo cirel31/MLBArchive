@@ -3,11 +3,10 @@ package com.example.ssafy301.match.service;
 import com.example.ssafy301.common.api.exception.NotFoundException;
 import com.example.ssafy301.common.api.status.FailCode;
 import com.example.ssafy301.match.domain.Match;
-import com.example.ssafy301.match.dto.MatchDetailDto;
-import com.example.ssafy301.match.dto.MatchDto;
-import com.example.ssafy301.match.dto.MatchSearchDto;
-import com.example.ssafy301.match.dto.QMatchDto;
+import com.example.ssafy301.match.domain.MatchDetail;
+import com.example.ssafy301.match.dto.*;
 import com.example.ssafy301.match.repository.MatchRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.ssafy301.team.service.TeamService;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
@@ -20,11 +19,12 @@ import org.springframework.data.support.PageableExecutionUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-import static com.example.ssafy301.match.domain.QMatch.*;
+import static com.example.ssafy301.match.domain.QMatch.match;
 
 @Service
 @RequiredArgsConstructor
@@ -34,7 +34,7 @@ public class MatchService {
     private final MatchRepository matchRepository;
     private final TeamService teamService;
     private final JPAQueryFactory queryFactory;
-
+    private final ObjectMapper objectMapper;
     
     // 오늘 있는 경기 목록 조회
     // 시간 순으로 정렬하기
@@ -119,5 +119,31 @@ public class MatchService {
     private BooleanExpression matchTeam(MatchSearchDto searchDto) {
         // 팀 이름 같은 것을 가져옴
         return match.homeId.eq(searchDto.getTeamId()).or(match.awayId.eq(searchDto.getTeamId()));
+    }
+
+    public MatchDetailJsonDto getDetailMatchByMatchId(Long matchId) {
+        MatchDetail matchDetail = matchRepository.findByMatchId(matchId);
+        if (matchDetail == null) {
+            throw new NotFoundException(FailCode.NO_MATCH);
+        }
+
+        try {
+            return objectMapper.readValue(matchDetail.getBoxscore(), MatchDetailJsonDto.class);
+        } catch (IOException e) {
+            throw new RuntimeException("Error parsing JSON", e);
+        }
+    }
+
+    public LineScoreDto getLineScoreByMatchId(Long matchId) {
+        MatchDetail matchDetail = matchRepository.findByMatchId(matchId);
+        if (matchDetail == null) {
+            throw new NotFoundException(FailCode.NO_MATCH);
+        }
+
+        try {
+            return objectMapper.readValue(matchDetail.getLinescore(), LineScoreDto.class);
+        } catch (IOException e) {
+            throw new RuntimeException("Error parsing JSON", e);
+        }
     }
 }
