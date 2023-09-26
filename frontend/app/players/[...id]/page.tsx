@@ -43,14 +43,16 @@ const PlayerDetailPage = () => {
     dispatch(fetchPlayerDetailData(searchQuery));
   }, []);
   useEffect(() => {
+    console.log("작동중")
+    console.log(playerData?.id)
     if (followCheck && playerData) {
       followCheck.map((player: { playerId: number }) => {
         if (player.playerId === playerData.id) {
-          setIsFollow(!isFollow);
+          setIsFollow(true);
         }
       });
     }
-  }, []);
+  }, [playerData]);
 
   const followBTN = () => {
     dispatch(addFollowPlayer(playerData.id));

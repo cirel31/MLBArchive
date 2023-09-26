@@ -5,6 +5,7 @@ import {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {requestDetailMatchData, requestMatchData} from "@/app/redux/features/matchSlice";
 import {teamData} from "@/app/components/team/teamData";
+import {useRouter} from "next/navigation";
 const SearchMatch = () => {
   const dispatch = useDispatch()
   const teamList = teamData
@@ -13,6 +14,7 @@ const SearchMatch = () => {
   const [teamName, setTeamName] = useState('109')
   const [nowPage, setPage] = useState(0)
   const matchList = useSelector((state:any) => state.match?.matchData)
+  const router = useRouter()
   function formatDate(date:Date) {
     const yyyy = date.getFullYear();
     const mm = String(date.getMonth() + 1).padStart(2, '0');
@@ -37,7 +39,7 @@ const SearchMatch = () => {
   const searchDetailMatch = (id: string) => {
     console.log("로직 실행 확인 중")
     dispatch(requestDetailMatchData(id))
-
+    router.push(`/match/${id}`)
   }
   return (
     <>
