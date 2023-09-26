@@ -1,91 +1,93 @@
 package com.example.ssafy301.match.dto;
 
 import lombok.Data;
+
 import java.util.List;
 
 @Data
 public class LineScoreDto {
-    private int game_id;
+
+    private Long game_id;
     private String game_date;
-    private CurrentScore currentScore;
-    private TeamScore teams;
-    private Defense defense;
-    private Offense offense;
-    private int balls;
-    private int strikes;
-    private int outs;
+    private InningScore linescore;
 
     @Data
-    public static class CurrentScore {
-        private int currentInning;
+    public static class InningScore {
+        private Integer currentInning;
         private String currentInningOrdinal;
         private String inningState;
         private String inningHalf;
-        private boolean isTopInning;
-        private int scheduledInnings;
-        private List<Inning> innings;
+        private Boolean isTopInning;
+        private Integer scheduledInnings;
+        private List<InningDetail> innings;
+        private TeamScore teams;
+        private PlayerDefense defense;
+        private PlayerOffense offense;
+        private Integer balls;
+        private Integer strikes;
+        private Integer outs;
     }
 
     @Data
-    public static class Inning {
-        private int num;
+    public static class InningDetail {
+        private Integer num;
         private String ordinalNum;
-        private Score home;
-        private Score away;
+        private ScoreDetail home;
+        private ScoreDetail away;
     }
 
     @Data
-    public static class Score {
-        private int runs;
-        private int hits;
-        private int errors;
-        private int leftOnBase;
+    public static class ScoreDetail {
+        private Integer runs;
+        private Integer hits;
+        private Integer errors;
+        private Integer leftOnBase;
     }
 
     @Data
     public static class TeamScore {
-        private Score home;
-        private Score away;
+        private ScoreDetail home;
+        private ScoreDetail away;
     }
 
     @Data
-    public static class Defense {
-        private Player pitcher;
-        private Player catcher;
-        private Player first;
-        private Player second;
-        private Player third;
-        private Player shortstop;
-        private Player left;
-        private Player center;
-        private Player right;
-        private Player batter;
-        private Player onDeck;
-        private Player inHole;
-        private int battingOrder;
-        private Team team;
+    public static class PlayerDefense {
+        private PlayerDetail pitcher;
+        private PlayerDetail catcher;
+        private PlayerDetail first;
+        private PlayerDetail second;
+        private PlayerDetail third;
+        private PlayerDetail shortstop;
+        private PlayerDetail left;
+        private PlayerDetail center;
+        private PlayerDetail right;
+        private PlayerDetail batter;
+        private PlayerDetail onDeck;
+        private PlayerDetail inHole;
+        private Integer battingOrder;
+        private TeamDetail team;
     }
 
     @Data
-    public static class Offense {
-        private Player batter;
-        private Player onDeck;
-        private Player inHole;
-        private Player pitcher;
-        private int battingOrder;
-        private Team team;
+    public static class PlayerOffense {
+        private PlayerDetail batter;
+        private PlayerDetail onDeck;
+        private PlayerDetail inHole;
+        private PlayerDetail pitcher;
+        private Integer battingOrder;
+        private TeamDetail team;
     }
 
     @Data
-    public static class Player {
-        private int id;
+    public static class PlayerDetail {
+        private Long id;
         private String fullName;
         private String link;
     }
 
     @Data
-    public static class Team {
-        private int id;
+    public static class TeamDetail {
+        private Long id;
         private String name;
         private String link;
     }
