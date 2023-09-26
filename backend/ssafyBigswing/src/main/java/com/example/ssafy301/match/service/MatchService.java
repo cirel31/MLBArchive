@@ -7,11 +7,14 @@ import com.example.ssafy301.match.domain.MatchDetail;
 import com.example.ssafy301.match.dto.*;
 import com.example.ssafy301.match.repository.MatchDetailRepository;
 import com.example.ssafy301.match.repository.MatchRepository;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.support.PageableExecutionUtils;
@@ -28,6 +31,7 @@ import static com.example.ssafy301.match.domain.QMatch.match;
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)
+@Slf4j
 public class MatchService {
 
     private final MatchRepository matchRepository;
@@ -122,12 +126,17 @@ public class MatchService {
 
     public MatchDetailJsonDto getDetailMatchByMatchId(Long matchId) {
         MatchDetail matchDetail = matchDetailRepository.findByMatchId(matchId);
+        log.debug("DTO Result: " + matchDetail.getMatchId()+" zzzz ",matchDetail.getId());
         if (matchDetail == null) {
             throw new NotFoundException(FailCode.NO_MATCH);
         }
 
         try {
-            return objectMapper.readValue(matchDetail.getBoxscore(), MatchDetailJsonDto.class);
+            log.debug("왜 안돼~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            MatchDetailJsonDto dto = objectMapper.readValue(matchDetail.getBoxscore(), MatchDetailJsonDto.class);
+            log.debug("DTO Result: " + dto);
+            return dto;
         } catch (IOException e) {
             throw new RuntimeException("Error parsing JSON", e);
         }
@@ -140,6 +149,7 @@ public class MatchService {
         }
 
         try {
+            objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
             return objectMapper.readValue(matchDetail.getLinescore(), LineScoreDto.class);
         } catch (IOException e) {
             throw new RuntimeException("Error parsing JSON", e);

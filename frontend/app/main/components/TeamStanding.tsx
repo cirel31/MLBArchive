@@ -5,23 +5,22 @@ import News from "../../teams/[...name]/news";
 const TeamStanding = () => {
   return (
     <>
-      {/* <div style={{ display: "flex", justifyContent: "center" }}>
-        <div className="teamrank">
-          팀랭킹
-          <TeamRank />
-        </div>
-        <div className="rank">
-          선수랭킹
-          <HitterRank />
-          <PitcherRank />
-        </div>
-      </div> */}
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignContent: "center",
+          margin: "0 auto",
+        }}
+      >
         <div className="teamrank">
           <TeamRank />
+        </div>
+        <div className="teamrank2">
           <PlayerRank />
         </div>
-        <div className="rank">{/* <News /> */}</div>
+
+        {/* <div className="rank"><News /></div> */}
       </div>
     </>
   );

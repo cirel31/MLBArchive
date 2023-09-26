@@ -36,10 +36,10 @@ const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
   const activityStatus = playerData.playing ? "활동 중" : "은퇴";
   const retireDateValue =
     playerData.retireDate !== null ? playerData.retireDate : "-";
-
+  const backValue = playerData.backnumber !== -1 ? playerData.backnumber : "-";
   const data = [
     { key: "playing", field: "활동여부", value: activityStatus },
-    { key: "backnumber", field: "등번호", value: playerData.backnumber },
+    { key: "backnumber", field: "등번호", value: backValue },
     { key: "debutDate", field: "데뷔일", value: playerData.debutDate },
     { key: "retireDate", field: "은퇴일", value: retireDateValue },
     { key: "height", field: "키", value: playerData.height },

@@ -20,8 +20,8 @@ public class MatchDetail {
 
     @Column(name = "match_id")
     private Long matchId;
-    @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String linescore;
-    @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String boxscore;
 }
