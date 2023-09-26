@@ -10,7 +10,7 @@ import axios from "axios";
 
 const TeamsPage = () => {
   const router = useRouter();
-  const { teamId } = router.query;
+  // const { teamId } = router.query;
   const [teamList, setTeamList] = useState(teamData);
   const handleMouseMove = (
     id: number,
@@ -58,7 +58,7 @@ const TeamsPage = () => {
   };
   const dispatch = useDispatch();
   const searchTeamData = (key: any) => {
-    dispatch(teamDetailData(key));
+    // dispatch(teamDetailData(key));
     router.push(`/teams/${key}`);
   };
   return (
@@ -93,18 +93,18 @@ const TeamsPage = () => {
   );
 };
 
-export async function getServerSideProps({ params }) {
-  const { teamId } = params;
-
-  // 서버에서 팀 데이터를 가져오는 로직을 작성하세요
-  const response = await axios.get(`URL_TO_FETCH_TEAM_DATA/${teamId}`);
-  const teamData = response.data; // 팀 데이터 예시
-
-  return {
-    props: {
-      teamData,
-    },
-  };
-}
+// export async function getServerSideProps({ params }) {
+//   const { teamId } = params;
+//
+//   // 서버에서 팀 데이터를 가져오는 로직을 작성하세요
+//   const response = await axios.get(`URL_TO_FETCH_TEAM_DATA/${teamId}`);
+//   const teamData = response.data; // 팀 데이터 예시
+//
+//   return {
+//     props: {
+//       teamData,
+//     },
+//   };
+// }
 
 export default TeamsPage;
