@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
 
-.body {
+body {
   font-family: "Noto Serif KR", serif;
 }
 .grid-container {
@@ -33,7 +33,16 @@
 }
 
 .teamrank {
-  width: 770px;
+  width: 57%;
+  border: 1px solid #eeebeb;
+  background: #eeebeb;
+  border-radius: 10px;
+  margin: 20px;
+  height: 100%;
+}
+
+.teamrank2 {
+  width: 30%;
   border: 1px solid #eeebeb;
   background: #eeebeb;
   border-radius: 10px;
@@ -47,6 +56,19 @@
   margin: 20px;
 }
 
+.TeamRank_box {
+  font-family: "Noto Serif KR", serif;
+}
+
+.TeamRank_box2 {
+  font-family: "Noto Serif KR", serif;
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.TeamRank_box td {
+  font-family: "Noto Serif KR", serif;
+}
 .one_game {
   // border: 1px solid;
   border-radius: 10px;

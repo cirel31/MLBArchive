@@ -2,8 +2,22 @@ import React, { useState, useEffect, useRef } from "react";
 import { gsap, Power3, Power4 } from "gsap"; // GSAP 라이브러리 가져오기
 import Image from "next/image";
 import teamcard from "../../assets/intro/Group 135.png";
+import teamcard2 from "../../assets/intro/Group 137.png";
+import teamcard3 from "../../assets/intro/Group 140.png";
+import teamcard4 from "../../assets/intro/Group 141.png";
+import teamcard5 from "../../assets/intro/Group 142.png";
+import teamcard6 from "../../assets/intro/Group 143.png";
+import teamcard7 from "../../assets/intro/Group 144.png";
+import teamcard8 from "../../assets/intro/Group 145.png";
+import teamcard9 from "../../assets/intro/Group 146.png";
+import teamcard10 from "../../assets/intro/Group 147.png";
+import teamcard11 from "../../assets/intro/Group 148.png";
+import teamcard12 from "../../assets/intro/Group 149.png";
+import teamcard13 from "../../assets/intro/Group 150.png";
+import teamcard14 from "../../assets/intro/Group 151.png";
 import "../../styles/intro.css";
-import { Tween } from "react-gsap";
+import Link from "next/link";
+import { Button } from "antd";
 
 gsap.registerPlugin(gsap);
 
@@ -23,7 +37,7 @@ function CardComponent() {
     const _button2 = document.querySelectorAll("button")[1];
 
     _button1.addEventListener("click", cardRandom);
-    _button2.addEventListener("click", cardSetting);
+    // _button2.addEventListener("click", cardSetting);
 
     window.addEventListener("resize", () => {
       // 스크롤 중인 경우 창 크기 변경을 하지 않음
@@ -113,6 +127,17 @@ function CardComponent() {
       left: parseFloat(item.style.left),
     }));
   }
+  const elements = document.querySelectorAll(".title2 div");
+
+  setTimeout(() => {
+    elements.forEach(function (_text) {
+      gsap.to(_text, {
+        autoAlpha: 1,
+        delay: Math.random() * 0.8,
+        ease: Power3.easeInOut,
+      });
+    });
+  }, 6000);
 
   return (
     // JSX로 컴포넌트 렌더링
@@ -122,61 +147,77 @@ function CardComponent() {
           <Image src={teamcard} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard2} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard3} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard4} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard5} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard6} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard7} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard8} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard9} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard10} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard11} alt="" />
         </div>
         <div className="cardItem">
-          <Image src={teamcard} alt="" />
+          <Image src={teamcard12} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard13} alt="" />
+        </div>
+        <div className="cardItem">
+          <Image src={teamcard14} alt="" />
         </div>
       </section>
 
       <div className="buttonWrap">
-        <button type="button" onClick={cardRandom}>
-          Random
-        </button>
-        <button type="button" onClick={cardSetting}>
+        <Button onClick={cardRandom}>카드 뿌리기</Button>
+        {/* <button type="button" onClick={cardSetting}>
           Reset
-        </button>
+        </button> */}
+
+        <Link href="/main">
+          <Button>
+            <a>이동하기</a>
+          </Button>
+        </Link>
+
         <div className="bottom">
-          <h1 className="title">
-            <div>원</div>
-            <div>하</div>
-            <div>는</div>
-            <div>팀</div>
-            <div>정</div>
-            <div>보</div>
-            <div>확</div>
-            <div>인</div>
-          </h1>
+          <section className="bottom">
+            <h1 className="title2">
+              <div>원</div>
+              <div>하</div>
+              <div>는</div>
+
+              <div>팀</div>
+              <div>고</div>
+              <div>르</div>
+              <div>기</div>
+              <h5>
+                {" "}
+                <div>이동하기 버튼을 클릭해 메인페이지로 이동하세요 !</div>
+              </h5>
+            </h1>
+          </section>
         </div>
       </div>
-      <section className="bottom3"></section>
     </div>
   );
 }
