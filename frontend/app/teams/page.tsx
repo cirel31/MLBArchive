@@ -10,7 +10,7 @@ import axios from "axios";
 
 const TeamsPage = () => {
   const router = useRouter();
-  const { teamId } = router.query;
+
   const [teamList, setTeamList] = useState(teamData);
   const handleMouseMove = (
     id: number,

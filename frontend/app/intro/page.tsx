@@ -38,7 +38,7 @@ function Intro() {
           ease: Power3.easeInOut,
         });
       });
-    }, 3000);
+    }, 4000);
 
     gsap.to(window, 2, {
       scrollTo: ".bottom",

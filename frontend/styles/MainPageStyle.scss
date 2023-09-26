@@ -20,8 +20,8 @@ body {
 // }
 
 .gametime {
-  border: 1px solid #eeebeb;
-  background: #eeebeb;
+  border: 1px solid rgb(6, 31, 77);
+  background: rgb(6, 31, 77);
   width: 90%;
   margin: 0 auto;
   border-radius: 10px;
@@ -34,17 +34,18 @@ body {
 
 .teamrank {
   width: 57%;
-  border: 1px solid #eeebeb;
-  background: #eeebeb;
+  border: 1px solid rgb(6, 31, 77);
+  background: rgb(6, 31, 77);
   border-radius: 10px;
   margin: 20px;
   height: 100%;
+  color: white;
 }
 
 .teamrank2 {
   width: 30%;
-  border: 1px solid #eeebeb;
-  background: #eeebeb;
+  border: 1px solid rgb(6, 31, 77);
+  background: rgb(6, 31, 77);
   border-radius: 10px;
   margin: 20px;
   height: 100%;
