@@ -2,14 +2,12 @@ package com.example.ssafy301.match.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 import java.util.Map;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 public class MatchDetailJsonDto {
     public static class Game {
         private int game_id;

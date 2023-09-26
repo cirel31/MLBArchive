@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Match {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "match_id")
     private Long id;
 
@@ -54,7 +55,7 @@ public class Match {
     @Column(name = "current_inning")
     private int currentInning;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "match_detail_id")
-    private MatchDetail matchDetail;
+//    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//    @JoinColumn(name = "match_detail_id")
+//    private MatchDetail matchDetail;
 }

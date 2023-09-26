@@ -1,7 +1,6 @@
 package com.example.ssafy301.match.dto;
 
 import com.example.ssafy301.match.domain.Match;
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -40,7 +39,7 @@ public class MatchDetailDto {
         this.awayName = match.getAwayName();
         this.status = match.getStatus();
         this.currentInning = match.getCurrentInning();
-        this.linescore = match.getMatchDetail().getLinescore();
-        this.boxscore = match.getMatchDetail().getBoxscore();
+//        this.linescore = match.getMatchDetail().getLinescore();
+//        this.boxscore = match.getMatchDetail().getBoxscore();
     }
 }

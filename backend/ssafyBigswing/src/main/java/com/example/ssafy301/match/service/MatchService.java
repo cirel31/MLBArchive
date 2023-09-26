@@ -5,6 +5,7 @@ import com.example.ssafy301.common.api.status.FailCode;
 import com.example.ssafy301.match.domain.Match;
 import com.example.ssafy301.match.domain.MatchDetail;
 import com.example.ssafy301.match.dto.*;
+import com.example.ssafy301.match.repository.MatchDetailRepository;
 import com.example.ssafy301.match.repository.MatchRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.querydsl.core.types.dsl.BooleanExpression;
@@ -30,6 +31,7 @@ import static com.example.ssafy301.match.domain.QMatch.match;
 public class MatchService {
 
     private final MatchRepository matchRepository;
+    private final MatchDetailRepository matchDetailRepository;
     private final JPAQueryFactory queryFactory;
     private final ObjectMapper objectMapper;
     
@@ -119,7 +121,7 @@ public class MatchService {
     }
 
     public MatchDetailJsonDto getDetailMatchByMatchId(Long matchId) {
-        MatchDetail matchDetail = matchRepository.findByMatchId(matchId);
+        MatchDetail matchDetail = matchDetailRepository.findByMatchId(matchId);
         if (matchDetail == null) {
             throw new NotFoundException(FailCode.NO_MATCH);
         }
@@ -132,7 +134,7 @@ public class MatchService {
     }
 
     public LineScoreDto getLineScoreByMatchId(Long matchId) {
-        MatchDetail matchDetail = matchRepository.findByMatchId(matchId);
+        MatchDetail matchDetail = matchDetailRepository.findByMatchId(matchId);
         if (matchDetail == null) {
             throw new NotFoundException(FailCode.NO_MATCH);
         }
