@@ -51,11 +51,9 @@
 }
 
 .playerFace {
-  width: 150px;
-  height: 200px;
-  border: 20px;
-  border-style: solid;
-  border-radius: 10px;
+  width: 130px;
+  height: 190px;
+  // border-radius: 10px;
   // margin-left: 60px;
   margin: 0 auto;
 }
@@ -117,7 +115,7 @@
 
 .circleBox {
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 5px;
   // margin: 10px;
 }
@@ -127,21 +125,22 @@
   border-radius: 8px;
   width: 180px;
   // padding-right: 10px;
-  height: 120px;
+  height: 100px;
   background-color: rgb(255, 255, 255);
-  top: 170px;
+  top: 190px;
   left: 10px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 
 .rectangle2 {
-  position: absolute;
-  width: 150px;
-  height: 30px;
+  // position: absolute;
+  width: auto;
+  height: auto;
   background-color: rgb(253, 254, 154);
   text-align: center;
-  top: 5px;
-  left: 25px;
+  // top: 5px;
+  // left: 16px;
+  margin: 0 auto;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
 .cardzone {
@@ -150,11 +149,19 @@
 }
 
 /////////////////////////////////////////////////////////////////////////
+.flip {
+  width: 200px;
+  height: 250px;
+  perspective: 1100px;
+}
+
 .card {
+  transition: 0.4s;
+  transform-style: preserve-3d;
   width: 200px;
   height: 300px;
-  background-color: #211799;
-  background-image: url(https://images.pokemontcg.io/smp/SM156.png);
+  // background-color: #211799;
+  // background-image: url(https://images.pokemontcg.io/smp/SM156.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -164,12 +171,14 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
-  margin: 20px 10px;
-  transition: transform 0.3s ease-in-out;
+  margin: 10px;
+  // margin: 20px 10px;
+  // transition: transform 0.3s ease-in-out;
 }
 
-.card.charizard {
-  background-image: url(https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/w_213,q_auto:best/v1/people/472551/headshot/67/current);
+// 호버 시 뒤집기
+.flip:hover .card {
+  transform: rotateY(180deg);
 }
 
 // 반짝이
@@ -271,7 +280,7 @@ body {
   font-family: "Heebo", sans-serif;
   height: 100%;
   text-align: center;
-  width: 80%;
+  // width: 80%;
 }
 html {
   height: 100%;
@@ -284,4 +293,49 @@ h1 {
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  position: relative;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.face-front {
+  background-color: #211799;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face-back {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg); /* 카드를 뒤집기 위한 변환 */
+}
+
+.card:hover .face-front {
+  transform: rotateY(180deg); /* 마우스 호버 시 뒤집기 */
+}
+
+.card:hover .face-back {
+  transform: rotateY(0deg); /* 마우스 호버 시 뒤집기 */
 }

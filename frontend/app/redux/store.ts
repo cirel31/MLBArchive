@@ -1,7 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import { persistStore, persistReducer } from 'redux-persist';
-// import storageSession from 'redux-persist/lib/storage/session';
-// import { createFilter } from 'redux-persist-transform-filter';
 import createSagaMiddleware from "@redux-saga/core";
 import rootSaga from "@/app/redux/services/rootSaga";
 import userReducer from "./features/userSlice"
@@ -9,20 +6,7 @@ import searchTeamReducer from "./features/searchTeamSlice"
 import playerDetailReducer from "./features/playerDetailSlice"
 import searchPlayerReducer from "./features/searchPlayerSlice"
 import matchReducer from "./features/matchSlice"
-// redux-persist 삭제로 인한 해당 코드 주석처리
-// const saveSubsetFilter = createFilter(
-//   'user',
-//   ['isLoading', 'userData', 'refreshToken', 'error']
-// );
-//
-// const persistConfig = {
-//   key: 'user',
-//   storage: storageSession,
-//   transforms: [saveSubsetFilter]
-// };
-
-// const persistedUserReducer = persistReducer(persistConfig, userReducer);
-
+import teamReduce from "./features/teamSlice"
 
 const sagaMiddleware = createSagaMiddleware()
 const sessionSaverMiddleware = (store: any) => (next: any) => (action: any) => {
@@ -43,6 +27,7 @@ export const store = configureStore({
     playerDetail: playerDetailReducer,
     searchPlayer: searchPlayerReducer,
     match: matchReducer,
+    team: teamReduce,
   },
   devTools: process.env.NODE_ENV !== "production",
   middleware: (getDefaultMiddleware) =>

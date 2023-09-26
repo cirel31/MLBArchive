@@ -5,14 +5,35 @@ import {
   requestMatchData, successMatchData, requestDetailMatchData, successDetailMatchData,
   errorMatchData, errorDetailMatchData
 } from "@/app/redux/features/matchSlice"
-import {matchDataAPI} from "@/app/redux/api/matchAPI";
+import {matchDataAPI, matchDetailDataAPI} from "@/app/redux/api/matchAPI";
 
+interface MatchDataPayload {
+  status: number
+  message: string
+  resultData: any
+}
 function* requestMatchDataSaga(action: PayloadAction<any>) {
   try {
     const {teamName, start, end, nowPage, articlePerPage} = action.payload
-    const response: AxiosResponse = yield call(matchDataAPI, teamName, start, end, nowPage, articlePerPage)
+    const response: MatchDataPayload = yield call(matchDataAPI, teamName, start, end, nowPage, articlePerPage)
     console.log(response)
+    if (response?.resultData) {
+      yield put(successMatchData(response.resultData.content))
+    }
+  }
+  catch (error) {
 
+  }
+}
+
+function* requestMatchDetailDataSaga(action: PayloadAction<any>) {
+  try {
+    const teamId = action.payload
+    const response: MatchDataPayload = yield call(matchDetailDataAPI, teamId)
+    console.log(response)
+    if (response?.resultData) {
+      yield put(successDetailMatchData(response.resultData.content))
+    }
   }
   catch (error) {
 
@@ -21,4 +42,5 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
 
 export function* watchMatchData() {
   yield takeLatest(requestMatchData.type, requestMatchDataSaga)
+  yield takeLatest(requestDetailMatchData.type, requestMatchDetailDataSaga)
 }

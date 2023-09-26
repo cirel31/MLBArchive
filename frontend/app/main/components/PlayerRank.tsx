@@ -3,6 +3,8 @@
 import React from "react";
 import { Table } from "antd";
 import type { ColumnsType, TableProps } from "antd/es/table";
+import HitterRank from "@/app/main/components/HitterRank";
+import PitcherRank from "@/app/main/components/PitcherRank";
 
 interface DataType {
   key: React.Key;
@@ -118,6 +120,8 @@ const App: React.FC = () => (
   <>
     <h3>Player Rank</h3>
     <Table columns={columns} dataSource={data} onChange={onChange} />
+    <HitterRank />
+    <PitcherRank />
   </>
 );
 

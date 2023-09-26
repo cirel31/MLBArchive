@@ -23,8 +23,8 @@ public class MatchDetailDto {
     private String awayName;
     private String status;
     private int currentInning;
-    private String linescore;
-    private String boxscore;
+//    private String linescore;
+//    private String boxscore;
 
     public MatchDetailDto (Match match) {
         this.id = match.getId();

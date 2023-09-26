@@ -1,6 +1,9 @@
 package com.example.ssafy301.match.domain;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,10 +17,11 @@ public class MatchDetail {
     @Id
     @Column(name = "match_detail_id")
     private Long id;
+
     @Column(name = "match_id")
     private Long matchId;
-    @Column(columnDefinition = "MEDIUMTEXT")
+    @Lob
     private String linescore;
-    @Column(columnDefinition = "MEDIUMTEXT")
+    @Lob
     private String boxscore;
 }

@@ -10,14 +10,16 @@ public class TeamDto {
 
     private Long id;
     private String teamName;
-    private LocalDate createdDate;
+    private String korName;
+    private String createdYear;
     private String teamLogo;
     private String teamLocation;
 
     public TeamDto(Team team) {
         this.id = team.getId();
         this.teamName = team.getTeamName();
-        this.createdDate = team.getCreatedDate();
+        this.korName = team.getKorName();
+        this.createdYear = team.getCreatedYear();
         this.teamLogo = team.getTeamLogo();
         this.teamLocation = team.getTeamLocation();
     }

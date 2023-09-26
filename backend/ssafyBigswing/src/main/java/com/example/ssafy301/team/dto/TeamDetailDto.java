@@ -13,7 +13,8 @@ public class TeamDetailDto {
 
     private Long id;
     private String teamName;
-    private LocalDate createdDate;
+    private String korName;
+    private String createdYear;
     private String teamLogo;
     private String teamLocation;
     private List<Integer> activeYears;
@@ -21,7 +22,8 @@ public class TeamDetailDto {
     public TeamDetailDto(Team team, List<Integer> activeYears) {
         this.id = team.getId();
         this.teamName = team.getTeamName();
-        this.createdDate = team.getCreatedDate();
+        this.korName = team.getKorName();
+        this.createdYear = team.getCreatedYear();
         this.teamLogo = team.getTeamLogo();
         this.teamLocation = team.getTeamLocation();
         this.activeYears = new ArrayList<>(activeYears);
