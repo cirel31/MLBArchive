@@ -43,7 +43,6 @@ const TeamRank = () => {
           };
           for (let j = 0; j < 5; j++) {
             const teamData = leagueData.teamRecords[j];
-            console.log(teamData.leagueRecord);
             leagueObj.teams.push({
               rank: teamData.leagueRank,
               teamId: teamData.team.id,
@@ -97,7 +96,7 @@ const TeamRank = () => {
       dataIndex: "teamName",
       key: "teamName",
       render: (text:string, record: TeamData) => (
-        <p onClick={() => router.push(`/team/${record.teamId}`)}>{text}</p>
+        <p onClick={() => router.push(`/teams/${record.teamId}`)}>{text}</p>
       ),
     },
     {
