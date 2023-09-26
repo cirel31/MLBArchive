@@ -126,7 +126,7 @@ const PlayerDetailPage = () => {
                       min={MIN_YEAR}
                       max={MAX_YEAR}
                       value={seasonData}
-                      onChange={(value) => setSeasonData(value)}
+                      onChange={(value) => setSeasonData(value ?? seasonData)}
                     />
                     <Button onClick={seasonSearchBTN}>조회</Button>
                   </div>
