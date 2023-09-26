@@ -16,6 +16,7 @@ const LoginCheck = () => {
     }
     if (!token && !isLoggedIn) {
       router.push('/login')
+      console.log(isLoggedIn, "로그인 상태 Fail")
     }
   }, [isLoggedIn])
   return null
