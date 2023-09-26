@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {useRouter} from "next/navigation";
 
 interface UserState {
   isLoading: boolean;
