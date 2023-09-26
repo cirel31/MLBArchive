@@ -20,8 +20,6 @@ public class MatchDetail {
 
     @Column(name = "match_id")
     private Long matchId;
-
-
     @Lob
     private String linescore;
     @Lob
