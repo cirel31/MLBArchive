@@ -18,6 +18,7 @@ import static com.example.ssafy301.common.api.status.SuccessCode.GENERAL_SUCCESS
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/match")
+@CrossOrigin(origins = "http://localhost:3000")
 public class MatchController {
 
     private final MatchService matchService;
