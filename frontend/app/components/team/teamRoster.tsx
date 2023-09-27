@@ -15,7 +15,7 @@ const TeamRoster = (props:any) => {
       console.log(data)
       dispatch(teamRosterData(data))
     }
-  }, [])
+  }, [season])
 
   const rosterData = useSelector((state:any) => state.team.teamRoster)
 

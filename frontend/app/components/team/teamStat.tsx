@@ -14,7 +14,7 @@ const TeamStat = (props:any) => {
       }
       dispatch(teamStatData(data))
     }
-  }, [])
+  }, [season])
 
   const statData = useSelector((state:any) => state.team.teamStat)
 
