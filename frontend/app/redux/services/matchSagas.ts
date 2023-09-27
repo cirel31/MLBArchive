@@ -3,7 +3,7 @@ import axios, {AxiosResponse} from 'axios';
 import {PayloadAction} from "@reduxjs/toolkit";
 import {
   requestMatchData, successMatchData, requestDetailMatchData, successDetailMatchData,
-  errorMatchData, errorDetailMatchData
+  errorMatchData, errorDetailMatchData, pageCheck
 } from "@/app/redux/features/matchSlice"
 import {matchDataAPI, matchDetailDataAPI} from "@/app/redux/api/matchAPI";
 
@@ -19,6 +19,10 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
     console.log(response)
     if (response?.resultData) {
       yield put(successMatchData(response.resultData.content))
+      yield put(pageCheck(response.resultData.totalPages));
+    }
+    else {
+      yield put(pageCheck(1))
     }
   }
   catch (error) {

@@ -68,9 +68,11 @@ const AllPlayers = () => {
     setIsActive(updatedIsActive);
     const selectedAlphabet = alphabets[idx];
     setSearchData(selectedAlphabet);
+    // 알파벳 이동 시 페이지 시작 지점 0으로 설정
+    setNowPage(0)
     const action = {
       searchData: selectedAlphabet,
-      nowPage: nowPage,
+      nowPage: 0,
       articlePerPage: articlePerPage,
     };
     dispatch(fetchPlayerLetterData(action));
@@ -91,11 +93,6 @@ const AllPlayers = () => {
       nowPage: idx,
       articlePerPage: 30,
     };
-    if (nowPage === idx && nowPage === 0) {
-      Swal.fire("이미 제일 앞의 페이지 입니다.");
-    } else if (nowPage === idx && nowPage === totalPage - 1) {
-      Swal.fire("이미 제일 뒤의 페이지 입니다.");
-    }
     dispatch(fetchPlayerLetterData(action));
   };
 
@@ -106,7 +103,7 @@ const AllPlayers = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [backgroundStyle, setBackgroundStyle] = useState(null);
 
-  const handleMouseMove = (e, cardIndex:any) => {
+  const handleMouseMove = (e:any, cardIndex:any) => {
     const l = e.nativeEvent.offsetX;
     const t = e.nativeEvent.offsetY;
     const h = e.currentTarget.clientHeight;
@@ -224,6 +221,8 @@ const AllPlayers = () => {
             keyboard_double_arrow_right
           </span>
         </button>
+        {/* 전체 페이지 중 현재 페이지 표시 */}
+        <div>{nowPage + 1} / {totalPage}</div>
       </div>
     </>
   );

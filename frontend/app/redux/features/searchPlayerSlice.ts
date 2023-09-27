@@ -27,6 +27,9 @@ export const searchPlayerResultSlice: any = createSlice({
     pageCheck: (state, action) => {
       state.totalPage = action.payload
     },
+    reSetData: (state, action) => {
+      state.wordParseResult = null
+    },
   }
 })
 
@@ -36,6 +39,7 @@ export const {
   fetchPlayerLetterData,
   fetchPlayerLetterDataSuccess,
   fetchPlayerDataError,
-  pageCheck
+  pageCheck,
+  reSetData
 } = searchPlayerResultSlice.actions
 export default searchPlayerResultSlice.reducer
