@@ -106,7 +106,7 @@ const AllPlayers = () => {
   const [activeCard, setActiveCard] = useState(null);
   const [backgroundStyle, setBackgroundStyle] = useState(null);
 
-  const handleMouseMove = (e, cardIndex:any) => {
+  const handleMouseMove = (e, cardIndex: any) => {
     const l = e.nativeEvent.offsetX;
     const t = e.nativeEvent.offsetY;
     const h = e.currentTarget.clientHeight;
@@ -171,23 +171,25 @@ const AllPlayers = () => {
                       {/* <div className="card charizard"> */}
                       <div className="playerCard">
                         <div className="container">
-                          <div className="rectangle2">{player.name}</div>
+                          <div className="circle2">{player.backnumber}</div>
                           <img
                             src={player.image}
                             alt={player.name}
                             className="playerFace"
+                            style={{ zIndex: "99999" }}
                           />
                           <div className="rectangle">
-                            <div className="circleBox">
-                              <div>
-                                <div className="circle">{player.number}</div>
-                                <div className="circle2">2</div>
+                            <div className="rectangle2"></div>
+                            <div>
+                              <div style={{ display: "flex" }}>
+                                <div className="position2">{player.name}</div>
+                                <div className="position">
+                                  {player.height}cm / {player.weight}kg
+                                </div>
                               </div>
-                              <div>
-                                <div className="circle3">3</div>
-                                <div className="circle4">4</div>
-                              </div>
-                              <p>{player.team}</p>
+                            </div>
+                            <div className="position">
+                              POSITION : {player.mainPosition}
                             </div>
                           </div>
                         </div>
@@ -195,8 +197,7 @@ const AllPlayers = () => {
                       {/* </div> */}
                     </div>
                     <div className="face face-back">
-                      팀마크
-                      {player.team}
+                      <img src={player.image} alt="" />
                     </div>
                   </div>
                 </main>

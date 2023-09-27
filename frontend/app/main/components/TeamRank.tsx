@@ -7,6 +7,7 @@ import { selectLogo } from "@/app/components/team/teamData";
 import { Table } from "antd";
 import type { ColumnsType, TableProps } from "antd/es/table";
 import Link from "next/link";
+import { Color } from "three/src/Three.js";
 
 type RecordType = {
   wins: number;
@@ -128,6 +129,7 @@ const TeamRank = () => {
         // dataSource={teamList.flatMap((league) => league.teams)}
         dataSource={flatTeamData}
         pagination={{ pageSize: 5 }}
+        style={{ color: "white" }}
       />
     </div>
   );
