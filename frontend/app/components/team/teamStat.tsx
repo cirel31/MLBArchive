@@ -4,7 +4,6 @@ import {useEffect} from "react";
 
 const TeamStat = (props:any) => {
   const {teamId, season} = props
-
   const dispatch = useDispatch()
   useEffect(() => {
     if (teamId && season) {
@@ -21,11 +20,22 @@ const TeamStat = (props:any) => {
 
   return (
     <>
-      <div>{season} {teamId}</div>
       <div>
         {statData &&
           <div>
-
+            <div>시즌 : {statData.season}</div>
+            <div>승 : {statData.win}</div>
+            <div>승룰 : {statData.winPercentage}</div>
+            <div>패 : {statData.lose}</div>
+            <div>무승부 : {statData.draw}</div>
+            <div>타율 : {statData.battingAvg}</div>
+            <div>평균 자책점 : {statData.eraAvg}</div>
+            {statData.season >= 1969 && (
+              <>
+                <div>지역 순위 : {statData.divisionRank}</div>
+                <div>리그 순위 : {statData.leagueRank}</div>
+              </>
+            )}
           </div>
         }
       </div>

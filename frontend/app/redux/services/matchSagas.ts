@@ -33,8 +33,9 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
 function* requestMatchDetailDataSaga(action: PayloadAction<any>) {
   try {
     const teamId = action.payload
+    console.log(teamId)
     const response: MatchDataPayload = yield call(matchDetailDataAPI, teamId)
-    console.log(response)
+    console.log("응?답", response)
     if (response?.resultData) {
       yield put(successDetailMatchData(response.resultData))
     }
