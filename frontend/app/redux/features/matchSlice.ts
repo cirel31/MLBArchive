@@ -19,10 +19,10 @@ export const matchSlice = createSlice({
 
     },
     requestDetailMatchData: (state, action) => {
-      console.log(action.payload)
+      console.log("디테일 매치 데이터 요청", action.payload)
     },
     successDetailMatchData: (state, action) => {
-      console.log(action.payload)
+      console.log("response가 안찍히는데 얘가 왜 됌???", action.payload)
       state.matchDetailData = action.payload
     },
     errorDetailMatchData: (state, action) => {
