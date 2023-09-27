@@ -20,3 +20,8 @@
   border: rgb(16, 14, 14) solid 2px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.contentStyle {
+  /* 다음 줄에서 word-wrap 또는 overflow-wrap 속성을 설정합니다. */
+  word-wrap: break-word; /* 또는 overflow-wrap: break-word; */
+}
