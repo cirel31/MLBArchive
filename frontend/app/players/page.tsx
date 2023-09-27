@@ -171,7 +171,9 @@ const AllPlayers = () => {
                       {/* <div className="card charizard"> */}
                       <div className="playerCard">
                         <div className="container">
-                          <div className="circle2">{player.backnumber}</div>
+                          <div className="circle2">
+                            {player.backnumber === -1 ? "-" : player.backnumber}
+                          </div>
                           <img
                             src={player.image}
                             alt={player.name}
@@ -181,8 +183,8 @@ const AllPlayers = () => {
                           <div className="rectangle">
                             <div className="rectangle2"></div>
                             <div>
+                              <div className="position2">{player.name}</div>
                               <div style={{ display: "flex" }}>
-                                <div className="position2">{player.name}</div>
                                 <div className="position">
                                   {player.height}cm / {player.weight}kg
                                 </div>

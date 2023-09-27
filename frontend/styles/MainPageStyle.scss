@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
 
 body {
   font-family: "Noto Serif KR", serif;
@@ -33,7 +34,7 @@ body {
 }
 
 .teamrank {
-  width: 57%;
+  width: 48%;
   border: 1px solid rgb(6, 31, 77);
   background: rgb(6, 31, 77);
   border-radius: 10px;
@@ -43,8 +44,8 @@ body {
 }
 
 .teamrank2 {
-  width: 30%;
-  border: 1px solid rgb(6, 31, 77);
+  width: 40%;
+  border: 3px solid rgb(6, 31, 77);
   background: rgb(6, 31, 77);
   border-radius: 10px;
   margin: 20px;
@@ -53,8 +54,10 @@ body {
 
 .rank {
   // margin-top: 40px;
-  font-size: 50px;
-  margin: 20px;
+  font-size: 40px;
+  // margin: 20px;
+  margin-left: 13px;
+  margin-right: 16px;
 }
 
 .TeamRank_box {
@@ -62,14 +65,20 @@ body {
 }
 
 .TeamRank_box2 {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Black Han Sans", sans-serif;
   font-size: 50px;
-  margin-left: 10px;
+  // margin-left: 10px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .TeamRank_box td {
-  font-family: "Noto Serif KR", serif;
+  font-family: "Orbit", sans-serif;
 }
+.TeamRank_box th {
+  font-family: "Orbit", sans-serif;
+}
+
 .one_game {
   // border: 1px solid;
   border-radius: 10px;
@@ -86,10 +95,11 @@ body {
   width: 100%;
   // margin: 20px;
   font-size: large;
-
+  background-color: #fff;
   font-weight: 500;
   // align-items: center;
   display: flex;
+  border-radius: 10px;
 }
 
 /* HitterRank.css */
@@ -113,5 +123,12 @@ body {
 .player_name {
   font-size: 18px;
   margin-left: 20px;
-  font-family: "Noto Serif KR", serif;
+  font-family: "Black Han Sans", sans-serif;
+}
+
+.player_name2 {
+  font-size: 25px;
+  // margin-left: 20px;
+  font-weight: bold;
+  font-family: "Black Han Sans", sans-serif;
 }
