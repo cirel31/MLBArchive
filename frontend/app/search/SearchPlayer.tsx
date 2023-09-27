@@ -30,12 +30,6 @@ const SearchPlayer = () => {
     const action = {
       searchData: searchData, nowPage:nowPage, articlePerPage:30
     }
-    if (nowPage === idx && nowPage === 0 ) {
-      Swal.fire('이미 제일 앞의 페이지 입니다.')
-    }
-    else if (nowPage === idx && nowPage === totalPage - 1 ) {
-      Swal.fire('이미 제일 뒤의 페이지 입니다.')
-    }
     dispatch(fetchPlayerWordData(action))
   }
 
@@ -67,7 +61,9 @@ const SearchPlayer = () => {
           onChange={e => setSearchData(e.target.value)}
         />
 
-        <button onClick={searchPlayer}>
+        <button
+          onClick={searchPlayer}
+        >
           확인
         </button>
         {

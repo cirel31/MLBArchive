@@ -7,12 +7,14 @@ const TeamStat = (props:any) => {
 
   const dispatch = useDispatch()
   useEffect(() => {
-    const data = {
-      id: teamId,
-      season: season
+    if (teamId && season) {
+      const data = {
+        id: teamId,
+        season: season
+      }
+      dispatch(teamStatData(data))
     }
-    dispatch(teamStatData(data))
-  })
+  }, [])
 
   const statData = useSelector((state:any) => state.team.teamStat)
 

@@ -19,9 +19,10 @@ function* fetchTeamDataSaga(action: PayloadAction<string>): Generator<PutEffect 
 
 function* fetchTeamStatDataSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
-    const { id, season } = action.payload
-    console.log(id, season)
-    const response = yield call(fetchTeamRosterDataAPI, id, season);
+    const id = action.payload.id
+    const season = action.payload.season
+    const response = yield call(fetchTeamStatDataAPI, id, season);
+    console.log(response)
     yield put(teamStatDataSuccess(response.resultData));
   } catch (error) {
   }
@@ -29,14 +30,16 @@ function* fetchTeamStatDataSaga(action: PayloadAction<any>): Generator<PutEffect
 
 function* fetchTeamRosterDataSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
-    const { id, season } = action.payload
-    const response = yield call(fetchTeamStatDataAPI, id, season);
+    const id = action.payload.id
+    const season = action.payload.season
+    const response = yield call(fetchTeamRosterDataAPI, id, season);
+    console.log(response)
     yield put(teamRosterDataSuccess(response.resultData));
   } catch (error) {
   }
 }
 export function* watchFetchTeamData() {
   yield takeLatest(teamDetailData.type, fetchTeamDataSaga);
-  yield takeLatest(teamDetailData.type, fetchTeamStatDataSaga);
-  yield takeLatest(teamDetailData.type, fetchTeamRosterDataSaga);
+  yield takeLatest(teamStatData.type, fetchTeamStatDataSaga);
+  yield takeLatest(teamRosterData.type, fetchTeamRosterDataSaga);
 }

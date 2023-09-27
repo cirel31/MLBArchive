@@ -6,14 +6,17 @@ import {useDispatch, useSelector} from "react-redux";
 import {requestDetailMatchData, requestMatchData} from "@/app/redux/features/matchSlice";
 import {teamData} from "@/app/components/team/teamData";
 import {useRouter} from "next/navigation";
+import {fetchPlayerWordData} from "@/app/redux/features/searchPlayerSlice";
 const SearchMatch = () => {
   const dispatch = useDispatch()
   const teamList = teamData
   const [startDate, setStartDate] = useState(new Date())
   const [endDate, setEndDate] = useState(new Date())
   const [teamName, setTeamName] = useState('109')
-  const [nowPage, setPage] = useState(0)
+  const [nowPage, setNowPage] = useState(0)
   const matchList = useSelector((state:any) => state.match?.matchData)
+  const totalPage = useSelector((state: any) => state.searchPlayer.totalPage)
+
   const router = useRouter()
   function formatDate(date:Date) {
     const yyyy = date.getFullYear();
@@ -22,20 +25,37 @@ const SearchMatch = () => {
     return `${yyyy}-${mm}-${dd}`;
   }
   const SearchMach = () => {
-    console.log(startDate)
     const formattedStartDate = formatDate(startDate);
     const formattedEndDate = formatDate(endDate);
+    setNowPage(0)
     const action = {
       teamName: teamName,
       start: formattedStartDate,
       end: formattedEndDate,
-      nowPage:nowPage,
+      nowPage:0,
       articlePerPage:30
     }
     console.log(action)
     dispatch(requestMatchData(action))
   }
-
+  const searchQuery = (x:number) => {
+    let idx = 0
+    if (x === 0 || nowPage + x < 0) {
+      setNowPage(0)
+    }
+    else if (nowPage + x >= totalPage || x === totalPage) {
+      idx = totalPage - 1
+      setNowPage(idx)
+    }
+    else {
+      idx = nowPage + x
+      setNowPage(idx)
+    }
+    const action = {
+      searchData: teamName, nowPage:nowPage, articlePerPage:30
+    }
+    dispatch(fetchPlayerWordData(action))
+  }
   const searchDetailMatch = (id: string) => {
     console.log("로직 실행 확인 중")
     dispatch(requestDetailMatchData(id))
@@ -114,6 +134,18 @@ const SearchMatch = () => {
             결과가 없습니다.
           </div>
       }
+      <div>
+        <button onClick={() => searchQuery(0)}>시작 페이지</button>
+        <br/>
+        <br/>
+        <button onClick={() => searchQuery(-1)}>이전 페이지</button>
+        <br/>
+        <br/>
+        <button onClick={() => searchQuery(+1)}>다음 페이지</button>
+        <br/>
+        <br/>
+        <button onClick={() => searchQuery(totalPage)}>끝 페이지</button>
+      </div>
     </>
   )
 }

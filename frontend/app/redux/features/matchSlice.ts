@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState = {
   matchData: null,
   matchDetailData: null,
+  totalPage: 1,
 }
 export const matchSlice = createSlice({
   name: 'match',
@@ -27,6 +28,9 @@ export const matchSlice = createSlice({
     errorDetailMatchData: (state, action) => {
 
     },
+    pageCheck: (state, action) => {
+      state.totalPage = action.payload
+    },
   }
 })
 
@@ -37,5 +41,6 @@ export const {
   successDetailMatchData,
   errorMatchData,
   errorDetailMatchData,
+  pageCheck,
 } = matchSlice.actions
 export default matchSlice.reducer

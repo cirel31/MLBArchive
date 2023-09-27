@@ -11,7 +11,7 @@ interface PromiseResult {
 }
 
 const PitcherRank = () => {
-  const [pitcher, setPitcher] = useState([]);
+  const [pitcher, setPitcher] = useState<any>([]);
   const router = useRouter();
 
   useEffect(() => {
