@@ -20,8 +20,8 @@ const TeamRoster = (props:any) => {
   }, [season])
 
   const rosterData = useSelector((state:any) => state.team.teamRoster)
-  // 슬라이드 당 표시할 인원 == 5
-  const slideSize = 5
+  // 행 개수
+  const slideSize = 3
 
 
   return (
@@ -37,7 +37,8 @@ const TeamRoster = (props:any) => {
                     className="playerNameContainer"
                     key={player.playerId}
                     onClick={() => router.push(`/players/${player.playerId}`)}>
-                    {player.playerName}
+                    <p>{player.playerName}</p>
+                    <img src={player.image} alt="이미지" className="playerImage"/>
                   </div>
                 ))}
               </div>
