@@ -1,0 +1,31 @@
+.boxTemplate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+.rosterContainer {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
+
+}
+
+.slide{
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.playerNameContainer {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.playerImage{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+}

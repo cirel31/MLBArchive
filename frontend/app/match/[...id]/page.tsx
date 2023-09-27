@@ -7,11 +7,11 @@ const MatchPage = () => {
   const router = useRouter()
   const matchData = useSelector((state:any) => state.match.matchDetailData)
   console.log(matchData)
-  useEffect(() => {
-    if (!matchData) {
-      router.push(`/search`)
-    }
-  }, [matchData])
+  // useEffect(() => {
+  //   if (!matchData) {
+  //     router.push(`/search`)
+  //   }
+  // }, [matchData])
 
   return (
     <>
