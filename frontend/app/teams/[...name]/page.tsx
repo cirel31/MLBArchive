@@ -4,7 +4,7 @@ import "../../../styles/TeamPage.css";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import { selectLogo, selectTwitter } from "@/app/components/team/teamData";
-import { InputNumber, Layout, Space, Card, Collapse } from "antd";
+import { InputNumber, Layout, Space, Card, Collapse, Select } from "antd";
 import type { CollapseProps } from "antd";
 import News from "./news";
 import { teamDetailData } from "@/app/redux/features/teamSlice";
@@ -63,8 +63,11 @@ const DetailTeamPage = () => {
   const logoPath = selectLogo(searchId);
   const twitterPath = selectTwitter(searchId);
 
+  const [selectedYear, setSelectedYear] = useState("");
+
   useEffect(() => {
-    if (teamData) {4
+    if (teamData) {
+      4;
       setIsLoading(false);
     }
   });
@@ -73,104 +76,103 @@ const DetailTeamPage = () => {
   }
 
   const splitActiveYears = (activeYears: number) => {
-    // activeYears를 문자열로 변환하고, ,를 모두 제거합니다.
     const activeYearsStr = activeYears.toString().replace(/,/g, "");
-
-    const regex = /.{1,4}/g; // 4글자씩 자를 정규식
-    return activeYearsStr.match(regex) || []; // 정규식에 맞게 자른 결과를 배열로 반환
+    const regex = /.{1,4}/g;
+    return (activeYearsStr.match(regex) || []).map((segment) => ({
+      value: segment,
+      label: segment,
+    }));
   };
 
-  const items: CollapseProps["items"] = [
-    {
-      key: "1",
-      label: "활동년도",
-      children: teamData
-        ? splitActiveYears(teamData.activeYears).map((segment, index) => (
-            <p key={index}>{segment}</p>
-          ))
-        : null,
-    },
-  ];
+  const handleChange = (value: string) => {
+    setSelectedYear(value); // 선택한 연도를 상태에 업데이트
+    setSeason(value); // 선택한 연도로 조회를 실행
+  };
+
   return (
     <>
-      {/* <TeamInfo /> */}
-      {/* <News /> */}
       <Layout>
-        <Sider style={siderStyle}>
-          {/* <Image className="teamlogo" src={logoPath} alt="이미지 없음" /> */}
-          {teamData && (
-            <>
-              <Card
-                hoverable
-                style={{ width: 240 }}
-                cover={
-                  <Image
-                    className="teamlogo"
-                    src={logoPath}
-                    alt="이미지 없음"
-                    style={{ width: "200px" }}
-                  />
-                }
-              >
-                <Meta
-                  title={teamData.teamName}
-                  description={new Date(
-                    teamData.createdYear
-                  ).toLocaleDateString()}
-                />
-                <div style={{ margin: "10px" }}>
-                  <Collapse accordion>
-                    <Collapse.Panel key="1" header="활동년도">
-                      <div style={{ maxHeight: "200px", overflowY: "auto" }}>
-                        {teamData
-                          ? splitActiveYears(teamData.activeYears).map(
-                              (segment, index) => <p key={index}>{segment}</p>
-                            )
-                          : null}
-                      </div>
-                    </Collapse.Panel>
-                  </Collapse>
-                </div>
-              </Card>
-
-              {/* <TeamInfo activeYears={teamData.activeYears} /> */}
-            </>
-          )}
-        </Sider>
-        <Layout>
-          <Header style={headerStyle}>
-            <p>아무거나 팀 이미지 하나씩 넣기</p>
-          </Header>
-          <Content style={contentStyle}>
-            팀관련데이터
-            {/* <News /> */}
+        <div style={{ display: "flex" }}>
+          <Sider style={siderStyle}>
             {teamData && (
-              <div>
-                {/* <div>{teamData.activeYears}</div> */}
+              <>
+                <Card
+                  hoverable
+                  style={{ width: 240, border: "5px solid rgb(6, 31, 77)" }}
+                  cover={
+                    <Image
+                      className="teamlogo"
+                      src={logoPath}
+                      alt="이미지 없음"
+                      style={{ width: "200px" }}
+                    />
+                  }
+                >
+                  <Meta
+                    title={teamData.teamName}
+                    description={new Date(
+                      teamData.createdYear
+                    ).toLocaleDateString()}
+                  />
+                  <div style={{ margin: "10px" }}>
+                    <p>활동 내역 조회</p>
+                    <Select
+                      value={selectedYear}
+                      style={{ width: 120 }}
+                      onChange={handleChange}
+                      options={
+                        teamData
+                          ? splitActiveYears(teamData.activeYears).reverse()
+                          : []
+                      }
+                    />
+                  </div>
 
-                {/* <div>{teamData.createdYear}</div> */}
-                <div>{teamData.korName}</div>
-                {/* <div>{teamData.teamName}</div> */}
-                {/* <div>{teamData.teamLocation}</div>` */}
+                  <TeamStat teamId={teamId} season={season} />
+                </Card>
+              </>
+            )}
+          </Sider>
+
+          <div>
+            <Layout>
+              <Header style={headerStyle}>
+                <p>아무거나 팀 이미지 하나씩 넣기</p>
+              </Header>
+              {/* <Content style={contentStyle}> */}
+              팀관련데이터
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                {teamData && (
+                  <div>
+                    <div>{teamData.korName}</div>
+                    <Image src={teamData.logo} alt="" />
+                  </div>
+                )}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                >
+                  <TeamRoster teamId={teamId} season={season} />
+                </div>
               </div>
-            }
-            <select
-              value={seasonData}
-              onChange={e => setSeasonData(parseInt(e.target.value))}
-            >
-              {teamData?.activeYears.map((year:number) => (
-                <option key={year} value={year} style={{ color: "black" }}>{year}</option>
-              ))
-              }
-            </select>
-            <button onClick={() => setSeason(seasonData)}>조회</button>
-            <TeamStat teamId={teamId} season={season} />
-            <TeamRoster teamId={teamId} season={season} />
-          </Content>
-          <Footer style={footerStyle}>
-            <a href={twitterPath}>{twitterPath}</a>
-          </Footer>
-        </Layout>
+              {/* </Content> */}
+              <Footer style={footerStyle}>
+                <a href={twitterPath}>{twitterPath}</a>
+              </Footer>
+            </Layout>
+          </div>
+        </div>
       </Layout>
     </>
   );
