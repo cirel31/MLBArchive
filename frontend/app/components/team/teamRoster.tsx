@@ -26,7 +26,6 @@ const TeamRoster = (props:any) => {
 
   return (
     <>
-      {console.log(rosterData)}
       <div>{season} 로스터</div>
       <div className="boxTemplate">
         {rosterData &&
