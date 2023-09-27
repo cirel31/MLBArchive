@@ -44,7 +44,6 @@ const TeamRank = () => {
           };
           for (let j = 0; j < 5; j++) {
             const teamData = leagueData.teamRecords[j];
-            console.log(teamData.leagueRecord);
             leagueObj.teams.push({
               rank: teamData.leagueRank,
               teamId: teamData.team.id,
@@ -82,43 +81,22 @@ const TeamRank = () => {
     {
       title: "리그 이름",
       dataIndex: "leagueId",
-      filters: [
-        {
-          text: "아메리칸 리그",
-          value: "아메리칸 리그",
-        },
-        {
-          text: "내셔널 리그",
-          value: "내셔널 리그",
-        },
-      ],
-      onFilter: (value: string, record) => record.leagueId.indexOf(value) === 0,
+      render: (text:string, record: League, index:number) => (
+        <p key={index}>{record.leagueId}</p>
+      ),
     },
     {
       title: "지역 이름",
       dataIndex: "divisionId",
-      filters: [
-        {
-          text: "동부",
-          value: "동부",
-        },
-        {
-          text: "서부",
-          value: "서부",
-        },
-        {
-          text: "중부",
-          value: "중부",
-        },
-      ],
-      onFilter: (value: string, record) =>
-        record.divisionId.indexOf(value) === 0,
+      render: (text:string, record: League, index:number) => (
+        <p key={index}>{record.divisionId}</p>
+      ),
     },
     {
       title: "팀 이름",
       dataIndex: "teamName",
       key: "teamName",
-      render: (text: string, record: TeamData) => (
+      render: (text:string, record: TeamData) => (
         <p onClick={() => router.push(`/teams/${record.teamId}`)}>{text}</p>
       ),
     },
