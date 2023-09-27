@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../../styles/TeamPage.css";
 import {useDispatch, useSelector} from "react-redux";
 import Image from "next/image";
@@ -61,7 +61,7 @@ const DetailTeamPage = () => {
   const twitterPath = selectTwitter(searchId);
 
   useEffect(() => {
-    if (teamData) {
+    if (teamData) {4
       setIsLoading(false);
     }
   });
@@ -84,21 +84,23 @@ const DetailTeamPage = () => {
             {/* <News /> */}
             {teamData &&
               <div>
-                <div>{teamData.activeYears}</div>
+                {/*{console.log(teamData)}*/}
+                {/*<div>{teamData.activeYears}</div>*/}
                 <div>{teamData.createdYear}</div>
                 <div>{teamData.korName}</div>
                 <div>{teamData.teamName}</div>
                 <div>{teamData.teamLocation}</div>
               </div>
             }
-
-            <InputNumber
-              type="number"
-              min={MIN_YEAR}
-              max={MAX_YEAR}
+            <select
               value={seasonData}
-              onChange={(value) => setSeasonData(value ?? seasonData)}
-            />
+              onChange={e => setSeasonData(parseInt(e.target.value))}
+            >
+              {teamData?.activeYears.map((year:number) => (
+                <option key={year} value={year} style={{ color: "black" }}>{year}</option>
+              ))
+              }
+            </select>
             <button onClick={() => setSeason(seasonData)}>조회</button>
             <TeamStat teamId={teamId} season={season} />
             <TeamRoster teamId={teamId} season={season} />
