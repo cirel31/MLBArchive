@@ -40,7 +40,7 @@
 }
 
 .playerCard {
-  border: 4px solid #211799;
+  // border: 4px solid #211799;
   width: 100%;
   border-radius: 8px;
   height: 100%;
@@ -51,8 +51,8 @@
 }
 
 .playerFace {
-  width: 90%;
-  height: 130%;
+  width: 100%;
+  height: 150%;
   // border-radius: 10px;
   // margin-left: 60px;
   margin: 0 auto;
@@ -81,7 +81,7 @@
   position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
   width: 50px;
   height: 50px;
-  border: 4px solid #000000;
+  border: 3px solid rgb(6, 31, 77);
   background-color: rgb(255, 255, 255);
   border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
   top: 5px; /* 상단 여백 조정 */
@@ -91,6 +91,8 @@
   align-items: center;
   display: flex;
   margin: 5px;
+  font-size: 30px;
+  font-family: "Noto Serif KR", serif;
 }
 
 .circle3 {
@@ -116,6 +118,9 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  color: white;
+  font-family: "Noto Serif KR", serif;
+  background-image: linear-gradient(to bottom, #545462, rgb(6, 31, 77));
 }
 
 .circle4 {
@@ -141,11 +146,11 @@
   position: absolute;
   // border-radius: 8px;
   width: 102%;
-  border: 3px solid #211799;
+  border: 3px solid rgb(6, 31, 77);
   // padding-right: 10px;
-  height: 90px;
+  height: 100px;
   background-color: rgb(255, 255, 255);
-  top: 203px;
+  top: 243px;
   left: -2px;
   z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
 }
@@ -175,16 +180,17 @@
 
 .card {
   transition: 0.4s;
+  border: 5px solid rgb(6, 31, 77);
   transform-style: preserve-3d;
   width: 200px;
-  height: 300px;
+  height: 350px;
   // background-color: #211799;
   // background-image: url(https://images.pokemontcg.io/smp/SM156.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 8px;
-  box-shadow: 0 0 6px 2px rgba(249, 235, 148, 0.75),
+  box-shadow: 0 0 6px 2px rgba(250, 246, 226, 0.75),
     0 35px 25px -15px rgba(0, 0, 0, 0.5);
   position: relative;
   overflow: hidden;
@@ -212,8 +218,8 @@
   background-image: linear-gradient(
     115deg,
     transparent 0%,
-    rgba(240, 234, 51, 0.925) 70%,
-    rgb(59, 16, 198) 30%,
+    rgba(255, 253, 190, 0.925) 70%,
+    rgb(134, 181, 242) 30%,
     transparent 100%
   );
   background-position: 0% 0%;
@@ -318,13 +324,6 @@ h1 {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-.card {
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-  position: relative;
 }
 
 .face {

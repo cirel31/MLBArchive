@@ -49,7 +49,7 @@ const HitterRank = () => {
     <div className="hitter-rank-container">
       {/* 스타일을 적용할 컨테이너 */}
       <div>
-        <div className="player_name">Hitter Rank</div>
+        <div className="player_name2">Hitter Rank</div>
         {hitter.length > 0 ? (
           <List
             dataSource={hitter}
@@ -66,19 +66,19 @@ const HitterRank = () => {
                       <Image
                         src="https://cdn-icons-png.flaticon.com/128/1021/1021116.png"
                         alt=""
-                        width={"70px"}
+                        width={"50px"}
                       />
                     ) : index == 1 ? (
                       <Image
                         src="https://cdn-icons-png.flaticon.com/128/1021/1021085.png"
                         alt=""
-                        width={"70px"}
+                        width={"50px"}
                       />
                     ) : index == 2 ? (
                       <Image
                         src="https://cdn-icons-png.flaticon.com/128/1021/1021077.png"
                         alt=""
-                        width={"70px"}
+                        width={"50px"}
                       />
                     ) : (
                       <span className="rank">{index + 1}</span>
@@ -87,7 +87,7 @@ const HitterRank = () => {
                     <Image
                       src={content.image}
                       className="player_img"
-                      style={{ width: "60px", marginLeft: "20px" }}
+                      style={{ width: "40px", marginLeft: "20px" }}
                       alt="선수 이미지"
                     />
                     <div className="player_name">{content.name}</div>
