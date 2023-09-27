@@ -3,7 +3,7 @@ import axios, {AxiosResponse} from 'axios';
 import {PayloadAction} from "@reduxjs/toolkit";
 import {
   requestMatchData, successMatchData, requestDetailMatchData, successDetailMatchData,
-  errorMatchData, errorDetailMatchData
+  errorMatchData, errorDetailMatchData, pageCheck
 } from "@/app/redux/features/matchSlice"
 import {matchDataAPI, matchDetailDataAPI} from "@/app/redux/api/matchAPI";
 
@@ -19,6 +19,10 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
     console.log(response)
     if (response?.resultData) {
       yield put(successMatchData(response.resultData.content))
+      yield put(pageCheck(response.resultData.totalPages));
+    }
+    else {
+      yield put(pageCheck(1))
     }
   }
   catch (error) {
@@ -29,8 +33,9 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
 function* requestMatchDetailDataSaga(action: PayloadAction<any>) {
   try {
     const teamId = action.payload
+    console.log(teamId)
     const response: MatchDataPayload = yield call(matchDetailDataAPI, teamId)
-    console.log(response)
+    console.log("응?답", response)
     if (response?.resultData) {
       yield put(successDetailMatchData(response.resultData))
     }

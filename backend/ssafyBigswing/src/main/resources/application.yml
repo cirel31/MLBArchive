@@ -7,23 +7,19 @@ spring:
 #      path: /h2
   datasource:
 #    url: jdbc:h2:mem:test
-#    url: jdbc:mariadb://52.78.141.216:3306/dream?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
-#    driver-class-name: org.mariadb.jdbc.Driver
-#    username: dev
-#    password: dreamtherock
     url: jdbc:mariadb://j9a301a.p.ssafy.io:3306/s09p22a301?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: dreamtherock
-#    url: jdbc:mariadb://stg-yswa-kr-practice-db-master.mariadb.database.azure.com:3306/S09P22A301?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+#    url: jdbc:mariadb://stg-yswa-kr-practice-db-master.mariadb.database.azure.com:3306/s09p22a301?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
 #    driver-class-name: org.mariadb.jdbc.Driver
-#    username: S09P22A301
-#    password: QmK0nwCJzS
+#    username: root
+#    password: 1234
     hikari:
-      maximum-pool-size: 5
+      maximum-pool-size: 10
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:

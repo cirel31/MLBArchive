@@ -3,8 +3,11 @@ import {useState} from "react";
 import "../../styles/SearchPageStyle.scss"
 import SearchMatch from "@/app/search/SearchMatch";
 import SearchPlayer from "@/app/search/SearchPlayer";
+import {useDispatch} from "react-redux";
+import {reSetData} from "@/app/redux/features/searchPlayerSlice";
 
 const SearchPage: React.FC = () => {
+  const dispatch = useDispatch()
   const [match, setMatch] = useState(false)
   const [player, setPlayer] = useState(false)
   const SearchKind = (kind:string) => {
@@ -25,7 +28,13 @@ const SearchPage: React.FC = () => {
           <button className="chooseSearchButton" onClick={() => SearchKind('match')}>
             경기 검색
           </button>
-          <button className="chooseSearchButton" onClick={() => SearchKind('player')}>
+          <button
+            className="chooseSearchButton"
+            onClick={
+              () => {
+                SearchKind('player')
+                dispatch(reSetData())
+              }}>
             선수 검색
           </button>
         </div>
