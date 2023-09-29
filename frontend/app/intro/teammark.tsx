@@ -31,6 +31,11 @@ function CardComponent() {
   const initialPositions = useRef([]);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      // window 객체가 정의되었을 때만 실행
+      setWindowHeight(window.innerHeight);
+      setWindowWidth(window.innerWidth);
+    }
     const _cards = document.querySelectorAll(".cardItem");
 
     const _button1 = document.querySelectorAll("button")[0];

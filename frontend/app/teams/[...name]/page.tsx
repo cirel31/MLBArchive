@@ -64,57 +64,95 @@ const DetailTeamPage = () => {
     setSeason(value); // 선택한 연도로 조회를 실행
   };
 
+  const [scrollY, setScrollY] = useState(0);
+
+  // 스크롤 이벤트 핸들러
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  // 스크롤 이벤트 리스너 등록 및 해제
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // 카드의 top 위치 계산
+  const cardTop = 100 + scrollY; // 원하는 위치로 조절
+
   return (
     <>
       <div className="header">
-        <div>
-          {teamData && (
-            <>
-              <Card
-                hoverable
-                style={{ width: 240, border: "5px solid rgb(6, 31, 77)" }}
-                cover={
-                  <Image
-                    className="teamlogo"
-                    src={logoPath}
-                    alt="이미지 없음"
-                    style={{ width: "200px" }}
+        {/* <div className="card-container"> */}
+        <div className="card" style={{ top: `${cardTop}px` }}>
+          <div>
+            {teamData && (
+              <>
+                <Card
+                  hoverable
+                  style={{ width: 240, border: "2px solid rgb(6, 31, 77)" }}
+                  cover={
+                    <Image
+                      className="teamlogo"
+                      src={logoPath}
+                      alt="이미지 없음"
+                      style={{ width: "200px" }}
+                    />
+                  }
+                >
+                  <Meta
+                    title={teamData.teamName}
+                    description={new Date(
+                      teamData.createdYear
+                    ).toLocaleDateString()}
                   />
-                }
-              >
-                <Meta
-                  title={teamData.teamName}
-                  description={new Date(
-                    teamData.createdYear
-                  ).toLocaleDateString()}
-                />
-                <a href={twitterPath}>{twitterPath}</a>
-                <div style={{ margin: "10px" }}>
-                  <p>활동 내역 조회</p>
-                  <Select
-                    value={selectedYear}
-                    style={{ width: 120 }}
-                    onChange={handleChange}
-                    options={
-                      teamData
-                        ? splitActiveYears(teamData.activeYears).reverse()
-                        : []
-                    }
-                  />
-                </div>
+                  <div style={{ textAlign: "center", marginTop: "10px" }}>
+                    <button
+                      style={{
+                        backgroundColor: "rgb(6, 31, 77)",
+                        color: "white",
+                        padding: "3px",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      <a href={twitterPath}>구단 SNS 바로가기</a>
+                    </button>
+                  </div>
 
-                <TeamStat teamId={teamId} season={season} />
-              </Card>
-            </>
-          )}
+                  {/* <a href={twitterPath}>{twitterPath}</a> */}
+                  <div style={{ padding: "10px" }}>
+                    <div style={{ textAlign: "center" }}>
+                      <p>활동 내역 조회</p>
+
+                      <Select
+                        value={selectedYear}
+                        style={{ width: 120 }}
+                        onChange={handleChange}
+                        options={
+                          teamData
+                            ? splitActiveYears(teamData.activeYears).reverse()
+                            : []
+                        }
+                      />
+                    </div>
+                  </div>
+
+                  <TeamStat teamId={teamId} season={season} />
+                </Card>
+              </>
+            )}
+          </div>
         </div>
-        <div>
-          <Image src={teamPath} style={{ width: "100%", height: "450px" }} />
+        <div className="teamImage">
+          <Image src={teamPath} />
           <div className="roster">
             <TeamRoster teamId={teamId} season={season} />
           </div>
         </div>
       </div>
+      {/* </div> */}
     </>
   );
 };
