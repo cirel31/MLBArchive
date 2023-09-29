@@ -9,12 +9,12 @@ import intro from "../../assets/intro/intro_pull.png";
 
 import { useSelector } from "react-redux";
 import { Table, Typography, Carousel } from "antd";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 const { Title } = Typography;
 
 const LoginPage = () => {
-  const isLoggedIn = useSelector((state:any) => state.user.isLoggedIn)
-  const router = useRouter()
+  const isLoggedIn = useSelector((state: any) => state.user.isLoggedIn);
+  const router = useRouter();
   const [STATE, SETSTATE] = useState("");
   const generateState = () => {
     const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
@@ -28,7 +28,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isLoggedIn) {
-      router.push('/main')
+      router.push("/main");
     }
     SETSTATE(generateState());
   }, []);
@@ -46,12 +46,14 @@ const LoginPage = () => {
   const REDIRECT_URI_NAVER = process.env.NEXT_PUBLIC_OAUTH_NAVER_URL;
   const OAUTH_NAVER = `https://nid.naver.com/oauth2.0/authorize?client_id=${API_KEY_NAVER}&redirect_uri=${BASE_URL}${REDIRECT_URI_NAVER}&response_type=code&state=${STATE}`;
 
-  setTimeout(function () {
-    const loginContents = document.querySelector(".loginContents");
-    if (loginContents) {
-      loginContents.style.opacity = "1";
-    }
-  }, 300); // 5초 뒤에 실행
+  if (typeof document !== "undefined") {
+    setTimeout(function () {
+      const loginContents = document.querySelector(".loginContents");
+      if (loginContents) {
+        loginContents.style.opacity = "1";
+      }
+    }, 300);
+  }
 
   const contentStyle: React.CSSProperties = {
     height: "100%",
@@ -113,7 +115,12 @@ const LoginPage = () => {
           />
         </a>
         <a href={OAUTH_KAKAO} className="loginItem">
-          <Image src={kakao_btn} alt="카카오 로그인" className="oauthLogo" priority/>
+          <Image
+            src={kakao_btn}
+            alt="카카오 로그인"
+            className="oauthLogo"
+            priority
+          />
         </a>
         <a href={OAUTH_GOOGLE} className="loginItem">
           <Image

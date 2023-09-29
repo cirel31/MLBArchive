@@ -27,8 +27,32 @@ body {
 
 .header {
   display: flex;
+
+  margin: 40px;
 }
 
 .roster {
-  display: flex;
+  /* display: flex; */
+}
+
+.teamImage {
+  position: absolute;
+  left: 18%;
+  width: 80%;
+  border: 2px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+/* .card-container {
+  position: relative;
+  width: 240px;
+  border: 2px solid rgb(6, 31, 77);
+} */
+
+.card {
+  position: absolute;
+  /* top: -30%; */
+  left: 10px;
+  /* transition: top 0.4s ease; 부드러운 이동을 위한 트랜지션 */
 }
