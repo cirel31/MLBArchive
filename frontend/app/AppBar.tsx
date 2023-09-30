@@ -22,8 +22,9 @@ const AppBar = () => {
         <button onClick={() => router.push("/main")}>Main</button>
         <button onClick={() => router.push("/teams")}>Teams</button>
         <button onClick={() => router.push("/players")}>Players</button>
+        <button onClick={() => router.push("/search")}>Search</button>
         {isLoggedIn ? (
-          <button onClick={() => logoutBTN()}>Logout</button>
+          <button onClick={() => router.push("/user/mypage")}>MyPage</button>
         ) : (
           <button onClick={() => router.push("/login")}>Login</button>
         )}

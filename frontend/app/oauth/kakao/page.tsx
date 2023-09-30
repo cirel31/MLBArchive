@@ -27,6 +27,7 @@ const KakaoLoginPage = () => {
   const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
   const userId = useSelector((state:any) => state.user.userData?.userId)
   useEffect(() => {
+    console.log(isLoggedIn)
     if (isLoggedIn) {
       router.push(`/user/mypage`)
     }

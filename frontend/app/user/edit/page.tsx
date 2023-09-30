@@ -3,59 +3,104 @@ import {useDispatch, useSelector} from "react-redux";
 import {AxiosResponse} from "axios";
 import {fetchHittingRankerDataAPI} from "@/app/redux/api/rankAPI";
 import {userInfoUpdateAPI} from "@/app/redux/api/userAPI";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {fetchReUserData} from "@/app/redux/features/userSlice";
+import {useRouter} from "next/navigation";
 
 const ProfileEditPage = () => {
+  const router = useRouter()
   const userInfo = useSelector((state:any) => state.user.userData) ?? null
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [img, setImg] = useState('')
+  console.log(userInfo)
+  const [imgFile, setImgFile] = useState('');
+  const [originNickname, setOriginNickname] = useState('');
   const dispatch = useDispatch()
+
   useEffect(() => {
     console.log("실행중")
     dispatch(fetchReUserData())
   }, [])
   useEffect(() => {
-    console.log(userInfo)
-    if (userInfo) {
-      setName(userInfo.nickName)
-      setEmail(userInfo.email)
-      setImg(userInfo.image)
+    if (userInfo && userInfo.nickname && userInfo.image) {
+      setOriginNickname(userInfo.nickname)
+      setImgFile(userInfo.image)
     }
   }, [userInfo])
 
+  const imgRef = useRef<HTMLInputElement>(null);
+  const nickRef = useRef<HTMLInputElement>(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
-  // const userInfoChange = () => {
-  //   const data = {
-  //
-  //   }
-  //   const response: Promise<AxiosResponse> = userInfoUpdateAPI(accessToken, data)
-  //     response
-  //       .then((response) => {
-  //
-  //       })
-  //       .catch((error) => {
-  //
-  //       })
-  // }
+  const saveImgFile = () => {
+    const file = imgRef.current?.files?.[0];
+    if (file) {
+      setImgFile(URL.createObjectURL(file));
+    }
+  };
+  const saveNickname = () => {
+    const nickname = nickRef.current?.value
+    if (nickname) {
+      setOriginNickname(nickname)
+    }
+  }
+
+  const handleSubmit = () => {
+    console.log('일단 버튼 확인')
+    const data = {
+
+    }
+    // const response: Promise<AxiosResponse> = userInfoUpdateAPI(accessToken, data)
+    //   response
+    //     .then((response) => {
+    //
+    //     })
+    //     .catch((error) => {
+    //
+    //     })
+  }
+  const handleMyPage = () => {
+    router.push('/user/mypage')
+  }
 
   return (
     <>
       <div>
-        {userInfo && (
-          <div>
-            <div>{userInfo.email}</div>
-            <div>{userInfo.image}</div>
-          </div>
-        )}
-        <p>이름: {name}</p>
-        <p>이메일: {email}</p>
-        <p>이미지:
-          <img src={img} alt=""/>
-        </p>
+        <div>
+          <form ref={formRef}>
+            <div>
+              <img
+                  src={imgFile}
+                  alt="프로필 이미지를 불러올 수 없습니다."
+              />
+              <input
+                  name="file"
+                  type="file"
+                  accept="image/*"
+                  onChange={saveImgFile}
+                  ref={imgRef}
+                  id="edit_image"
+              />
+              <label>
+                <p>사진 변경하기</p>
+              </label>
+            </div>
+            <div >
+              <div>
+                <h2>닉네임 변경하기</h2>
+                <input
+                  style={{ color: "black" }}
+                  name="nickName"
+                  type="text"
+                  value={originNickname || ''}
+                  onChange={saveNickname}
+                  ref={nickRef}
+                />
+              </div>
+              <button onClick={() => handleSubmit()}>프로필 변경하기</button>
+            </div>
+          </form>
+          <button onClick={handleMyPage}>뒤로 가기</button>
+        </div>
       </div>
-      {console.log(userInfo)}
     </>
   )
 }
