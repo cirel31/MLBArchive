@@ -86,7 +86,8 @@ const DetailTeamPage = () => {
     <>
       <div className="header">
         {/* <div className="card-container"> */}
-        <div className="card" style={{ top: `${cardTop}px` }}>
+        <div className="card">
+          {/* <div className="card" style={{ top: `${cardTop}px` }}> */}
           <div>
             {teamData && (
               <>
