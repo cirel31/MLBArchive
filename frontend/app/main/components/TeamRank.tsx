@@ -91,7 +91,7 @@ const TeamRank = () => {
           value: "내셔널 리그",
         },
       ],
-      onFilter: (value: string, record) => record.leagueId.indexOf(value) === 0,
+      onFilter: (value: string, record:League) => record.leagueId.indexOf(value) === 0,
 
       render: (text: string, record: League, index: number) => (
         <p key={index}>{record.leagueId}</p>
@@ -114,7 +114,7 @@ const TeamRank = () => {
           value: "중부",
         },
       ],
-      onFilter: (value: string, record) =>
+      onFilter: (value: string, record: League) =>
         record.divisionId.indexOf(value) === 0,
 
       render: (text: string, record: League, index: number) => (

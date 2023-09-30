@@ -31,7 +31,7 @@ const LoginPage = () => {
       router.push("/main");
     }
     SETSTATE(generateState());
-  }, []);
+  }, [isLoggedIn]);
 
   const BASE_URL = process.env.NEXT_PUBLIC_CLIENT_BASE_URL;
   const API_KEY_KAKAO = process.env.NEXT_PUBLIC_KAKAO_CLIENT_ID;
@@ -48,7 +48,7 @@ const LoginPage = () => {
 
   if (typeof document !== "undefined") {
     setTimeout(function () {
-      const loginContents = document.querySelector(".loginContents");
+      const loginContents = document.querySelector(".loginContents") as HTMLElement;
       if (loginContents) {
         loginContents.style.opacity = "1";
       }
