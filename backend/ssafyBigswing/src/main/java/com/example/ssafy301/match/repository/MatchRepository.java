@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MatchRepository extends JpaRepository<Match, Long> {
-    //MatchDetail findByMatchId(Long matchId);
+    Match findByMatchId(Long matchId);
 
 }
