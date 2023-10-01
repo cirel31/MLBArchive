@@ -78,7 +78,7 @@ public class MatchDetailJsonDto {
         private Long baseOnBalls;//볼넷
         private Long strikeOuts;//삼진
         private Long homeRuns;//홈런
-        private Long atBats;//타수
+        private Long atBats; //타수
 
     }
     @Data

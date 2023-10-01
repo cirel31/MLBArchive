@@ -4,7 +4,9 @@ import com.example.ssafy301.common.api.ResponseEntity;
 import com.example.ssafy301.common.api.status.SuccessCode;
 import com.example.ssafy301.match.dto.MatchDto;
 import com.example.ssafy301.seasonRoster.dto.SeasonRosterDto;
+import com.example.ssafy301.simulation.dto.PlayerSearchRespDto;
 import com.example.ssafy301.simulation.dto.SimulationMembersDto;
+import com.example.ssafy301.simulation.dto.SimulationPlayerSearchDto;
 import com.example.ssafy301.simulation.service.SimulationService;
 import com.example.ssafy301.user.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -30,6 +32,13 @@ public class SimulationController {
     @GetMapping("/teamlist/{matchId}")
     public ResponseEntity getSimulationTeam(@PathVariable Long matchId) {
         SimulationMembersDto result = simulationService.getSimulationTeams(matchId);
+        return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
+    }
+
+    // 교체할 선수 목록 검색
+    @GetMapping("/playersearch")
+    public ResponseEntity getReplacementList(@ModelAttribute SimulationPlayerSearchDto searchDto) {
+        List<PlayerSearchRespDto> result = simulationService.getReplacementList(searchDto);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 }
