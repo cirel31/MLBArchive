@@ -4,5 +4,5 @@ import com.example.ssafy301.match.domain.MatchDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MatchDetailRepository extends JpaRepository<MatchDetail, Long> {
-    MatchDetail findByMatchId(Long matchId);
+    MatchDetail findByMatchDetailId(Long Id);
 }

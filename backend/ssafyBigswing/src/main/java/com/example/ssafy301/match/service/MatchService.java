@@ -125,7 +125,8 @@ public class MatchService {
     }
 
     public MatchDetailJsonDto getDetailMatchByMatchId(Long matchId) {
-        MatchDetail matchDetail = matchDetailRepository.findByMatchId(matchId);
+        Match match = matchRepository.findByMatchId(matchId);
+        MatchDetail matchDetail = matchDetailRepository.findByMatchDetailId(match.getMatchDetailId());
         log.debug("DTO Result: " + matchDetail.getMatchId()+" zzzz ",matchDetail.getId());
         if (matchDetail == null) {
             throw new NotFoundException(FailCode.NO_MATCH);
@@ -143,7 +144,8 @@ public class MatchService {
     }
 
     public LineScoreDto getLineScoreByMatchId(Long matchId) {
-        MatchDetail matchDetail = matchDetailRepository.findByMatchId(matchId);
+        Match match = matchRepository.findByMatchId(matchId);
+        MatchDetail matchDetail = matchDetailRepository.findByMatchDetailId(match.getMatchDetailId());
         if (matchDetail == null) {
             throw new NotFoundException(FailCode.NO_MATCH);
         }

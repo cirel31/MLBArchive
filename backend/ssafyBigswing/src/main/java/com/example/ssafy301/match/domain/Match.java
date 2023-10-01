@@ -55,7 +55,5 @@ public class Match {
     @Column(name = "current_inning")
     private int currentInning;
 
-//    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    @JoinColumn(name = "match_detail_id")
-//    private MatchDetail matchDetail;
+    private Long matchDetailId;
 }
