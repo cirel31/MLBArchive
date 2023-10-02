@@ -49,7 +49,7 @@ const HitterRank = () => {
     <div className="hitter-rank-container">
       {/* 스타일을 적용할 컨테이너 */}
       <div>
-        <div className="player_name2">Hitter Rank</div>
+        <div className="player_name2">Hitter</div>
         {hitter.length > 0 ? (
           <List
             dataSource={hitter}
@@ -58,7 +58,7 @@ const HitterRank = () => {
                 key={content.playerId}
                 onClick={() => router.push(`/players/${content.playerId}`)}
               >
-                <div className="player_rank">
+                <div>
                   <div style={{ display: "flex", alignItems: "center" }}>
                     {/* <span className="rank">{index + 1}.</span> */}
 
@@ -83,14 +83,18 @@ const HitterRank = () => {
                     ) : (
                       <span className="rank">{index + 1}</span>
                     )}
+                    <div style={{ display: "flex" }}>
+                      <div style={{ width: "50px" }}>
+                        <Image
+                          src={content.image}
+                          className="player_img"
+                          style={{ width: "50px", marginLeft: "10px" }}
+                          alt="선수 이미지"
+                        />
+                      </div>
 
-                    <Image
-                      src={content.image}
-                      className="player_img"
-                      style={{ width: "40px", marginLeft: "20px" }}
-                      alt="선수 이미지"
-                    />
-                    <div className="player_name">{content.name}</div>
+                      <div className="player_name">{content.name}</div>
+                    </div>
                   </div>
                 </div>
               </List.Item>
