@@ -77,9 +77,9 @@ const MyPage = () => {
             </div>
             <div className="followList">
               <div style={{ marginBottom: "10px" }}>
-                <FollowedTeam />
+                <FollowedPlayer />
               </div>
-              <FollowedPlayer />
+              <FollowedTeam />
             </div>
           </div>
         )}
