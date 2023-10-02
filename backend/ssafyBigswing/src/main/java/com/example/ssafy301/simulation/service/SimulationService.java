@@ -14,16 +14,16 @@ import com.example.ssafy301.player.domain.Player;
 import com.example.ssafy301.player.domain.Position;
 import com.example.ssafy301.player.repository.PlayerRepository;
 import com.example.ssafy301.player.service.PlayerService;
+import com.example.ssafy301.seasonRoster.domain.QSeasonRoster;
 import com.example.ssafy301.seasonRoster.domain.SeasonRoster;
 import com.example.ssafy301.seasonRoster.dto.SeasonRosterDto;
 import com.example.ssafy301.seasonRoster.dto.SeasonRosterReqDto;
 import com.example.ssafy301.seasonRoster.repository.SeasonRosterRepository;
 import com.example.ssafy301.seasonRoster.service.SeasonRosterService;
-import com.example.ssafy301.simulation.dto.PlayerSearchRespDto;
-import com.example.ssafy301.simulation.dto.SimulationMembersDto;
-import com.example.ssafy301.simulation.dto.SimulationPlayerSearchDto;
+import com.example.ssafy301.simulation.dto.*;
 import com.example.ssafy301.teamLike.dto.TeamLikeDto;
 import com.example.ssafy301.user.service.UserService;
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
@@ -38,6 +38,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static com.example.ssafy301.match.domain.QMatch.*;
+import static com.example.ssafy301.seasonRoster.domain.QSeasonRoster.*;
 
 @Service
 @Transactional(readOnly = true)
@@ -59,7 +60,13 @@ public class SimulationService {
     // 큰 점수 차로 진 경기를 보여주자
     public List<MatchDto> getRecommendedSimulations(String refreshToken) {
 
-        TeamLikeDto likeTeam = userService.getLikedTeamsByRefreshToken(refreshToken).get(0);
+        List<TeamLikeDto> likeTeams = userService.getLikedTeams(refreshToken);
+        TeamLikeDto likeTeam = null;
+
+        if(likeTeams != null && !likeTeams.isEmpty()) {
+            likeTeam = likeTeams.get(0);
+        }
+
         int currentYear = LocalDate.now().getYear();
 
         List<MatchDto> result;
@@ -169,42 +176,75 @@ public class SimulationService {
         return new SimulationMembersDto(homeMembers, awayMembers);
     }
 
-    public List<PlayerSearchRespDto> getReplacementList(SimulationPlayerSearchDto searchDto) {
+    public PlayerSearchRespDto getReplacementList(SimulationPlayerSearchDto searchDto) {
 
         // 우선 검색어가 이름에 포함된 선수가 존재하는지 확인
         List<Player> players = playerService.searchSimulationPlayerByName(searchDto.getContent());
 
-        // 팀id랑 season으로
+        // 팀id랑 season, 그리고 바꾸려는 선수의 포지션으로
         // seasonRoster 목록을 가져오자
-        List<SeasonRoster> seasonRosters = seasonRosterRepository.getSeasonRostersByTeamIdAndSeason(searchDto.getTeamId(), searchDto.getSeason());
+        // 교체되려는 선수의 포지션을 알아오자
+        Player currentPlayer = playerRepository.findById(searchDto.getPlayerId()).orElseThrow(() -> new NotFoundException(FailCode.NO_REPLACED_PLAYER));
+        Position mainPosition = currentPlayer.getMainPosition();
+//        List<SeasonRoster> seasonRosters = seasonRosterRepository.getSeasonRostersByTeamIdAndSeason(searchDto.getTeamId(), searchDto.getSeason());
+        List<SeasonRoster> seasonRosters = queryFactory
+                .select(seasonRoster)
+                .from(seasonRoster)
+                .where(
+                        teamIdEq(searchDto.getTeamId()),
+                        seasonEq(searchDto.getSeason()),
+                        seasonRoster.player.mainPosition.eq(Position.TWO_WAY_PLAYER).or(seasonRoster.player.mainPosition.eq(mainPosition))
+                )
+                .fetch();
+
         // 입력된 시즌에 해당 팀의 SeasonRoster가 존재하지 않으면 예외 발생
         if(seasonRosters == null || seasonRosters.isEmpty()) {
             throw new NotFoundException(FailCode.NO_SEASONROSTER);
         }
-
-        // 교체되려는 선수의 포지션을 알아오자
-        Player currentPlayer = playerRepository.findById(searchDto.getPlayerId()).orElseThrow(() -> new NotFoundException(FailCode.NO_REPLACED_PLAYER));
-        Position mainPosition = currentPlayer.getMainPosition();
 
         // seasonRoster의 id와 같고
         // mainPosition과 포지션이 같은 선수만 남겨주자
         List<Player> matchedPlayers = players.stream()
                 .filter(player -> seasonRosters.stream()
                         .anyMatch(seasonRoster -> seasonRoster.getPlayer().getId() == player.getId()
-                        && seasonRoster.getPlayer().getMainPosition() == mainPosition))
+                        && (seasonRoster.getPlayer().getMainPosition() == Position.TWO_WAY_PLAYER || seasonRoster.getPlayer().getMainPosition() == mainPosition)))
                 .collect(Collectors.toList());
 
         // 이제 matchedPlayers에서
-        // Hitting과 Pitching 스탯을 가져와서
-        // Dto를 만들어주고 반환
-        List<PlayerSearchRespDto> result = matchedPlayers.stream()
-                .map(matchedPlayer -> {
-                    Hitting hitting = hittingRepository.getHittingByPlayerIdAndSeason(matchedPlayer.getId(), searchDto.getSeason());
-                    Pitching pitching = pitchingRepository.getPitchingByPlayerIdAndSeason(matchedPlayer.getId(), searchDto.getSeason());
-                    return new PlayerSearchRespDto(matchedPlayer, hitting, pitching);
-                })
-                .collect(Collectors.toList());
+        // MainPosiotion이 Pitcher면 PitcherSearchRespDto로
+        // PITCHER 이외의 포지션이면 OtherPositionSearchRespDto로
+        // 변환해서 PlayerSearchRespDto의 List에 포지션 별로 나눠서 담아주자
+        PlayerSearchRespDto result = new PlayerSearchRespDto();
+        matchedPlayers.stream()
+                .forEach(matchedPlayer -> {
+
+                    if(matchedPlayer.getMainPosition() == Position.TWO_WAY_PLAYER) {
+                        Pitching pitching = pitchingRepository.getPitchingByPlayerIdAndSeason(matchedPlayer.getId(), searchDto.getSeason());
+                        Hitting hitting = hittingRepository.getHittingByPlayerIdAndSeason(matchedPlayer.getId(), searchDto.getSeason());
+                        TwoWayRespDto twoWay = new TwoWayRespDto(matchedPlayer, pitching, hitting);
+                        result.addTwoWay(twoWay);
+                    }
+                    else if(matchedPlayer.getMainPosition() == Position.PITCHER) {
+                        Pitching pitching = pitchingRepository.getPitchingByPlayerIdAndSeason(matchedPlayer.getId(), searchDto.getSeason());
+                        PitcherSearchRespDto pitcher = new PitcherSearchRespDto(matchedPlayer, pitching);
+                        result.addPitcher(pitcher);
+                    }
+                    else {
+                        Hitting hitting = hittingRepository.getHittingByPlayerIdAndSeason(matchedPlayer.getId(), searchDto.getSeason());
+                        OtherPositionSearchRespDto other = new OtherPositionSearchRespDto(matchedPlayer, hitting);
+                        result.addOthers(other);
+                    }
+
+                });
 
         return result;
+    }
+
+    private BooleanExpression seasonEq(int season) {
+        return seasonRoster.season.eq(season);
+    }
+
+    private BooleanExpression teamIdEq(Long teamId) {
+        return seasonRoster.team.id.eq(teamId);
     }
 }

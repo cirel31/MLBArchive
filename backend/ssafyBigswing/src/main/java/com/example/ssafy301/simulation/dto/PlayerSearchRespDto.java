@@ -9,54 +9,32 @@ import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
+@NoArgsConstructor
 public class PlayerSearchRespDto {
 
     // 선수 관련 정보
-    private Long playerId;
-    private String name;
-    private String korName;
-    private boolean isPlaying;
-    private int height;
-    private int weight;
-    private Position mainPosition; // 주포지션
-    private UseHand mainHand;
-    private String image;
-    private LocalDate debutDate;
-    private LocalDate retireDate;
-    private String hometown;
-    private int backnumber;
+    private List<PitcherSearchRespDto> pitchers = new ArrayList<>(); // 투수만 모아놨습니다(pitching 스탯만 있음)
+    private List<OtherPositionSearchRespDto> others = new ArrayList<>(); // 투수랑 twoway가 둘다 아닌 선수만 모아놨습니다(hitting 스탯만 있음)
+    private List<TwoWayRespDto> twoWays = new ArrayList<>(); // 투수랑 타자 둘 다 가능한 선수만 모아놨습니다(ex. 오타니 쇼헤이) (pitching, hitting 스탯 다 있음)
 
-    // 히팅 정보
-    private float batting_avg;
-    private float ops;
-
-    // 피칭 정보
-    private float era;
-    private float whip;
-
-    public PlayerSearchRespDto(Player player, Hitting hitting, Pitching pitching) {
-        this.playerId = player.getId();
-        this.name = player.getName();
-        this.korName = player.getKorName();
-        this.isPlaying = player.isPlaying();
-        this.height = player.getHeight();
-        this.weight = player.getWeight();
-        this.mainPosition = player.getMainPosition(); // 주포지션
-        this.mainHand = player.getMainHand();
-        this.image = player.getImage();
-        this.debutDate = player.getDebutDate();
-        this.retireDate = player.getRetireDate();
-        this.hometown = player.getHometown();
-        this.backnumber = player.getBacknumber();
-
-        this.batting_avg = hitting.getBattingAvg();
-        this.ops = hitting.getOps();
-
-        this.era = pitching.getEra();
-        this.whip = pitching.getWhip();
+    public void addPitcher(PitcherSearchRespDto pitcher) {
+        pitchers.add(pitcher);
     }
+
+    public void addOthers(OtherPositionSearchRespDto other) {
+        others.add(other);
+    }
+
+    public void addTwoWay(TwoWayRespDto twoWay) {
+        twoWays.add(twoWay);
+    }
+
+
 }

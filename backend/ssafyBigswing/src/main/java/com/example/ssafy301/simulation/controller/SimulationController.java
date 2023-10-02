@@ -38,7 +38,7 @@ public class SimulationController {
     // 교체할 선수 목록 검색
     @GetMapping("/playersearch")
     public ResponseEntity getReplacementList(@ModelAttribute SimulationPlayerSearchDto searchDto) {
-        List<PlayerSearchRespDto> result = simulationService.getReplacementList(searchDto);
+        PlayerSearchRespDto result = simulationService.getReplacementList(searchDto);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS, result);
     }
 }
