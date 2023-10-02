@@ -10,6 +10,7 @@ import java.util.List;
 public interface HittingRepository extends JpaRepository<Hitting, Long> {
 
     Hitting getHittingByPlayerIdAndSeason(Long playerId, int season);
+    List<Hitting> getHittingsByPlayerIdAndSeason(Long playerId, int season);
 
     List<Hitting> getHittingsBySeason(int season);
 }
