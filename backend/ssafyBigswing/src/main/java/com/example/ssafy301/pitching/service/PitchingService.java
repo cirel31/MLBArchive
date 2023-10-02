@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,14 +27,17 @@ public class PitchingService {
     
     // playerId와 season을 입력해서, 관련된 stat 정보를 가져온다
     public PitchingRespDto getPitchingStat(PitchingReqDto pitchingReqDto) {
-        Pitching pitchingStat = pitchingRepository.getPitchingByPlayerIdAndSeason(pitchingReqDto.getPlayerId(), pitchingReqDto.getSeason());
+        List<Pitching> pitchingStats = pitchingRepository.getPitchingsByPlayerIdAndSeason(pitchingReqDto.getPlayerId(), pitchingReqDto.getSeason());
         
         // 입력된 선수와 시즌과 관련된 스탯이 없다면 예외 발생
-        if(pitchingStat == null) {
+        if(pitchingStats.isEmpty()) {
             throw new NotFoundException(FailCode.NO_PITCHING_STAT);
         }
 
-        return new PitchingRespDto(pitchingStat);
+        // Pitching값이 여러개라면 가장 게임수가 많은 스탯만 뽑아냄
+        Pitching mostPlayedPitching = Collections.max(pitchingStats, Comparator.comparingInt(Pitching::getGamesPlayed));
+
+        return new PitchingRespDto(mostPlayedPitching);
     }
 
     // 현재 시즌의 모든 투수 중 pitching 순위(era가 낮을수록 높은 순위) TOP5 목록을 가져온다
