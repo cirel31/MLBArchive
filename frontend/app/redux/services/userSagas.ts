@@ -96,9 +96,11 @@ function* addFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffect 
 function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
   try {
     const data = {
-      teamId: action.payload.teamId
+      teamId: action.payload
     }
+    console.log("제대로 보내는지 확인" ,data)
     const response: AxiosResponse<any> = yield call(addTeamFollowAPI, data)
+    console.log("응답", response)
     if (response) {
       yield call(fetchFollowDataSaga);
     }
