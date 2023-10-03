@@ -9,7 +9,6 @@ import com.example.ssafy301.match.repository.MatchDetailRepository;
 import com.example.ssafy301.match.repository.MatchRepository;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.querydsl.jpa.impl.JPAQueryFactory;
@@ -151,7 +150,7 @@ public class MatchService {
         }
 
         try {
-            objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             return objectMapper.readValue(matchDetail.getLinescore(), LineScoreDto.class);
         } catch (IOException e) {
             throw new RuntimeException("Error parsing JSON", e);

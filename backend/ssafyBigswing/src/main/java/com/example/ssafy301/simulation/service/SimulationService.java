@@ -2,11 +2,15 @@ package com.example.ssafy301.simulation.service;
 
 import com.example.ssafy301.common.api.exception.NotFoundException;
 import com.example.ssafy301.common.api.status.FailCode;
+import com.example.ssafy301.match.domain.Match;
+import com.example.ssafy301.match.domain.MatchDetail;
 import com.example.ssafy301.hitting.domain.Hitting;
 import com.example.ssafy301.hitting.repository.HittingRepository;
 import com.example.ssafy301.match.dto.MatchDetailDto;
 import com.example.ssafy301.match.dto.MatchDto;
 import com.example.ssafy301.match.dto.QMatchDto;
+import com.example.ssafy301.match.repository.MatchDetailRepository;
+import com.example.ssafy301.match.repository.MatchRepository;
 import com.example.ssafy301.match.service.MatchService;
 import com.example.ssafy301.pitching.domain.Pitching;
 import com.example.ssafy301.pitching.repository.PitchingRepository;
@@ -20,6 +24,14 @@ import com.example.ssafy301.seasonRoster.dto.SeasonRosterDto;
 import com.example.ssafy301.seasonRoster.dto.SeasonRosterReqDto;
 import com.example.ssafy301.seasonRoster.repository.SeasonRosterRepository;
 import com.example.ssafy301.seasonRoster.service.SeasonRosterService;
+import com.example.ssafy301.simulation.dto.SimulationMembersDto;
+import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto;
+import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto.Player;
+import com.example.ssafy301.simulation.dto.SimulationResponseDto;
+import com.example.ssafy301.teamLike.dto.TeamLikeDto;
+import com.example.ssafy301.user.service.UserService;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.ssafy301.simulation.dto.*;
 import com.example.ssafy301.teamLike.dto.TeamLikeDto;
 import com.example.ssafy301.user.service.UserService;
@@ -27,10 +39,16 @@ import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.time.LocalDate;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static com.example.ssafy301.match.domain.QMatch.match;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -43,6 +61,7 @@ import static com.example.ssafy301.seasonRoster.domain.QSeasonRoster.*;
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
+@Slf4j
 public class SimulationService {
 
     private final MatchService matchService;
@@ -54,7 +73,9 @@ public class SimulationService {
     private final HittingRepository hittingRepository;
     private final PitchingRepository pitchingRepository;
     private final JPAQueryFactory queryFactory;
-
+    private final MatchRepository matchRepository;
+    private final MatchDetailRepository matchDetailRepository;
+    private final ObjectMapper objectMapper;
     // 시뮬레이션 추천
     // 내가 좋아하는 팀이 참여한 경기 중
     // 큰 점수 차로 진 경기를 보여주자
@@ -176,6 +197,48 @@ public class SimulationService {
         return new SimulationMembersDto(homeMembers, awayMembers);
     }
 
+    public SimulationMembersJsonDto getSimulationMembersByMatchId(Long matchId) {
+        Match match = matchRepository.findById(matchId).orElseThrow(() -> new NotFoundException(FailCode.NO_MATCH));;
+        MatchDetail matchDetail = matchDetailRepository.findById(match.getMatchDetailId()).orElseThrow(() -> new NotFoundException(FailCode.NO_MATCH));;
+        log.debug("DTO Result: " + matchDetail.getMatchId()+" zzzz ",matchDetail.getId());
+        if (matchDetail == null) {
+            throw new NotFoundException(FailCode.NO_MATCH);
+        }
+
+        try {
+            log.debug("왜 안돼~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+            SimulationMembersJsonDto dto = objectMapper.readValue(matchDetail.getBoxscore(), SimulationMembersJsonDto.class);
+            log.debug("DTO Result: " + dto);
+            return dto;
+        } catch (IOException e) {
+            throw new RuntimeException("Error parsing JSON", e);
+        }
+    }
+
+    public SimulationResponseDto getFilteredMembers(SimulationMembersJsonDto dto) {
+        Map<String, Player> awayPlayers = dto.getBoxscore().getTeams().getAway().getPlayers();
+        Map<String, Player> homePlayers = dto.getBoxscore().getTeams().getHome().getPlayers();
+
+        List<Player> filteredAwayBatters = dto.getBoxscore().getTeams().getAway().getBattingOrder().stream()
+                .map(pid -> awayPlayers.get("ID" + pid))
+                .collect(Collectors.toList());
+
+        List<Player> filteredAwayPitchers = dto.getBoxscore().getTeams().getAway().getPitchers().stream()
+                .map(pid -> awayPlayers.get("ID" + pid))
+                .collect(Collectors.toList());
+
+        List<Player> filteredHomeBatters = dto.getBoxscore().getTeams().getHome().getBattingOrder().stream()
+                .map(pid -> homePlayers.get("ID" + pid))
+                .collect(Collectors.toList());
+
+        List<Player> filteredHomePitchers = dto.getBoxscore().getTeams().getHome().getPitchers().stream()
+                .map(pid -> homePlayers.get("ID" + pid))
+                .collect(Collectors.toList());
+
+        return new SimulationResponseDto(filteredHomeBatters, filteredHomePitchers, filteredAwayBatters, filteredAwayPitchers);
+    }
+
     public PlayerSearchRespDto getReplacementList(SimulationPlayerSearchDto searchDto) {
 
         // 우선 검색어가 이름에 포함된 선수가 존재하는지 확인
@@ -186,7 +249,6 @@ public class SimulationService {
         // 교체되려는 선수의 포지션을 알아오자
         Player currentPlayer = playerRepository.findById(searchDto.getPlayerId()).orElseThrow(() -> new NotFoundException(FailCode.NO_REPLACED_PLAYER));
         Position mainPosition = currentPlayer.getMainPosition();
-//        List<SeasonRoster> seasonRosters = seasonRosterRepository.getSeasonRostersByTeamIdAndSeason(searchDto.getTeamId(), searchDto.getSeason());
         List<SeasonRoster> seasonRosters = queryFactory
                 .select(seasonRoster)
                 .from(seasonRoster)

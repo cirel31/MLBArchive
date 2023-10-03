@@ -1,4 +1,4 @@
-package com.example.ssafy301.match.dto;
+package com.example.ssafy301.simulation.dto;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import lombok.AllArgsConstructor;
@@ -13,11 +13,9 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-public class MatchDetailJsonDto {
-
+public class SimulationMembersJsonDto {
     private int game_id;
     private BoxScore boxscore;
-
     @Data
     public static class BoxScore {
         private Teams teams;
@@ -48,7 +46,7 @@ public class MatchDetailJsonDto {
     @Data
     public static class Player {
         private Person person;
-        private Stats stats;
+        private SeasonStats seasonStats;
         private Position position;
         // getters, setters ...
     }
@@ -56,43 +54,44 @@ public class MatchDetailJsonDto {
     public static class Person {
         private int id;
         private String fullName;
-        // getters, setters ...
     }
     @Data
-    public static class Stats {
+    public static class SeasonStats {
         private Batting batting;
         private Pitching pitching;
-        // getters, setters ...
     }
     @Data
     public static class Position {
-        private String code;
+        private Long code;
         private String name;
         private String type;
     }
     @Data
     public static class Batting {
-        private Long hits; // 안타
-        private Long runs; // 득점
-        private Long rbi; // 타점
-        private Long baseOnBalls;//볼넷
-        private Long strikeOuts;//삼진
-        private Long homeRuns;//홈런
-        private Long atBats; //타수
+//        private Long hits; // 안타
+//        private Long runs; // 득점
+//        private Long rbi; // 타점
+//        private Long baseOnBalls;//볼넷
+//        private Long strikeOuts;//삼진
+//        private Long homeRuns;//홈런
+//        private Long atBats;//타수
+        private String avg;
+        private String ops;
 
     }
     @Data
     public static class Pitching {
-        private float inningsPitched;// 이닝
-        private Long hits; // 피안타
-        private Long runs; //실점
-        private Long rbi; // 자책
-        private Long baseOnBalls;//볼넷
-        private Long strikeOuts;//삼진
-        private Long homeRuns;//피홈런
-        private Long battersFaced;//타자
-        private Long atBats;//타수
-        private Long pitchesThrown;//투구수
-
+//        private float inningsPitched;// 이닝
+//        private Long hits; // 피안타
+//        private Long runs; //실점
+//        private Long rbi; // 자책
+//        private Long baseOnBalls;//볼넷
+//        private Long strikeOuts;//삼진
+//        private Long homeRuns;//피홈런
+//        private Long battersFaced;//타자
+//        private Long atBats;//타수
+//        private Long pitchesThrown;//투구수
+        private String era;
+        private String whip;
     }
 }
