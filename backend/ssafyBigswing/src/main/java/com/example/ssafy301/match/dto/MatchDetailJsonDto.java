@@ -66,7 +66,7 @@ public class MatchDetailJsonDto {
     }
     @Data
     public static class Position {
-        private Long code;
+        private String code;
         private String name;
         private String type;
     }
