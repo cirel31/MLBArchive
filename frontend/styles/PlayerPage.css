@@ -46,7 +46,7 @@
 
 .photo_box {
   width: 320px;
-  border: 2px solid #cccccc;
+  border: 5px solid rgb(6, 31, 77);
   border-radius: 10px;
   margin: 0 auto;
   text-align: center;
@@ -54,7 +54,7 @@
 
 .scoreView {
   width: 320px;
-  border: 2px solid #cccccc;
+  border: 5px solid rgb(6, 31, 77);
   border-radius: 10px;
   padding: 20px;
   margin: 30px;

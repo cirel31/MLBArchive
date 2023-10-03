@@ -17,11 +17,12 @@ const FollowedTeam = () => {
                   key={team.teamId}
                   onClick={() => router.push(`/players/${team.teamId}`)}
                 >
-                  <div className="miniCard">
+                  <div className="miniCard2">
                     <img
                       src={team.teamLogo}
                       alt="이미지없음"
-                      className="playerImage"
+                      className="playerImage2"
+                      style={{ backgroundColor: "white" }}
                     />
                     <div>{team.teamName}</div>
                   </div>

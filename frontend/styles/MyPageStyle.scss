@@ -106,3 +106,27 @@ body {
 .textbox {
   text-align: center;
 }
+
+.miniCard2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid;
+  text-align: center;
+  font-size: 15px;
+  margin: 5px;
+  background-color: rgb(6, 31, 77);
+  border-radius: 10px;
+  color: white;
+  font-family: "IBM Plex Sans KR", sans-serif;
+
+  width: 150px;
+  height: 180px;
+}
+
+.playerImage2 {
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  margin: 0 auto;
+}

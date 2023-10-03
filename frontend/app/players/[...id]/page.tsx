@@ -106,7 +106,7 @@ const PlayerDetailPage = () => {
                       className="f_button"
                       type="primary"
                       onClick={followBTN}
-                      style={{ color: "black" }}
+                      style={{ color: "black", backgroundColor: "pink" }}
                     >
                       언팔로우
                     </Button>
@@ -115,7 +115,7 @@ const PlayerDetailPage = () => {
                       className="f_button"
                       type="primary"
                       onClick={followBTN}
-                      style={{ color: "black" }}
+                      style={{ color: "black", backgroundColor: "skyblue" }}
                     >
                       팔로우
                     </Button>

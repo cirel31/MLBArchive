@@ -6,7 +6,7 @@ import "@/styles/TeamRosterPlayer.scss";
 
 const TeamRoster = (props: any) => {
   const { teamId, season } = props;
-  console.log(season)
+  console.log(season);
   const router = useRouter();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -46,7 +46,7 @@ const TeamRoster = (props: any) => {
                           router.push(`/players/${player.playerId}`)
                         }
                       >
-                        <div className="miniCard">
+                        <div className="miniCard3">
                           <img
                             src={player.image}
                             alt="이미지"
@@ -57,7 +57,7 @@ const TeamRoster = (props: any) => {
                               margin: "0 auto",
                             }}
                           />
-                          <div className="name">
+                          <div className="name2">
                             {" "}
                             <p>{player.playerName}</p>
                           </div>
