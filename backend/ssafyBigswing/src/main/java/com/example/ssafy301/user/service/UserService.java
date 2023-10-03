@@ -65,6 +65,12 @@ public class UserService {
         User user = findByRefreshToken(refreshToken);
         return teamLikeService.getLikeTeamList(user.getId());
     }
+    
+    // 시뮬레이션 추천을 위해 좋아하는 팀 반환하는 메서드
+    public List<TeamLikeDto> getLikedTeams(String refreshToken) {
+        User user = findByRefreshToken(refreshToken);
+        return teamLikeService.getLikeTeams(user.getId());
+    }
 
     @Transactional
     public void updateUser(UserUpdateDTO dto) {

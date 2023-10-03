@@ -7,31 +7,30 @@ const FollowedTeam = () => {
   const router = useRouter();
   return (
     <>
-      <h3>[ FOLLOW PLAYER ]</h3>
+      <h3>[ FOLLOW TEAM ]</h3>
       <div>
-        {followList?.PlayerList ? (
+        {followList?.TeamList ? (
           <div>
             <div style={{ display: "flex" }}>
-              {followList.PlayerList.map((player: any) => (
+              {followList.TeamList.map((team: any) => (
                 <div
-                  key={player.playerId}
-                  onClick={() => router.push(`/players/${player.playerId}`)}
+                  key={team.teamId}
+                  onClick={() => router.push(`/players/${team.teamId}`)}
                 >
                   <div className="miniCard">
                     <img
-                      src={player.image}
+                      src={team.teamLogo}
                       alt="이미지없음"
                       className="playerImage"
                     />
-                    <div>{player.name}</div>
-                    <div>{player.korName}</div>
+                    <div>{team.teamName}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         ) : (
-          <p>팔로우한 선수들이 없습니다.</p>
+          <p>팔로우한 팀이 없습니다.</p>
         )}
       </div>
     </>

@@ -6,6 +6,7 @@ import "@/styles/TeamRosterPlayer.scss";
 
 const TeamRoster = (props: any) => {
   const { teamId, season } = props;
+  console.log(season)
   const router = useRouter();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -17,10 +18,9 @@ const TeamRoster = (props: any) => {
       console.log(data);
       dispatch(teamRosterData(data));
     }
-  }, [season]);
+  }, [teamId, season]);
 
   const rosterData = useSelector((state: any) => state.team.teamRoster);
-  // 열 개수를 정의합니다.
   const columns = 5;
 
   return (

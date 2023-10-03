@@ -1,6 +1,6 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
 import { fetchPlayerDetailData } from "@/app/redux/features/playerDetailSlice";
 import { useRouter, usePathname } from "next/navigation";
 import Swal from "sweetalert2";
@@ -8,6 +8,7 @@ import "../../../styles/PlayerPage.css";
 import { addFollowPlayer } from "@/app/redux/features/userSlice";
 import PlayerInfo from "../[...id]/playerInfo";
 import { Button, InputNumber, Divider, Typography } from "antd";
+import Loading from "@/app/Loading";
 
 const { Title } = Typography;
 
@@ -29,18 +30,19 @@ const PlayerDetailPage = () => {
   const playerId = parseInt(pathURI.slice(9));
   const MIN_YEAR: number = 1903;
   const MAX_YEAR = new Date().getFullYear();
-  const [isClient, setIsClient] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // 처음 접속 시 로딩 상태 활성화
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
   useEffect(() => {
     const searchQuery = {
       playerId: playerId,
       season: seasonData,
     };
     dispatch(fetchPlayerDetailData(searchQuery));
-  }, []);
+
+    // 처음 접속 시에만 로딩 상태를 비활성화
+    setIsLoading(false);
+  }, [playerId, seasonData]);
+
   useEffect(() => {
     if (followCheck && playerData) {
       followCheck.map((player: { playerId: number }) => {
@@ -49,12 +51,13 @@ const PlayerDetailPage = () => {
         }
       });
     }
-  }, [playerData]);
+  }, [followCheck, playerData]);
 
   const followBTN = () => {
     dispatch(addFollowPlayer(playerData.id));
     setIsFollow(!isFollow);
   };
+
   const seasonSearchBTN = () => {
     if (MIN_YEAR > seasonData) {
       Swal.fire({
@@ -76,13 +79,20 @@ const PlayerDetailPage = () => {
       dispatch(fetchPlayerDetailData(searchQuery));
     }
   };
+
   return (
-    <div className="container">
-      {/* <p>{parseInt(pathURI.slice(9))}</p> */}
+    <div className="container2">
+      {/* 처음 접속 시에만 로딩 창을 표시합니다 */}
+      {isLoading && (
+        <div className="loading">
+          <Loading />
+        </div>
+      )}
+
       {playerData && (
         <div>
           <div className="infoBox">
-            <div className="playerImage">
+            <div className="playerImage2">
               <div className="photo_box">
                 <Title>{playerData.name}</Title>
                 <img
@@ -135,7 +145,7 @@ const PlayerDetailPage = () => {
                       )
                     )
                   ) : (
-                      <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+                    <div>해당 시즌에는 활동한 기록이 없습니다.</div>
                   )}
                 </div>
                 <Divider />
@@ -150,7 +160,7 @@ const PlayerDetailPage = () => {
                       )
                     )
                   ) : (
-                      <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+                    <div>해당 시즌에는 활동한 기록이 없습니다.</div>
                   )}
                 </div>
                 <Divider />
@@ -165,15 +175,10 @@ const PlayerDetailPage = () => {
                       )
                     )
                   ) : (
-                      <div>해당 시즌에는 활동한 기록이 없습니다.</div>
+                    <div>해당 시즌에는 활동한 기록이 없습니다.</div>
                   )}
                 </div>
               </div>
-              {/* <Button
-              onClick={() => dispatch(addFollowPlayer(playerData.id))}
-            >
-              팔로우
-            </Button> */}
             </div>
             <PlayerInfo playerData={playerData} />
           </div>

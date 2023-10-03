@@ -1,18 +1,40 @@
+"use client";
 import { useSelector } from "react-redux";
+import {useRouter} from "next/navigation";
 
 const FollowedPlayer = () => {
   const followList = useSelector((state: any) => state.user.followList);
-  return (
-    <>
-      <h3>[ FOLLOW TEAM ]</h3>
-      <div>
-        {followList?.TeamList ? (
-          <p>팔로우 한 팀들</p>
-        ) : (
-          <p>팔로우한 팀들이 없습니다.</p>
-        )}
-      </div>
-    </>
+    const router = useRouter();
+    return (
+      <>
+        <h3>[ FOLLOW PLAYER ]</h3>
+        <div>
+          {followList?.PlayerList ? (
+            <div>
+              <div style={{ display: "flex" }}>
+                {followList.PlayerList.map((player: any) => (
+                  <div
+                    key={player.playerId}
+                    onClick={() => router.push(`/players/${player.playerId}`)}
+                  >
+                    <div className="miniCard">
+                      <img
+                        src={player.image}
+                        alt="이미지없음"
+                        className="playerImage"
+                      />
+                      <div>{player.name}</div>
+                      <div>{player.korName}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <p>팔로우한 선수들이 없습니다.</p>
+          )}
+        </div>
+      </>
   );
 };
 

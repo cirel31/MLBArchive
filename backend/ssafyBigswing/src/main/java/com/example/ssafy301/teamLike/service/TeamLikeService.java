@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,6 +41,21 @@ public class TeamLikeService {
 
         return likeTeams;
     }
+
+    // 시뮬레이션 추천을 위한 좋아하는 팀 반환 로직
+    public List<TeamLikeDto> getLikeTeams(Long userId) {
+        List<TeamLike> teamLikes = teamLikeRepository.getTeamLikesByUserId(userId);
+        List<TeamLikeDto> result = new ArrayList<>();
+
+        if(teamLikes != null && !teamLikes.isEmpty()) {
+           result = teamLikes.stream().map((team) -> {
+                return new TeamLikeDto(team);
+            }).collect(Collectors.toList());
+        }
+
+        return result;
+    }
+
     @Transactional
     public void saveTeamLike(String refreshToken, Long teamId) {
         // 토큰으로 유저를 조회합니다.
