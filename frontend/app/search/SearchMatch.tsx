@@ -64,7 +64,7 @@ const SearchMatch = () => {
     dispatch(fetchPlayerWordData(action));
   };
   const searchDetailMatch = (id: string) => {
-    console.log("로직 실행 확인 중");
+    console.log("로직 실행 확인 중", id);
     dispatch(requestDetailMatchData(id));
     router.push(`/match/${id}`);
   };

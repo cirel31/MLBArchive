@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState = {
   matchData: null,
   matchDetailData: null,
+  matchLineScore: null,
   totalPage: 1,
 }
 export const matchSlice = createSlice({
@@ -19,11 +20,13 @@ export const matchSlice = createSlice({
 
     },
     requestDetailMatchData: (state, action) => {
-      console.log("디테일 매치 데이터 요청", action.payload)
     },
     successDetailMatchData: (state, action) => {
-      console.log("response가 안찍히는데 얘가 왜 됌???", action.payload)
       state.matchDetailData = action.payload
+    },
+    successMatchLineScore: (state, action) => {
+      state.matchLineScore = action.payload
+      console.log(action.payload)
     },
     errorDetailMatchData: (state, action) => {
 
@@ -39,6 +42,7 @@ export const {
   successMatchData,
   requestDetailMatchData,
   successDetailMatchData,
+  successMatchLineScore,
   errorMatchData,
   errorDetailMatchData,
   pageCheck,

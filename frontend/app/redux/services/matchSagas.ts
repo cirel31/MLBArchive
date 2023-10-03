@@ -2,10 +2,10 @@ import { call, put, takeLatest, CallEffect, PutEffect} from "@redux-saga/core/ef
 import axios, {AxiosResponse} from 'axios';
 import {PayloadAction} from "@reduxjs/toolkit";
 import {
-  requestMatchData, successMatchData, requestDetailMatchData, successDetailMatchData,
+  requestMatchData, successMatchData, requestDetailMatchData, successDetailMatchData, successMatchLineScore,
   errorMatchData, errorDetailMatchData, pageCheck
 } from "@/app/redux/features/matchSlice"
-import {matchDataAPI, matchDetailDataAPI} from "@/app/redux/api/matchAPI";
+import {matchDataAPI, matchDetailDataAPI, matchLineScoreAPI} from "@/app/redux/api/matchAPI";
 
 interface MatchDataPayload {
   status: number
@@ -16,7 +16,6 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
   try {
     const {teamName, start, end, nowPage, articlePerPage} = action.payload
     const response: MatchDataPayload = yield call(matchDataAPI, teamName, start, end, nowPage, articlePerPage)
-    console.log(response)
     if (response?.resultData) {
       yield put(successMatchData(response.resultData.content))
       yield put(pageCheck(response.resultData.totalPages));
@@ -33,12 +32,15 @@ function* requestMatchDataSaga(action: PayloadAction<any>) {
 function* requestMatchDetailDataSaga(action: PayloadAction<any>) {
   try {
     const teamId = action.payload
-    console.log(teamId)
     const response: MatchDataPayload = yield call(matchDetailDataAPI, teamId)
-    console.log("응?답", response)
     if (response?.resultData) {
       yield put(successDetailMatchData(response.resultData))
     }
+    const response2: MatchDataPayload = yield call(matchLineScoreAPI, teamId)
+    if (response2?.resultData) {
+      yield put(successMatchLineScore(response2.resultData))
+    }
+
   }
   catch (error) {
 

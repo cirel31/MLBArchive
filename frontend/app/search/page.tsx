@@ -13,7 +13,7 @@ const SearchPage: React.FC = () => {
   const [player, setPlayer] = useState(false);
   const [activeKey, setActiveKey] = useState("match");
 
-  const handleTabClick = (key) => {
+  const handleTabClick = (key:any) => {
     setActiveKey(key); // 클릭한 탭을 활성화된 탭으로 설정합니다.
   };
 
