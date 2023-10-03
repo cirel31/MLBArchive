@@ -1,6 +1,6 @@
 package com.example.ssafy301.simulation.dto;
 
-import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto.Player;
+import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto.Players;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,8 +11,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SimulationResponseDto {
-    private List<Player> homeTeamBatters;
-    private List<Player> homeTeamPitchers;
-    private List<Player> awayTeamBatters;
-    private List<Player> awayTeamPitchers;
+    private List<Players> homeTeamBatters;
+    private List<Players> homeTeamPitchers;
+    private List<Players> awayTeamBatters;
+    private List<Players> awayTeamPitchers;
 }

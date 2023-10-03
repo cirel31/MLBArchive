@@ -30,7 +30,7 @@ public class SimulationMembersJsonDto {
     @Data
     public static class TeamDetails {
         private Team team;
-        private Map<String, Player> players;
+        private Map<String, Players> players;
         private List<Integer> pitchers;
         private List<Integer> battingOrder;
         // getters, setters ...
@@ -44,7 +44,7 @@ public class SimulationMembersJsonDto {
         // getters, setters ...
     }
     @Data
-    public static class Player {
+    public static class Players {
         private Person person;
         private SeasonStats seasonStats;
         private Position position;
