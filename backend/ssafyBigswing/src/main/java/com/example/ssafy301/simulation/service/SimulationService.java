@@ -26,7 +26,7 @@ import com.example.ssafy301.seasonRoster.repository.SeasonRosterRepository;
 import com.example.ssafy301.seasonRoster.service.SeasonRosterService;
 import com.example.ssafy301.simulation.dto.SimulationMembersDto;
 import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto;
-import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto.Player;
+import com.example.ssafy301.simulation.dto.SimulationMembersJsonDto.Players;
 import com.example.ssafy301.simulation.dto.SimulationResponseDto;
 import com.example.ssafy301.teamLike.dto.TeamLikeDto;
 import com.example.ssafy301.user.service.UserService;
@@ -48,7 +48,6 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static com.example.ssafy301.match.domain.QMatch.match;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -217,22 +216,22 @@ public class SimulationService {
     }
 
     public SimulationResponseDto getFilteredMembers(SimulationMembersJsonDto dto) {
-        Map<String, Player> awayPlayers = dto.getBoxscore().getTeams().getAway().getPlayers();
-        Map<String, Player> homePlayers = dto.getBoxscore().getTeams().getHome().getPlayers();
+        Map<String, Players> awayPlayers = dto.getBoxscore().getTeams().getAway().getPlayers();
+        Map<String, Players> homePlayers = dto.getBoxscore().getTeams().getHome().getPlayers();
 
-        List<Player> filteredAwayBatters = dto.getBoxscore().getTeams().getAway().getBattingOrder().stream()
+        List<Players> filteredAwayBatters = dto.getBoxscore().getTeams().getAway().getBattingOrder().stream()
                 .map(pid -> awayPlayers.get("ID" + pid))
                 .collect(Collectors.toList());
 
-        List<Player> filteredAwayPitchers = dto.getBoxscore().getTeams().getAway().getPitchers().stream()
+        List<Players> filteredAwayPitchers = dto.getBoxscore().getTeams().getAway().getPitchers().stream()
                 .map(pid -> awayPlayers.get("ID" + pid))
                 .collect(Collectors.toList());
 
-        List<Player> filteredHomeBatters = dto.getBoxscore().getTeams().getHome().getBattingOrder().stream()
+        List<Players> filteredHomeBatters = dto.getBoxscore().getTeams().getHome().getBattingOrder().stream()
                 .map(pid -> homePlayers.get("ID" + pid))
                 .collect(Collectors.toList());
 
-        List<Player> filteredHomePitchers = dto.getBoxscore().getTeams().getHome().getPitchers().stream()
+        List<Players> filteredHomePitchers = dto.getBoxscore().getTeams().getHome().getPitchers().stream()
                 .map(pid -> homePlayers.get("ID" + pid))
                 .collect(Collectors.toList());
 
