@@ -271,6 +271,11 @@ public class SimulationService {
                         && (seasonRoster.getPlayer().getMainPosition() == Position.TWO_WAY_PLAYER || seasonRoster.getPlayer().getMainPosition() == mainPosition)))
                 .collect(Collectors.toList());
 
+        // seasonRosters와 players에 겹치는 선수가 없다면 예외 발생
+        if(matchedPlayers.isEmpty()) {
+            throw new NotFoundException(FailCode.NO_PLAYERS);
+        }
+
         // 이제 matchedPlayers에서
         // MainPosiotion이 Pitcher면 PitcherSearchRespDto로
         // PITCHER 이외의 포지션이면 OtherPositionSearchRespDto로
@@ -306,6 +311,6 @@ public class SimulationService {
     }
 
     private BooleanExpression teamIdEq(Long teamId) {
-        return seasonRoster.team.id.eq(teamId);
+        return teamId != null ? seasonRoster.team.id.eq(teamId) : null;
     }
 }
