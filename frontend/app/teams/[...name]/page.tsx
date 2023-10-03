@@ -148,13 +148,13 @@ const DetailTeamPage = () => {
                     </button>
                   </div>
                   <div>
-                    <div>
+                    <div style={{ textAlign: "center", marginTop: "10px" }}>
                       {isFollow ? (
                         <Button
                           className="f_button"
                           type="primary"
                           onClick={followBTN}
-                          style={{ color: "black" }}
+                          style={{ color: "black", backgroundColor: "pink" }}
                         >
                           언팔로우
                         </Button>
@@ -163,7 +163,7 @@ const DetailTeamPage = () => {
                           className="f_button"
                           type="primary"
                           onClick={followBTN}
-                          style={{ color: "black" }}
+                          style={{ color: "black", backgroundColor: "skyblue" }}
                         >
                           팔로우
                         </Button>
