@@ -5,10 +5,13 @@
 @import "tailwindcss/utilities";
 
 .infoBox {
+  width: 1000px;
   display: flex;
-  /* border: 1px solid; */
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row; /* 요소들을 가로로 정렬 */
+  align-items: flex-start;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .playerInfo {
@@ -16,7 +19,7 @@
   margin: 0 auto;
 }
 
-.playerImage {
+.playerImage2 {
   display: flex;
   flex-direction: column;
 }
@@ -30,10 +33,11 @@
   font-weight: bolder;
 }
 
-.container {
+.container2 {
   /* border: 1px solid; */
   margin: 0 auto;
   padding: 30px;
+  width: 1400px;
 }
 
 .f_button {
@@ -41,7 +45,7 @@
 }
 
 .photo_box {
-  width: 80%;
+  width: 320px;
   border: 2px solid #cccccc;
   border-radius: 10px;
   margin: 0 auto;
@@ -49,6 +53,7 @@
 }
 
 .scoreView {
+  width: 320px;
   border: 2px solid #cccccc;
   border-radius: 10px;
   padding: 20px;

@@ -8,14 +8,22 @@ import {
   selectTwitter,
   selectTeam,
 } from "@/app/components/team/teamData";
-import {InputNumber, Layout, Space, Card, Collapse, Select, Button} from "antd";
+import {
+  InputNumber,
+  Layout,
+  Space,
+  Card,
+  Collapse,
+  Select,
+  Button,
+} from "antd";
 import type { CollapseProps } from "antd";
 import News from "./news";
 import { teamDetailData } from "@/app/redux/features/teamSlice";
 import TeamStat from "@/app/components/team/teamStat";
 import TeamRoster from "@/app/components/team/teamRoster";
 import TeamInfo from "./TeamInfo";
-import {addFollowPlayer, addFollowTeam} from "@/app/redux/features/userSlice";
+import { addFollowPlayer, addFollowTeam } from "@/app/redux/features/userSlice";
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Meta } = Card;
@@ -32,10 +40,10 @@ const DetailTeamPage = () => {
   const searchId = teamData?.id ?? 120;
   const logoPath = selectLogo(searchId);
   const twitterPath = selectTwitter(searchId);
-  const teamPath = selectTeam(searchId) ?? '';
+  const teamPath = selectTeam(searchId) ?? "";
 
   const followCheck = useSelector(
-      (state: any) => state.user.followList?.TeamList
+    (state: any) => state.user.followList?.TeamList
   );
 
   useEffect(() => {
@@ -55,7 +63,6 @@ const DetailTeamPage = () => {
     dispatch(addFollowTeam(teamData.id));
     setIsFollow(!isFollow);
   };
-
 
   const [selectedYear, setSelectedYear] = useState("");
 
@@ -105,7 +112,7 @@ const DetailTeamPage = () => {
     <>
       <div className="header">
         {/* <div className="card-container"> */}
-        <div className="card">
+        <div className="card2">
           {/* <div className="card" style={{ top: `${cardTop}px` }}> */}
           <div>
             {teamData && (
@@ -143,23 +150,23 @@ const DetailTeamPage = () => {
                   <div>
                     <div>
                       {isFollow ? (
-                          <Button
-                              className="f_button"
-                              type="primary"
-                              onClick={followBTN}
-                              style={{ color: "black" }}
-                          >
-                            언팔로우
-                          </Button>
+                        <Button
+                          className="f_button"
+                          type="primary"
+                          onClick={followBTN}
+                          style={{ color: "black" }}
+                        >
+                          언팔로우
+                        </Button>
                       ) : (
-                          <Button
-                              className="f_button"
-                              type="primary"
-                              onClick={followBTN}
-                              style={{ color: "black" }}
-                          >
-                            팔로우
-                          </Button>
+                        <Button
+                          className="f_button"
+                          type="primary"
+                          onClick={followBTN}
+                          style={{ color: "black" }}
+                        >
+                          팔로우
+                        </Button>
                       )}
                     </div>
                   </div>
