@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import {apiGet, apiJsonType, apiPostJson} from "./apiConfig"
+import {apiFormType, apiGet, apiJsonType, apiPostJson} from "./apiConfig"
 
 const baseURL = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
 const oauthURL = process.env.NEXT_PUBLIC_OAUTH_SERVER_URL;
@@ -10,6 +10,8 @@ const reLoadDataURL = '/api/users/user'
 const addPlayerURL = '/api/playerlike/like'
 const addTeamURL = '/api/teamlike/like'
 const logoutURL = '/api/auth/logout'
+const editURL = '/api/users/update'
+
 
 export const fetchUserDataAPI = async (code: string, state: string, kind: string): Promise<AxiosResponse> => {
   console.log(`${baseURL}${oauthURL}${kind}?code=${code}&state=${state}`)
@@ -37,4 +39,7 @@ export const addPlayerFollowAPI = async (data:any) => {
 }
 export const LogoutAPI = async () => {
   return await apiGet.get(`${logoutURL}`)
+}
+export const EditAPI = async (data:any) => {
+  return await apiFormType.post(`${editURL}`, data)
 }

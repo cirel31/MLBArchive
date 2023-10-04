@@ -9,7 +9,7 @@ import { Tabs } from "antd";
 
 const SearchPage: React.FC = () => {
   const dispatch = useDispatch();
-  const [match, setMatch] = useState(false);
+  const [match, setMatch] = useState(true);
   const [player, setPlayer] = useState(false);
   const [activeKey, setActiveKey] = useState("match");
 

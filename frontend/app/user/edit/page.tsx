@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { AxiosResponse } from "axios";
 import { fetchHittingRankerDataAPI } from "@/app/redux/api/rankAPI";
-import { userInfoUpdateAPI } from "@/app/redux/api/userAPI";
+import {EditAPI, userInfoUpdateAPI} from "@/app/redux/api/userAPI";
 import { useEffect, useRef, useState } from "react";
 import { fetchReUserData } from "@/app/redux/features/userSlice";
 import { useRouter } from "next/navigation";
@@ -46,15 +46,15 @@ const ProfileEditPage = () => {
 
   const handleSubmit = () => {
     console.log("일단 버튼 확인");
-    const data = {};
-    // const response: Promise<AxiosResponse> = userInfoUpdateAPI(accessToken, data)
-    //   response
-    //     .then((response) => {
-    //
-    //     })
-    //     .catch((error) => {
-    //
-    //     })
+    const formData = new FormData()
+    formData.append('nickName', originNickname)
+    formData.append('image', imgFile)
+    try {
+      const response = EditAPI(formData);
+      console.log(response);
+    } catch (error) {
+      console.error("오류 발생:", error);
+    }
   };
   const handleMyPage = () => {
     router.push("/user/mypage");
