@@ -1,17 +1,17 @@
 "use client";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import "../styles/MainPageStyle.scss";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Intro from "../app/intro/page";
 gsap.registerPlugin(ScrollToPlugin);
 export default function Home() {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleLoginPage = () => {
     router.push("/login");
   };
-
   return (
     <div
     // style={{

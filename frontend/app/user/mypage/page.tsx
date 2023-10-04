@@ -10,8 +10,7 @@ import { useRouter } from "next/navigation";
 import FollowedTeam from "@/app/components/user/followedTeam";
 import FollowedPlayer from "@/app/components/user/followedPlayer";
 import "../../../styles/MyPageStyle.scss";
-import Image from "next/image";
-import systemImg from "../../../assets/system.png";
+import { Divider } from "antd";
 
 const MyPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -79,6 +78,9 @@ const MyPage = () => {
               <div style={{ marginBottom: "10px" }}>
                 <FollowedPlayer />
               </div>
+
+              <Divider />
+
               <FollowedTeam />
             </div>
           </div>
