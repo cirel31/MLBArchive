@@ -1,85 +1,146 @@
-"use client"
-import {useSelector} from "react-redux";
-import {useEffect, useState} from "react";
+import React from "react";
+import { useSelector } from "react-redux";
+import { Table } from "antd";
+// import "@/styles/MatchLineScore.css";
 
 const MatchLineScore = () => {
-  const gameData = useSelector((state:any) => state.match.matchLineScore)
-  const lineScore = useSelector((state:any) => state.match.matchLineScore?.linescore)
-  const [awayScore, setAwayScore] = useState(0)
-  const [homeScore, setHomeScore] = useState(0)
-  const [innings, setInnings] = useState([])
+  const gameData = useSelector((state) => state.match.matchLineScore);
+  const lineScore = useSelector(
+    (state) => state.match.matchLineScore?.linescore
+  );
+  const innings = useSelector((state) =>
+    state.match.matchLineScore?.linescore?.innings
+      ? Object.values(state.match.matchLineScore.linescore.innings)
+      : []
+  );
 
-  useEffect(() => {
-    if (lineScore) {
-      setInnings(Object.values(lineScore.innings))
-      Object.values(lineScore.innings).map((inning:any, index) => {
-        setAwayScore((prevValue) => prevValue + inning.away.runs)
-        setHomeScore((prevValue) => prevValue + inning.home.runs)
-      })
-      console.log(awayScore, homeScore)
-    }
-  }, [lineScore])
+  const teams = useSelector((state) =>
+    state.match.matchLineScore?.linescore?.teams
+      ? Object.values(state.match.matchLineScore.linescore.teams)
+      : []
+  );
+
+  console.log(gameData);
+
+  // away 팀의 이닝 득점 합계 계산
+  const awayRunsTotal = innings.reduce(
+    (total, inning) => total + inning.away.runs,
+    0
+  );
+
+  // home 팀의 이닝 득점 합계 계산
+  const homeRunsTotal = innings.reduce(
+    (total, inning) => total + inning.home.runs,
+    0
+  );
+
+  // H (안타)와 E (에러) 데이터 가져오기
+  const awayHits = lineScore?.away?.hits;
+  const awayErrors = lineScore?.away?.errors;
+  const homeHits = lineScore?.home?.hits;
+  const homeErrors = lineScore?.home?.errors;
+
+  // 테이블 컬럼 정의
+  const columns = [
+    {
+      title: "이닝",
+      dataIndex: "inning",
+      key: "inning",
+    },
+    ...innings.map((inning, index) => ({
+      title: `${index + 1}`,
+      dataIndex: `inning_${index}`,
+      key: `inning_${index}`,
+    })),
+    {
+      title: "R",
+      dataIndex: "runs",
+      key: "runs",
+      render: (text, record) => {
+        if (record.key === "away") {
+          return awayRunsTotal;
+        } else if (record.key === "home") {
+          return homeRunsTotal;
+        }
+        return text;
+      },
+    },
+    {
+      title: "H",
+      dataIndex: "hits",
+      key: "hits",
+      render: (text, record) => {
+        if (record.key === "away") {
+          return teams[0].hits;
+        } else if (record.key === "home") {
+          return teams[1].hits;
+        }
+        return text;
+      },
+    },
+    {
+      title: "E",
+      dataIndex: "errors",
+      key: "errors",
+      render: (text, record) => {
+        if (record.key === "away") {
+          return teams[0].errors;
+        } else if (record.key === "home") {
+          return teams[1].errors;
+        }
+        return text;
+      },
+    },
+  ];
+
+  // 테이블 데이터 생성
+  const tableData = [
+    {
+      key: "away",
+      inning: "away",
+      ...innings.reduce((data, inning, index) => {
+        data[`inning_${index}`] = inning.away.runs;
+        data[`runs`] = awayRunsTotal; // away 팀의 이닝 득점 합계
+        data[`hits`] = awayHits; // away 팀의 안타
+        data[`errors`] = awayErrors; // away 팀의 에러
+        return data;
+      }, {}),
+    },
+    {
+      key: "home",
+      inning: "home",
+      ...innings.reduce((data, inning, index) => {
+        data[`inning_${index}`] = inning.home.runs;
+        data[`runs`] = homeRunsTotal; // home 팀의 이닝 득점 합계
+        data[`hits`] = homeHits; // home 팀의 안타
+        data[`errors`] = homeErrors; // home 팀의 에러
+        return data;
+      }, {}),
+    },
+  ];
 
   return (
     <>
-      {gameData &&
+      {gameData && (
         <div>
-          <div>경기일 : {gameData.game_date}</div>
-          <div>전체 이닝 : {lineScore.currentInning}</div>
-          <div>점수 : {awayScore} vs {homeScore} </div>
-          <br/>
+          <div className="team_name_match2">경기일: {gameData.game_date}</div>
+          {/* <div>전체 이닝: {lineScore.currentInning}</div> */}
           <div>
-            {(innings.length > 1) && innings.map((inning:any, index) => (
-              <div key={index}>
-                <hr/>
-                <div>{index + 1} 이닝</div>
-                <br/>
-                <div>어웨이 팀 득점 : {inning.away.runs}</div>
-                <div>홈 팀 득점 : {inning.home.runs}</div>
-                <br/>
-                <div>어웨이 팀 안타 : {inning.away.hits}</div>
-                <div>홈 팀 안타 : {inning.home.hits}</div>
-                <br/>
-                <div>어웨이 팀 에러 : {inning.away.errors}</div>
-                <div>홈 팀 에러 : {inning.home.errors}</div>
-              </div>
-            ))}
-            {/*  <div>Defense</div>*/}
-            {/*  <div>Team : {lineScore.defense?.team.name}</div>*/}
-            {/*  <div>Batter : {lineScore.defense?.batter?.fullName}</div>*/}
-            {/*  <div>Catcher : {lineScore.defense?.catcher?.fullName}</div>*/}
-            {/*  <div>Center : {lineScore.defense?.center?.fullName}</div>*/}
-            {/*  <div>First : {lineScore.defense?.first?.fullName}</div>*/}
-            {/*  <div>InHole : {lineScore.defense?.inHole?.fullName}</div>*/}
-            {/*  <div>Left : {lineScore.defense?.left?.fullName}</div>*/}
-            {/*  <div>OnDeck : {lineScore.defense?.onDeck?.fullName}</div>*/}
-            {/*  <div>Pitcher : {lineScore.defense?.pitcher?.fullName}</div>*/}
-            {/*  <div>Right : {lineScore.defense?.right?.fullName}</div>*/}
-            {/*  <div>Second : {lineScore.defense?.second?.fullName}</div>*/}
-            {/*  <div>ShortStop : {lineScore.defense?.shortstop?.fullName}</div>*/}
-            {/*  <div>Third : {lineScore.defense?.third?.fullName}</div>*/}
-
-            {/*  <hr/><br/><hr/>*/}
-
-            {/*  <div>Offense</div>*/}
-            {/*  <div>Team : {lineScore.offense?.team.name}</div>*/}
-            {/*  <div>Batter : {lineScore.offense?.batter?.fullName}</div>*/}
-            {/*  <div>Catcher : {lineScore.offense?.catcher?.fullName}</div>*/}
-            {/*  <div>Center : {lineScore.offense?.center?.fullName}</div>*/}
-            {/*  <div>First : {lineScore.offense?.first?.fullName}</div>*/}
-            {/*  <div>InHole : {lineScore.offense?.inHole?.fullName}</div>*/}
-            {/*  <div>Left : {lineScore.offense?.left?.fullName}</div>*/}
-            {/*  <div>OnDeck : {lineScore.offense?.onDeck?.fullName}</div>*/}
-            {/*  <div>Pitcher : {lineScore.offense?.pitcher?.fullName}</div>*/}
-            {/*  <div>Right : {lineScore.offense?.right?.fullName}</div>*/}
-            {/*  <div>Second : {lineScore.offense?.second?.fullName}</div>*/}
-            {/*  <div>ShortStop : {lineScore.offense?.shortstop?.fullName}</div>*/}
-            {/*  <div>Third : {lineScore.offense?.third?.fullName}</div>*/}
+            {/* 점수 표시 */}
+            {innings.length > 0 && (
+              <Table
+                className="rotated-table"
+                dataSource={tableData}
+                columns={columns}
+                pagination={false}
+                style={{ color: "black", marginTop: "20px" }}
+              />
+            )}
           </div>
         </div>
-      }
+      )}
     </>
-  )
-}
+  );
+};
 
-export default MatchLineScore
+export default MatchLineScore;
