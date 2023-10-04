@@ -16,7 +16,7 @@ const FollowedTeam = () => {
               {followList.TeamList.map((team: any) => (
                 <div
                   key={team.teamId}
-                  onClick={() => router.push(`/players/${team.teamId}`)}
+                  onClick={() => router.push(`/teams/${team.teamId}`)}
                 >
                   <div className="miniCard2">
                     <img
