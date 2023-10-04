@@ -1,0 +1,128 @@
+import { call, put, takeLatest, CallEffect, PutEffect } from "@redux-saga/core/effects";
+import { AxiosResponse } from "axios";
+import {
+  fetchUserData, fetchUserDataSuccess, fetchDataError, fetchUserLogout,
+  fetchFollowData, fetchFollowDataSuccess, fetchReUserDataSuccess,
+  addFollowTeam, addFollowPlayer, fetchReUserData, successUserLogout,
+} from "@/app/redux/features/userSlice";
+import {PayloadAction} from "@reduxjs/toolkit";
+import {
+  addPlayerFollowAPI, addTeamFollowAPI,
+  fetchUserDataAPI,
+  getReLoadDataAPI, LogoutAPI,
+  userPlayerFollowAPI,
+  userTeamFollowAPI
+} from "@/app/redux/api/userAPI";
+import {useRouter} from "next/navigation";
+
+// ./features/userSlice.ts
+interface UserData {
+  id: number;
+  nickname: string;
+  email: string;
+  profileImage: string;
+  followList: any;
+}
+
+interface FetchUserDataResponse {
+  userData: UserData
+  accessToken: string
+  refreshToken: string
+}
+interface FetchUserDataPayload {
+  code: string;
+  state: string;
+  kind: string
+}
+interface FollowDataPayload {
+  status: number
+  message: string
+  resultData: any
+}
+function* fetchUserDataSaga(action: PayloadAction<FetchUserDataPayload>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
+  try {
+    const code = action.payload.code
+    const state = action.payload.state
+    const kind = action.payload.kind
+    const response: AxiosResponse<any> = yield call(fetchUserDataAPI, code, state, kind)
+    if (response.data) {
+      yield put(fetchUserDataSuccess(response.data))
+      yield put(fetchFollowData())
+    }
+  }
+  catch (error) {
+    yield put(fetchDataError(error as Error))
+  }
+}
+function* fetchReUserDataSaga() {
+  try {
+    const response: AxiosResponse<any> = yield call(getReLoadDataAPI)
+    if (response) {
+      yield put(fetchReUserDataSuccess(response))
+    }
+  }
+  catch (error) {
+  }
+}
+function* fetchFollowDataSaga() {
+  try {
+    const response1: FollowDataPayload = yield call(userTeamFollowAPI)
+    const response2: FollowDataPayload = yield call(userPlayerFollowAPI)
+    const response = {
+      TeamList: response1.resultData,
+      PlayerList: response2.resultData,
+    }
+    if (response) {
+      yield put(fetchFollowDataSuccess(response))
+    }
+  }
+  catch (error) {
+  }
+}
+
+function* addFollowPlayerSaga(action: PayloadAction<any>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
+  try {
+    const data = {
+      playerId: action.payload
+    }
+    const response: AxiosResponse<any> = yield call(addPlayerFollowAPI, data)
+    if (response) {
+      yield call(fetchFollowDataSaga);
+    }
+  }
+  catch (error) {
+  }
+}
+function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
+  try {
+    const data = {
+      teamId: action.payload
+    }
+    console.log("제대로 보내는지 확인" ,data)
+    const response: AxiosResponse<any> = yield call(addTeamFollowAPI, data)
+    console.log("응답", response)
+    if (response) {
+      yield call(fetchFollowDataSaga);
+    }
+  }
+  catch (error) {
+  }
+}
+
+
+function* fetchUserLogoutSaga(): Generator<CallEffect | PutEffect, void, AxiosResponse<FetchUserDataResponse>> {
+  const response: AxiosResponse<any> = yield call(LogoutAPI)
+  if (response) {
+    yield put(successUserLogout())
+    sessionStorage.clear()
+  }
+}
+
+export function* watchFetchUserData() {
+  yield takeLatest(fetchUserData.type, fetchUserDataSaga)
+  yield takeLatest(fetchUserLogout.type, fetchUserLogoutSaga)
+  yield takeLatest(addFollowTeam.type, addFollowTeamSaga)
+  yield takeLatest(addFollowPlayer.type, addFollowPlayerSaga)
+  yield takeLatest(fetchReUserData.type, fetchReUserDataSaga)
+  yield takeLatest(fetchFollowData.type, fetchFollowDataSaga)
+}

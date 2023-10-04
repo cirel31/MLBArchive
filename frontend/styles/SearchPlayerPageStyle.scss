@@ -1,0 +1,368 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@200&display=swap");
+
+.searchAlphabet {
+  display: grid;
+  grid-template-columns: repeat(26, 1fr);
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 90%;
+  margin: auto auto 2rem;
+}
+
+.alphabet {
+  margin: 0.5rem;
+  &:hover {
+    background-color: wheat;
+  }
+}
+
+.totalCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+}
+.clicked_alphabet {
+  background-color: darkorange;
+}
+
+.playerContent {
+  display: flex;
+  margin: 0 auto;
+}
+
+.profile {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+}
+
+.playerCard {
+  // border: 4px solid #211799;
+  width: 100%;
+  border-radius: 8px;
+  height: 100%;
+  // justify-content: center;
+  display: flex;
+  background: rgb(240, 240, 240);
+  // background: linear-gradient(160deg, rgb(25, 4, 99), rgb(255, 255, 255));
+}
+
+.playerFace2 {
+  width: 100%;
+  height: 140%;
+  border: 20px solid white;
+  // border-radius: 10px;
+  // margin-left: 60px;
+  margin: 0 auto;
+}
+.container {
+  position: relative; /* 컨테이너 내의 요소들을 포함하기 위해 위치 지정 */
+  width: 200px;
+  height: 200px;
+  // display: flex;
+  justify-content: center;
+}
+
+.circle {
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  // top: 10px; /* 상단 여백 조정 */
+  // left: 10px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.circle2 {
+  position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgb(6, 31, 77);
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 5px; /* 상단 여백 조정 */
+  left: 5px; /* 왼쪽 여백 조정 */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 5px;
+  font-size: 30px;
+  font-family: "Noto Serif KR", serif;
+}
+
+.circle3 {
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 96px; /* 상단 여백 조정 */
+  left: 10px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+.position {
+  // margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+.position2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-family: "Noto Serif KR", serif;
+  background-image: linear-gradient(to bottom, #545462, rgb(6, 31, 77));
+}
+
+.circle4 {
+  // position: absolute; /* 절대 위치로 설정하여 다른 요소 위에 겹치도록 함 */
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000000;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%; /* 원 모양을 만들기 위해 경계 반지름 설정 */
+  top: 139px; /* 상단 여백 조정 */
+  left: 10px; /* 왼쪽 여백 조정 */
+  text-align: center;
+}
+
+.circleBox {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 5px;
+  // margin: 10px;
+}
+
+.rectangle {
+  position: absolute;
+  // border-radius: 8px;
+  width: 102%;
+  border: 3px solid rgb(6, 31, 77);
+  // padding-right: 10px;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  top: 243px;
+  left: -2px;
+  z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
+}
+
+.rectangle2 {
+  // position: absolute;
+  width: auto;
+  height: auto;
+  background-color: rgb(253, 254, 154);
+  text-align: center;
+  // top: 5px;
+  // left: 16px;
+  margin: 0 auto;
+  z-index: 1; /* 겹치는 순서를 조절하기 위한 z-index 설정 */
+}
+.cardzone {
+  display: flex;
+  justify-content: center;
+}
+
+/////////////////////////////////////////////////////////////////////////
+.flip {
+  width: 200px;
+  height: 250px;
+  perspective: 1100px;
+}
+
+.card {
+  transition: 0.4s;
+  border: 5px solid rgb(6, 31, 77);
+  transform-style: preserve-3d;
+  width: 200px;
+  height: 350px;
+  // background-color: #211799;
+  // background-image: url(https://images.pokemontcg.io/smp/SM156.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 0 6px 2px rgba(250, 246, 226, 0.75),
+    0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  // margin: 20px 10px;
+  // transition: transform 0.3s ease-in-out;
+}
+
+// 호버 시 뒤집기
+.flip:hover .card {
+  transform: rotateY(180deg);
+}
+
+// 반짝이
+.card:before,
+.card:after {
+  border-radius: 8px;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 253, 190, 0.925) 70%,
+    rgb(134, 181, 242) 30%,
+    transparent 100%
+  );
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  animation: holoGradient 15s ease infinite;
+}
+// .card:after {
+//   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+//   background-position: center;
+//   background-size: 200%;
+//   mix-blend-mode: color-dodge;
+//   opacity: 0;
+//   z-index: 2;
+//   animation: holoSparkle 20s ease infinite;
+// }
+
+.card.active:before {
+  opacity: 0.5;
+  animation: none;
+  transition: none;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 25%,
+    rgba(240, 234, 51, 0.925) 70%,
+    rgb(59, 16, 198) 30%,
+    transparent 70%,
+    transparent 100%
+  );
+}
+
+@keyframes holoSparkle {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes holoGradient {
+  3% {
+    opacity: 0;
+  }
+  5% {
+    background-position: 0% 0%;
+  }
+  7% {
+    opacity: 0.5;
+  }
+  9% {
+    background-position: 100% 100%;
+  }
+  11% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    background-position: 100% 100%;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+}
+
+body {
+  // font-family: "Heebo", sans-serif;
+  height: 100%;
+  text-align: center;
+  font-family: "IBM Plex Sans KR", sans-serif !important;
+  font-weight: bold;
+}
+html {
+  height: 100%;
+}
+
+h1 {
+  display: block;
+  margin-top: 30px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.face-front {
+  background-color: #211799;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.face-back {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg); /* 카드를 뒤집기 위한 변환 */
+}
+
+.card:hover .face-front {
+  transform: rotateY(180deg); /* 마우스 호버 시 뒤집기 */
+}
+
+.card:hover .face-back {
+  transform: rotateY(0deg); /* 마우스 호버 시 뒤집기 */
+}
+
+.p_title {
+  font-size: 50px;
+  font-weight: bold;
+}
