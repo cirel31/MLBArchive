@@ -46,12 +46,17 @@ const ProfileEditPage = () => {
 
   const handleSubmit = () => {
     console.log("일단 버튼 확인");
-    const formData = new FormData()
-    formData.append('nickName', originNickname)
-    formData.append('image', imgFile)
+    // const formData = new FormData()
+    // formData.append('nickName', originNickname)
+    // formData.append('image', imgFile)
+    const formData = new FormData(formRef.current || undefined)
     try {
       const response = EditAPI(formData);
-      console.log(response);
+      response
+        .then(() => {
+          dispatch(fetchReUserData())
+          router.push('/user/mypage')
+        })
     } catch (error) {
       console.error("오류 발생:", error);
     }
@@ -78,7 +83,7 @@ const ProfileEditPage = () => {
                 <p>프로필사진 변경</p>
               </label> */}
               <input
-                name="file"
+                name="image"
                 type="file"
                 accept="image/*"
                 onChange={saveImgFile}

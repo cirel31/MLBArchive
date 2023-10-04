@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
 import LoadingPage from "@/app/components/LoadingPage";
+import Loading from "@/app/Loading";
 
 const KakaoLoginPage = () => {
   const router = useRouter()
@@ -34,7 +35,7 @@ const KakaoLoginPage = () => {
   }, [isLoggedIn])
   return (
     <>
-      <LoadingPage />
+      <Loading />
     </>
   )
 }

@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
 import LoadingPage from "@/app/components/LoadingPage";
+import Loading from "@/app/Loading";
 const GoogleLoginPage = () => {
   const router = useRouter()
   let code: string | null = null;
@@ -33,7 +34,7 @@ const GoogleLoginPage = () => {
   }, [isLoggedIn])
   return (
     <>
-      <LoadingPage />
+      <Loading />
     </>
   )
 }
