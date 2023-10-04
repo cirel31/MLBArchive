@@ -7,6 +7,9 @@ import { Helmet } from "react-helmet";
 import { Table } from "antd";
 import PlayerTable from "./PlayerTable";
 import "../../styles/SearchPageStyle.scss";
+import Image from "next/image";
+import p_mainphoto from "@/assets/search_player.jpg";
+
 const SearchPlayer = () => {
   const router = useRouter();
   const dispatch = useDispatch();
@@ -59,6 +62,7 @@ const SearchPlayer = () => {
       </Helmet>
 
       <div className="playsearching">
+        <Image src={p_mainphoto} alt="로스터" style={{ width: "80%" }} />
         <p className="title">검색할 선수의 이름을 입력해 주세요.</p>
         <div className="teambox2">
           <div className="teambox1">

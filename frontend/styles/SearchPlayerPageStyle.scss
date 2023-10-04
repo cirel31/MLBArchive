@@ -1,6 +1,4 @@
-body {
-  color: black;
-}
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@200&display=swap");
 
 .searchAlphabet {
   display: grid;
@@ -307,10 +305,11 @@ body {
 }
 
 body {
-  font-family: "Heebo", sans-serif;
+  // font-family: "Heebo", sans-serif;
   height: 100%;
   text-align: center;
-  // width: 80%;
+  font-family: "IBM Plex Sans KR", sans-serif !important;
+  font-weight: bold;
 }
 html {
   height: 100%;
@@ -361,4 +360,9 @@ h1 {
 
 .card:hover .face-back {
   transform: rotateY(0deg); /* 마우스 호버 시 뒤집기 */
+}
+
+.p_title {
+  font-size: 50px;
+  font-weight: bold;
 }

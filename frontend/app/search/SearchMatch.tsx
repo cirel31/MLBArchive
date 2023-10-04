@@ -13,7 +13,8 @@ import { fetchPlayerWordData } from "@/app/redux/features/searchPlayerSlice";
 import { Button } from "antd";
 import { Helmet } from "react-helmet";
 import MatchTable from "./MatchTable";
-
+import mainphoto from "@/assets/teamsearch_img.jpg";
+import Image from "next/image";
 const SearchMatch = () => {
   const dispatch = useDispatch();
   const teamList = teamData;
@@ -78,6 +79,7 @@ const SearchMatch = () => {
       </Helmet>
       <div className="searchgame">
         <div className="playsearching">
+          <Image src={mainphoto} alt="단체사진" style={{ width: "80%" }} />
           <p className="title">어떤 경기 결과를 검색하고 싶으신가요?</p>
           <div className="teambox2">
             <div className="teambox1">

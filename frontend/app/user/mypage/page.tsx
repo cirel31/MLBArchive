@@ -49,7 +49,7 @@ const MyPage = () => {
         {userData && (
           <div className="myInfoContents">
             <div>
-              <div className="profile">
+              <div className="my_profile">
                 <img
                   src={userData.image}
                   alt="이미지에러"
