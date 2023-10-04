@@ -1,0 +1,58 @@
+body {
+  color: black;
+}
+/* .container {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  width: 100%;
+} */
+
+.item1 {
+  border: 1px solid;
+}
+
+.item2 {
+  border: 1px solid;
+}
+
+.item3 {
+  border: 1px solid;
+}
+
+.teamlogo {
+  /* position: relative; */
+  margin: 20px;
+  width: 150px;
+}
+
+.header {
+  display: flex;
+
+  margin: 40px;
+}
+
+.roster {
+  /* display: flex; */
+}
+
+.teamImage {
+  position: absolute;
+  left: 18%;
+  width: 80%;
+  border: 2px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+/* .card-container {
+  position: relative;
+  width: 240px;
+  border: 2px solid rgb(6, 31, 77);
+} */
+
+.card2 {
+  position: absolute;
+  /* top: -30%; */
+  left: 10px;
+  /* transition: top 0.4s ease; 부드러운 이동을 위한 트랜지션 */
+}

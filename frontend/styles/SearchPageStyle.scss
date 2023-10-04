@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@200&display=swap");
+body {
+  color: black;
+}
+
+.chooseSearchType {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.chooseSearchButton {
+  width: 10vw;
+  background-color: orange;
+  margin: 0 auto;
+}
+
+.chooseResult {
+  margin: auto;
+}
+
+.tab {
+  border: 1px solid;
+  text-align: center;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: bold;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ant-tabs-tab {
+  border: 1px solid rgb(6, 31, 77) !important;
+
+  border-radius: 10px;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: bold;
+  // border-color: rgb(6, 31, 77); /* 탭 테두리 색상을 변경합니다. */
+}
+
+.playsearching {
+  // border: 1px solid;
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchresult {
+  display: flex;
+  justify-content: center;
+}
+
+.miniresult {
+  cursor: pointer;
+  border: 2px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  margin: 10px;
+  width: 100%;
+  flex: 0 0 calc(20% - 20px);
+  padding: 10px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.totalresult {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.matchTable th,
+.matchTable td {
+  border: 2px solid black; /* 기본적인 테두리 설정 */
+  padding: 8px;
+  text-align: center;
+  border-right: 2px solid black; /* 열 사이에 수직 분할선 추가 */
+}
+
+.name {
+  background-color: rgb(6, 31, 77);
+  color: white;
+  width: 80px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.teambox1 {
+  display: flex;
+}
+
+.selectbox1 {
+  border: 1px solid rgb(6, 31, 77);
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.teambox2 {
+  margin: 15px;
+}
+
+.searchname {
+  border: 1px solid rgb(6, 31, 77);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.playertable {
+  font-family: "IBM Plex Sans KR", sans-serif;
+  width: 100%;
+}

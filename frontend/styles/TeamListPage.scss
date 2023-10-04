@@ -1,18 +1,27 @@
 .teamList {
   display: grid;
-  grid-template-columns:  repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 3vw;
   align-items: center;
   justify-items: center;
-  margin: 0 auto;
-  perspective: 500px
+  margin: 50px;
+  perspective: 500px;
+  border: 3px solid rgb(6, 31, 77);
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 40px;
 }
 
 .teamLogo {
-  width: 10vw;
-  height: 10vw;
+  width: 12vw;
+  height: 12vw;
   cursor: pointer;
   border-radius: 50%;
-  border: rosybrown solid 2px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+  border: rgb(16, 14, 14) solid 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contentStyle {
+  /* 다음 줄에서 word-wrap 또는 overflow-wrap 속성을 설정합니다. */
+  word-wrap: break-word; /* 또는 overflow-wrap: break-word; */
 }

@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+
+.boxTemplate {
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  width: 100%;
+  // overflow-x: auto;
+  // overflow-y: auto;
+  // scroll-snap-type: y mandatory;
+}
+.rosterContainer {
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.playerNameContainer {
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+.playerImage {
+  width: 5vw;
+  height: 5vw;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+.miniCard3 {
+  border: 1px solid;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  margin: 10px;
+  background-color: rgb(6, 31, 77);
+  border-radius: 10px;
+  // width: 180px;
+  // height: 240px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@200&display=swap");
+.name2 {
+  // border: 1px solid;
+  padding: 5px;
+  color: white;
+  font-weight: bolder;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-size: 15px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+
+.roster {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}

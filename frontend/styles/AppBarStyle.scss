@@ -1,0 +1,17 @@
+.appbar {
+  height: 60px;
+  background-color: rgb(6, 31, 77);
+  // margin-bottom: 3rem;
+  color: white;
+  // position: fixed;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Black Han Sans", sans-serif;
+}
+
+.mark {
+  width: 160px;
+  padding: 10px;
+}
