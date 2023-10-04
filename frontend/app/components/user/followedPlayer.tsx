@@ -7,11 +7,11 @@ const FollowedPlayer = () => {
   const router = useRouter();
   return (
     <>
-      <h3>[ FOLLOW PLAYER ]</h3>
+      <div className="main_title">[ FOLLOW PLAYER ]</div>
       <div>
         {followList?.PlayerList ? (
           <div>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               {followList.PlayerList.map((player: any) => (
                 <div
                   key={player.playerId}
@@ -21,7 +21,7 @@ const FollowedPlayer = () => {
                     <img
                       src={player.image}
                       alt="이미지없음"
-                      className="playerImage"
+                      className="playerImage6"
                     />
                     <div>{player.name}</div>
                     <div>{player.korName}</div>

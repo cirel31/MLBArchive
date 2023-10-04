@@ -44,9 +44,9 @@ body {
   margin: 0 auto;
   font-family: "IBM Plex Sans KR", sans-serif;
 }
-.playerImage {
-  width: 60%;
-  height: 60%;
+.playerImage6 {
+  width: 80px;
+  height: 110px;
   border-radius: 10px;
   border: 3px solid white;
   margin: 0 auto;
@@ -141,9 +141,12 @@ body {
   background-color: rgb(6, 31, 77);
   border-radius: 10px;
   color: white;
-  width: 80%;
+  width: 130px;
   font-family: "IBM Plex Sans KR", sans-serif;
+}
 
-  // width: 180px;
-  // height: 240px;
+.main_title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
 }

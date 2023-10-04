@@ -7,11 +7,12 @@ const FollowedTeam = () => {
   const router = useRouter();
   return (
     <>
-      <h3>[ FOLLOW TEAM ]</h3>
+      <div className="main_title">[ FOLLOW TEAM ]</div>
+      {/* <h2>[ FOLLOW TEAM ]</h2> */}
       <div>
         {followList?.TeamList ? (
           <div>
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", justifyContent: "center" }}>
               {followList.TeamList.map((team: any) => (
                 <div
                   key={team.teamId}
