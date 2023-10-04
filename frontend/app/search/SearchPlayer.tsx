@@ -8,7 +8,7 @@ import { Table } from "antd";
 import PlayerTable from "./PlayerTable";
 import "../../styles/SearchPageStyle.scss";
 import Image from "next/image";
-import p_mainphoto from "@/assets/search_player.jpg";
+import p_mainphoto from "../../assets/playersearch_main.jpg";
 
 const SearchPlayer = () => {
   const router = useRouter();
