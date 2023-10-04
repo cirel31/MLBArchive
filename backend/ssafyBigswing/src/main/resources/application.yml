@@ -1,4 +1,8 @@
 spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
   application:
     name: monitoring
   #  h2:
@@ -72,3 +76,16 @@ google:
 
 jwt:
   refreshTokenExpirationMs: 604800000  # 7일로 설정
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAWEYQVFMPLZ45LNXQ
+      secret-key: 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
+    s3:
+      bucket: 505bucket
+    region:
+      static: ap-northeast-2 # 리전 정보
+    stack:
+      auto: false
+
