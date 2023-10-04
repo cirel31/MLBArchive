@@ -4,8 +4,10 @@ import com.example.ssafy301.common.api.ResponseEntity;
 import com.example.ssafy301.common.api.status.SuccessCode;
 import com.example.ssafy301.playerLike.dto.PlayerLikeDto;
 import com.example.ssafy301.teamLike.dto.TeamLikeDto;
+import com.example.ssafy301.user.domain.User;
 import com.example.ssafy301.user.dto.UserDTO;
 import com.example.ssafy301.user.dto.UserUpdateDTO;
+import com.example.ssafy301.user.repository.UserRepository;
 import com.example.ssafy301.user.service.S3UploaderService;
 import com.example.ssafy301.user.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/users")
@@ -28,6 +31,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private final S3UploaderService s3Uploader;
+
+    private UserRepository userRepository;
     @GetMapping("/user")
     public ResponseEntity<UserDTO> getUserByRefreshToken(@RequestHeader("refreshToken") String refreshToken) {
         UserDTO userDTO = userService.getUserByRefreshToken(refreshToken);
@@ -48,8 +53,14 @@ public class UserController {
     }
 
     @PostMapping("/update")
-    public ResponseEntity updateUser(@RequestPart("user") UserUpdateDTO dto,
-                                     @RequestPart(value = "file", required = false) MultipartFile file) throws IOException {
+    public ResponseEntity updateUser(@RequestHeader("refreshToken") String refreshToken,
+                                     @RequestPart("nickName") String nickName,
+                                     @RequestPart(value = "image", required = false) MultipartFile file) throws IOException {
+        Optional<User> userOptional = userRepository.findByRefreshToken(refreshToken);
+        User user = userOptional.orElse(null);
+        UserUpdateDTO dto = new UserUpdateDTO(user.getEmail(),user.getNickname(),user.getProfileImage());
+        dto.setNickname(nickName);
+
         if (file != null && !file.isEmpty()) {
             String url = s3Uploader.upload(file, "static");
             dto.setProfileImage(url);  // 이미지 URL을 DTO에 설정
