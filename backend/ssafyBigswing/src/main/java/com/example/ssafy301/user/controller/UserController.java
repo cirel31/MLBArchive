@@ -32,6 +32,7 @@ public class UserController {
     @Autowired
     private final S3UploaderService s3Uploader;
 
+    @Autowired
     private UserRepository userRepository;
     @GetMapping("/user")
     public ResponseEntity<UserDTO> getUserByRefreshToken(@RequestHeader("refreshToken") String refreshToken) {
@@ -60,12 +61,14 @@ public class UserController {
         User user = userOptional.orElse(null);
         UserUpdateDTO dto = new UserUpdateDTO(user.getEmail(),user.getNickname(),user.getProfileImage());
         dto.setNickname(nickName);
-
+        log.debug("파일: "+file);
         if (file != null && !file.isEmpty()) {
+            log.debug("asdasdadadsad");
             String url = s3Uploader.upload(file, "static");
+            log.debug("url표시"+" "+url);
             dto.setProfileImage(url);  // 이미지 URL을 DTO에 설정
         }
-
+        log.debug(dto.getEmail() +" "+ dto.getNickname()+" "+dto.getProfileImage());
         userService.updateUser(dto);
         return ResponseEntity.success(SuccessCode.GENERAL_SUCCESS);
     }
