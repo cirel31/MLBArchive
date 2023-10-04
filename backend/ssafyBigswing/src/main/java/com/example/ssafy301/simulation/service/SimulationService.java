@@ -141,22 +141,27 @@ public class SimulationService {
                 throw new NotFoundException(FailCode.NO_MATCH);
             }
 
+//            for (MatchDto myTeamMatch : myTeamMatches) {
+//                log.debug(myTeamMatch.getHomeName() + " : " + myTeamMatch.getAwayName() + " = " + myTeamMatch.getHomeScore() + " : " + myTeamMatch.getAwayScore());
+//            }
+
             // 그리고 내가 응원하는 팀이 진 경기를 가져오자
             List<MatchDto> loseMatches = new ArrayList<>();
             Long myTeamId = likeTeam.getTeamId();
             for (MatchDto myTeamMatch : myTeamMatches) {
                 // 경기에서 내가 좋아하는 팀이 홈팀인 경우, 홈팀의 점수가 더 낮을 때 loseMatches에 넣어줌
-                if((myTeamMatch.getHomeId() == myTeamId) && (myTeamMatch.getHomeScore() < myTeamMatch.getAwayScore())) {
+                if((myTeamMatch.getHomeId().equals(myTeamId)) && (myTeamMatch.getHomeScore() < myTeamMatch.getAwayScore())) {
                     loseMatches.add(myTeamMatch);
                 }
                 // 경기에서 내가 좋아하는 팀이 어웨이팀인 경우, 어웨이팀의 점수가 더 낮을 때 loseMatches에 넣어줌
-                else if ((myTeamMatch.getAwayId() == myTeamId) && (myTeamMatch.getAwayScore() < myTeamMatch.getHomeScore())) {
+                else if ((myTeamMatch.getAwayId().equals(myTeamId)) && (myTeamMatch.getAwayScore() < myTeamMatch.getHomeScore())) {
                     loseMatches.add(myTeamMatch);
                 }
             }
 
+
             // 작년부터 지금까지 진 경기가 없다면 예외 발생
-            if(loseMatches.size() == 0) {
+            if(loseMatches.isEmpty()) {
                 throw new NotFoundException(FailCode.NO_LOSE_MATCH);
             }
 
