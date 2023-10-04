@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=IBM+Plex+Sans+KR:wght@200&display=swap");
 
-.profile {
+.my_profile {
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
   // align-items: center;
@@ -129,4 +129,21 @@ body {
   height: 70%;
   border-radius: 10px;
   margin: 0 auto;
+}
+
+.miniCard4 {
+  border: 1px solid;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  margin: 5px;
+  background-color: rgb(6, 31, 77);
+  border-radius: 10px;
+  color: white;
+  width: 80%;
+  font-family: "IBM Plex Sans KR", sans-serif;
+
+  // width: 180px;
+  // height: 240px;
 }

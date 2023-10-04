@@ -63,7 +63,7 @@ body {
 .TeamRank_box {
   border: 3px solid rgb(6, 31, 77);
   border-radius: 10px;
-  font-family: "Noto Serif KR", serif;
+  font-family: "IBM Plex Sans KR", sans-serif !important;
 }
 
 .TeamRank_box2 {
@@ -123,10 +123,11 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200;700&family=Orbit&display=swap");
 
-.player_name {
+.player_name5 {
   font-size: 18px;
   margin-left: 20px;
   font-family: "Black Han Sans", sans-serif;
+  text-align: left;
 }
 
 .player_name2 {

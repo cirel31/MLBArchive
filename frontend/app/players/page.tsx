@@ -130,7 +130,9 @@ const AllPlayers = () => {
 
   return (
     <>
-      <Title>Players</Title>
+      <div className="p_title">
+        <p className="p_title">Players</p>
+      </div>
       <Helmet>
         <link
           rel="stylesheet"

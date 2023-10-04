@@ -9,6 +9,9 @@ import { addFollowPlayer } from "@/app/redux/features/userSlice";
 import PlayerInfo from "../[...id]/playerInfo";
 import { Button, InputNumber, Divider, Typography } from "antd";
 import Loading from "@/app/Loading";
+import FieldingTable from "./PlayerFieldingData";
+import HittingTable from "./PlayerHittingData";
+import PitchingTable from "./PlayerPitchingData ";
 
 const { Title } = Typography;
 
@@ -136,47 +139,23 @@ const PlayerDetailPage = () => {
                 </div>
                 <div>
                   <div className="num">투구 성적</div>
-                  {playerScore?.playerPitching ? (
-                    Object.entries(playerScore.playerPitching).map(
-                      ([key, value]) => (
-                        <div key={key}>
-                          {key} : {String(value)}
-                        </div>
-                      )
-                    )
-                  ) : (
-                    <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-                  )}
+                  <div>
+                    <FieldingTable playerScore={playerScore} />
+                  </div>
                 </div>
                 <Divider />
                 <div>
                   <div className="num">타석 성적</div>
-                  {playerScore?.playerHitting ? (
-                    Object.entries(playerScore.playerHitting).map(
-                      ([key, value]) => (
-                        <div key={key}>
-                          {key} : {String(value)}
-                        </div>
-                      )
-                    )
-                  ) : (
-                    <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-                  )}
+                  <div>
+                    <HittingTable playerScore={playerScore} />
+                  </div>
                 </div>
                 <Divider />
                 <div>
                   <div className="num">수비 성적</div>
-                  {playerScore?.playerFielding ? (
-                    Object.entries(playerScore.playerFielding).map(
-                      ([key, value]) => (
-                        <div key={key}>
-                          {key} : {String(value)}
-                        </div>
-                      )
-                    )
-                  ) : (
-                    <div>해당 시즌에는 활동한 기록이 없습니다.</div>
-                  )}
+                  <div>
+                    <PitchingTable playerScore={playerScore} />
+                  </div>
                 </div>
               </div>
             </div>

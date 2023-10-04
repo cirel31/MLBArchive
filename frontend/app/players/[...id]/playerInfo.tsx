@@ -57,9 +57,10 @@ const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
   return (
     <div
       style={{
-        width: "700px",
+        width: "100%",
         border: "5px solid rgb(6, 31, 77)",
         borderRadius: "10px",
+        marginLeft: "20px",
       }}
     >
       <Card title="Player Information">

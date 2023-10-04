@@ -93,7 +93,7 @@ const HitterRank = () => {
                         />
                       </div>
 
-                      <div className="player_name">{content.name}</div>
+                      <div className="player_name5">{content.name}</div>
                     </div>
                   </div>
                 </div>
