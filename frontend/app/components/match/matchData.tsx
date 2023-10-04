@@ -1,15 +1,16 @@
-"use client"
-import {useRouter} from "next/navigation";
-import {useEffect, useState} from "react";
-import {useSelector} from "react-redux";
+"use client";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import "@/styles/MatchData.css";
 
 const MatchData = () => {
-  const router = useRouter()
-  const [awayPlayerArray, setAwayPlayerArray] = useState([])
-  const [homePlayerArray, setHomePlayerArray] = useState([])
+  const router = useRouter();
+  const [awayPlayerArray, setAwayPlayerArray] = useState([]);
+  const [homePlayerArray, setHomePlayerArray] = useState([]);
 
-  const [showAwayTeam, setShowAwayTeam] = useState(false)
-  const [showHomeTeam, setShowHomeTeam] = useState(false)
+  const [showAwayTeam, setShowAwayTeam] = useState(false);
+  const [showHomeTeam, setShowHomeTeam] = useState(false);
 
   const [awayHitterArray, setAwayHitterArray] = useState<any[]>([])
   const [awayPitcherArray, setAwayPitcherArray] = useState<any[]>([])
@@ -23,8 +24,8 @@ const MatchData = () => {
   const homePitchers = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.home.pitchers)
 
   useEffect(() => {
-    const awayPlayerList = matchData?.boxscore.teams.away.players
-    const homePlayerList = matchData?.boxscore.teams.home.players
+    const awayPlayerList = matchData?.boxscore.teams.away.players;
+    const homePlayerList = matchData?.boxscore.teams.home.players;
 
     if (awayPlayerList && homePlayerList) {
       const awayPlayers = Object.values(awayPlayerList)
@@ -49,21 +50,22 @@ const MatchData = () => {
       setHomePitcherArray(homePitchingPlayers)
 
     }
-  }, [matchData])
-
+  }, [matchData]);
 
   return (
     <>
-      {matchData &&
-        <div>
-          <div>
-            <div>어웨이 팀</div>
-            <div>팀 id : {matchData.boxscore.teams.away.team.id}</div>
-            <div>팀 이름 : {matchData.boxscore.teams.away.team.name}</div>
+      {matchData && (
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <div className="match_team1">
+            <div>AWAY TEAM</div>
+            {/* <div>팀 id : {matchData.boxscore.teams.away.team.name}</div> */}
+            <div className="team_name_match">
+              {matchData.boxscore.teams.away.team.name}
+            </div>
             {/*<div>점수 : {matchData.awayScore}</div>*/}
             {/*<div>선발 투수 : {matchData.awayPitcher}</div>*/}
             <button onClick={() => setShowAwayTeam(true)}>선수 확인</button>
-            {showAwayTeam &&
+            {showAwayTeam && (
               <div>
                 <button onClick={() => setShowAwayTeam(false)}>선수 숨기기</button>
                 <br/>
@@ -95,7 +97,7 @@ const MatchData = () => {
                 ))}
                 </div>
               </div>
-            }
+            )}
           </div>
           <br/><br/>
           <div>
@@ -105,7 +107,7 @@ const MatchData = () => {
             {/*<div>점수 : {matchData.awayScore}</div>*/}
             {/*<div>선발 투수 : {matchData.awayPitcher}</div>*/}
             <button onClick={() => setShowHomeTeam(true)}>선수 확인</button>
-            {showHomeTeam &&
+            {showHomeTeam && (
               <div>
                 <button onClick={() => setShowHomeTeam(false)}>선수 숨기기</button>
                 <br/>
@@ -137,13 +139,12 @@ const MatchData = () => {
                 ))}
                 </div>
               </div>
-            }
+            )}
           </div>
         </div>
-      }
+      )}
     </>
-  )
+  );
+};
 
-}
-
-export default MatchData
+export default MatchData;

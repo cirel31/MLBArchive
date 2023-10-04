@@ -140,7 +140,7 @@ const PlayerDetailPage = () => {
                 <div>
                   <div className="num">투구 성적</div>
                   <div>
-                    <FieldingTable playerScore={playerScore} />
+                    <PitchingTable playerScore={playerScore} />
                   </div>
                 </div>
                 <Divider />
@@ -154,7 +154,7 @@ const PlayerDetailPage = () => {
                 <div>
                   <div className="num">수비 성적</div>
                   <div>
-                    <PitchingTable playerScore={playerScore} />
+                    <FieldingTable playerScore={playerScore} />
                   </div>
                 </div>
               </div>
