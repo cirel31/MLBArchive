@@ -35,8 +35,8 @@ const MyPage = () => {
     }
     const response:any = recommendAPI()
     response
-      .then(() => {
-        console.log(response)
+      .then((response: any) => {
+        console.log("결과", response)
         setMatchList(response.resultData)
       })
   }, []);
