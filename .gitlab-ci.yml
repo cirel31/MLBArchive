@@ -1,0 +1,75 @@
+stages:
+  - build
+  - check_container
+  - deploy
+
+backend-build:
+  stage: build
+  only:
+    - ci-cd
+  before_script:
+    - echo 'backend build starts'
+    - cd ./backend/ssafyBigswing/
+    - chmod +x ./gradlew
+  script:
+    - ./gradlew clean build
+    - docker build -t springboot . # Docker 이미지 빌드
+  artifacts:
+    name: "springboot"
+    paths:
+      - ./backend/ssafyBigswing/build/libs/*.jar
+  tags:
+    - ssafy
+
+frontend-build:
+  stage: build
+  only:
+    - ci-cd
+  before_script:
+    - echo 'frontend build starts'
+    - cd ./frontend
+  script:
+    - docker build -t nextjs -f ./Dockerfile . # Docker 이미지 빌드
+  tags:
+    - ssafy
+
+backend-check-container:
+  stage: check_container
+  script:
+    - |
+      if docker ps -a --format '{{.Names}}' | grep -q "nextjs-app"; then
+        echo "The 'nextjs-app' container already exists."
+        docker stop nextjs-app  # 컨테이너 중지
+        docker rm nextjs-app    # 컨테이너 삭제
+      fi
+frontend-check-container:
+  stage: check_container
+  script:
+    - |
+      if docker ps -a --format '{{.Names}}' | grep -q "springboot-app"; then
+        echo "The 'springboot-app' container already exists."
+        docker stop springboot-app  # 컨테이너 중지
+        docker rm springboot-app    # 컨테이너 삭제
+      fi
+backend-deploy:
+  stage: deploy
+  only:
+    - ci-cd
+  before_script:
+    - echo 'backend deploy starts'
+
+  script:
+    - docker run -d -p 8080:8080 --name springboot-app springboot # Docker 컨테이너 실행
+  tags:
+    - ssafy
+
+frontend-deploy:
+  stage: deploy
+  only:
+    - ci-cd
+  before_script:
+    - echo "frontend deploy start"
+  script:
+    - sudo docker run -d -p 3000:3000 --name nextjs-app nextjs # Docker 컨테이너 실행
+  tags:
+    - ssafy
