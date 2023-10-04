@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
+import LoadingPage from "@/app/components/LoadingPage";
 
 const NaverLoginPage = () => {
   const router = useRouter()
@@ -27,14 +28,12 @@ const NaverLoginPage = () => {
   useEffect(() => {
     console.log(isLoggedIn)
     if (isLoggedIn) {
-      router.push(`/user/mypage`)
+      router.push("/main");
     }
   }, [isLoggedIn])
   return (
     <>
-      <div>
-        네이버 로그인 로직 진행 중
-      </div>
+      <LoadingPage />
     </>
   )
 }

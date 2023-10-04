@@ -46,7 +46,7 @@ const TeamRoster = (props: any) => {
                           router.push(`/players/${player.playerId}`)
                         }
                       >
-                        <div className="miniCard3">
+                        <div className="miniCard3" style={{ cursor: 'pointer' }}>
                           <img
                             src={player.image}
                             alt="이미지"

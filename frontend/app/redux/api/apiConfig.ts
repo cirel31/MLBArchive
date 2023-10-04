@@ -75,3 +75,29 @@ apiPostJson.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+
+apiFormType.interceptors.request.use(
+  config => {
+    if (isClient) {
+      const token = sessionStorage.getItem("refreshToken");
+      const parsedToken = token?.substring(1, token.length - 1) ?? null
+      if (token) {
+        config.headers['refreshToken'] = parsedToken;
+      }
+    }
+    return config;
+  }
+);
+
+apiFormType.interceptors.response.use(
+  response => {
+    return response.data;
+  },
+  error => {
+    if (error.response && error.response.status === 401) {
+      console.log("추가할 예외 처리 로직")
+    }
+    return Promise.reject(error);
+  }
+);

@@ -30,6 +30,7 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
+      state.isLoading = true
     },
     fetchReUserData: (state) => {
     },

@@ -146,7 +146,7 @@ const AllPlayers = () => {
             className={`alphabet ${isActive[index] ? "clicked_alphabet" : ""}`}
             onClick={() => backgroundCheck(index)}
           >
-            {alphabet}
+            <button>{alphabet}</button>
           </div>
         ))}
       </div>
@@ -155,6 +155,7 @@ const AllPlayers = () => {
           searchLetter.map((player: any) => (
             <div
               key={player.id}
+              style={{cursor: 'pointer'}}
               className="playerContent"
               onClick={() => handleDetailPage(player.id)}
             >

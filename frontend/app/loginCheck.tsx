@@ -6,6 +6,7 @@ import {useRouter} from "next/navigation";
 
 const LoginCheck = () => {
   const dispatch = useDispatch()
+  const isLoading = useSelector((state:any) => state.user.isLoading)
   const isLoggedIn = useSelector((state:any) => state.user.isLoggedIn)
   const router = useRouter()
   useEffect(() => {
@@ -14,7 +15,7 @@ const LoginCheck = () => {
       dispatch(fetchReUserData())
       dispatch(fetchFollowData())
     }
-    if (!token && !isLoggedIn) {
+    if (!token && !isLoggedIn && !isLoading) {
       router.push('/login')
     }
   }, [isLoggedIn])
