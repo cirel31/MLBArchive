@@ -11,9 +11,11 @@ import FollowedTeam from "@/app/components/user/followedTeam";
 import FollowedPlayer from "@/app/components/user/followedPlayer";
 import "../../../styles/MyPageStyle.scss";
 import { Divider } from "antd";
+import {recommendAPI} from "@/app/redux/api/userAPI";
 
 const MyPage = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [matchList, setMatchList] = useState([]);
   const userData = useSelector((state: any) => state.user.userData);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -31,6 +33,12 @@ const MyPage = () => {
     if (sessionStorage.getItem("refreshToken")) {
       dispatch(fetchReUserData());
     }
+    const response:any = recommendAPI()
+    response
+      .then(() => {
+        console.log(response)
+        setMatchList(response.resultData)
+      })
   }, []);
 
   const getFollowBTN = () => {
@@ -44,6 +52,19 @@ const MyPage = () => {
   return (
     <>
       <div>
+        <div className="gametime">
+          {matchList && matchList.length > 0 ?
+            matchList.map((content: any) => (
+              <div key={content.id} className="one_game">
+                <div>{content.awayName} vs {content.homeName}</div>
+                <div>경기 일자 : {content.matchDate.slice(0, 10)}</div>
+              </div>
+            )) :
+            <div className="one_game">
+              <p>추천 경기가 없습니다.</p>
+            </div>
+          }
+        </div>
         <div></div>
         {userData && (
           <div className="myInfoContents">

@@ -11,6 +11,7 @@ const addPlayerURL = '/api/playerlike/like'
 const addTeamURL = '/api/teamlike/like'
 const logoutURL = '/api/auth/logout'
 const editURL = '/api/users/update'
+const recommendURL = '/api/simulation/recommend'
 
 
 export const fetchUserDataAPI = async (code: string, state: string, kind: string): Promise<AxiosResponse> => {
@@ -42,4 +43,7 @@ export const LogoutAPI = async () => {
 }
 export const EditAPI = async (data:any) => {
   return await apiFormType.post(`${editURL}`, data)
+}
+export const recommendAPI = async () => {
+  return await apiGet.get(`${recommendURL}`)
 }
