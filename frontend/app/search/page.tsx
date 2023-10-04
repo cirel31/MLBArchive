@@ -55,11 +55,13 @@ const SearchPage: React.FC = () => {
         style={tabPaneStyle}
         items={[
           {
+            style: {cursor: 'pointer',},
             label: "경기 검색", // 첫 번째 탭에 "경기 검색" 라벨 추가
             key: "match",
             children: match && <SearchMatch />, // 해당 탭에 경기 검색 컴포넌트를 표시
           },
           {
+            style: {cursor: 'pointer',},
             label: "선수 검색", // 두 번째 탭에 "선수 검색" 라벨 추가
             key: "player",
             children: player && <SearchPlayer />, // 해당 탭에 선수 검색 컴포넌트를 표시
