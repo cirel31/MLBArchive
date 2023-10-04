@@ -3,6 +3,7 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
+import LoadingPage from "@/app/components/LoadingPage";
 const GoogleLoginPage = () => {
   const router = useRouter()
   let code: string | null = null;
@@ -25,17 +26,14 @@ const GoogleLoginPage = () => {
 
   }, [code])
   const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
-  const userId = useSelector((state:any) => state.user.userData?.userId)
   useEffect(() => {
     if (isLoggedIn) {
-      router.push(`/user/mypage`)
+      router.push("/main");
     }
   }, [isLoggedIn])
   return (
     <>
-      <div>
-        구글 로그인 로직 진행 중
-      </div>
+      <LoadingPage />
     </>
   )
 }
