@@ -11,14 +11,43 @@ const MatchData = () => {
   const [showAwayTeam, setShowAwayTeam] = useState(false)
   const [showHomeTeam, setShowHomeTeam] = useState(false)
 
+  const [awayHitterArray, setAwayHitterArray] = useState<any[]>([])
+  const [awayPitcherArray, setAwayPitcherArray] = useState<any[]>([])
+  const [homeHitterArray, setHomeHitterArray] = useState<any[]>([])
+  const [homePitcherArray, setHomePitcherArray] = useState<any[]>([])
+
   const matchData = useSelector((state:any) => state.match.matchDetailData)
+  const awayBattings = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.away.battingOrder)
+  const awayPitchers = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.away.pitchers)
+  const homeBattings = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.home.battingOrder)
+  const homePitchers = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.home.pitchers)
+
   useEffect(() => {
     const awayPlayerList = matchData?.boxscore.teams.away.players
     const homePlayerList = matchData?.boxscore.teams.home.players
 
     if (awayPlayerList && homePlayerList) {
+      const awayPlayers = Object.values(awayPlayerList)
+      const homePlayers = Object.values(homePlayerList)
       setAwayPlayerArray(Object.values(awayPlayerList))
       setHomePlayerArray(Object.values(homePlayerList))
+      console.log(matchData)
+
+      const awayBattingPlayers = awayPlayers.filter((player:any) => awayBattings.includes(player.person.id))
+      const awayPitchingPlayers = awayPlayers.filter((player:any) => awayPitchers.includes(player.person.id))
+      const homeBattingPlayers = homePlayers.filter((player:any) => homeBattings.includes(player.person.id))
+      const homePitchingPlayers = homePlayers.filter((player:any) => homePitchers.includes(player.person.id))
+      console.log("중간결과")
+      console.log(awayBattingPlayers)
+      console.log(awayPitchingPlayers)
+      console.log(homeBattingPlayers)
+      console.log(homePitchingPlayers)
+
+      setAwayHitterArray(awayBattingPlayers)
+      setAwayPitcherArray(awayPitchingPlayers)
+      setHomeHitterArray(homeBattingPlayers)
+      setHomePitcherArray(homePitchingPlayers)
+
     }
   }, [matchData])
 
@@ -37,18 +66,38 @@ const MatchData = () => {
             {showAwayTeam &&
               <div>
                 <button onClick={() => setShowAwayTeam(false)}>선수 숨기기</button>
-                <div>{awayPlayerArray.map((player: any) => (
-                  <div key={player.person.id}>
+                <br/>
+                <div>타자</div>
+                <div>{awayHitterArray.map((player: any) => (
+                  <div
+                    key={player.person.id}
+                    onClick={() => router.push(`/players/${player.person.id}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <hr/>
                     <div>이름 : {player.person.fullName}</div>
-                    <div>코드 : {player.position.code}</div>
                     <div>포지션 이름 : {player.position.name}</div>
-                    <div>포지션 타입 : {player.position.type}</div>
+                  </div>
+                ))}
+                </div>
+                <br/>
+                <div>투수</div>
+                <div>{awayPitcherArray.map((player: any) => (
+                  <div
+                    key={player.person.id}
+                    onClick={() => router.push(`/players/${player.person.id}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <hr/>
+                    <div>이름 : {player.person.fullName}</div>
+                    <div>포지션 이름 : {player.position.name}</div>
                   </div>
                 ))}
                 </div>
               </div>
             }
           </div>
+          <br/><br/>
           <div>
             <div>홈 팀</div>
             <div>팀 id : {matchData.boxscore.teams.home.team.id}</div>
@@ -59,12 +108,31 @@ const MatchData = () => {
             {showHomeTeam &&
               <div>
                 <button onClick={() => setShowHomeTeam(false)}>선수 숨기기</button>
-                <div>{homePlayerArray.map((player: any) => (
-                  <div key={player.person.id}>
+                <br/>
+                <div>타자</div>
+                <div>{homeHitterArray.map((player: any) => (
+                  <div
+                    key={player.person.id}
+                    onClick={() => router.push(`/players/${player.person.id}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <hr/>
                     <div>이름 : {player.person.fullName}</div>
-                    <div>코드 : {player.position.code}</div>
                     <div>포지션 이름 : {player.position.name}</div>
-                    <div>포지션 타입 : {player.position.type}</div>
+                  </div>
+                ))}
+                </div>
+                <br/>
+                <div>투수</div>
+                <div>{homePitcherArray.map((player: any) => (
+                  <div
+                    key={player.person.id}
+                    onClick={() => router.push(`/players/${player.person.id}`)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <hr/>
+                    <div>이름 : {player.person.fullName}</div>
+                    <div>포지션 이름 : {player.position.name}</div>
                   </div>
                 ))}
                 </div>
