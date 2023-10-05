@@ -52,6 +52,11 @@ const SearchPlayer = () => {
       searchQuery(0);
     }
   };
+  const handleEnter = (e:  React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      searchPlayer()
+    }
+  }
   return (
     <>
       <Helmet>
@@ -71,6 +76,7 @@ const SearchPlayer = () => {
               type="text"
               autoFocus
               value={searchData}
+              onKeyDown={handleEnter}
               onChange={(e) => setSearchData(e.target.value)}
             />
             <div className="name">
