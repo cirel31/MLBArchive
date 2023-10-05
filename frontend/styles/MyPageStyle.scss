@@ -15,15 +15,6 @@
   display: flex;
 }
 
-.followList {
-  border: 3px solid rgb(6, 31, 77);
-  border-radius: 10px;
-  width: 80%;
-  margin-top: 20px !important;
-  margin: 0 auto;
-  padding: 30px;
-}
-
 .profileImage {
   height: 10%;
   width: 10%;
@@ -146,7 +137,40 @@ body {
 }
 
 .main_title {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   font-weight: bolder;
+}
+
+.gamebox_profile {
+  // margin: 0 auto;
+  border: 3px solid rgb(6, 31, 77);
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+  text-align: center;
+}
+
+.followList {
+  border: 3px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  width: 50%;
+  margin-right: 40px;
+
+  // margin-top: 20px !important;
+  // margin: 0 auto;
+  padding: 30px;
+}
+
+.one_game {
+  background-color: rgb(6, 31, 77);
+  color: white;
+  margin: 20px;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.top5 {
+  font-size: 30px;
+  font-weight: bold;
 }

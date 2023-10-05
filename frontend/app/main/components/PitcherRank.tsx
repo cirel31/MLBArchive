@@ -74,7 +74,7 @@ const PitcherRank = () => {
                           alt="선수 이미지"
                         />
                       </div>
-                      <div className="player_name5">{content.name}</div>
+                      <div className="player_name5">{content.korName}</div>
                     </div>
                   </div>
                 </div>
