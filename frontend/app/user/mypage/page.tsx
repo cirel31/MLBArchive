@@ -100,7 +100,11 @@ const MyPage = () => {
           <div>
             {matchList && matchList.length > 0 ? (
               matchList.map((content: any) => (
-                <div key={content.id} className="one_game">
+                <div
+                  key={content.id}
+                  className="one_game"
+                  onClick={() => router.push(`/match/${content.id}`)}
+                >
                   <div>{content.matchDate.slice(0, 10)}</div>
                   <div style={{ fontWeight: "bold" }}>
                     {content.awayName} vs {content.homeName}
