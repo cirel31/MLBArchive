@@ -18,7 +18,6 @@ interface Props {
 }
 
 const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
-  console.log({ playerData });
   const columns: any = [
     {
       title: "항목",

@@ -64,11 +64,8 @@ const SearchMatch = () => {
     };
     dispatch(fetchPlayerWordData(action));
   };
-  const searchDetailMatch = (id: string) => {
-    console.log("로직 실행 확인 중", id);
-    dispatch(requestDetailMatchData(id));
-    router.push(`/match/${id}`);
-  };
+
+
   return (
     <>
       <Helmet>
@@ -132,10 +129,7 @@ const SearchMatch = () => {
           {matchList ? (
             <div>
               {/* 하위 컴포넌트에 데이터와 콜백 함수를 전달 */}
-              <MatchTable
-                matchList={matchList}
-                searchDetailMatch={searchDetailMatch}
-              />
+              <MatchTable />
             </div>
           ) : (
             <div>결과가 없습니다.</div>

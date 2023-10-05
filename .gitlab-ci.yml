@@ -7,7 +7,8 @@ backend-build:
   stage: build
   only:
     - develop
-    - main
+    - master
+
   before_script:
     - echo 'backend build starts'
     - cd ./backend/ssafyBigswing/
@@ -15,36 +16,38 @@ backend-build:
   script:
     - ./gradlew clean build
     - docker build -t springboot . # Docker 이미지 빌드
-  artifacts:
-    name: "springboot"
-    paths:
-      - ./backend/ssafyBigswing/build/libs/*.jar
-  tags:
-    - ssafy
+  # artifacts:
+  #   name: "springboot"
+  #   paths:
+  #     - ./backend/ssafyBigswing/build/libs/*.jar
+  # tags:
+  #   - ssafy
 
 frontend-build:
   stage: build
   only:
     - develop
-    - main
+    - master
+
   before_script:
     - echo 'frontend build starts'
     - cd ./frontend
   script:
     - docker build -t nextjs -f ./Dockerfile . # Docker 이미지 빌드
 
-  artifacts:
-    name: "nextjs"
-    paths:
-      - ./frontend/.nextjs
+  # artifacts:
+  #   name: "nextjs"
+  #   paths:
+  #     - ./frontend/.next/
 
-  tags:
-    - ssafy
+  # tags:
+  #   - ssafy
 
 backend-check-container:
   stage: check_container
   only:
-    - main
+    - master
+
   script:
     - |
       if docker ps -a --format '{{.Names}}' | grep -q "nextjs-app"; then
@@ -52,10 +55,13 @@ backend-check-container:
         docker stop nextjs-app  # 컨테이너 중지
         docker rm nextjs-app    # 컨테이너 삭제
       fi
+  tags:
+    - ssafy
+
 frontend-check-container:
   stage: check_container
   only:
-    - main
+    - master
   script:
     - |
       if docker ps -a --format '{{.Names}}' | grep -q "springboot-app"; then
@@ -63,10 +69,13 @@ frontend-check-container:
         docker stop springboot-app  # 컨테이너 중지
         docker rm springboot-app    # 컨테이너 삭제
       fi
+  tags:
+    - ssafy
+
 backend-deploy:
   stage: deploy
   only:
-    - main
+    - master
   before_script:
     - echo 'backend deploy starts'
 
@@ -78,7 +87,8 @@ backend-deploy:
 frontend-deploy:
   stage: deploy
   only:
-    - main
+
+    - master
   before_script:
     - echo "frontend deploy start"
   script:

@@ -8,6 +8,7 @@ const DATA_URL_INFO = '/api/player/detail'
 const DATA_URL_HITTING = '/api/hitting/detail'
 const DATA_URL_PITCHING  = '/api/pitching/detail'
 const DATA_URL_FIELDING = '/api/fielding/detail'
+const comparisonURL = '/api/simulation/playersearch'
 
 export const fetchPlayerWordDataAPI = async (word: string, page: string, size: string): Promise<AxiosResponse> => {
   console.log('API 경로 확인 : ', `${baseURL}${wordURL}/${word}?page=${page}&size=${size}`)
@@ -35,3 +36,10 @@ export const fetchPlayerFieldingDataAPI = async (id: string, season: string): Pr
   console.log('API 경로 확인 : ', `${baseURL}${DATA_URL_FIELDING}?playerId=${id}&season=${season}`)
   return await apiGet.get(`${DATA_URL_FIELDING}?playerId=${id}&season=${season}`)
 }
+
+export const comparisonAPI = async (id: number, content: string, teamId: string, season:number): Promise<AxiosResponse> => {
+  // id: number, content: string, teamId: string, season:number
+  return await apiGet.get(`${comparisonURL}?playerId=${id}&content=${content}&teamId=${teamId}&season=${season}`)
+  // return await apiGet.get(`/api/simulation/playersearch?playerId=120221&content=otani&teamId=&season=2022`)
+}
+
