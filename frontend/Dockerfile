@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY package*.json /app
+# COPY package*.json /app
 
 # API KEY & SECRETE KEY
 ENV NEXT_PUBLIC_NAVER_CLIENT_ID jzQ_Z_TqlmAVqPcgNCwr
@@ -36,9 +36,7 @@ ENV NEXT_PUBLIC_SERVER_LOGOUT_URL /logout
 # SEARCH
 ENV NEXT_PUBLIC_SERVER_SEARCH_URL /search
 
-RUN npm install -f
-
-COPY ./.next /app
+COPY ./ /app
 
 EXPOSE 3000
 

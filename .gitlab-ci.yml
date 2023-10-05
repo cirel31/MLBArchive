@@ -33,13 +33,14 @@ frontend-build:
     - echo 'frontend build starts'
     - cd ./frontend
   script:
+    - npm install -f
     - npm run build
     - docker build -t nextjs -f ./Dockerfile . # Docker 이미지 빌드
 
   artifacts:
     name: "nextjs"
     paths:
-      - ./frontend/.next/*
+      - ./frontend/.next/
 
   tags:
     - ssafy
