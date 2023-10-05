@@ -39,6 +39,21 @@ public class HittingService {
         return new HittingRespDto(mostPlayedHitting);
     }
 
+    // 선수 비교를 위한 메서드
+    public HittingRespDto getHittingStat2(HittingReqDto hittingReqDto) {
+        List<Hitting> hittingStats = hittingRepository.getHittingsByPlayerIdAndSeason(hittingReqDto.getPlayerId(), hittingReqDto.getSeason());
+
+        // 입력된 선수와 시즌과 관련된 스탯이 없다면 예외 발생
+        if(hittingStats.isEmpty()) {
+            return null;
+        }
+
+        Hitting mostPlayedHitting = Collections.max(hittingStats, Comparator.comparingInt(Hitting::getGamesPlayed));
+
+        return new HittingRespDto(mostPlayedHitting);
+    }
+
+
     // 현재 시즌의 모든 타자 중 hitting 순위(battingAvg가 높을수록 높은 순위) TOP5 목록을 가져온다
     // 선수사진, 선수이름, 타율, 속한팀 이름을 반환
     public List<TopHitter> getTop5Hitter() {

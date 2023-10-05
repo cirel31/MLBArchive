@@ -1,7 +1,7 @@
 package com.example.ssafy301.simulation.dto;
 
-import com.example.ssafy301.hitting.domain.Hitting;
-import com.example.ssafy301.pitching.domain.Pitching;
+import com.example.ssafy301.hitting.dto.HittingRespDto;
+import com.example.ssafy301.pitching.dto.PitchingRespDto;
 import com.example.ssafy301.player.domain.Player;
 import com.example.ssafy301.player.domain.Position;
 import com.example.ssafy301.player.domain.UseHand;
@@ -35,7 +35,7 @@ public class TwoWayRespDto {
     private float batting_avg;
     private float ops;
 
-    public TwoWayRespDto(Player player, Pitching pitching, Hitting hitting) {
+    public TwoWayRespDto(Player player, PitchingRespDto pitching, HittingRespDto hitting) {
         this.playerId = player.getId();
         this.name = player.getName();
         this.korName = player.getKorName();
