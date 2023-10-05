@@ -93,8 +93,10 @@ const PlayerDetailPage = () => {
   const [comparisonSeason, setComparisonSeason] = useState(2023)
   const [exceptionModal1, setExceptionModal1] = useState(false)
   const [exceptionModal1Message, setExceptionModal1Message] = useState('')
-
   const [exceptionModal2, setExceptionModal2] = useState(false)
+  const [pitchers, setPichters] = useState([])
+  const [hitters, setHitters] = useState([])
+  const [twoways, setTwoways] = useState([])
 
   const defaultTeam = [
     {
@@ -121,6 +123,11 @@ const PlayerDetailPage = () => {
         setExceptionModal1(true)
         setExceptionModal1Message(response.message)
       }
+      if (response.status === 200) {
+        setHitters(response.resultData.others)
+        setPichters(response.resultData.pitchers)
+        setTwoways(response.resultData.twoWays)
+      }
     })
 
   }
@@ -130,8 +137,50 @@ const PlayerDetailPage = () => {
     setComparisonName('')
     setComparisonSeason(2023)
     setExceptionModal1Message('')
-    setExceptionModal2(false)
     setIsModal(false)
+    setPichters([])
+    setTwoways([])
+    setHitters([])
+  }
+  const resetModal2 = () => {
+    setWhatName('')
+    setWhatImage('')
+    setEra(0)
+    setWhip(0)
+    setBattingAvg(0)
+    setOps(0)
+    setExceptionModal2(false)
+  }
+
+  const [battingAvg, setBattingAvg] = useState(0)
+  const [ops, setOps] = useState(0)
+  const [whip, setWhip] = useState(0)
+  const [era, setEra] = useState(0)
+  const [whatName, setWhatName] = useState('')
+  const [whatImage, setWhatImage] = useState('')
+
+  const comparisonHitter = (korName:string, image:string, battingAvg:number, ops:number) => {
+    setWhatName(korName)
+    setWhatImage(image)
+    setBattingAvg(battingAvg)
+    setOps(ops)
+    setExceptionModal2(true)
+  }
+  const comparisonPitcher = (korName:string, image:string, era:number, whip:number) => {
+    setWhatName(korName)
+    setWhatImage(image)
+    setEra(era)
+    setWhip(whip)
+    setExceptionModal2(true)
+  }
+  const comparisonTwoway = (korName:string, image:string, era:number, whip:number, battingAvg:number, ops:number) => {
+    setWhatName(korName)
+    setWhatImage(image)
+    setEra(era)
+    setWhip(whip)
+    setBattingAvg(battingAvg)
+    setOps(ops)
+    setExceptionModal2(true)
   }
   return (
     <div className="container2">
@@ -252,10 +301,67 @@ const PlayerDetailPage = () => {
             onChange={(e) => setComparisonSeason(parseInt(e.target.value))}
           />
         </div>
-        <p>결과 관련 에러문 이 아래에 뜰거임ㅇㅇ</p>
+        <hr/>
+        <p>결과 관련 이 아래에 뜰거임ㅇㅇ</p>
+        <hr/>
         {exceptionModal1 && (
           <div>{exceptionModal1Message}</div>
         )}
+        <br/>
+        <div>
+          {hitters?.map((player:any) => (
+            <div key={player.playerId} onClick={() => comparisonHitter(player.korName, player.image, player.batting_avg, player.ops)}>
+              <img src={player.image} alt="이미지"/>
+              <p>{player.korName}</p>
+            </div>
+          ))}
+          <br/>
+          {pitchers?.map((player:any) => (
+            <div key={player.playerId} onClick={() => comparisonPitcher(player.korName, player.image, player.era, player.whip)}>
+              <img src={player.image} alt="이미지"/>
+              <p>{player.korName}</p>
+            </div>
+          ))}
+          <br/>
+          {twoways?.map((player:any) => (
+            <div key={player.playerId} onClick={() => comparisonTwoway(player.korName, player.image, player.era, player.whip, player.batting_avg, player.ops)}>
+              <img src={player.image} alt="이미지"/>
+              <p>{player.korName}</p>
+            </div>
+          ))}
+        </div>
+      </Modal>
+      <Modal
+        title="선수 비교 창!!!!"
+        open={exceptionModal2}
+        onOk={() => resetModal2()}
+        onCancel={() => resetModal2()}
+      >
+        <div>
+          {playerScore && (
+            <div>
+              <div>
+                <p>왼쪽 선수</p>
+                <img src={playerData.image} alt="이미지" />
+                <p>{playerData.korName}</p>
+                {playerScore.playerHitting?.battingAvg > 0 && <p> 타율 : {playerScore.playerHitting.battingAvg}</p>}
+                {playerScore.playerHitting?.ops > 0 && <p> OPS : {playerScore.playerHitting.ops}</p>}
+                {playerScore.playerPitching?.era > 0 && <p> 평균 자책점: {playerScore.playerPitching.era}</p>}
+                {playerScore.playerPitching?.whip > 0 && <p> WHIP : {playerScore.playerPitching.whip}</p>}
+              </div>
+              <hr/>
+              <div>
+                <p>비교 대상</p>
+                {whatImage && <img src={whatImage} alt="이미지"/>}
+                {whatName && <p>{whatName}</p>}
+                {battingAvg > 0 && <p> 타율 : {battingAvg}</p>}
+                {ops > 0 && <p> OPS : {ops}</p>}
+                {era > 0 && <p> 평균 자책점: {era}</p>}
+                {whip > 0 && <p> WHIP : {whip}</p>}
+              </div>
+            </div>
+          )}
+        </div>
       </Modal>
     </div>
   );
