@@ -65,7 +65,7 @@ body {
   color: black !important;
 }
 
-.player_match {
+.special {
   /* text-align: center; */
   border: 1px solid;
   width: 130px;
@@ -78,7 +78,7 @@ body {
   background-color: #061f4d;
 }
 
-.face {
+.face10 {
   width: 100px !important;
   height: 130px;
   padding: 10px;

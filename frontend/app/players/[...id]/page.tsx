@@ -392,14 +392,14 @@ const PlayerDetailPage = () => {
                   }
                   className="player-card"
                 >
-                  <div className="player_match">
+                  <div className="special">
                     <div style={{ textAlign: "center" }}>{player.korName}</div>
                     <div className="player-image-container">
                       <Image
                         src={player.image}
                         alt="이미지"
                         style={{ width: "100px" }}
-                        className="face"
+                        className="face10"
                       />
                     </div>
                   </div>
@@ -420,7 +420,7 @@ const PlayerDetailPage = () => {
                     }
                     className="player-card"
                   >
-                    <div className="player_match">
+                    <div className="special">
                       <div style={{ textAlign: "center", fontSize: "13px" }}>
                         {player.korName}
                       </div>
@@ -429,7 +429,7 @@ const PlayerDetailPage = () => {
                           src={player.image}
                           alt="이미지"
                           style={{ width: "100px" }}
-                          className="face"
+                          className="face10"
                         />
                       </div>
                     </div>
@@ -452,14 +452,14 @@ const PlayerDetailPage = () => {
                   }
                   className="player-card"
                 >
-                  <div className="player_match">
+                  <div className="special">
                     <div style={{ textAlign: "center" }}>{player.korName}</div>
                     <div className="player-image-container">
                       <img
                         src={player.image}
                         alt="이미지"
                         style={{ width: "100px" }}
-                        className="face"
+                        className="face10"
                       />
                     </div>
                   </div>
@@ -522,7 +522,7 @@ const PlayerDetailPage = () => {
                 {/* WHIP */}
                 {playerScore.playerPitching?.whip > 0 && (
                   <p>
-                    {whip < playerScore.playerPitching?.whip ? (
+                    {whip > playerScore.playerPitching?.whip ? (
                       <span className="red-text">
                         WHIP : {playerScore.playerPitching?.whip}
                       </span>
@@ -564,7 +564,7 @@ const PlayerDetailPage = () => {
                 {/* WHIP */}
                 {whip > 0 && (
                   <p>
-                    {playerScore.playerPitching?.whip < whip ? (
+                    {playerScore.playerPitching?.whip > whip ? (
                       <span className="red-text">WHIP :{whip}</span>
                     ) : (
                       <p>WHIP :{whip}</p>
