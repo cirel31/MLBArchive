@@ -1,13 +1,16 @@
-"use client";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../styles/MainPageStyle.scss";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-gsap.registerPlugin(ScrollToPlugin);
+import { useSelector } from "react-redux";
+
 export default function Home() {
   const router = useRouter();
-
+  const isLoggedIn = useSelector((state: any) => state.user.isLoggedIn);
+  useEffect(() => {
+    if (isLoggedIn) {
+      router.push("/main");
+    }
+  });
   const handleLoginPage = () => {
     router.push("/login");
   };
@@ -24,12 +27,7 @@ export default function Home() {
           console.log("Scrolled");
           handleLoginPage();
         }}
-      >
-        {/* <div style={{ height: "1000px" }}>
-          시작페이지
-          <div style={{ height: "1000px" }}>Scroll content</div>
-        </div> */}
-      </main>
+      ></main>
     </div>
   );
 }
