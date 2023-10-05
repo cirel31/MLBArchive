@@ -6,7 +6,8 @@ stages:
 backend-build:
   stage: build
   only:
-    - ci-cd
+    - develop
+    - main
   before_script:
     - echo 'backend build starts'
     - cd ./backend/ssafyBigswing/
@@ -24,17 +25,26 @@ backend-build:
 frontend-build:
   stage: build
   only:
-    - ci-cd
+    - develop
+    - main
   before_script:
     - echo 'frontend build starts'
     - cd ./frontend
   script:
     - docker build -t nextjs -f ./Dockerfile . # Docker 이미지 빌드
+
+  artifacts:
+    name: "nextjs"
+    paths:
+      - ./frontend/.nextjs
+
   tags:
     - ssafy
 
 backend-check-container:
   stage: check_container
+  only:
+    - main
   script:
     - |
       if docker ps -a --format '{{.Names}}' | grep -q "nextjs-app"; then
@@ -44,6 +54,8 @@ backend-check-container:
       fi
 frontend-check-container:
   stage: check_container
+  only:
+    - main
   script:
     - |
       if docker ps -a --format '{{.Names}}' | grep -q "springboot-app"; then
@@ -54,7 +66,7 @@ frontend-check-container:
 backend-deploy:
   stage: deploy
   only:
-    - ci-cd
+    - main
   before_script:
     - echo 'backend deploy starts'
 
@@ -66,7 +78,7 @@ backend-deploy:
 frontend-deploy:
   stage: deploy
   only:
-    - ci-cd
+    - main
   before_script:
     - echo "frontend deploy start"
   script:
