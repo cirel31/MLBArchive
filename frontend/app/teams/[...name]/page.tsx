@@ -24,6 +24,7 @@ import TeamStat from "@/app/components/team/teamStat";
 import TeamRoster from "@/app/components/team/teamRoster";
 import TeamInfo from "./TeamInfo";
 import { addFollowPlayer, addFollowTeam } from "@/app/redux/features/userSlice";
+import Loading from "@/app/Loading";
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Meta } = Card;
@@ -73,7 +74,7 @@ const DetailTeamPage = () => {
   }, [teamId]);
 
   if (isLoading) {
-    console.log("로딩 중...");
+    <Loading />
   }
 
   const splitActiveYears = (activeYears: number) => {

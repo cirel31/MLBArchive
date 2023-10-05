@@ -7,11 +7,15 @@ import Swal from "sweetalert2";
 import "../../../styles/PlayerPage.css";
 import { addFollowPlayer } from "@/app/redux/features/userSlice";
 import PlayerInfo from "../[...id]/playerInfo";
-import { Button, InputNumber, Divider, Typography } from "antd";
+import {Button, InputNumber, Divider, Typography, Modal} from "antd";
 import Loading from "@/app/Loading";
 import FieldingTable from "./PlayerFieldingData";
 import HittingTable from "./PlayerHittingData";
 import PitchingTable from "./PlayerPitchingData ";
+import {teamData} from "@/app/components/team/teamData";
+import {comparisonAPI} from "@/app/redux/api/playerAPI";
+import ArizonaDiamondbacks from "@/assets/teamlogo/ArizonaDiamondbacks.svg";
+import ADphoto from "@/assets/teamphoto/ADphoto.jpg";
 
 const { Title } = Typography;
 
@@ -83,6 +87,52 @@ const PlayerDetailPage = () => {
     }
   };
 
+  const [isModal, setIsModal] = useState(false)
+  const [teamName, setTeamName] = useState('')
+  const [comparisonName, setComparisonName] = useState('')
+  const [comparisonSeason, setComparisonSeason] = useState(2023)
+  const [exceptionModal1, setExceptionModal1] = useState(false)
+  const [exceptionModal1Message, setExceptionModal1Message] = useState('')
+
+  const [exceptionModal2, setExceptionModal2] = useState(false)
+
+  const defaultTeam = [
+    {
+    id: '',
+    name: '',
+    linkName: '',
+    logo: '',
+    rotationX: 0,
+    rotationY: 0,
+    twitter: '',
+    team: '',
+  },
+  ]
+  const teamList = [...defaultTeam, ...teamData]
+  const onModal = () => {
+    setIsModal(true)
+  }
+  const comparisonSearch = (player1Id:number, player2Name:string, player2Team:string, player2Season:number) => {
+    console.log("확인", player1Id, player2Name, player2Team, player2Season)
+    const response = comparisonAPI(player1Id, player2Name, player2Team, player2Season)
+    response.then((response:any) => {
+      console.log(response)
+      if (response.status === 204) {
+        setExceptionModal1(true)
+        setExceptionModal1Message(response.message)
+      }
+    })
+
+  }
+  const resetModal = () => {
+    setTeamName('')
+    setExceptionModal1(false)
+    setComparisonName('')
+    setComparisonSeason(2023)
+    setExceptionModal1Message('')
+    setExceptionModal2(false)
+    setIsModal(false)
+  }
   return (
     <div className="container2">
       {/* 처음 접속 시에만 로딩 창을 표시합니다 */}
@@ -161,8 +211,52 @@ const PlayerDetailPage = () => {
             </div>
             <PlayerInfo playerData={playerData} />
           </div>
+          <div onClick={onModal}>선수 비교</div>
         </div>
       )}
+      <Modal
+        title="비교할 선수를 검색해주세요!"
+        open={isModal}
+        onOk={() => comparisonSearch(playerId, comparisonName, teamName, comparisonSeason)}
+        onCancel={() => resetModal()}
+      >
+        <div>
+          <label>선수 이름</label>
+          <input
+            type="text"
+            value={comparisonName}
+            onChange={(e) => setComparisonName(e.target.value)}
+          />
+        </div>
+        <div>
+          <div>
+            <label>팀 이름</label>
+            <select
+              className="selectbox1"
+              value={teamName}
+              onChange={(e) => setTeamName(e.target.value)}
+            >
+              {teamList.map((team) => (
+                <option key={team.id} value={team.id}>
+                  {team.name}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div>
+          <label>시즌</label>
+          <input
+            type="number"
+            value={comparisonSeason}
+            onChange={(e) => setComparisonSeason(parseInt(e.target.value))}
+          />
+        </div>
+        <p>결과 관련 에러문 이 아래에 뜰거임ㅇㅇ</p>
+        {exceptionModal1 && (
+          <div>{exceptionModal1Message}</div>
+        )}
+      </Modal>
     </div>
   );
 };
