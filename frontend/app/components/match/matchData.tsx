@@ -117,7 +117,7 @@ const MatchData = () => {
                     style={{ cursor: "pointer" }}
                     className="onebox"
                   >
-                    <div>NAME: {player.person.fullName}</div>
+                    <div>{player.person.fullName}</div>
                     <div>POSITION: {player.position.name}</div>
                   </div>
                 ))}
@@ -136,7 +136,7 @@ const MatchData = () => {
                     style={{ cursor: "pointer" }}
                     className="onebox"
                   >
-                    <div>NAME: {player.person.fullName}</div>
+                    <div>{player.person.fullName}</div>
                     <div>POSITION: {player.position.name}</div>
                   </div>
                 ))}
@@ -155,7 +155,7 @@ const MatchData = () => {
                     style={{ cursor: "pointer" }}
                     className="onebox"
                   >
-                    <div>NAME: {player.person.fullName}</div>
+                    <div>{player.person.fullName}</div>
                     <div>POSITION: {player.position.name}</div>
                   </div>
                 ))}
@@ -174,7 +174,7 @@ const MatchData = () => {
                     style={{ cursor: "pointer" }}
                     className="onebox"
                   >
-                    <div>NAME: {player.person.fullName}</div>
+                    <div>{player.person.fullName}</div>
                     <div>POSITION: {player.position.name}</div>
                   </div>
                 ))}
