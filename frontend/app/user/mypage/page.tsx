@@ -97,14 +97,22 @@ const MyPage = () => {
         </div>
         <div className="gamebox_profile">
           <div className="top5">추천 경기 TOP5</div>
-          <div className="gametime">
+          <div>
             {matchList && matchList.length > 0 ? (
               matchList.map((content: any) => (
-                <div key={content.id} className="one_game">
-                  <div>
+                <div
+                  key={content.id}
+                  className="one_game"
+                  onClick={() => router.push(`/match/${content.id}`)}
+                >
+                  <div>{content.matchDate.slice(0, 10)}</div>
+                  <div style={{ fontWeight: "bold" }}>
                     {content.awayName} vs {content.homeName}
+                    <div>
+                      {" "}
+                      {content.awayScore} : {content.homeScore}{" "}
+                    </div>
                   </div>
-                  <div>경기 일자 : {content.matchDate.slice(0, 10)}</div>
                 </div>
               ))
             ) : (

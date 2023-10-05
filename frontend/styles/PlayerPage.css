@@ -62,5 +62,75 @@
 }
 
 body {
-  color: black;
+  color: black !important;
+}
+
+.special {
+  /* text-align: center; */
+  border: 1px solid;
+  width: 130px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: #061f4d;
+}
+
+.face10 {
+  width: 100px !important;
+  height: 130px;
+  padding: 10px;
+}
+
+.player-image-container {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.modal_title {
+  width: 80px;
+  text-align: center;
+  background-color: #061f4d;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.match_box {
+  margin: 10px;
+  text-align: center;
+}
+
+.red-text {
+  color: red;
+  font-weight: bolder;
+}
+
+.ok-button {
+  color: red;
+}
+
+.modal1 {
+  width: 700px;
+  text-align: center;
+  background-color: #061f4d;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.modal_box2 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

@@ -36,6 +36,7 @@ public enum FailCode {
     NO_PLAYERS(NO_CONTENT, "선수 목록이 존재하지 않습니다."),
     NO_PLAYER(NO_CONTENT, "해당 선수는 존재하지 않습니다."),
     NO_REPLACED_PLAYER(NO_CONTENT, "교체하려는 선수의 정보가 없습니다."),
+    NO_RESULTS(NO_CONTENT, "검색결과가 없습니다."),
 
     // 유저 관련
     USER_NOT_FOUND(NOT_FOUND, "해당 refreshToken으로 사용자를 찾을 수 없습니다.");

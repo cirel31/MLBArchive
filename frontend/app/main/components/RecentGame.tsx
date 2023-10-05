@@ -30,6 +30,7 @@ const RecentGame = () => {
             display: "flex",
             justifyContent: "center",
             fontSize: "40px",
+            fontWeight: "100",
           }}
         >
           오늘의 경기
@@ -41,24 +42,25 @@ const RecentGame = () => {
               const showGame = content.awayName || content.homeName;
               return showGame ? (
                 <div key={content.id}>
-                  <div className="one_game">
+                  <div className="one_game2">
                     <div className="contentbox">
-                      <div style={{ fontWeight: "bolder" }}>
+                      <div>
                         {" "}
-                        {content.awayName}
+                        {content.awayName} : {content.awayScore}
                       </div>
                       <div>vs</div>
-                      <div style={{ fontWeight: "bolder" }}>
+                      <div>
                         {" "}
-                        {content.homeName}
+                        {content.homeName} : {content.homeScore}
                       </div>
+                      <div>이닝 : {content.currentInning}</div>
                     </div>
                   </div>
                 </div>
               ) : null;
             })
           ) : (
-            <p>오늘은 경기 일정이 없습니다.</p>
+            <p style={{ color: "white" }}>오늘은 경기 일정이 없습니다.</p>
           )}
         </div>
       </div>
