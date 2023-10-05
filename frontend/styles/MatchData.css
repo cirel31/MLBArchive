@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+
+body {
+}
+
+.match_team1 {
+  border: 5px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  margin: 20px;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+}
+
+.match_team2 {
+  border: 5px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  margin: 20px;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+}
+
+.team_name_match {
+  font-size: 30px;
+  font-family: "Black Han Sans", sans-serif !important;
+  text-align: center;
+}
+
+.team_name_match2 {
+  font-size: 50px;
+  font-family: "Black Han Sans", sans-serif !important;
+  text-align: center;
+}
+
+.playerinfo_match {
+  border: 1px solid;
+}

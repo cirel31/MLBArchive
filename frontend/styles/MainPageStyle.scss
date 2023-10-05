@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&family=Orbit&display=swap");
+
+body {
+  font-family: "Noto Serif KR", serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 20% auto;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+// .main {
+//   margin-top: 100px;
+// }
+
+.gametime {
+  border: 1px solid rgb(6, 31, 77);
+  background: rgb(6, 31, 77);
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  height: 200px;
+  margin-top: 10px;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+.teamrank {
+  width: 48%;
+  border: 3px solid rgb(6, 31, 77);
+  background: rgb(6, 31, 77);
+  border-radius: 10px;
+  margin: 20px;
+  height: 100%;
+  color: white;
+}
+
+.teamrank2 {
+  width: 40%;
+  border: 3px solid rgb(6, 31, 77);
+  background: rgb(6, 31, 77);
+  border-radius: 10px;
+  margin: 20px;
+  height: 100%;
+}
+
+.rank {
+  // margin-top: 40px;
+  font-size: 30px;
+  // margin: 20px;
+  margin-left: 13px;
+  margin-right: 16px;
+}
+
+.TeamRank_box {
+  border: 3px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  font-family: "IBM Plex Sans KR", sans-serif !important;
+}
+
+.TeamRank_box2 {
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 50px;
+  // margin-left: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.TeamRank_box td {
+  font-family: "Orbit", sans-serif;
+}
+.TeamRank_box th {
+  font-family: "Orbit", sans-serif;
+}
+
+.one_game {
+  // border: 1px solid;
+
+  border-radius: 10px;
+  width: 30%;
+  height: 70%;
+  margin: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player_rank {
+  border: 3px solid rgb(6, 31, 77);
+  border-radius: 10px;
+  width: 100%;
+  font-size: large;
+  background-color: #fff;
+  font-weight: 500;
+  display: flex;
+  border-radius: 10px;
+}
+
+/* HitterRank.css */
+
+.hitter-rank-container {
+  background-color: white; /* 배경색을 하얀색으로 설정 */
+  padding: 16px; /* 원하는 패딩값을 설정 */
+  border-radius: 8px; /* 필요에 따라 테이블에 모서리를 둥글게 만들 수 있습니다. */
+  width: 50%;
+}
+
+.pitcher-rank-container {
+  background-color: white; /* 배경색을 하얀색으로 설정 */
+  padding: 16px; /* 원하는 패딩값을 설정 */
+  border-radius: 8px; /* 필요에 따라 테이블에 모서리를 둥글게 만들 수 있습니다. */
+  width: 50%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@200;700&family=Orbit&display=swap");
+
+.player_name5 {
+  font-size: 18px;
+  margin-left: 20px;
+  font-family: "Black Han Sans", sans-serif;
+  text-align: left;
+}
+
+.player_name2 {
+  font-size: 25px;
+  // margin-left: 20px;
+  font-weight: bold;
+  color: black;
+  font-family: "Black Han Sans", sans-serif;
+  text-align: center;
+}
