@@ -7,8 +7,8 @@ const MatchPage = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <div className="match_box ">
-        <MatchLineScore />
         <MatchData />
+        <MatchLineScore />
       </div>
     </div>
   );

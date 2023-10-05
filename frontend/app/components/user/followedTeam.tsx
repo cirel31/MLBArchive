@@ -12,7 +12,13 @@ const FollowedTeam = () => {
       <div>
         {followList?.TeamList ? (
           <div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
               {followList.TeamList.map((team: any) => (
                 <div
                   key={team.teamId}
