@@ -17,7 +17,11 @@ const AppBar = () => {
   return (
     <>
       <div className="appbar">
-        <Image className="mark" src={intro} alt="" />
+        <button onClick={() => router.push("/main")}>
+          {" "}
+          <Image className="mark" src={intro} alt="" />
+        </button>
+
         {/* <button onClick={() => router.push("/")}>Home</button> */}
         <button onClick={() => router.push("/main")}>Main</button>
         <button onClick={() => router.push("/teams")}>Teams</button>
