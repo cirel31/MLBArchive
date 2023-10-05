@@ -38,7 +38,7 @@ frontend-build:
   artifacts:
     name: "nextjs"
     paths:
-      - ./frontend/.next/
+      - ./frontend/.next/*
 
   tags:
     - ssafy
