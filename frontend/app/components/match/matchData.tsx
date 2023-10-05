@@ -12,24 +12,16 @@ const MatchData = () => {
   const [showAwayTeam, setShowAwayTeam] = useState(false);
   const [showHomeTeam, setShowHomeTeam] = useState(false);
 
-  const [awayHitterArray, setAwayHitterArray] = useState<any[]>([]);
-  const [awayPitcherArray, setAwayPitcherArray] = useState<any[]>([]);
-  const [homeHitterArray, setHomeHitterArray] = useState<any[]>([]);
-  const [homePitcherArray, setHomePitcherArray] = useState<any[]>([]);
+  const [awayHitterArray, setAwayHitterArray] = useState<any[]>([])
+  const [awayPitcherArray, setAwayPitcherArray] = useState<any[]>([])
+  const [homeHitterArray, setHomeHitterArray] = useState<any[]>([])
+  const [homePitcherArray, setHomePitcherArray] = useState<any[]>([])
 
-  const matchData = useSelector((state: any) => state.match.matchDetailData);
-  const awayBattings = useSelector(
-    (state: any) => state.match.matchDetailData.boxscore.teams.away.battingOrder
-  );
-  const awayPitchers = useSelector(
-    (state: any) => state.match.matchDetailData.boxscore.teams.away.pitchers
-  );
-  const homeBattings = useSelector(
-    (state: any) => state.match.matchDetailData.boxscore.teams.home.battingOrder
-  );
-  const homePitchers = useSelector(
-    (state: any) => state.match.matchDetailData.boxscore.teams.home.pitchers
-  );
+  const matchData = useSelector((state:any) => state.match.matchDetailData)
+  const awayBattings = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.away.battingOrder)
+  const awayPitchers = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.away.pitchers)
+  const homeBattings = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.home.battingOrder)
+  const homePitchers = useSelector((state:any) => state.match.matchDetailData.boxscore.teams.home.pitchers)
 
   useEffect(() => {
     const awayPlayerList = matchData?.boxscore.teams.away.players;
