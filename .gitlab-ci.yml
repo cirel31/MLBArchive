@@ -33,6 +33,7 @@ frontend-build:
     - echo 'frontend build starts'
     - cd ./frontend
   script:
+    - npm run build
     - docker build -t nextjs -f ./Dockerfile . # Docker 이미지 빌드
 
   artifacts:
@@ -87,7 +88,6 @@ backend-deploy:
 frontend-deploy:
   stage: deploy
   only:
-
     - master
   before_script:
     - echo "frontend deploy start"

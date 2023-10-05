@@ -38,8 +38,8 @@ ENV NEXT_PUBLIC_SERVER_SEARCH_URL /search
 
 RUN npm install -f
 
-COPY ./ /app
+COPY ./.next /app
 
 EXPOSE 3000
 
-CMD ["npm","run","dev"]
+CMD ["npm","run","start"]
