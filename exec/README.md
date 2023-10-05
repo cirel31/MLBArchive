@@ -99,14 +99,13 @@ java -jar ./build/libs/ssafyBigswing-0.0.1-SNAPSHOT.jar
 
 ```bash
 cd /frontend
-# force install
-npm i -f
+npm i
 npm run build
 
 # 개발자 모드 실행
 npm run dev
-# 서비스 실행
 
+# 서비스 실행
 npm run start
 ```
 
