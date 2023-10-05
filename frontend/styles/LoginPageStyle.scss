@@ -1,19 +1,40 @@
 .loginContents {
   display: grid;
+  position: absolute;
   grid-template-columns: 1fr;
+  top: 20%;
+  left: 50%; /* 부모 요소의 가운데로 이동하기 위해 50%로 설정 */
+  transform: translateX(-50%);
   gap: 10px;
-
-  align-items: center;
-  width: 100%;
+  width: 40%;
+  background-color: #ffffff;
+  border: 3px solid #5663a7;
+  // border-radius: 20px;
+  margin: 0 auto;
+  padding: 40px;
+  opacity: 0; /* 초기에는 투명하게 설정 */
+  transition: opacity 1s ease-in-out;
 }
 
 .loginItem {
   display: flex;
   justify-content: center;
-
 }
 
 .oauthLogo {
   width: 250px;
+}
 
+.logo {
+  width: 300px;
+  // margin-top: 100px;
+  // padding-top: 4rem;
+  margin: 0 auto;
+}
+
+.login_info {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
 }
