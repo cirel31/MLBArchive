@@ -1,6 +1,6 @@
 package com.example.ssafy301.simulation.dto;
 
-import com.example.ssafy301.pitching.domain.Pitching;
+import com.example.ssafy301.pitching.dto.PitchingRespDto;
 import com.example.ssafy301.player.domain.Player;
 import com.example.ssafy301.player.domain.Position;
 import com.example.ssafy301.player.domain.UseHand;
@@ -30,7 +30,7 @@ public class PitcherSearchRespDto {
     private float era;
     private float whip;
 
-    public PitcherSearchRespDto(Player player, Pitching pitching) {
+    public PitcherSearchRespDto(Player player, PitchingRespDto pitching) {
         this.playerId = player.getId();
         this.name = player.getName();
         this.korName = player.getKorName();

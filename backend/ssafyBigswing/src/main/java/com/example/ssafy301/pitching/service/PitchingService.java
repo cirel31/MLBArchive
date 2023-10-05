@@ -40,6 +40,21 @@ public class PitchingService {
         return new PitchingRespDto(mostPlayedPitching);
     }
 
+    // 선수 비교를 위한 메서드
+    public PitchingRespDto getPitchingStat2(PitchingReqDto pitchingReqDto) {
+        List<Pitching> pitchingStats = pitchingRepository.getPitchingsByPlayerIdAndSeason(pitchingReqDto.getPlayerId(), pitchingReqDto.getSeason());
+
+        // 입력된 선수와 시즌과 관련된 스탯이 없다면 예외 발생
+        if(pitchingStats.isEmpty()) {
+            return null;
+        }
+
+        // Pitching값이 여러개라면 가장 게임수가 많은 스탯만 뽑아냄
+        Pitching mostPlayedPitching = Collections.max(pitchingStats, Comparator.comparingInt(Pitching::getGamesPlayed));
+
+        return new PitchingRespDto(mostPlayedPitching);
+    }
+
     // 현재 시즌의 모든 투수 중 pitching 순위(era가 낮을수록 높은 순위) TOP5 목록을 가져온다
     // 선수사진, 선수이름, 방어율율, 속한팀 이름을 반환
     public List<TopPitcher> getTop5Pitcher() {

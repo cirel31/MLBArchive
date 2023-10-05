@@ -1,6 +1,6 @@
 package com.example.ssafy301.simulation.dto;
 
-import com.example.ssafy301.hitting.domain.Hitting;
+import com.example.ssafy301.hitting.dto.HittingRespDto;
 import com.example.ssafy301.player.domain.Player;
 import com.example.ssafy301.player.domain.Position;
 import com.example.ssafy301.player.domain.UseHand;
@@ -30,7 +30,7 @@ public class OtherPositionSearchRespDto {
     private float batting_avg;
     private float ops;
 
-    public OtherPositionSearchRespDto(Player player, Hitting hitting) {
+    public OtherPositionSearchRespDto(Player player, HittingRespDto hitting) {
         this.playerId = player.getId();
         this.name = player.getName();
         this.korName = player.getKorName();
