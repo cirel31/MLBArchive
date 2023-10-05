@@ -43,7 +43,7 @@ frontend-build:
   # tags:
   #   - ssafy
 
-backend-check-container:
+frontend-check-container:
   stage: check_container
   only:
     - master
@@ -58,7 +58,7 @@ backend-check-container:
   tags:
     - ssafy
 
-frontend-check-container:
+backend-check-container:
   stage: check_container
   only:
     - master
