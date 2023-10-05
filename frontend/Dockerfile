@@ -3,7 +3,7 @@ FROM node:18-alpine
 WORKDIR /app
 
 COPY package*.json /app
-RUN npm -i -f
+RUN npm i -f
 # API KEY & SECRETE KEY
 ENV NEXT_PUBLIC_NAVER_CLIENT_ID jzQ_Z_TqlmAVqPcgNCwr
 ENV NEXT_PUBLIC_NAVER_CLIENT_SECRET eseJBAMxn2
