@@ -1,0 +1,4442 @@
+[
+  {
+    "game_id": 71001,
+    "summary": "1901-04-18 - Brooklyn Superbas (12) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 71004,
+    "summary": "1901-04-19 - Philadelphia Phillies (2) @ Brooklyn Superbas (10) (Final)"
+  },
+  {
+    "game_id": 71003,
+    "summary": "1901-04-19 - New York Giants (0) @ Boston Beaneaters (7) (Final)"
+  },
+  {
+    "game_id": 71002,
+    "summary": "1901-04-19 - Chicago Orphans (8) @ St. Louis Cardinals (7) (Final)"
+  },
+  {
+    "game_id": 71006,
+    "summary": "1901-04-20 - Pittsburgh Pirates (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 71005,
+    "summary": "1901-04-20 - Chicago Orphans (9) @ St. Louis Cardinals (11) (Final)"
+  },
+  {
+    "game_id": 71007,
+    "summary": "1901-04-21 - Chicago Orphans (5) @ St. Louis Cardinals (12) (Final)"
+  },
+  {
+    "game_id": 71008,
+    "summary": "1901-04-22 - Brooklyn Superbas (3) @ Philadelphia Phillies (9) (Final)"
+  },
+  {
+    "game_id": 71009,
+    "summary": "1901-04-23 - Boston Beaneaters (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71010,
+    "summary": "1901-04-23 - Pittsburgh Pirates (4) @ St. Louis Cardinals (10) (Final)"
+  },
+  {
+    "game_id": 71011,
+    "summary": "1901-04-24 - Chicago Orphans (9) @ Cincinnati Reds (10) (Final)"
+  },
+  {
+    "game_id": 71013,
+    "summary": "1901-04-24 - Pittsburgh Pirates (5) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71012,
+    "summary": "1901-04-24 - Cleveland Blues (2) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 71015,
+    "summary": "1901-04-25 - Milwaukee Brewers (13) @ Detroit Tigers (14) (Final)"
+  },
+  {
+    "game_id": 71014,
+    "summary": "1901-04-25 - Cleveland Blues (3) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 71017,
+    "summary": "1901-04-26 - Brooklyn Superbas (3) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71021,
+    "summary": "1901-04-26 - Washington Senators (5) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 71018,
+    "summary": "1901-04-26 - Boston Beaneaters (4) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71016,
+    "summary": "1901-04-26 - Boston Americans (6) @ Baltimore Orioles (10) (Final)"
+  },
+  {
+    "game_id": 71020,
+    "summary": "1901-04-26 - Milwaukee Brewers (5) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71019,
+    "summary": "1901-04-26 - Cincinnati Reds (8) @ Chicago Orphans (7) (Final)"
+  },
+  {
+    "game_id": 71028,
+    "summary": "1901-04-27 - St. Louis Cardinals (7) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71029,
+    "summary": "1901-04-27 - Washington Senators (11) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 71027,
+    "summary": "1901-04-27 - New York Giants (1) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71023,
+    "summary": "1901-04-27 - Boston Beaneaters (3) @ Brooklyn Superbas (6) (Final)"
+  },
+  {
+    "game_id": 71022,
+    "summary": "1901-04-27 - Boston Americans (6) @ Baltimore Orioles (12) (Final)"
+  },
+  {
+    "game_id": 71026,
+    "summary": "1901-04-27 - Milwaukee Brewers (9) @ Detroit Tigers (13) (Final)"
+  },
+  {
+    "game_id": 71024,
+    "summary": "1901-04-27 - Cincinnati Reds (9) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71025,
+    "summary": "1901-04-27 - Cleveland Blues (10) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71032,
+    "summary": "1901-04-28 - Milwaukee Brewers (11) @ Detroit Tigers (12) (Final)"
+  },
+  {
+    "game_id": 71030,
+    "summary": "1901-04-28 - Cincinnati Reds (6) @ Chicago Orphans (4) (Final)"
+  },
+  {
+    "game_id": 71031,
+    "summary": "1901-04-28 - Cleveland Blues (1) @ Chicago White Sox (13) (Final)"
+  },
+  {
+    "game_id": 71038,
+    "summary": "1901-04-29 - Milwaukee Brewers (3) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71034,
+    "summary": "1901-04-29 - Boston Americans (5) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 71040,
+    "summary": "1901-04-29 - St. Louis Cardinals (12) @ Pittsburgh Pirates (14) (Final)"
+  },
+  {
+    "game_id": 71039,
+    "summary": "1901-04-29 - New York Giants (13) @ Philadelphia Phillies (14) (Final)"
+  },
+  {
+    "game_id": 71035,
+    "summary": "1901-04-29 - Boston Beaneaters (12) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71033,
+    "summary": "1901-04-29 - Baltimore Orioles (2) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71036,
+    "summary": "1901-04-29 - Cincinnati Reds (6) @ Chicago Orphans (9) (Final)"
+  },
+  {
+    "game_id": 71037,
+    "summary": "1901-04-29 - Detroit Tigers (3) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 71046,
+    "summary": "1901-04-30 - Milwaukee Brewers (8) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71042,
+    "summary": "1901-04-30 - Boston Americans (8) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71048,
+    "summary": "1901-04-30 - St. Louis Cardinals (4) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71047,
+    "summary": "1901-04-30 - New York Giants (3) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71043,
+    "summary": "1901-04-30 - Boston Beaneaters (1) @ Brooklyn Superbas (2) (Final)"
+  },
+  {
+    "game_id": 71041,
+    "summary": "1901-04-30 - Baltimore Orioles (6) @ Washington Senators (12) (Final)"
+  },
+  {
+    "game_id": 71044,
+    "summary": "1901-04-30 - Cincinnati Reds (7) @ Chicago Orphans (8) (Final)"
+  },
+  {
+    "game_id": 71045,
+    "summary": "1901-04-30 - Detroit Tigers (2) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71054,
+    "summary": "1901-05-01 - Milwaukee Brewers (3) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71050,
+    "summary": "1901-05-01 - Boston Americans (1) @ Philadelphia Athletics (14) (Final)"
+  },
+  {
+    "game_id": 71051,
+    "summary": "1901-05-01 - Chicago Orphans (8) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71055,
+    "summary": "1901-05-01 - New York Giants (1) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71049,
+    "summary": "1901-05-01 - Baltimore Orioles (6) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71052,
+    "summary": "1901-05-01 - Cincinnati Reds (7) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71053,
+    "summary": "1901-05-01 - Detroit Tigers (9) @ Chicago White Sox (19) (Final)"
+  },
+  {
+    "game_id": 71061,
+    "summary": "1901-05-02 - Milwaukee Brewers (9) @ Cleveland Blues (7) (Final)"
+  },
+  {
+    "game_id": 71057,
+    "summary": "1901-05-02 - Boston Americans (23) @ Philadelphia Athletics (12) (Final)"
+  },
+  {
+    "game_id": 71058,
+    "summary": "1901-05-02 - Chicago Orphans (2) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71062,
+    "summary": "1901-05-02 - Philadelphia Phillies (4) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71056,
+    "summary": "1901-05-02 - Baltimore Orioles (11) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71059,
+    "summary": "1901-05-02 - Cincinnati Reds (16) @ St. Louis Cardinals (12) (Final)"
+  },
+  {
+    "game_id": 71060,
+    "summary": "1901-05-02 - Detroit Tigers (7) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71066,
+    "summary": "1901-05-03 - Chicago Orphans (6) @ Pittsburgh Pirates (10) (Final)"
+  },
+  {
+    "game_id": 71064,
+    "summary": "1901-05-03 - Boston Americans (4) @ Washington Senators (9) (Final)"
+  },
+  {
+    "game_id": 71069,
+    "summary": "1901-05-03 - Philadelphia Phillies (1) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71068,
+    "summary": "1901-05-03 - New York Giants (2) @ Boston Beaneaters (1) (Final)"
+  },
+  {
+    "game_id": 71063,
+    "summary": "1901-05-03 - Baltimore Orioles (4) @ Philadelphia Athletics (9) (Final)"
+  },
+  {
+    "game_id": 71067,
+    "summary": "1901-05-03 - Cleveland Blues (3) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71065,
+    "summary": "1901-05-03 - Chicago White Sox (11) @ Milwaukee Brewers (3) (Final)"
+  },
+  {
+    "game_id": 71073,
+    "summary": "1901-05-04 - Chicago Orphans (4) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71071,
+    "summary": "1901-05-04 - Boston Americans (10) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 71077,
+    "summary": "1901-05-04 - Philadelphia Phillies (8) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71076,
+    "summary": "1901-05-04 - New York Giants (3) @ Boston Beaneaters (6) (Final)"
+  },
+  {
+    "game_id": 71070,
+    "summary": "1901-05-04 - Baltimore Orioles (11) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71075,
+    "summary": "1901-05-04 - Cleveland Blues (11) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71074,
+    "summary": "1901-05-04 - Cincinnati Reds @ St. Louis Cardinals (Final: Tied)"
+  },
+  {
+    "game_id": 71072,
+    "summary": "1901-05-04 - Chicago White Sox (11) @ Milwaukee Brewers (3) (Final)"
+  },
+  {
+    "game_id": 71080,
+    "summary": "1901-05-05 - Cleveland Blues (3) @ Detroit Tigers (10) (Final)"
+  },
+  {
+    "game_id": 71081,
+    "summary": "1901-05-05 - Pittsburgh Pirates (4) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71079,
+    "summary": "1901-05-05 - Cincinnati Reds (7) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71078,
+    "summary": "1901-05-05 - Chicago White Sox (7) @ Milwaukee Brewers (21) (Final)"
+  },
+  {
+    "game_id": 71088,
+    "summary": "1901-05-06 - St. Louis Cardinals (13) @ Cincinnati Reds (8) (Final)"
+  },
+  {
+    "game_id": 71083,
+    "summary": "1901-05-06 - Boston Americans (9) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71087,
+    "summary": "1901-05-06 - Philadelphia Phillies (0) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71084,
+    "summary": "1901-05-06 - Brooklyn Superbas (2) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71082,
+    "summary": "1901-05-06 - Baltimore Orioles (5) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71086,
+    "summary": "1901-05-06 - Cleveland Blues (4) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71085,
+    "summary": "1901-05-06 - Chicago White Sox (6) @ Milwaukee Brewers (3) (Final)"
+  },
+  {
+    "game_id": 71095,
+    "summary": "1901-05-07 - St. Louis Cardinals (3) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71090,
+    "summary": "1901-05-07 - Boston Americans (7) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 71093,
+    "summary": "1901-05-07 - Philadelphia Phillies (4) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71091,
+    "summary": "1901-05-07 - Brooklyn Superbas (4) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71089,
+    "summary": "1901-05-07 - Baltimore Orioles (14) @ Philadelphia Athletics (10) (Final)"
+  },
+  {
+    "game_id": 71092,
+    "summary": "1901-05-07 - Detroit Tigers (9) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71094,
+    "summary": "1901-05-07 - Pittsburgh Pirates (8) @ Chicago Orphans (0) (Final)"
+  },
+  {
+    "game_id": 71098,
+    "summary": "1901-05-08 - Philadelphia Athletics (4) @ Boston Americans (12) (Final)"
+  },
+  {
+    "game_id": 71101,
+    "summary": "1901-05-08 - St. Louis Cardinals (14) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71099,
+    "summary": "1901-05-08 - Philadelphia Phillies (8) @ New York Giants (9) (Final)"
+  },
+  {
+    "game_id": 71096,
+    "summary": "1901-05-08 - Brooklyn Superbas (6) @ Boston Beaneaters (7) (Final)"
+  },
+  {
+    "game_id": 71097,
+    "summary": "1901-05-08 - Chicago White Sox (3) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71102,
+    "summary": "1901-05-08 - Washington Senators (1) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71100,
+    "summary": "1901-05-08 - Pittsburgh Pirates (8) @ Chicago Orphans (7) (Final)"
+  },
+  {
+    "game_id": 71106,
+    "summary": "1901-05-09 - Philadelphia Athletics (3) @ Boston Americans (9) (Final)"
+  },
+  {
+    "game_id": 71108,
+    "summary": "1901-05-09 - St. Louis Cardinals (3) @ Cincinnati Reds (9) (Final)"
+  },
+  {
+    "game_id": 71103,
+    "summary": "1901-05-09 - Brooklyn Superbas (2) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71104,
+    "summary": "1901-05-09 - Chicago White Sox (4) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71105,
+    "summary": "1901-05-09 - Detroit Tigers (6) @ Milwaukee Brewers (7) (Final)"
+  },
+  {
+    "game_id": 71107,
+    "summary": "1901-05-09 - Pittsburgh Pirates (8) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 71110,
+    "summary": "1901-05-10 - Cincinnati Reds (0) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71109,
+    "summary": "1901-05-10 - Chicago White Sox (5) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71111,
+    "summary": "1901-05-10 - Detroit Tigers (7) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71112,
+    "summary": "1901-05-10 - St. Louis Cardinals (1) @ Chicago Orphans (4) (Final)"
+  },
+  {
+    "game_id": 71115,
+    "summary": "1901-05-11 - New York Giants (7) @ Brooklyn Superbas (0) (Final)"
+  },
+  {
+    "game_id": 71119,
+    "summary": "1901-05-11 - Washington Senators (3) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71117,
+    "summary": "1901-05-11 - Philadelphia Phillies (9) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71116,
+    "summary": "1901-05-11 - Philadelphia Athletics (7) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 71113,
+    "summary": "1901-05-11 - Chicago White Sox (4) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 71114,
+    "summary": "1901-05-11 - Cleveland Blues (5) @ Milwaukee Brewers (12) (Final)"
+  },
+  {
+    "game_id": 71118,
+    "summary": "1901-05-11 - St. Louis Cardinals (2) @ Chicago Orphans (12) (Final)"
+  },
+  {
+    "game_id": 71122,
+    "summary": "1901-05-12 - Pittsburgh Pirates (1) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71120,
+    "summary": "1901-05-12 - Chicago White Sox (5) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 71121,
+    "summary": "1901-05-12 - Cleveland Blues (2) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71123,
+    "summary": "1901-05-12 - St. Louis Cardinals (3) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 71126,
+    "summary": "1901-05-13 - Cincinnati Reds (3) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71124,
+    "summary": "1901-05-13 - Brooklyn Superbas @ New York Giants (Forfeit: Final)"
+  },
+  {
+    "game_id": 71130,
+    "summary": "1901-05-13 - Washington Senators (5) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71129,
+    "summary": "1901-05-13 - Philadelphia Phillies (6) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71128,
+    "summary": "1901-05-13 - Philadelphia Athletics (5) @ Baltimore Orioles (14) (Final)"
+  },
+  {
+    "game_id": 71125,
+    "summary": "1901-05-13 - Chicago White Sox (7) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71127,
+    "summary": "1901-05-13 - Cleveland Blues (4) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71133,
+    "summary": "1901-05-14 - Cincinnati Reds (7) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71132,
+    "summary": "1901-05-14 - Chicago Orphans (0) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71138,
+    "summary": "1901-05-14 - Washington Senators (3) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71136,
+    "summary": "1901-05-14 - Pittsburgh Pirates (3) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71137,
+    "summary": "1901-05-14 - St. Louis Cardinals (3) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71135,
+    "summary": "1901-05-14 - Philadelphia Athletics (5) @ Baltimore Orioles (11) (Final)"
+  },
+  {
+    "game_id": 71131,
+    "summary": "1901-05-14 - Chicago White Sox (6) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 71134,
+    "summary": "1901-05-14 - Cleveland Blues (1) @ Milwaukee Brewers (11) (Final)"
+  },
+  {
+    "game_id": 71140,
+    "summary": "1901-05-15 - Cincinnati Reds (6) @ Brooklyn Superbas (1) (Final)"
+  },
+  {
+    "game_id": 71139,
+    "summary": "1901-05-15 - Chicago Orphans (0) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71144,
+    "summary": "1901-05-15 - Washington Senators (4) @ Boston Americans (0) (Final)"
+  },
+  {
+    "game_id": 71142,
+    "summary": "1901-05-15 - Pittsburgh Pirates (5) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71143,
+    "summary": "1901-05-15 - St. Louis Cardinals (2) @ Boston Beaneaters (8) (Final)"
+  },
+  {
+    "game_id": 71141,
+    "summary": "1901-05-15 - Philadelphia Athletics (5) @ Baltimore Orioles (8) (Final)"
+  },
+  {
+    "game_id": 71148,
+    "summary": "1901-05-16 - Detroit Tigers (5) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71147,
+    "summary": "1901-05-16 - Cincinnati Reds (6) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71146,
+    "summary": "1901-05-16 - Chicago Orphans (11) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71150,
+    "summary": "1901-05-16 - Philadelphia Athletics (5) @ Washington Senators (12) (Final)"
+  },
+  {
+    "game_id": 71151,
+    "summary": "1901-05-16 - Pittsburgh Pirates (2) @ Philadelphia Phillies (12) (Final)"
+  },
+  {
+    "game_id": 71152,
+    "summary": "1901-05-16 - St. Louis Cardinals (6) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71145,
+    "summary": "1901-05-16 - Baltimore Orioles (8) @ Boston Americans (7) (Final)"
+  },
+  {
+    "game_id": 71149,
+    "summary": "1901-05-16 - Milwaukee Brewers (1) @ Chicago White Sox (14) (Final)"
+  },
+  {
+    "game_id": 71156,
+    "summary": "1901-05-17 - Detroit Tigers (6) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71155,
+    "summary": "1901-05-17 - Cincinnati Reds (9) @ Brooklyn Superbas (10) (Final)"
+  },
+  {
+    "game_id": 71154,
+    "summary": "1901-05-17 - Chicago Orphans (4) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71158,
+    "summary": "1901-05-17 - Philadelphia Athletics (7) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71159,
+    "summary": "1901-05-17 - Pittsburgh Pirates (6) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71160,
+    "summary": "1901-05-17 - St. Louis Cardinals (7) @ Boston Beaneaters (6) (Final)"
+  },
+  {
+    "game_id": 71153,
+    "summary": "1901-05-17 - Baltimore Orioles (2) @ Boston Americans (7) (Final)"
+  },
+  {
+    "game_id": 71157,
+    "summary": "1901-05-17 - Milwaukee Brewers (6) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 71162,
+    "summary": "1901-05-18 - Detroit Tigers (7) @ Cleveland Blues (9) (Final)"
+  },
+  {
+    "game_id": 71164,
+    "summary": "1901-05-18 - Philadelphia Athletics (11) @ Washington Senators (6) (Final)"
+  },
+  {
+    "game_id": 71161,
+    "summary": "1901-05-18 - Chicago Orphans (0) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71163,
+    "summary": "1901-05-18 - Milwaukee Brewers (3) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71165,
+    "summary": "1901-05-19 - Cleveland Blues (11) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 71166,
+    "summary": "1901-05-19 - Milwaukee Brewers (3) @ Chicago White Sox (14) (Final)"
+  },
+  {
+    "game_id": 71168,
+    "summary": "1901-05-20 - Detroit Tigers (13) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71169,
+    "summary": "1901-05-20 - Philadelphia Athletics (4) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71167,
+    "summary": "1901-05-20 - Chicago Orphans (4) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71172,
+    "summary": "1901-05-21 - Pittsburgh Pirates (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71173,
+    "summary": "1901-05-21 - St. Louis Cardinals (11) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71170,
+    "summary": "1901-05-21 - Chicago Orphans (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71171,
+    "summary": "1901-05-21 - Cincinnati Reds (4) @ Boston Beaneaters (1) (Final)"
+  },
+  {
+    "game_id": 71179,
+    "summary": "1901-05-22 - St. Louis Cardinals (4) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71180,
+    "summary": "1901-05-22 - St. Louis Cardinals (4) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71178,
+    "summary": "1901-05-22 - Pittsburgh Pirates (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71181,
+    "summary": "1901-05-22 - Washington Senators (5) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71175,
+    "summary": "1901-05-22 - Chicago Orphans (1) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71176,
+    "summary": "1901-05-22 - Cincinnati Reds (4) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71174,
+    "summary": "1901-05-22 - Boston Americans (9) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71177,
+    "summary": "1901-05-22 - Philadelphia Athletics (9) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71183,
+    "summary": "1901-05-23 - Chicago Orphans (9) @ Brooklyn Superbas (2) (Final)"
+  },
+  {
+    "game_id": 71184,
+    "summary": "1901-05-23 - Cincinnati Reds (1) @ New York Giants (8) (Final)"
+  },
+  {
+    "game_id": 71188,
+    "summary": "1901-05-23 - Washington Senators (13) @ Cleveland Blues (14) (Final)"
+  },
+  {
+    "game_id": 71187,
+    "summary": "1901-05-23 - St. Louis Cardinals (10) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71186,
+    "summary": "1901-05-23 - Pittsburgh Pirates (3) @ Boston Beaneaters (7) (Final)"
+  },
+  {
+    "game_id": 71182,
+    "summary": "1901-05-23 - Boston Americans (4) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 71185,
+    "summary": "1901-05-23 - Philadelphia Athletics (9) @ Chicago White Sox (11) (Final)"
+  },
+  {
+    "game_id": 71190,
+    "summary": "1901-05-24 - Chicago Orphans (7) @ Brooklyn Superbas (15) (Final)"
+  },
+  {
+    "game_id": 71191,
+    "summary": "1901-05-24 - Cincinnati Reds (0) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 71194,
+    "summary": "1901-05-24 - Washington Senators @ Cleveland Blues (Final: Tied)"
+  },
+  {
+    "game_id": 71193,
+    "summary": "1901-05-24 - St. Louis Cardinals (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71192,
+    "summary": "1901-05-24 - Pittsburgh Pirates (6) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71189,
+    "summary": "1901-05-24 - Boston Americans (0) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 71196,
+    "summary": "1901-05-25 - Boston Americans (5) @ Cleveland Blues (0) (Final)"
+  },
+  {
+    "game_id": 71198,
+    "summary": "1901-05-25 - Pittsburgh Pirates (11) @ Boston Beaneaters (1) (Final)"
+  },
+  {
+    "game_id": 71199,
+    "summary": "1901-05-25 - Washington Senators (6) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71197,
+    "summary": "1901-05-25 - Philadelphia Athletics (5) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 71195,
+    "summary": "1901-05-25 - Baltimore Orioles (3) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71201,
+    "summary": "1901-05-26 - Philadelphia Athletics (5) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71200,
+    "summary": "1901-05-26 - Baltimore Orioles (0) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71204,
+    "summary": "1901-05-27 - Washington Senators (8) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71203,
+    "summary": "1901-05-27 - Philadelphia Athletics (8) @ Milwaukee Brewers (3) (Final)"
+  },
+  {
+    "game_id": 71202,
+    "summary": "1901-05-27 - Baltimore Orioles (3) @ Chicago White Sox (10) (Final)"
+  },
+  {
+    "game_id": 71208,
+    "summary": "1901-05-28 - Pittsburgh Pirates (7) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71209,
+    "summary": "1901-05-28 - St. Louis Cardinals (1) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71206,
+    "summary": "1901-05-28 - Cincinnati Reds (0) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 71207,
+    "summary": "1901-05-28 - Philadelphia Athletics (4) @ Milwaukee Brewers (3) (Final)"
+  },
+  {
+    "game_id": 71205,
+    "summary": "1901-05-28 - Baltimore Orioles (14) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71211,
+    "summary": "1901-05-29 - Philadelphia Athletics (8) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71210,
+    "summary": "1901-05-29 - Baltimore Orioles (4) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 71220,
+    "summary": "1901-05-30 - Philadelphia Athletics (3) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71221,
+    "summary": "1901-05-30 - Philadelphia Athletics (8) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71222,
+    "summary": "1901-05-30 - Pittsburgh Pirates (4) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71223,
+    "summary": "1901-05-30 - Pittsburgh Pirates (2) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71224,
+    "summary": "1901-05-30 - St. Louis Cardinals (4) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71225,
+    "summary": "1901-05-30 - St. Louis Cardinals (6) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71218,
+    "summary": "1901-05-30 - Cincinnati Reds (1) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71219,
+    "summary": "1901-05-30 - Cincinnati Reds (4) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71216,
+    "summary": "1901-05-30 - Chicago Orphans (4) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71217,
+    "summary": "1901-05-30 - Chicago Orphans (3) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71212,
+    "summary": "1901-05-30 - Baltimore Orioles (10) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 71213,
+    "summary": "1901-05-30 - Baltimore Orioles (1) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71226,
+    "summary": "1901-05-30 - Washington Senators (2) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71227,
+    "summary": "1901-05-30 - Washington Senators (3) @ Milwaukee Brewers (13) (Final)"
+  },
+  {
+    "game_id": 71214,
+    "summary": "1901-05-30 - Boston Americans (3) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 71215,
+    "summary": "1901-05-30 - Boston Americans (3) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71230,
+    "summary": "1901-05-31 - Philadelphia Athletics (15) @ Cleveland Blues (14) (Final)"
+  },
+  {
+    "game_id": 71231,
+    "summary": "1901-05-31 - Pittsburgh Pirates (5) @ Brooklyn Superbas (2) (Final)"
+  },
+  {
+    "game_id": 71228,
+    "summary": "1901-05-31 - Baltimore Orioles @ Detroit Tigers (Forfeit: Final)"
+  },
+  {
+    "game_id": 71232,
+    "summary": "1901-05-31 - Washington Senators @ Milwaukee Brewers (Final: Tied)"
+  },
+  {
+    "game_id": 71229,
+    "summary": "1901-05-31 - Boston Americans (5) @ Chicago White Sox (10) (Final)"
+  },
+  {
+    "game_id": 71238,
+    "summary": "1901-06-01 - Philadelphia Athletics (6) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71237,
+    "summary": "1901-06-01 - Cincinnati Reds (4) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71235,
+    "summary": "1901-06-01 - Brooklyn Superbas (5) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 71236,
+    "summary": "1901-06-01 - Boston Beaneaters (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71233,
+    "summary": "1901-06-01 - Baltimore Orioles (3) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 71239,
+    "summary": "1901-06-01 - St. Louis Cardinals (9) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71240,
+    "summary": "1901-06-01 - Washington Senators (3) @ Milwaukee Brewers (0) (Final)"
+  },
+  {
+    "game_id": 71234,
+    "summary": "1901-06-01 - Boston Americans (10) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71244,
+    "summary": "1901-06-02 - St. Louis Cardinals (6) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 71242,
+    "summary": "1901-06-02 - Philadelphia Athletics (11) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71241,
+    "summary": "1901-06-02 - Boston Americans (13) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71243,
+    "summary": "1901-06-02 - Pittsburgh Pirates (6) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 71245,
+    "summary": "1901-06-02 - Washington Senators (7) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71248,
+    "summary": "1901-06-03 - Brooklyn Superbas (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 71252,
+    "summary": "1901-06-03 - Philadelphia Phillies (1) @ Pittsburgh Pirates (11) (Final)"
+  },
+  {
+    "game_id": 71246,
+    "summary": "1901-06-03 - Baltimore Orioles (7) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71251,
+    "summary": "1901-06-03 - Philadelphia Athletics (2) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 71247,
+    "summary": "1901-06-03 - Boston Americans (2) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71250,
+    "summary": "1901-06-03 - New York Giants (8) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71249,
+    "summary": "1901-06-03 - Boston Beaneaters (3) @ Chicago Orphans (0) (Final)"
+  },
+  {
+    "game_id": 71253,
+    "summary": "1901-06-03 - Washington Senators (5) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71256,
+    "summary": "1901-06-04 - Brooklyn Superbas (7) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71260,
+    "summary": "1901-06-04 - Philadelphia Phillies (3) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 71254,
+    "summary": "1901-06-04 - Baltimore Orioles (1) @ Cleveland Blues (5) (Final)"
+  },
+  {
+    "game_id": 71259,
+    "summary": "1901-06-04 - Philadelphia Athletics (1) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 71255,
+    "summary": "1901-06-04 - Boston Americans (2) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71258,
+    "summary": "1901-06-04 - New York Giants (4) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71257,
+    "summary": "1901-06-04 - Boston Beaneaters (5) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 71261,
+    "summary": "1901-06-04 - Washington Senators (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71263,
+    "summary": "1901-06-05 - Brooklyn Superbas @ Cincinnati Reds (Final: Tied)"
+  },
+  {
+    "game_id": 71266,
+    "summary": "1901-06-05 - Philadelphia Phillies (2) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71265,
+    "summary": "1901-06-05 - Philadelphia Athletics (2) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 71262,
+    "summary": "1901-06-05 - Boston Americans (7) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71264,
+    "summary": "1901-06-05 - New York Giants (3) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71268,
+    "summary": "1901-06-06 - Brooklyn Superbas (4) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71267,
+    "summary": "1901-06-06 - Baltimore Orioles (2) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71270,
+    "summary": "1901-06-06 - Philadelphia Phillies (14) @ Chicago Orphans (4) (Final)"
+  },
+  {
+    "game_id": 71269,
+    "summary": "1901-06-06 - Boston Beaneaters (3) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71275,
+    "summary": "1901-06-07 - Milwaukee Brewers (2) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71271,
+    "summary": "1901-06-07 - Brooklyn Superbas (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71276,
+    "summary": "1901-06-07 - New York Giants (2) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71273,
+    "summary": "1901-06-07 - Chicago White Sox (15) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71274,
+    "summary": "1901-06-07 - Cleveland Blues (9) @ Baltimore Orioles (10) (Final)"
+  },
+  {
+    "game_id": 71277,
+    "summary": "1901-06-07 - Philadelphia Phillies (4) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 71272,
+    "summary": "1901-06-07 - Boston Beaneaters (3) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 71282,
+    "summary": "1901-06-08 - Milwaukee Brewers (4) @ Boston Americans (12) (Final)"
+  },
+  {
+    "game_id": 71281,
+    "summary": "1901-06-08 - Detroit Tigers (1) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71278,
+    "summary": "1901-06-08 - Brooklyn Superbas (7) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71283,
+    "summary": "1901-06-08 - New York Giants (4) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71279,
+    "summary": "1901-06-08 - Chicago White Sox (3) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71280,
+    "summary": "1901-06-08 - Cleveland Blues (13) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71284,
+    "summary": "1901-06-08 - Philadelphia Phillies (4) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71286,
+    "summary": "1901-06-09 - New York Giants (25) @ Cincinnati Reds (13) (Final)"
+  },
+  {
+    "game_id": 71285,
+    "summary": "1901-06-09 - Brooklyn Superbas (7) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 71292,
+    "summary": "1901-06-10 - Milwaukee Brewers (4) @ Boston Americans (7) (Final)"
+  },
+  {
+    "game_id": 71291,
+    "summary": "1901-06-10 - Detroit Tigers (5) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 71293,
+    "summary": "1901-06-10 - New York Giants (1) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71288,
+    "summary": "1901-06-10 - Boston Beaneaters (9) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 71289,
+    "summary": "1901-06-10 - Chicago White Sox (13) @ Washington Senators (10) (Final)"
+  },
+  {
+    "game_id": 71290,
+    "summary": "1901-06-10 - Cleveland Blues (13) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 71287,
+    "summary": "1901-06-10 - Brooklyn Superbas (9) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 71294,
+    "summary": "1901-06-10 - Philadelphia Phillies (0) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 71300,
+    "summary": "1901-06-11 - Milwaukee Brewers (4) @ Boston Americans (8) (Final)"
+  },
+  {
+    "game_id": 71299,
+    "summary": "1901-06-11 - Detroit Tigers (4) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 71301,
+    "summary": "1901-06-11 - New York Giants (0) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 71296,
+    "summary": "1901-06-11 - Boston Beaneaters (3) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 71297,
+    "summary": "1901-06-11 - Chicago White Sox (1) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 71298,
+    "summary": "1901-06-11 - Cleveland Blues (8) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71295,
+    "summary": "1901-06-11 - Brooklyn Superbas (9) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71302,
+    "summary": "1901-06-11 - Philadelphia Phillies (3) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 71307,
+    "summary": "1901-06-12 - Detroit Tigers (2) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71308,
+    "summary": "1901-06-12 - Milwaukee Brewers (6) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 71309,
+    "summary": "1901-06-12 - New York Giants (2) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71306,
+    "summary": "1901-06-12 - Cleveland Blues (6) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 71304,
+    "summary": "1901-06-12 - Boston Beaneaters @ Cincinnati Reds (Final: Tied)"
+  },
+  {
+    "game_id": 71305,
+    "summary": "1901-06-12 - Chicago White Sox (1) @ Baltimore Orioles (8) (Final)"
+  },
+  {
+    "game_id": 71303,
+    "summary": "1901-06-12 - Brooklyn Superbas (1) @ Chicago Orphans (8) (Final)"
+  },
+  {
+    "game_id": 71310,
+    "summary": "1901-06-12 - Philadelphia Phillies (0) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 71314,
+    "summary": "1901-06-13 - Detroit Tigers (11) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71315,
+    "summary": "1901-06-13 - Milwaukee Brewers (0) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71317,
+    "summary": "1901-06-13 - Philadelphia Phillies (8) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71312,
+    "summary": "1901-06-13 - Boston Beaneaters (2) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 71313,
+    "summary": "1901-06-13 - Chicago White Sox (12) @ Baltimore Orioles (0) (Final)"
+  },
+  {
+    "game_id": 71316,
+    "summary": "1901-06-13 - New York Giants (9) @ Chicago Orphans (7) (Final)"
+  },
+  {
+    "game_id": 71311,
+    "summary": "1901-06-13 - Brooklyn Superbas (3) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71321,
+    "summary": "1901-06-14 - Detroit Tigers (7) @ Boston Americans (16) (Final)"
+  },
+  {
+    "game_id": 71322,
+    "summary": "1901-06-14 - Milwaukee Brewers (0) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71319,
+    "summary": "1901-06-14 - Boston Beaneaters (7) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71320,
+    "summary": "1901-06-14 - Chicago White Sox (10) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71323,
+    "summary": "1901-06-14 - New York Giants (4) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 71318,
+    "summary": "1901-06-14 - Brooklyn Superbas (2) @ St. Louis Cardinals (10) (Final)"
+  },
+  {
+    "game_id": 71327,
+    "summary": "1901-06-15 - Detroit Tigers (4) @ Boston Americans (12) (Final)"
+  },
+  {
+    "game_id": 71326,
+    "summary": "1901-06-15 - Cleveland Blues (5) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 71329,
+    "summary": "1901-06-15 - Philadelphia Phillies (5) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71325,
+    "summary": "1901-06-15 - Boston Beaneaters (0) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71328,
+    "summary": "1901-06-15 - New York Giants (2) @ Chicago Orphans (9) (Final)"
+  },
+  {
+    "game_id": 71324,
+    "summary": "1901-06-15 - Brooklyn Superbas (3) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71332,
+    "summary": "1901-06-16 - Pittsburgh Pirates (2) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 71331,
+    "summary": "1901-06-16 - New York Giants @ Chicago Orphans (Final: Tied)"
+  },
+  {
+    "game_id": 71330,
+    "summary": "1901-06-16 - Brooklyn Superbas (5) @ St. Louis Cardinals (11) (Final)"
+  },
+  {
+    "game_id": 71333,
+    "summary": "1901-06-17 - Chicago White Sox (1) @ Boston Americans (11) (Final)"
+  },
+  {
+    "game_id": 71334,
+    "summary": "1901-06-17 - Chicago White Sox (4) @ Boston Americans (10) (Final)"
+  },
+  {
+    "game_id": 71335,
+    "summary": "1901-06-17 - Cleveland Blues (8) @ Philadelphia Athletics (12) (Final)"
+  },
+  {
+    "game_id": 71339,
+    "summary": "1901-06-17 - St. Louis Cardinals (12) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 71336,
+    "summary": "1901-06-17 - Detroit Tigers (9) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 71338,
+    "summary": "1901-06-17 - Philadelphia Phillies (8) @ Boston Beaneaters (9) (Final)"
+  },
+  {
+    "game_id": 71337,
+    "summary": "1901-06-17 - Milwaukee Brewers (7) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 71341,
+    "summary": "1901-06-18 - Cleveland Blues (9) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 71344,
+    "summary": "1901-06-18 - New York Giants (5) @ Brooklyn Superbas (10) (Final)"
+  },
+  {
+    "game_id": 71346,
+    "summary": "1901-06-18 - St. Louis Cardinals (2) @ Pittsburgh Pirates (9) (Final)"
+  },
+  {
+    "game_id": 71342,
+    "summary": "1901-06-18 - Detroit Tigers (10) @ Washington Senators (6) (Final)"
+  },
+  {
+    "game_id": 71345,
+    "summary": "1901-06-18 - Philadelphia Phillies (4) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71340,
+    "summary": "1901-06-18 - Chicago White Sox (3) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71343,
+    "summary": "1901-06-18 - Milwaukee Brewers (4) @ Baltimore Orioles (11) (Final)"
+  },
+  {
+    "game_id": 71348,
+    "summary": "1901-06-19 - Chicago Orphans (2) @ Boston Beaneaters (6) (Final)"
+  },
+  {
+    "game_id": 71349,
+    "summary": "1901-06-19 - Chicago Orphans (6) @ Boston Beaneaters (7) (Final)"
+  },
+  {
+    "game_id": 71350,
+    "summary": "1901-06-19 - Cincinnati Reds (6) @ Brooklyn Superbas (10) (Final)"
+  },
+  {
+    "game_id": 71351,
+    "summary": "1901-06-19 - Cleveland Blues (3) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 71354,
+    "summary": "1901-06-19 - Pittsburgh Pirates @ New York Giants (Final: Tied)"
+  },
+  {
+    "game_id": 71352,
+    "summary": "1901-06-19 - Detroit Tigers (2) @ Washington Senators (7) (Final)"
+  },
+  {
+    "game_id": 71355,
+    "summary": "1901-06-19 - St. Louis Cardinals (6) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71347,
+    "summary": "1901-06-19 - Chicago White Sox (3) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 71353,
+    "summary": "1901-06-19 - Milwaukee Brewers (3) @ Baltimore Orioles (9) (Final)"
+  },
+  {
+    "game_id": 71364,
+    "summary": "1901-06-20 - St. Louis Cardinals (5) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71365,
+    "summary": "1901-06-20 - St. Louis Cardinals (4) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71357,
+    "summary": "1901-06-20 - Chicago Orphans (5) @ Boston Beaneaters (6) (Final)"
+  },
+  {
+    "game_id": 71358,
+    "summary": "1901-06-20 - Chicago Orphans (0) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71359,
+    "summary": "1901-06-20 - Cincinnati Reds (1) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71360,
+    "summary": "1901-06-20 - Cleveland Blues (6) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 71363,
+    "summary": "1901-06-20 - Pittsburgh Pirates (7) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71361,
+    "summary": "1901-06-20 - Detroit Tigers (7) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71356,
+    "summary": "1901-06-20 - Chicago White Sox (3) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71362,
+    "summary": "1901-06-20 - Milwaukee Brewers (2) @ Baltimore Orioles (7) (Final)"
+  },
+  {
+    "game_id": 71369,
+    "summary": "1901-06-21 - Cleveland Blues (3) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71368,
+    "summary": "1901-06-21 - Cincinnati Reds (3) @ Brooklyn Superbas (21) (Final)"
+  },
+  {
+    "game_id": 71372,
+    "summary": "1901-06-21 - Pittsburgh Pirates (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71371,
+    "summary": "1901-06-21 - Milwaukee Brewers (10) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 71373,
+    "summary": "1901-06-21 - St. Louis Cardinals (1) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71367,
+    "summary": "1901-06-21 - Chicago Orphans (3) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71366,
+    "summary": "1901-06-21 - Chicago White Sox (4) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 71370,
+    "summary": "1901-06-21 - Detroit Tigers (3) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71375,
+    "summary": "1901-06-22 - Chicago Orphans (16) @ Brooklyn Superbas (6) (Final)"
+  },
+  {
+    "game_id": 71376,
+    "summary": "1901-06-22 - Chicago Orphans (5) @ Brooklyn Superbas (2) (Final)"
+  },
+  {
+    "game_id": 71381,
+    "summary": "1901-06-22 - Pittsburgh Pirates (2) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71382,
+    "summary": "1901-06-22 - Pittsburgh Pirates (6) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71378,
+    "summary": "1901-06-22 - Cleveland Blues (1) @ Boston Americans (8) (Final)"
+  },
+  {
+    "game_id": 71383,
+    "summary": "1901-06-22 - St. Louis Cardinals (13) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71380,
+    "summary": "1901-06-22 - Milwaukee Brewers (0) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 71377,
+    "summary": "1901-06-22 - Cincinnati Reds (6) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71374,
+    "summary": "1901-06-22 - Chicago White Sox (6) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 71379,
+    "summary": "1901-06-22 - Detroit Tigers (3) @ Baltimore Orioles (10) (Final)"
+  },
+  {
+    "game_id": 71386,
+    "summary": "1901-06-24 - Cincinnati Reds (0) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 71387,
+    "summary": "1901-06-24 - Cincinnati Reds (1) @ Philadelphia Phillies (19) (Final)"
+  },
+  {
+    "game_id": 71388,
+    "summary": "1901-06-24 - Cleveland Blues (7) @ Boston Americans (1) (Final)"
+  },
+  {
+    "game_id": 71385,
+    "summary": "1901-06-24 - Chicago Orphans (1) @ Brooklyn Superbas (2) (Final)"
+  },
+  {
+    "game_id": 71392,
+    "summary": "1901-06-24 - St. Louis Cardinals (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71390,
+    "summary": "1901-06-24 - Milwaukee Brewers (9) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71391,
+    "summary": "1901-06-24 - Pittsburgh Pirates (8) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71384,
+    "summary": "1901-06-24 - Chicago White Sox (7) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 71389,
+    "summary": "1901-06-24 - Detroit Tigers (8) @ Baltimore Orioles (17) (Final)"
+  },
+  {
+    "game_id": 71396,
+    "summary": "1901-06-25 - Cleveland Blues (2) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71394,
+    "summary": "1901-06-25 - Chicago Orphans (2) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71400,
+    "summary": "1901-06-25 - St. Louis Cardinals (12) @ New York Giants (8) (Final)"
+  },
+  {
+    "game_id": 71398,
+    "summary": "1901-06-25 - Milwaukee Brewers (1) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 71395,
+    "summary": "1901-06-25 - Cincinnati Reds (0) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71399,
+    "summary": "1901-06-25 - Pittsburgh Pirates (4) @ Boston Beaneaters (9) (Final)"
+  },
+  {
+    "game_id": 71393,
+    "summary": "1901-06-25 - Chicago White Sox (5) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 71397,
+    "summary": "1901-06-25 - Detroit Tigers (2) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71402,
+    "summary": "1901-06-26 - Milwaukee Brewers (8) @ Cleveland Blues (5) (Final)"
+  },
+  {
+    "game_id": 71404,
+    "summary": "1901-06-26 - Pittsburgh Pirates (3) @ Brooklyn Superbas (16) (Final)"
+  },
+  {
+    "game_id": 71401,
+    "summary": "1901-06-26 - Cincinnati Reds (2) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71403,
+    "summary": "1901-06-26 - Philadelphia Athletics (4) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71405,
+    "summary": "1901-06-26 - St. Louis Cardinals (3) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71409,
+    "summary": "1901-06-27 - Cincinnati Reds (7) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71410,
+    "summary": "1901-06-27 - Cincinnati Reds (0) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71407,
+    "summary": "1901-06-27 - Chicago Orphans (7) @ Philadelphia Phillies (16) (Final)"
+  },
+  {
+    "game_id": 71408,
+    "summary": "1901-06-27 - Chicago Orphans (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71414,
+    "summary": "1901-06-27 - Pittsburgh Pirates (7) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71406,
+    "summary": "1901-06-27 - Boston Americans (0) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 71415,
+    "summary": "1901-06-27 - St. Louis Cardinals (7) @ Boston Beaneaters (8) (Final)"
+  },
+  {
+    "game_id": 71413,
+    "summary": "1901-06-27 - Philadelphia Athletics (5) @ Baltimore Orioles (9) (Final)"
+  },
+  {
+    "game_id": 71412,
+    "summary": "1901-06-27 - Milwaukee Brewers (3) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71411,
+    "summary": "1901-06-27 - Cleveland Blues (1) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71422,
+    "summary": "1901-06-28 - Pittsburgh Pirates (5) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71418,
+    "summary": "1901-06-28 - Cincinnati Reds (10) @ New York Giants (11) (Final)"
+  },
+  {
+    "game_id": 71416,
+    "summary": "1901-06-28 - Boston Americans (6) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71417,
+    "summary": "1901-06-28 - Chicago Orphans (2) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71423,
+    "summary": "1901-06-28 - St. Louis Cardinals (10) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71421,
+    "summary": "1901-06-28 - Philadelphia Athletics (3) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 71420,
+    "summary": "1901-06-28 - Milwaukee Brewers (0) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71419,
+    "summary": "1901-06-28 - Cleveland Blues (6) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 71431,
+    "summary": "1901-06-29 - St. Louis Cardinals (4) @ Brooklyn Superbas (7) (Final)"
+  },
+  {
+    "game_id": 71432,
+    "summary": "1901-06-29 - St. Louis Cardinals (7) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71425,
+    "summary": "1901-06-29 - Chicago Orphans (1) @ New York Giants (14) (Final)"
+  },
+  {
+    "game_id": 71424,
+    "summary": "1901-06-29 - Boston Americans (7) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 71430,
+    "summary": "1901-06-29 - Pittsburgh Pirates (5) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71426,
+    "summary": "1901-06-29 - Cincinnati Reds (11) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71429,
+    "summary": "1901-06-29 - Philadelphia Athletics (13) @ Baltimore Orioles (15) (Final)"
+  },
+  {
+    "game_id": 71428,
+    "summary": "1901-06-29 - Milwaukee Brewers (0) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71427,
+    "summary": "1901-06-29 - Cleveland Blues (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71433,
+    "summary": "1901-06-30 - Cleveland Blues (7) @ Milwaukee Brewers (0) (Final)"
+  },
+  {
+    "game_id": 71434,
+    "summary": "1901-06-30 - Detroit Tigers (2) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71437,
+    "summary": "1901-07-01 - Cincinnati Reds (1) @ Boston Beaneaters (9) (Final)"
+  },
+  {
+    "game_id": 71438,
+    "summary": "1901-07-01 - Cincinnati Reds (2) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71436,
+    "summary": "1901-07-01 - Chicago Orphans (4) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71442,
+    "summary": "1901-07-01 - St. Louis Cardinals (10) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71440,
+    "summary": "1901-07-01 - Philadelphia Athletics @ Washington Senators (Final: Tied)"
+  },
+  {
+    "game_id": 71441,
+    "summary": "1901-07-01 - Pittsburgh Pirates (0) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 71435,
+    "summary": "1901-07-01 - Boston Americans (5) @ Baltimore Orioles (7) (Final)"
+  },
+  {
+    "game_id": 71439,
+    "summary": "1901-07-01 - Cleveland Blues (8) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71444,
+    "summary": "1901-07-02 - Chicago Orphans (2) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71450,
+    "summary": "1901-07-02 - St. Louis Cardinals (4) @ Brooklyn Superbas (2) (Final)"
+  },
+  {
+    "game_id": 71448,
+    "summary": "1901-07-02 - Philadelphia Athletics (6) @ Washington Senators (10) (Final)"
+  },
+  {
+    "game_id": 71449,
+    "summary": "1901-07-02 - Pittsburgh Pirates (5) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71445,
+    "summary": "1901-07-02 - Cincinnati Reds (10) @ Boston Beaneaters (1) (Final)"
+  },
+  {
+    "game_id": 71443,
+    "summary": "1901-07-02 - Boston Americans (10) @ Baltimore Orioles (8) (Final)"
+  },
+  {
+    "game_id": 71446,
+    "summary": "1901-07-02 - Cleveland Blues (6) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71447,
+    "summary": "1901-07-02 - Detroit Tigers (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71454,
+    "summary": "1901-07-03 - Washington Senators (7) @ Philadelphia Athletics (9) (Final)"
+  },
+  {
+    "game_id": 71452,
+    "summary": "1901-07-03 - Chicago White Sox (4) @ Cleveland Blues (3) (Final)"
+  },
+  {
+    "game_id": 71451,
+    "summary": "1901-07-03 - Baltimore Orioles (1) @ Boston Americans (9) (Final)"
+  },
+  {
+    "game_id": 71453,
+    "summary": "1901-07-03 - Detroit Tigers (7) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71465,
+    "summary": "1901-07-04 - New York Giants (5) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71466,
+    "summary": "1901-07-04 - New York Giants (0) @ Pittsburgh Pirates (12) (Final)"
+  },
+  {
+    "game_id": 71459,
+    "summary": "1901-07-04 - Boston Beaneaters (0) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 71460,
+    "summary": "1901-07-04 - Boston Beaneaters (6) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71461,
+    "summary": "1901-07-04 - Chicago White Sox (2) @ Cleveland Blues (8) (Final)"
+  },
+  {
+    "game_id": 71462,
+    "summary": "1901-07-04 - Chicago White Sox (5) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71455,
+    "summary": "1901-07-04 - Baltimore Orioles (2) @ Boston Americans (10) (Final)"
+  },
+  {
+    "game_id": 71456,
+    "summary": "1901-07-04 - Baltimore Orioles (3) @ Boston Americans (8) (Final)"
+  },
+  {
+    "game_id": 71463,
+    "summary": "1901-07-04 - Detroit Tigers (5) @ Milwaukee Brewers (1) (Final)"
+  },
+  {
+    "game_id": 71464,
+    "summary": "1901-07-04 - Detroit Tigers (7) @ Milwaukee Brewers (8) (Final)"
+  },
+  {
+    "game_id": 71457,
+    "summary": "1901-07-04 - Brooklyn Superbas (3) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71458,
+    "summary": "1901-07-04 - Brooklyn Superbas (9) @ Chicago Orphans (10) (Final)"
+  },
+  {
+    "game_id": 71467,
+    "summary": "1901-07-04 - Philadelphia Phillies (2) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 71468,
+    "summary": "1901-07-04 - Philadelphia Phillies (1) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 71469,
+    "summary": "1901-07-04 - Washington Senators (5) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71474,
+    "summary": "1901-07-05 - Milwaukee Brewers (6) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71475,
+    "summary": "1901-07-05 - New York Giants (2) @ Pittsburgh Pirates (7) (Final)"
+  },
+  {
+    "game_id": 71477,
+    "summary": "1901-07-05 - Washington Senators (1) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71472,
+    "summary": "1901-07-05 - Boston Beaneaters (4) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71470,
+    "summary": "1901-07-05 - Baltimore Orioles (5) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 71473,
+    "summary": "1901-07-05 - Chicago White Sox (8) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71471,
+    "summary": "1901-07-05 - Brooklyn Superbas (12) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71476,
+    "summary": "1901-07-05 - Philadelphia Phillies (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71482,
+    "summary": "1901-07-06 - Milwaukee Brewers (6) @ Cleveland Blues (11) (Final)"
+  },
+  {
+    "game_id": 71483,
+    "summary": "1901-07-06 - New York Giants (2) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 71485,
+    "summary": "1901-07-06 - Washington Senators (0) @ Boston Americans (7) (Final)"
+  },
+  {
+    "game_id": 71480,
+    "summary": "1901-07-06 - Boston Beaneaters (1) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71478,
+    "summary": "1901-07-06 - Baltimore Orioles (5) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 71481,
+    "summary": "1901-07-06 - Chicago White Sox (5) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71479,
+    "summary": "1901-07-06 - Brooklyn Superbas (8) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 71484,
+    "summary": "1901-07-06 - Philadelphia Phillies (14) @ St. Louis Cardinals (9) (Final)"
+  },
+  {
+    "game_id": 71489,
+    "summary": "1901-07-07 - New York Giants (5) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71487,
+    "summary": "1901-07-07 - Chicago White Sox (3) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71488,
+    "summary": "1901-07-07 - Cleveland Blues (0) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71486,
+    "summary": "1901-07-07 - Brooklyn Superbas (8) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71493,
+    "summary": "1901-07-08 - New York Giants (9) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71495,
+    "summary": "1901-07-08 - Washington Senators (1) @ Boston Americans (3) (Final)"
+  },
+  {
+    "game_id": 71492,
+    "summary": "1901-07-08 - Boston Beaneaters (0) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71490,
+    "summary": "1901-07-08 - Baltimore Orioles (8) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71491,
+    "summary": "1901-07-08 - Brooklyn Superbas (7) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 71494,
+    "summary": "1901-07-08 - Philadelphia Phillies (1) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71500,
+    "summary": "1901-07-09 - Detroit Tigers (11) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71501,
+    "summary": "1901-07-09 - New York Giants (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 71498,
+    "summary": "1901-07-09 - Boston Beaneaters (4) @ Pittsburgh Pirates (9) (Final)"
+  },
+  {
+    "game_id": 71496,
+    "summary": "1901-07-09 - Baltimore Orioles (3) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 71497,
+    "summary": "1901-07-09 - Brooklyn Superbas (3) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71502,
+    "summary": "1901-07-09 - Philadelphia Phillies (6) @ Chicago Orphans (3) (Final)"
+  },
+  {
+    "game_id": 71499,
+    "summary": "1901-07-09 - Chicago White Sox (17) @ Milwaukee Brewers (9) (Final)"
+  },
+  {
+    "game_id": 71507,
+    "summary": "1901-07-10 - Detroit Tigers (7) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71509,
+    "summary": "1901-07-10 - Philadelphia Athletics (13) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71508,
+    "summary": "1901-07-10 - New York Giants (3) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 71505,
+    "summary": "1901-07-10 - Boston Beaneaters (0) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71503,
+    "summary": "1901-07-10 - Baltimore Orioles (5) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 71504,
+    "summary": "1901-07-10 - Brooklyn Superbas (1) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71510,
+    "summary": "1901-07-10 - Philadelphia Phillies (6) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71506,
+    "summary": "1901-07-10 - Chicago White Sox (5) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71515,
+    "summary": "1901-07-11 - Detroit Tigers (1) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71512,
+    "summary": "1901-07-11 - Brooklyn Superbas (5) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71516,
+    "summary": "1901-07-11 - Philadelphia Athletics (1) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71513,
+    "summary": "1901-07-11 - Boston Beaneaters (0) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71511,
+    "summary": "1901-07-11 - Baltimore Orioles (6) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 71517,
+    "summary": "1901-07-11 - Philadelphia Phillies (4) @ Chicago Orphans (3) (Final)"
+  },
+  {
+    "game_id": 71514,
+    "summary": "1901-07-11 - Chicago White Sox (5) @ Milwaukee Brewers (1) (Final)"
+  },
+  {
+    "game_id": 71518,
+    "summary": "1901-07-12 - Brooklyn Superbas (8) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71523,
+    "summary": "1901-07-12 - Philadelphia Athletics (3) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 71524,
+    "summary": "1901-07-12 - Philadelphia Phillies (4) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71525,
+    "summary": "1901-07-12 - Washington Senators (14) @ Baltimore Orioles (12) (Final)"
+  },
+  {
+    "game_id": 71520,
+    "summary": "1901-07-12 - Cleveland Blues (5) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 71522,
+    "summary": "1901-07-12 - New York Giants (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71519,
+    "summary": "1901-07-12 - Boston Beaneaters (7) @ Chicago Orphans (0) (Final)"
+  },
+  {
+    "game_id": 71521,
+    "summary": "1901-07-12 - Milwaukee Brewers (1) @ Chicago White Sox (14) (Final)"
+  },
+  {
+    "game_id": 71527,
+    "summary": "1901-07-13 - Brooklyn Superbas (9) @ Cincinnati Reds (8) (Final)"
+  },
+  {
+    "game_id": 71526,
+    "summary": "1901-07-13 - Boston Americans (1) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71532,
+    "summary": "1901-07-13 - Philadelphia Phillies (3) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71529,
+    "summary": "1901-07-13 - Cleveland Blues (12) @ Detroit Tigers (19) (Final)"
+  },
+  {
+    "game_id": 71531,
+    "summary": "1901-07-13 - New York Giants (2) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 71528,
+    "summary": "1901-07-13 - Boston Beaneaters (6) @ Chicago Orphans (7) (Final)"
+  },
+  {
+    "game_id": 71530,
+    "summary": "1901-07-13 - Milwaukee Brewers (3) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 71533,
+    "summary": "1901-07-14 - Brooklyn Superbas (0) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 71534,
+    "summary": "1901-07-14 - Cleveland Blues (0) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71537,
+    "summary": "1901-07-14 - Pittsburgh Pirates (3) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 71536,
+    "summary": "1901-07-14 - New York Giants (5) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 71535,
+    "summary": "1901-07-14 - Milwaukee Brewers (0) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71542,
+    "summary": "1901-07-15 - Washington Senators (3) @ Baltimore Orioles (2) (Final)"
+  },
+  {
+    "game_id": 71543,
+    "summary": "1901-07-15 - Washington Senators (3) @ Baltimore Orioles (7) (Final)"
+  },
+  {
+    "game_id": 71539,
+    "summary": "1901-07-15 - Brooklyn Superbas (3) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71538,
+    "summary": "1901-07-15 - Boston Americans (1) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71541,
+    "summary": "1901-07-15 - New York Giants (5) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 71540,
+    "summary": "1901-07-15 - Boston Beaneaters (1) @ Chicago Orphans (4) (Final)"
+  },
+  {
+    "game_id": 71544,
+    "summary": "1901-07-16 - Boston Americans (10) @ Cleveland Blues (8) (Final)"
+  },
+  {
+    "game_id": 71546,
+    "summary": "1901-07-16 - Philadelphia Phillies (6) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71547,
+    "summary": "1901-07-16 - Washington Senators (8) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71545,
+    "summary": "1901-07-16 - Boston Beaneaters (4) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71549,
+    "summary": "1901-07-17 - Boston Americans (9) @ Cleveland Blues (3) (Final)"
+  },
+  {
+    "game_id": 71550,
+    "summary": "1901-07-17 - Boston Americans (10) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71552,
+    "summary": "1901-07-17 - Boston Beaneaters (2) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 71553,
+    "summary": "1901-07-17 - Boston Beaneaters (5) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 71551,
+    "summary": "1901-07-17 - Brooklyn Superbas (7) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71556,
+    "summary": "1901-07-17 - Washington Senators (3) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71555,
+    "summary": "1901-07-17 - Philadelphia Athletics (5) @ Milwaukee Brewers (1) (Final)"
+  },
+  {
+    "game_id": 71554,
+    "summary": "1901-07-17 - New York Giants (4) @ Chicago Orphans (7) (Final)"
+  },
+  {
+    "game_id": 71548,
+    "summary": "1901-07-17 - Baltimore Orioles (2) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71558,
+    "summary": "1901-07-18 - Boston Americans (5) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71559,
+    "summary": "1901-07-18 - Brooklyn Superbas (4) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 71563,
+    "summary": "1901-07-18 - Philadelphia Phillies (13) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 71564,
+    "summary": "1901-07-18 - Washington Senators (8) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71562,
+    "summary": "1901-07-18 - Philadelphia Athletics (1) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71561,
+    "summary": "1901-07-18 - New York Giants (5) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 71560,
+    "summary": "1901-07-18 - Boston Beaneaters (8) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71557,
+    "summary": "1901-07-18 - Baltimore Orioles (1) @ Chicago White Sox (9) (Final)"
+  },
+  {
+    "game_id": 71566,
+    "summary": "1901-07-19 - Boston Americans (1) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71567,
+    "summary": "1901-07-19 - Brooklyn Superbas (5) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 71571,
+    "summary": "1901-07-19 - Philadelphia Phillies (2) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71572,
+    "summary": "1901-07-19 - Washington Senators (3) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 71570,
+    "summary": "1901-07-19 - Philadelphia Athletics (3) @ Milwaukee Brewers (1) (Final)"
+  },
+  {
+    "game_id": 71569,
+    "summary": "1901-07-19 - New York Giants (2) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71568,
+    "summary": "1901-07-19 - Boston Beaneaters (1) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 71565,
+    "summary": "1901-07-19 - Baltimore Orioles (7) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71575,
+    "summary": "1901-07-20 - Brooklyn Superbas (2) @ Pittsburgh Pirates (15) (Final)"
+  },
+  {
+    "game_id": 71580,
+    "summary": "1901-07-20 - Washington Senators (9) @ Cleveland Blues (7) (Final)"
+  },
+  {
+    "game_id": 71579,
+    "summary": "1901-07-20 - Philadelphia Phillies (1) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 71574,
+    "summary": "1901-07-20 - Boston Americans (6) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71577,
+    "summary": "1901-07-20 - New York Giants (2) @ Chicago Orphans (7) (Final)"
+  },
+  {
+    "game_id": 71576,
+    "summary": "1901-07-20 - Boston Beaneaters (10) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71578,
+    "summary": "1901-07-20 - Philadelphia Athletics (8) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 71573,
+    "summary": "1901-07-20 - Baltimore Orioles (13) @ Milwaukee Brewers (11) (Final)"
+  },
+  {
+    "game_id": 71581,
+    "summary": "1901-07-21 - Baltimore Orioles (10) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71582,
+    "summary": "1901-07-21 - Baltimore Orioles (7) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71583,
+    "summary": "1901-07-21 - Boston Americans (4) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 71585,
+    "summary": "1901-07-21 - New York Giants (2) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71584,
+    "summary": "1901-07-21 - Cincinnati Reds (2) @ St. Louis Cardinals (15) (Final)"
+  },
+  {
+    "game_id": 71586,
+    "summary": "1901-07-21 - Philadelphia Athletics (4) @ Chicago White Sox (9) (Final)"
+  },
+  {
+    "game_id": 71592,
+    "summary": "1901-07-22 - Washington Senators (3) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71589,
+    "summary": "1901-07-22 - Boston Beaneaters (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71588,
+    "summary": "1901-07-22 - Boston Americans (5) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71590,
+    "summary": "1901-07-22 - Chicago Orphans (5) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 71591,
+    "summary": "1901-07-22 - Philadelphia Athletics (2) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 71587,
+    "summary": "1901-07-22 - Baltimore Orioles (3) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71597,
+    "summary": "1901-07-23 - Cincinnati Reds (2) @ Pittsburgh Pirates (9) (Final)"
+  },
+  {
+    "game_id": 71594,
+    "summary": "1901-07-23 - Brooklyn Superbas (8) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71599,
+    "summary": "1901-07-23 - Washington Senators @ Cleveland Blues (Final: Tied)"
+  },
+  {
+    "game_id": 71595,
+    "summary": "1901-07-23 - Boston Beaneaters (1) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71593,
+    "summary": "1901-07-23 - Boston Americans (9) @ Milwaukee Brewers (7) (Final)"
+  },
+  {
+    "game_id": 71596,
+    "summary": "1901-07-23 - Chicago Orphans (6) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71598,
+    "summary": "1901-07-23 - Philadelphia Athletics (6) @ Chicago White Sox (10) (Final)"
+  },
+  {
+    "game_id": 71604,
+    "summary": "1901-07-24 - Cincinnati Reds (2) @ Pittsburgh Pirates (11) (Final)"
+  },
+  {
+    "game_id": 71605,
+    "summary": "1901-07-24 - New York Giants (10) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71602,
+    "summary": "1901-07-24 - Boston Beaneaters (1) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71600,
+    "summary": "1901-07-24 - Baltimore Orioles (9) @ Cleveland Blues (6) (Final)"
+  },
+  {
+    "game_id": 71606,
+    "summary": "1901-07-24 - Philadelphia Athletics (12) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71601,
+    "summary": "1901-07-24 - Boston Americans (3) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71603,
+    "summary": "1901-07-24 - Chicago Orphans (1) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71607,
+    "summary": "1901-07-24 - Washington Senators (3) @ Chicago White Sox (17) (Final)"
+  },
+  {
+    "game_id": 71613,
+    "summary": "1901-07-25 - Cincinnati Reds (5) @ Pittsburgh Pirates (9) (Final)"
+  },
+  {
+    "game_id": 71610,
+    "summary": "1901-07-25 - Brooklyn Superbas (5) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71611,
+    "summary": "1901-07-25 - Boston Beaneaters (3) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 71608,
+    "summary": "1901-07-25 - Baltimore Orioles (5) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71614,
+    "summary": "1901-07-25 - Philadelphia Athletics (3) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71609,
+    "summary": "1901-07-25 - Boston Americans (2) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71612,
+    "summary": "1901-07-25 - Chicago Orphans (3) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71615,
+    "summary": "1901-07-25 - Washington Senators (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71618,
+    "summary": "1901-07-26 - Boston Beaneaters (4) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71616,
+    "summary": "1901-07-26 - Baltimore Orioles (6) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71617,
+    "summary": "1901-07-26 - Boston Americans (4) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71619,
+    "summary": "1901-07-26 - Cincinnati Reds (2) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71620,
+    "summary": "1901-07-26 - Pittsburgh Pirates (7) @ St. Louis Cardinals (12) (Final)"
+  },
+  {
+    "game_id": 71621,
+    "summary": "1901-07-26 - Washington Senators (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 71624,
+    "summary": "1901-07-27 - Brooklyn Superbas (1) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71625,
+    "summary": "1901-07-27 - Brooklyn Superbas (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71628,
+    "summary": "1901-07-27 - Philadelphia Athletics (3) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71626,
+    "summary": "1901-07-27 - Boston Beaneaters (3) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 71622,
+    "summary": "1901-07-27 - Baltimore Orioles (0) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 71627,
+    "summary": "1901-07-27 - Cincinnati Reds (3) @ Chicago Orphans (9) (Final)"
+  },
+  {
+    "game_id": 71629,
+    "summary": "1901-07-27 - Pittsburgh Pirates (7) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71630,
+    "summary": "1901-07-27 - Washington Senators (7) @ Milwaukee Brewers (0) (Final)"
+  },
+  {
+    "game_id": 71623,
+    "summary": "1901-07-27 - Boston Americans (7) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 71633,
+    "summary": "1901-07-28 - Washington Senators (0) @ Milwaukee Brewers (1) (Final)"
+  },
+  {
+    "game_id": 71634,
+    "summary": "1901-07-28 - Washington Senators (4) @ Milwaukee Brewers (9) (Final)"
+  },
+  {
+    "game_id": 71631,
+    "summary": "1901-07-28 - Baltimore Orioles (4) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71632,
+    "summary": "1901-07-28 - Pittsburgh Pirates (3) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71639,
+    "summary": "1901-07-29 - Chicago Orphans (3) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 71637,
+    "summary": "1901-07-29 - Brooklyn Superbas (7) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71638,
+    "summary": "1901-07-29 - Boston Beaneaters (5) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71635,
+    "summary": "1901-07-29 - Baltimore Orioles (10) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71640,
+    "summary": "1901-07-29 - Pittsburgh Pirates (8) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 71641,
+    "summary": "1901-07-29 - Washington Senators (1) @ Milwaukee Brewers (9) (Final)"
+  },
+  {
+    "game_id": 71636,
+    "summary": "1901-07-29 - Boston Americans (4) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 71642,
+    "summary": "1901-07-30 - Chicago Orphans (5) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 71644,
+    "summary": "1901-07-30 - Philadelphia Athletics (11) @ Cleveland Blues (5) (Final)"
+  },
+  {
+    "game_id": 71645,
+    "summary": "1901-07-30 - Philadelphia Phillies (3) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71643,
+    "summary": "1901-07-30 - New York Giants (4) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71647,
+    "summary": "1901-07-31 - Chicago Orphans (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 71646,
+    "summary": "1901-07-31 - Boston Americans (10) @ Philadelphia Athletics (13) (Final)"
+  },
+  {
+    "game_id": 71650,
+    "summary": "1901-07-31 - Philadelphia Phillies (3) @ Brooklyn Superbas (0) (Final)"
+  },
+  {
+    "game_id": 71649,
+    "summary": "1901-07-31 - New York Giants (0) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71651,
+    "summary": "1901-07-31 - Washington Senators (2) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 71648,
+    "summary": "1901-07-31 - Detroit Tigers (0) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 71657,
+    "summary": "1901-08-01 - Washington Senators (5) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 71658,
+    "summary": "1901-08-01 - Washington Senators (8) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71652,
+    "summary": "1901-08-01 - Boston Americans (6) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 71655,
+    "summary": "1901-08-01 - Philadelphia Phillies (2) @ Brooklyn Superbas (1) (Final)"
+  },
+  {
+    "game_id": 71654,
+    "summary": "1901-08-01 - New York Giants (9) @ Boston Beaneaters (8) (Final)"
+  },
+  {
+    "game_id": 71656,
+    "summary": "1901-08-01 - St. Louis Cardinals (1) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71653,
+    "summary": "1901-08-01 - Detroit Tigers (0) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71659,
+    "summary": "1901-08-02 - Boston Americans (16) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 71663,
+    "summary": "1901-08-02 - Philadelphia Phillies (3) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71660,
+    "summary": "1901-08-02 - Brooklyn Superbas (1) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71664,
+    "summary": "1901-08-02 - Washington Senators (4) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71661,
+    "summary": "1901-08-02 - Cleveland Blues (7) @ Milwaukee Brewers (0) (Final)"
+  },
+  {
+    "game_id": 71662,
+    "summary": "1901-08-02 - Detroit Tigers (0) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 71672,
+    "summary": "1901-08-03 - Washington Senators (6) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71673,
+    "summary": "1901-08-03 - Washington Senators (8) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71665,
+    "summary": "1901-08-03 - Boston Americans (4) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71667,
+    "summary": "1901-08-03 - Cincinnati Reds (7) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 71670,
+    "summary": "1901-08-03 - Philadelphia Phillies (5) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71666,
+    "summary": "1901-08-03 - Brooklyn Superbas (5) @ Boston Beaneaters (0) (Final)"
+  },
+  {
+    "game_id": 71668,
+    "summary": "1901-08-03 - Cleveland Blues (8) @ Milwaukee Brewers (7) (Final)"
+  },
+  {
+    "game_id": 71671,
+    "summary": "1901-08-03 - St. Louis Cardinals (5) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 71669,
+    "summary": "1901-08-03 - Detroit Tigers (8) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 71675,
+    "summary": "1901-08-04 - Detroit Tigers (3) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71676,
+    "summary": "1901-08-04 - Detroit Tigers (4) @ Milwaukee Brewers (11) (Final)"
+  },
+  {
+    "game_id": 71677,
+    "summary": "1901-08-04 - Pittsburgh Pirates (6) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71678,
+    "summary": "1901-08-04 - St. Louis Cardinals (4) @ Chicago Orphans (3) (Final)"
+  },
+  {
+    "game_id": 71674,
+    "summary": "1901-08-04 - Cleveland Blues (5) @ Chicago White Sox (9) (Final)"
+  },
+  {
+    "game_id": 71688,
+    "summary": "1901-08-05 - Washington Senators (3) @ Philadelphia Athletics (10) (Final)"
+  },
+  {
+    "game_id": 71689,
+    "summary": "1901-08-05 - Washington Senators (0) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 71685,
+    "summary": "1901-08-05 - Philadelphia Phillies (6) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71686,
+    "summary": "1901-08-05 - Philadelphia Phillies (10) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71679,
+    "summary": "1901-08-05 - Boston Americans (3) @ Baltimore Orioles (1) (Final)"
+  },
+  {
+    "game_id": 71680,
+    "summary": "1901-08-05 - Boston Americans (0) @ Baltimore Orioles (9) (Final)"
+  },
+  {
+    "game_id": 71682,
+    "summary": "1901-08-05 - Chicago Orphans (7) @ Cincinnati Reds (10) (Final)"
+  },
+  {
+    "game_id": 71687,
+    "summary": "1901-08-05 - St. Louis Cardinals (20) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 71681,
+    "summary": "1901-08-05 - Brooklyn Superbas (1) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71684,
+    "summary": "1901-08-05 - Detroit Tigers (4) @ Milwaukee Brewers (19) (Final)"
+  },
+  {
+    "game_id": 71683,
+    "summary": "1901-08-05 - Cleveland Blues (6) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71690,
+    "summary": "1901-08-06 - Chicago Orphans (6) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 71693,
+    "summary": "1901-08-06 - St. Louis Cardinals (1) @ Pittsburgh Pirates (8) (Final)"
+  },
+  {
+    "game_id": 71692,
+    "summary": "1901-08-06 - Philadelphia Phillies (3) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71691,
+    "summary": "1901-08-06 - Detroit Tigers (8) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71700,
+    "summary": "1901-08-07 - Washington Senators (1) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 71701,
+    "summary": "1901-08-07 - Washington Senators (7) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 71694,
+    "summary": "1901-08-07 - Boston Americans (10) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71695,
+    "summary": "1901-08-07 - Boston Americans (4) @ Baltimore Orioles (10) (Final)"
+  },
+  {
+    "game_id": 71697,
+    "summary": "1901-08-07 - Chicago Orphans (3) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71698,
+    "summary": "1901-08-07 - Milwaukee Brewers (4) @ Cleveland Blues (5) (Final)"
+  },
+  {
+    "game_id": 71699,
+    "summary": "1901-08-07 - St. Louis Cardinals (3) @ Pittsburgh Pirates (9) (Final)"
+  },
+  {
+    "game_id": 71696,
+    "summary": "1901-08-07 - Chicago White Sox (3) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 71703,
+    "summary": "1901-08-08 - Brooklyn Superbas (3) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71704,
+    "summary": "1901-08-08 - Brooklyn Superbas (1) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71711,
+    "summary": "1901-08-08 - Washington Senators (6) @ Philadelphia Athletics (11) (Final)"
+  },
+  {
+    "game_id": 71712,
+    "summary": "1901-08-08 - Washington Senators (7) @ Philadelphia Athletics (14) (Final)"
+  },
+  {
+    "game_id": 71708,
+    "summary": "1901-08-08 - Philadelphia Phillies (7) @ Boston Beaneaters (0) (Final)"
+  },
+  {
+    "game_id": 71709,
+    "summary": "1901-08-08 - Philadelphia Phillies (5) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71707,
+    "summary": "1901-08-08 - Milwaukee Brewers (3) @ Cleveland Blues (5) (Final)"
+  },
+  {
+    "game_id": 71706,
+    "summary": "1901-08-08 - Chicago Orphans (6) @ Pittsburgh Pirates (7) (Final)"
+  },
+  {
+    "game_id": 71710,
+    "summary": "1901-08-08 - St. Louis Cardinals (2) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 71702,
+    "summary": "1901-08-08 - Baltimore Orioles (2) @ Boston Americans (0) (Final)"
+  },
+  {
+    "game_id": 71705,
+    "summary": "1901-08-08 - Chicago White Sox (18) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71720,
+    "summary": "1901-08-09 - Philadelphia Athletics (5) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71721,
+    "summary": "1901-08-09 - Philadelphia Athletics (9) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71713,
+    "summary": "1901-08-09 - Baltimore Orioles (11) @ Boston Americans (9) (Final)"
+  },
+  {
+    "game_id": 71714,
+    "summary": "1901-08-09 - Baltimore Orioles (2) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71718,
+    "summary": "1901-08-09 - Milwaukee Brewers (3) @ Cleveland Blues (8) (Final)"
+  },
+  {
+    "game_id": 71717,
+    "summary": "1901-08-09 - Chicago Orphans (4) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71722,
+    "summary": "1901-08-09 - St. Louis Cardinals (13) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71719,
+    "summary": "1901-08-09 - New York Giants (2) @ Philadelphia Phillies (13) (Final)"
+  },
+  {
+    "game_id": 71715,
+    "summary": "1901-08-09 - Boston Beaneaters (3) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71716,
+    "summary": "1901-08-09 - Chicago White Sox (1) @ Detroit Tigers (12) (Final)"
+  },
+  {
+    "game_id": 71731,
+    "summary": "1901-08-10 - Philadelphia Athletics (4) @ Washington Senators (9) (Final)"
+  },
+  {
+    "game_id": 71732,
+    "summary": "1901-08-10 - Philadelphia Athletics (13) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 71725,
+    "summary": "1901-08-10 - Boston Beaneaters (9) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71726,
+    "summary": "1901-08-10 - Boston Beaneaters (5) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71723,
+    "summary": "1901-08-10 - Baltimore Orioles (4) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71724,
+    "summary": "1901-08-10 - Baltimore Orioles (4) @ Boston Americans (3) (Final)"
+  },
+  {
+    "game_id": 71730,
+    "summary": "1901-08-10 - New York Giants (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71727,
+    "summary": "1901-08-10 - Chicago White Sox (7) @ Cleveland Blues (11) (Final)"
+  },
+  {
+    "game_id": 71729,
+    "summary": "1901-08-10 - Milwaukee Brewers (4) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 71728,
+    "summary": "1901-08-10 - Cincinnati Reds (8) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71735,
+    "summary": "1901-08-11 - Milwaukee Brewers (5) @ Detroit Tigers (16) (Final)"
+  },
+  {
+    "game_id": 71736,
+    "summary": "1901-08-11 - Pittsburgh Pirates (5) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 71733,
+    "summary": "1901-08-11 - Cincinnati Reds (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71734,
+    "summary": "1901-08-11 - Cleveland Blues (4) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71740,
+    "summary": "1901-08-12 - Philadelphia Athletics (0) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71741,
+    "summary": "1901-08-12 - Philadelphia Athletics (7) @ Boston Americans (1) (Final)"
+  },
+  {
+    "game_id": 71737,
+    "summary": "1901-08-12 - Chicago White Sox (17) @ Cleveland Blues (2) (Final)"
+  },
+  {
+    "game_id": 71739,
+    "summary": "1901-08-12 - Milwaukee Brewers (6) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71738,
+    "summary": "1901-08-12 - Cincinnati Reds (5) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 71744,
+    "summary": "1901-08-13 - Chicago White Sox (0) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71745,
+    "summary": "1901-08-13 - Chicago White Sox (14) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71747,
+    "summary": "1901-08-13 - Philadelphia Athletics (3) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71748,
+    "summary": "1901-08-13 - Philadelphia Phillies (2) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71743,
+    "summary": "1901-08-13 - Boston Beaneaters (3) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71742,
+    "summary": "1901-08-13 - Baltimore Orioles (5) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 71746,
+    "summary": "1901-08-13 - Cincinnati Reds (6) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71752,
+    "summary": "1901-08-14 - Philadelphia Athletics (9) @ Boston Americans (0) (Final)"
+  },
+  {
+    "game_id": 71753,
+    "summary": "1901-08-14 - Philadelphia Athletics (2) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71754,
+    "summary": "1901-08-14 - Philadelphia Phillies (4) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71755,
+    "summary": "1901-08-14 - Philadelphia Phillies (2) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71750,
+    "summary": "1901-08-14 - Boston Beaneaters (8) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71751,
+    "summary": "1901-08-14 - Boston Beaneaters (0) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71749,
+    "summary": "1901-08-14 - Baltimore Orioles (4) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71756,
+    "summary": "1901-08-15 - Boston Beaneaters (3) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71757,
+    "summary": "1901-08-15 - Boston Beaneaters @ New York Giants (Final: Tied)"
+  },
+  {
+    "game_id": 71760,
+    "summary": "1901-08-15 - Milwaukee Brewers (4) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71759,
+    "summary": "1901-08-15 - Cleveland Blues (9) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71758,
+    "summary": "1901-08-15 - Chicago Orphans (4) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71765,
+    "summary": "1901-08-16 - Milwaukee Brewers (2) @ Philadelphia Athletics (10) (Final)"
+  },
+  {
+    "game_id": 71766,
+    "summary": "1901-08-16 - New York Giants (1) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71764,
+    "summary": "1901-08-16 - Detroit Tigers (5) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 71761,
+    "summary": "1901-08-16 - Boston Beaneaters (1) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71762,
+    "summary": "1901-08-16 - Chicago White Sox (2) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71763,
+    "summary": "1901-08-16 - Cleveland Blues (0) @ Baltimore Orioles (1) (Final)"
+  },
+  {
+    "game_id": 71777,
+    "summary": "1901-08-17 - Milwaukee Brewers (5) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 71778,
+    "summary": "1901-08-17 - Milwaukee Brewers (4) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 71767,
+    "summary": "1901-08-17 - Brooklyn Superbas (4) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71768,
+    "summary": "1901-08-17 - Brooklyn Superbas (6) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 71775,
+    "summary": "1901-08-17 - Detroit Tigers (1) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71776,
+    "summary": "1901-08-17 - Detroit Tigers (2) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 71769,
+    "summary": "1901-08-17 - Boston Beaneaters (0) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71770,
+    "summary": "1901-08-17 - Boston Beaneaters (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71773,
+    "summary": "1901-08-17 - Cincinnati Reds (0) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71771,
+    "summary": "1901-08-17 - Chicago White Sox (2) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71774,
+    "summary": "1901-08-17 - Cleveland Blues (2) @ Baltimore Orioles (3) (Final)"
+  },
+  {
+    "game_id": 71772,
+    "summary": "1901-08-17 - Chicago Orphans (6) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71780,
+    "summary": "1901-08-18 - Pittsburgh Pirates (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 71779,
+    "summary": "1901-08-18 - Chicago Orphans (5) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 71784,
+    "summary": "1901-08-19 - Milwaukee Brewers (5) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71782,
+    "summary": "1901-08-19 - Chicago Orphans (0) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 71785,
+    "summary": "1901-08-19 - New York Giants (6) @ Boston Beaneaters (11) (Final)"
+  },
+  {
+    "game_id": 71781,
+    "summary": "1901-08-19 - Chicago White Sox (2) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71783,
+    "summary": "1901-08-19 - Detroit Tigers (3) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71786,
+    "summary": "1901-08-19 - Pittsburgh Pirates (9) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71787,
+    "summary": "1901-08-20 - Brooklyn Superbas (4) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 71788,
+    "summary": "1901-08-20 - Brooklyn Superbas (3) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 71792,
+    "summary": "1901-08-20 - Milwaukee Brewers (0) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 71790,
+    "summary": "1901-08-20 - Cleveland Blues (7) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 71793,
+    "summary": "1901-08-20 - New York Giants (3) @ Boston Beaneaters (0) (Final)"
+  },
+  {
+    "game_id": 71789,
+    "summary": "1901-08-20 - Chicago White Sox (9) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 71791,
+    "summary": "1901-08-20 - Detroit Tigers (5) @ Baltimore Orioles (2) (Final)"
+  },
+  {
+    "game_id": 71794,
+    "summary": "1901-08-20 - Pittsburgh Pirates (14) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 71798,
+    "summary": "1901-08-21 - Cleveland Blues (7) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 71799,
+    "summary": "1901-08-21 - Cleveland Blues (3) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71801,
+    "summary": "1901-08-21 - Milwaukee Brewers (5) @ Boston Americans (8) (Final)"
+  },
+  {
+    "game_id": 71797,
+    "summary": "1901-08-21 - Chicago Orphans (9) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 71795,
+    "summary": "1901-08-21 - Brooklyn Superbas (2) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71802,
+    "summary": "1901-08-21 - New York Giants (2) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71796,
+    "summary": "1901-08-21 - Chicago White Sox (0) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71800,
+    "summary": "1901-08-21 - Detroit Tigers @ Baltimore Orioles (Forfeit: Final)"
+  },
+  {
+    "game_id": 71803,
+    "summary": "1901-08-21 - Pittsburgh Pirates (3) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 71805,
+    "summary": "1901-08-22 - Chicago Orphans (3) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 71806,
+    "summary": "1901-08-22 - Cleveland Blues (3) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 71807,
+    "summary": "1901-08-22 - Detroit Tigers (0) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 71809,
+    "summary": "1901-08-22 - New York Giants (1) @ Brooklyn Superbas (7) (Final)"
+  },
+  {
+    "game_id": 71808,
+    "summary": "1901-08-22 - Milwaukee Brewers (3) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71810,
+    "summary": "1901-08-22 - Philadelphia Phillies (4) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71804,
+    "summary": "1901-08-22 - Chicago White Sox (6) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71811,
+    "summary": "1901-08-22 - Pittsburgh Pirates (4) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 71814,
+    "summary": "1901-08-23 - Cleveland Blues (1) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 71815,
+    "summary": "1901-08-23 - Detroit Tigers (2) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71812,
+    "summary": "1901-08-23 - Brooklyn Superbas (4) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 71816,
+    "summary": "1901-08-23 - Philadelphia Phillies (6) @ Boston Beaneaters (7) (Final)"
+  },
+  {
+    "game_id": 71813,
+    "summary": "1901-08-23 - Chicago White Sox (6) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71818,
+    "summary": "1901-08-24 - Cleveland Blues (4) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71819,
+    "summary": "1901-08-24 - Milwaukee Brewers (1) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 71820,
+    "summary": "1901-08-24 - Philadelphia Phillies (13) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71817,
+    "summary": "1901-08-24 - Chicago White Sox (4) @ Baltimore Orioles (10) (Final)"
+  },
+  {
+    "game_id": 71821,
+    "summary": "1901-08-24 - St. Louis Cardinals (1) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71822,
+    "summary": "1901-08-25 - Pittsburgh Pirates (6) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 71823,
+    "summary": "1901-08-25 - St. Louis Cardinals (3) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71828,
+    "summary": "1901-08-26 - Detroit Tigers (6) @ Boston Americans (3) (Final)"
+  },
+  {
+    "game_id": 71831,
+    "summary": "1901-08-26 - St. Louis Cardinals (5) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71827,
+    "summary": "1901-08-26 - Cleveland Blues (1) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 71830,
+    "summary": "1901-08-26 - New York Giants (3) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 71824,
+    "summary": "1901-08-26 - Boston Beaneaters (2) @ Brooklyn Superbas (0) (Final)"
+  },
+  {
+    "game_id": 71825,
+    "summary": "1901-08-26 - Chicago White Sox (11) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 71829,
+    "summary": "1901-08-26 - Milwaukee Brewers (3) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 71826,
+    "summary": "1901-08-26 - Cincinnati Reds (4) @ Chicago Orphans (3) (Final)"
+  },
+  {
+    "game_id": 71839,
+    "summary": "1901-08-27 - New York Giants (5) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71840,
+    "summary": "1901-08-27 - New York Giants (5) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71832,
+    "summary": "1901-08-27 - Boston Beaneaters (3) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71833,
+    "summary": "1901-08-27 - Boston Beaneaters (0) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71837,
+    "summary": "1901-08-27 - Detroit Tigers (1) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71841,
+    "summary": "1901-08-27 - St. Louis Cardinals (1) @ Pittsburgh Pirates (7) (Final)"
+  },
+  {
+    "game_id": 71836,
+    "summary": "1901-08-27 - Cleveland Blues (0) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71834,
+    "summary": "1901-08-27 - Chicago White Sox (5) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71838,
+    "summary": "1901-08-27 - Milwaukee Brewers @ Baltimore Orioles (Final: Tied)"
+  },
+  {
+    "game_id": 71835,
+    "summary": "1901-08-27 - Cincinnati Reds (2) @ Chicago Orphans (3) (Final)"
+  },
+  {
+    "game_id": 71845,
+    "summary": "1901-08-28 - Cleveland Blues (1) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71846,
+    "summary": "1901-08-28 - Cleveland Blues (7) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 71847,
+    "summary": "1901-08-28 - Detroit Tigers (4) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 71850,
+    "summary": "1901-08-28 - St. Louis Cardinals (9) @ Pittsburgh Pirates (7) (Final)"
+  },
+  {
+    "game_id": 71849,
+    "summary": "1901-08-28 - New York Giants (4) @ Philadelphia Phillies (13) (Final)"
+  },
+  {
+    "game_id": 71842,
+    "summary": "1901-08-28 - Boston Beaneaters (1) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71843,
+    "summary": "1901-08-28 - Chicago White Sox (3) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 71848,
+    "summary": "1901-08-28 - Milwaukee Brewers (11) @ Baltimore Orioles (8) (Final)"
+  },
+  {
+    "game_id": 71844,
+    "summary": "1901-08-28 - Cincinnati Reds (4) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 71853,
+    "summary": "1901-08-29 - Chicago Orphans (4) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71854,
+    "summary": "1901-08-29 - Chicago Orphans (1) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 71856,
+    "summary": "1901-08-29 - Washington Senators (13) @ Cleveland Blues (11) (Final)"
+  },
+  {
+    "game_id": 71855,
+    "summary": "1901-08-29 - Philadelphia Phillies (7) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71852,
+    "summary": "1901-08-29 - Brooklyn Superbas (1) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71851,
+    "summary": "1901-08-29 - Boston Americans (3) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71862,
+    "summary": "1901-08-30 - Philadelphia Phillies (8) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 71859,
+    "summary": "1901-08-30 - Brooklyn Superbas (4) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71858,
+    "summary": "1901-08-30 - Boston Americans (5) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71861,
+    "summary": "1901-08-30 - Philadelphia Athletics (3) @ Milwaukee Brewers (1) (Final)"
+  },
+  {
+    "game_id": 71860,
+    "summary": "1901-08-30 - Cincinnati Reds (7) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 71857,
+    "summary": "1901-08-30 - Baltimore Orioles @ Chicago White Sox (Final: Tied)"
+  },
+  {
+    "game_id": 71868,
+    "summary": "1901-08-31 - Chicago Orphans (5) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 71869,
+    "summary": "1901-08-31 - Chicago Orphans (2) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71873,
+    "summary": "1901-08-31 - Washington Senators (4) @ Cleveland Blues (16) (Final)"
+  },
+  {
+    "game_id": 71874,
+    "summary": "1901-08-31 - Washington Senators (7) @ Cleveland Blues (0) (Final)"
+  },
+  {
+    "game_id": 71865,
+    "summary": "1901-08-31 - Boston Americans (5) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 71866,
+    "summary": "1901-08-31 - Boston Americans @ Detroit Tigers (Final: Tied)"
+  },
+  {
+    "game_id": 71863,
+    "summary": "1901-08-31 - Baltimore Orioles (2) @ Chicago White Sox (12) (Final)"
+  },
+  {
+    "game_id": 71864,
+    "summary": "1901-08-31 - Baltimore Orioles (2) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71872,
+    "summary": "1901-08-31 - Philadelphia Phillies (4) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71867,
+    "summary": "1901-08-31 - Brooklyn Superbas (0) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71871,
+    "summary": "1901-08-31 - Philadelphia Athletics (1) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71870,
+    "summary": "1901-08-31 - Cincinnati Reds (4) @ St. Louis Cardinals (15) (Final)"
+  },
+  {
+    "game_id": 71877,
+    "summary": "1901-09-01 - Washington Senators (9) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 71876,
+    "summary": "1901-09-01 - Philadelphia Athletics (1) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71875,
+    "summary": "1901-09-01 - Baltimore Orioles (3) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 71880,
+    "summary": "1901-09-02 - Boston Americans (9) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71881,
+    "summary": "1901-09-02 - Boston Americans (4) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71882,
+    "summary": "1901-09-02 - Chicago Orphans (1) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71883,
+    "summary": "1901-09-02 - Chicago Orphans (3) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 71884,
+    "summary": "1901-09-02 - Cincinnati Reds (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71885,
+    "summary": "1901-09-02 - Cincinnati Reds (1) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71888,
+    "summary": "1901-09-02 - Pittsburgh Pirates (5) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71889,
+    "summary": "1901-09-02 - Pittsburgh Pirates (3) @ Boston Beaneaters (0) (Final)"
+  },
+  {
+    "game_id": 71891,
+    "summary": "1901-09-02 - Washington Senators (2) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 71892,
+    "summary": "1901-09-02 - Washington Senators (4) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 71886,
+    "summary": "1901-09-02 - Philadelphia Athletics (0) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 71887,
+    "summary": "1901-09-02 - Philadelphia Athletics (10) @ Chicago White Sox (9) (Final)"
+  },
+  {
+    "game_id": 71878,
+    "summary": "1901-09-02 - Baltimore Orioles (1) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71879,
+    "summary": "1901-09-02 - Baltimore Orioles (1) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71890,
+    "summary": "1901-09-02 - St. Louis Cardinals (5) @ Brooklyn Superbas (11) (Final)"
+  },
+  {
+    "game_id": 71895,
+    "summary": "1901-09-03 - Boston Americans (0) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71896,
+    "summary": "1901-09-03 - Boston Americans (0) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71900,
+    "summary": "1901-09-03 - St. Louis Cardinals (3) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71901,
+    "summary": "1901-09-03 - St. Louis Cardinals (8) @ Brooklyn Superbas (7) (Final)"
+  },
+  {
+    "game_id": 71893,
+    "summary": "1901-09-03 - Baltimore Orioles (10) @ Milwaukee Brewers (0) (Final)"
+  },
+  {
+    "game_id": 71894,
+    "summary": "1901-09-03 - Baltimore Orioles (1) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71897,
+    "summary": "1901-09-03 - Chicago Orphans (10) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71899,
+    "summary": "1901-09-03 - Pittsburgh Pirates (5) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71902,
+    "summary": "1901-09-03 - Washington Senators (4) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 71898,
+    "summary": "1901-09-03 - Philadelphia Athletics (3) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 71908,
+    "summary": "1901-09-04 - Pittsburgh Pirates (12) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 71909,
+    "summary": "1901-09-04 - Pittsburgh Pirates (10) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71906,
+    "summary": "1901-09-04 - Cincinnati Reds (7) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71905,
+    "summary": "1901-09-04 - Chicago Orphans (4) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71910,
+    "summary": "1901-09-04 - St. Louis Cardinals (2) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71903,
+    "summary": "1901-09-04 - Baltimore Orioles (4) @ Cleveland Blues (5) (Final)"
+  },
+  {
+    "game_id": 71907,
+    "summary": "1901-09-04 - Philadelphia Athletics (1) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 71904,
+    "summary": "1901-09-04 - Boston Americans (4) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71911,
+    "summary": "1901-09-04 - Washington Senators (5) @ Chicago White Sox (9) (Final)"
+  },
+  {
+    "game_id": 71918,
+    "summary": "1901-09-05 - Pittsburgh Pirates (15) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 71919,
+    "summary": "1901-09-05 - Pittsburgh Pirates (15) @ New York Giants (7) (Final)"
+  },
+  {
+    "game_id": 71916,
+    "summary": "1901-09-05 - Philadelphia Athletics (11) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 71917,
+    "summary": "1901-09-05 - Philadelphia Athletics (9) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 71921,
+    "summary": "1901-09-05 - Washington Senators (3) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71922,
+    "summary": "1901-09-05 - Washington Senators (9) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 71915,
+    "summary": "1901-09-05 - Cincinnati Reds (2) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71914,
+    "summary": "1901-09-05 - Chicago Orphans (4) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 71920,
+    "summary": "1901-09-05 - St. Louis Cardinals (5) @ Boston Beaneaters (6) (Final)"
+  },
+  {
+    "game_id": 71912,
+    "summary": "1901-09-05 - Baltimore Orioles (1) @ Cleveland Blues (3) (Final)"
+  },
+  {
+    "game_id": 71913,
+    "summary": "1901-09-05 - Boston Americans (4) @ Milwaukee Brewers (2) (Final)"
+  },
+  {
+    "game_id": 71928,
+    "summary": "1901-09-06 - Pittsburgh Pirates (15) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71929,
+    "summary": "1901-09-06 - Pittsburgh Pirates (13) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 71923,
+    "summary": "1901-09-06 - Baltimore Orioles (7) @ Cleveland Blues (10) (Final)"
+  },
+  {
+    "game_id": 71924,
+    "summary": "1901-09-06 - Baltimore Orioles (7) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71926,
+    "summary": "1901-09-06 - Cincinnati Reds (1) @ Brooklyn Superbas (13) (Final)"
+  },
+  {
+    "game_id": 71925,
+    "summary": "1901-09-06 - Chicago Orphans (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 71930,
+    "summary": "1901-09-06 - St. Louis Cardinals (9) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71927,
+    "summary": "1901-09-06 - Philadelphia Athletics (3) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71931,
+    "summary": "1901-09-06 - Washington Senators (5) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71934,
+    "summary": "1901-09-07 - Chicago Orphans (0) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71935,
+    "summary": "1901-09-07 - Chicago Orphans (2) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71936,
+    "summary": "1901-09-07 - Cincinnati Reds (1) @ Boston Beaneaters (4) (Final)"
+  },
+  {
+    "game_id": 71937,
+    "summary": "1901-09-07 - Cincinnati Reds (1) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71938,
+    "summary": "1901-09-07 - Philadelphia Athletics (7) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71940,
+    "summary": "1901-09-07 - St. Louis Cardinals (2) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71939,
+    "summary": "1901-09-07 - Pittsburgh Pirates (1) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 71932,
+    "summary": "1901-09-07 - Baltimore Orioles (2) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 71941,
+    "summary": "1901-09-07 - Washington Senators (20) @ Milwaukee Brewers (8) (Final)"
+  },
+  {
+    "game_id": 71933,
+    "summary": "1901-09-07 - Boston Americans (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71944,
+    "summary": "1901-09-08 - Washington Senators (4) @ Milwaukee Brewers (6) (Final)"
+  },
+  {
+    "game_id": 71945,
+    "summary": "1901-09-08 - Washington Senators (7) @ Milwaukee Brewers (4) (Final)"
+  },
+  {
+    "game_id": 71942,
+    "summary": "1901-09-08 - Baltimore Orioles (5) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71943,
+    "summary": "1901-09-08 - Boston Americans (3) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71953,
+    "summary": "1901-09-09 - St. Louis Cardinals (1) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 71954,
+    "summary": "1901-09-09 - St. Louis Cardinals (11) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71947,
+    "summary": "1901-09-09 - Boston Americans (3) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 71948,
+    "summary": "1901-09-09 - Boston Americans (4) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 71949,
+    "summary": "1901-09-09 - Chicago Orphans (0) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 71951,
+    "summary": "1901-09-09 - Philadelphia Athletics (1) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71952,
+    "summary": "1901-09-09 - Pittsburgh Pirates (11) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71950,
+    "summary": "1901-09-09 - Cincinnati Reds (3) @ Boston Beaneaters (5) (Final)"
+  },
+  {
+    "game_id": 71946,
+    "summary": "1901-09-09 - Baltimore Orioles (4) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 71958,
+    "summary": "1901-09-10 - Philadelphia Athletics (0) @ Cleveland Blues (7) (Final)"
+  },
+  {
+    "game_id": 71959,
+    "summary": "1901-09-10 - Philadelphia Athletics (4) @ Cleveland Blues (1) (Final)"
+  },
+  {
+    "game_id": 71956,
+    "summary": "1901-09-10 - Chicago Orphans (4) @ Brooklyn Superbas (3) (Final)"
+  },
+  {
+    "game_id": 71961,
+    "summary": "1901-09-10 - St. Louis Cardinals @ New York Giants (Final: Tied)"
+  },
+  {
+    "game_id": 71960,
+    "summary": "1901-09-10 - Pittsburgh Pirates (8) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 71957,
+    "summary": "1901-09-10 - Cincinnati Reds (2) @ Boston Beaneaters (6) (Final)"
+  },
+  {
+    "game_id": 71955,
+    "summary": "1901-09-10 - Chicago White Sox (6) @ Milwaukee Brewers (3) (Final)"
+  },
+  {
+    "game_id": 71965,
+    "summary": "1901-09-11 - Pittsburgh Pirates (5) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71964,
+    "summary": "1901-09-11 - Cincinnati Reds (4) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 71962,
+    "summary": "1901-09-11 - Boston Americans (9) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 71966,
+    "summary": "1901-09-11 - St. Louis Cardinals (2) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 71963,
+    "summary": "1901-09-11 - Chicago Orphans (6) @ Boston Beaneaters (3) (Final)"
+  },
+  {
+    "game_id": 71971,
+    "summary": "1901-09-12 - Detroit Tigers (5) @ Cleveland Blues (4) (Final)"
+  },
+  {
+    "game_id": 71972,
+    "summary": "1901-09-12 - Detroit Tigers (4) @ Cleveland Blues (3) (Final)"
+  },
+  {
+    "game_id": 71973,
+    "summary": "1901-09-12 - Philadelphia Athletics (3) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71974,
+    "summary": "1901-09-12 - Philadelphia Athletics (5) @ Baltimore Orioles (4) (Final)"
+  },
+  {
+    "game_id": 71968,
+    "summary": "1901-09-12 - Chicago White Sox (1) @ Milwaukee Brewers (5) (Final)"
+  },
+  {
+    "game_id": 71969,
+    "summary": "1901-09-12 - Chicago White Sox (4) @ Milwaukee Brewers (0) (Final)"
+  },
+  {
+    "game_id": 71970,
+    "summary": "1901-09-12 - Cincinnati Reds (5) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71967,
+    "summary": "1901-09-12 - Boston Americans @ Washington Senators (Final: Tied)"
+  },
+  {
+    "game_id": 71975,
+    "summary": "1901-09-12 - St. Louis Cardinals (10) @ Philadelphia Phillies (9) (Final)"
+  },
+  {
+    "game_id": 71985,
+    "summary": "1901-09-13 - Pittsburgh Pirates (3) @ Brooklyn Superbas (5) (Final)"
+  },
+  {
+    "game_id": 71986,
+    "summary": "1901-09-13 - Pittsburgh Pirates (2) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 71980,
+    "summary": "1901-09-13 - Cincinnati Reds (1) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71981,
+    "summary": "1901-09-13 - Cincinnati Reds (0) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 71976,
+    "summary": "1901-09-13 - Boston Americans (5) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 71977,
+    "summary": "1901-09-13 - Boston Americans (3) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 71987,
+    "summary": "1901-09-13 - St. Louis Cardinals (8) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 71988,
+    "summary": "1901-09-13 - St. Louis Cardinals (0) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 71978,
+    "summary": "1901-09-13 - Chicago Orphans (1) @ Boston Beaneaters (2) (Final)"
+  },
+  {
+    "game_id": 71979,
+    "summary": "1901-09-13 - Chicago Orphans (0) @ Boston Beaneaters (1) (Final)"
+  },
+  {
+    "game_id": 71982,
+    "summary": "1901-09-13 - Detroit Tigers (7) @ Cleveland Blues (0) (Final)"
+  },
+  {
+    "game_id": 71984,
+    "summary": "1901-09-13 - Philadelphia Athletics (10) @ Baltimore Orioles (12) (Final)"
+  },
+  {
+    "game_id": 71983,
+    "summary": "1901-09-13 - Milwaukee Brewers (5) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 71991,
+    "summary": "1901-09-14 - Cincinnati Reds (3) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 71992,
+    "summary": "1901-09-14 - Cincinnati Reds (4) @ Pittsburgh Pirates (8) (Final)"
+  },
+  {
+    "game_id": 71989,
+    "summary": "1901-09-14 - Baltimore Orioles (2) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 71990,
+    "summary": "1901-09-14 - Baltimore Orioles (2) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 71995,
+    "summary": "1901-09-14 - Washington Senators (1) @ Boston Americans (12) (Final)"
+  },
+  {
+    "game_id": 71994,
+    "summary": "1901-09-14 - New York Giants (2) @ Boston Beaneaters (9) (Final)"
+  },
+  {
+    "game_id": 71993,
+    "summary": "1901-09-14 - Cleveland Blues (5) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 71997,
+    "summary": "1901-09-15 - Milwaukee Brewers (4) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 71998,
+    "summary": "1901-09-15 - Milwaukee Brewers (4) @ Chicago White Sox (9) (Final)"
+  },
+  {
+    "game_id": 71999,
+    "summary": "1901-09-15 - Pittsburgh Pirates (3) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 71996,
+    "summary": "1901-09-15 - Cleveland Blues (0) @ Detroit Tigers (21) (Final)"
+  },
+  {
+    "game_id": 72000,
+    "summary": "1901-09-15 - St. Louis Cardinals (13) @ Chicago Orphans (6) (Final)"
+  },
+  {
+    "game_id": 72005,
+    "summary": "1901-09-16 - Washington Senators (5) @ Boston Americans (6) (Final)"
+  },
+  {
+    "game_id": 72006,
+    "summary": "1901-09-16 - Washington Senators (7) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 72003,
+    "summary": "1901-09-16 - Boston Beaneaters (3) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 72004,
+    "summary": "1901-09-16 - Boston Beaneaters (2) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 72002,
+    "summary": "1901-09-16 - Brooklyn Superbas (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 72001,
+    "summary": "1901-09-16 - Baltimore Orioles (2) @ Philadelphia Athletics (10) (Final)"
+  },
+  {
+    "game_id": 72007,
+    "summary": "1901-09-17 - Cleveland Blues (0) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 72008,
+    "summary": "1901-09-17 - Detroit Tigers (1) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 72010,
+    "summary": "1901-09-17 - Pittsburgh Pirates (7) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72009,
+    "summary": "1901-09-17 - New York Giants (10) @ Brooklyn Superbas (6) (Final)"
+  },
+  {
+    "game_id": 72013,
+    "summary": "1901-09-18 - Milwaukee Brewers (9) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 72014,
+    "summary": "1901-09-18 - Milwaukee Brewers (3) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 72011,
+    "summary": "1901-09-18 - Chicago White Sox (10) @ Baltimore Orioles (3) (Final)"
+  },
+  {
+    "game_id": 72012,
+    "summary": "1901-09-18 - Chicago White Sox (5) @ Baltimore Orioles (1) (Final)"
+  },
+  {
+    "game_id": 72015,
+    "summary": "1901-09-18 - Philadelphia Phillies (1) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 72022,
+    "summary": "1901-09-20 - Philadelphia Phillies (1) @ Pittsburgh Pirates (10) (Final)"
+  },
+  {
+    "game_id": 72023,
+    "summary": "1901-09-20 - Philadelphia Phillies (2) @ Pittsburgh Pirates (7) (Final)"
+  },
+  {
+    "game_id": 72017,
+    "summary": "1901-09-20 - Boston Beaneaters (3) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 72018,
+    "summary": "1901-09-20 - Boston Beaneaters (7) @ Chicago Orphans (0) (Final)"
+  },
+  {
+    "game_id": 72021,
+    "summary": "1901-09-20 - Detroit Tigers (2) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 72020,
+    "summary": "1901-09-20 - Cleveland Blues (8) @ Washington Senators (9) (Final)"
+  },
+  {
+    "game_id": 72019,
+    "summary": "1901-09-20 - Chicago White Sox (8) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 72016,
+    "summary": "1901-09-20 - Brooklyn Superbas (8) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 72027,
+    "summary": "1901-09-21 - Cleveland Blues (7) @ Washington Senators (18) (Final)"
+  },
+  {
+    "game_id": 72028,
+    "summary": "1901-09-21 - Cleveland Blues (3) @ Washington Senators (11) (Final)"
+  },
+  {
+    "game_id": 72030,
+    "summary": "1901-09-21 - Milwaukee Brewers (2) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 72031,
+    "summary": "1901-09-21 - Milwaukee Brewers (2) @ Baltimore Orioles (7) (Final)"
+  },
+  {
+    "game_id": 72029,
+    "summary": "1901-09-21 - Detroit Tigers (3) @ Boston Americans (1) (Final)"
+  },
+  {
+    "game_id": 72032,
+    "summary": "1901-09-21 - New York Giants (5) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 72033,
+    "summary": "1901-09-21 - Philadelphia Phillies (4) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 72026,
+    "summary": "1901-09-21 - Chicago White Sox (4) @ Philadelphia Athletics (10) (Final)"
+  },
+  {
+    "game_id": 72024,
+    "summary": "1901-09-21 - Brooklyn Superbas (3) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 72025,
+    "summary": "1901-09-21 - Boston Beaneaters (0) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 72035,
+    "summary": "1901-09-22 - New York Giants (0) @ Cincinnati Reds (13) (Final)"
+  },
+  {
+    "game_id": 72036,
+    "summary": "1901-09-22 - New York Giants (10) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72037,
+    "summary": "1901-09-22 - Pittsburgh Pirates (15) @ Chicago Orphans (9) (Final)"
+  },
+  {
+    "game_id": 72034,
+    "summary": "1901-09-22 - Brooklyn Superbas (3) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 72043,
+    "summary": "1901-09-23 - Detroit Tigers (5) @ Boston Americans (4) (Final)"
+  },
+  {
+    "game_id": 72044,
+    "summary": "1901-09-23 - Detroit Tigers (9) @ Boston Americans (2) (Final)"
+  },
+  {
+    "game_id": 72041,
+    "summary": "1901-09-23 - Cleveland Blues (6) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 72042,
+    "summary": "1901-09-23 - Cleveland Blues (7) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 72045,
+    "summary": "1901-09-23 - Milwaukee Brewers (4) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 72046,
+    "summary": "1901-09-23 - Milwaukee Brewers (4) @ Baltimore Orioles (5) (Final)"
+  },
+  {
+    "game_id": 72038,
+    "summary": "1901-09-23 - Brooklyn Superbas (25) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 72047,
+    "summary": "1901-09-23 - New York Giants (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 72040,
+    "summary": "1901-09-23 - Chicago White Sox (3) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 72048,
+    "summary": "1901-09-23 - Philadelphia Phillies (3) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 72039,
+    "summary": "1901-09-23 - Boston Beaneaters (3) @ St. Louis Cardinals (9) (Final)"
+  },
+  {
+    "game_id": 72049,
+    "summary": "1901-09-24 - Brooklyn Superbas (16) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72054,
+    "summary": "1901-09-24 - Milwaukee Brewers (4) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 72055,
+    "summary": "1901-09-24 - New York Giants (9) @ Pittsburgh Pirates (14) (Final)"
+  },
+  {
+    "game_id": 72053,
+    "summary": "1901-09-24 - Detroit Tigers (1) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 72051,
+    "summary": "1901-09-24 - Chicago White Sox (3) @ Boston Americans (8) (Final)"
+  },
+  {
+    "game_id": 72052,
+    "summary": "1901-09-24 - Cleveland Blues (6) @ Baltimore Orioles (11) (Final)"
+  },
+  {
+    "game_id": 72056,
+    "summary": "1901-09-24 - Philadelphia Phillies (4) @ Chicago Orphans (0) (Final)"
+  },
+  {
+    "game_id": 72050,
+    "summary": "1901-09-24 - Boston Beaneaters (4) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 72057,
+    "summary": "1901-09-25 - Brooklyn Superbas (9) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72062,
+    "summary": "1901-09-25 - Milwaukee Brewers (4) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 72063,
+    "summary": "1901-09-25 - New York Giants (5) @ Pittsburgh Pirates (10) (Final)"
+  },
+  {
+    "game_id": 72061,
+    "summary": "1901-09-25 - Detroit Tigers (2) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 72059,
+    "summary": "1901-09-25 - Chicago White Sox (2) @ Boston Americans (5) (Final)"
+  },
+  {
+    "game_id": 72060,
+    "summary": "1901-09-25 - Cleveland Blues (5) @ Baltimore Orioles (8) (Final)"
+  },
+  {
+    "game_id": 72064,
+    "summary": "1901-09-25 - Philadelphia Phillies (4) @ Chicago Orphans (3) (Final)"
+  },
+  {
+    "game_id": 72058,
+    "summary": "1901-09-25 - Boston Beaneaters (1) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 72070,
+    "summary": "1901-09-26 - Milwaukee Brewers (10) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 72065,
+    "summary": "1901-09-26 - Brooklyn Superbas (3) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 72069,
+    "summary": "1901-09-26 - Detroit Tigers (5) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 72066,
+    "summary": "1901-09-26 - Boston Beaneaters (2) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 72067,
+    "summary": "1901-09-26 - Chicago White Sox (2) @ Boston Americans (3) (Final)"
+  },
+  {
+    "game_id": 72068,
+    "summary": "1901-09-26 - Cleveland Blues (9) @ Baltimore Orioles (10) (Final)"
+  },
+  {
+    "game_id": 72071,
+    "summary": "1901-09-26 - New York Giants (5) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 72072,
+    "summary": "1901-09-26 - Philadelphia Phillies (6) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 72074,
+    "summary": "1901-09-27 - Boston Beaneaters (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 72075,
+    "summary": "1901-09-27 - Boston Beaneaters (1) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 72079,
+    "summary": "1901-09-27 - Milwaukee Brewers (2) @ Boston Americans (7) (Final)"
+  },
+  {
+    "game_id": 72077,
+    "summary": "1901-09-27 - Cleveland Blues (6) @ Philadelphia Athletics (14) (Final)"
+  },
+  {
+    "game_id": 72073,
+    "summary": "1901-09-27 - Brooklyn Superbas (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 72076,
+    "summary": "1901-09-27 - Chicago White Sox (6) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 72078,
+    "summary": "1901-09-27 - Detroit Tigers (4) @ Baltimore Orioles (6) (Final)"
+  },
+  {
+    "game_id": 72080,
+    "summary": "1901-09-27 - Philadelphia Phillies (0) @ St. Louis Cardinals (9) (Final)"
+  },
+  {
+    "game_id": 72084,
+    "summary": "1901-09-28 - Milwaukee Brewers (3) @ Boston Americans (8) (Final)"
+  },
+  {
+    "game_id": 72085,
+    "summary": "1901-09-28 - Milwaukee Brewers (9) @ Boston Americans (10) (Final)"
+  },
+  {
+    "game_id": 72081,
+    "summary": "1901-09-28 - Cleveland Blues (9) @ Philadelphia Athletics (12) (Final)"
+  },
+  {
+    "game_id": 72082,
+    "summary": "1901-09-28 - Cleveland Blues (1) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 72083,
+    "summary": "1901-09-28 - Detroit Tigers (5) @ Baltimore Orioles (2) (Final)"
+  },
+  {
+    "game_id": 72086,
+    "summary": "1901-09-28 - New York Giants (2) @ Chicago Orphans (5) (Final)"
+  },
+  {
+    "game_id": 72087,
+    "summary": "1901-09-28 - Philadelphia Phillies (4) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 72091,
+    "summary": "1901-09-29 - Pittsburgh Pirates (1) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72092,
+    "summary": "1901-09-29 - Pittsburgh Pirates (1) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72089,
+    "summary": "1901-09-29 - New York Giants (4) @ St. Louis Cardinals (9) (Final)"
+  },
+  {
+    "game_id": 72090,
+    "summary": "1901-09-29 - New York Giants (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 72088,
+    "summary": "1901-09-29 - Brooklyn Superbas (4) @ Chicago Orphans (1) (Final)"
+  },
+  {
+    "game_id": 72096,
+    "summary": "1901-09-30 - Philadelphia Phillies (10) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72097,
+    "summary": "1901-09-30 - Philadelphia Phillies (2) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 72094,
+    "summary": "1901-09-30 - New York Giants (4) @ St. Louis Cardinals (12) (Final)"
+  },
+  {
+    "game_id": 72095,
+    "summary": "1901-09-30 - New York Giants (5) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 72093,
+    "summary": "1901-09-30 - Boston Beaneaters (5) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 72099,
+    "summary": "1901-10-01 - Philadelphia Phillies (4) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 72100,
+    "summary": "1901-10-01 - Philadelphia Phillies (6) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72098,
+    "summary": "1901-10-01 - Boston Beaneaters (0) @ Pittsburgh Pirates (9) (Final)"
+  },
+  {
+    "game_id": 72102,
+    "summary": "1901-10-02 - Philadelphia Phillies (3) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 72103,
+    "summary": "1901-10-02 - Philadelphia Phillies (5) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 72101,
+    "summary": "1901-10-02 - Boston Beaneaters (4) @ Pittsburgh Pirates (8) (Final)"
+  },
+  {
+    "game_id": 72105,
+    "summary": "1901-10-05 - New York Giants (0) @ Brooklyn Superbas (8) (Final)"
+  },
+  {
+    "game_id": 72106,
+    "summary": "1901-10-05 - New York Giants (2) @ Brooklyn Superbas (4) (Final)"
+  },
+  {
+    "game_id": 72104,
+    "summary": "1901-10-05 - Boston Beaneaters (7) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 72107,
+    "summary": "1901-10-05 - Pittsburgh Pirates (1) @ Chicago Orphans (2) (Final)"
+  },
+  {
+    "game_id": 72109,
+    "summary": "1901-10-06 - St. Louis Cardinals (1) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 72110,
+    "summary": "1901-10-06 - St. Louis Cardinals (9) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 72108,
+    "summary": "1901-10-06 - Pittsburgh Pirates (9) @ Chicago Orphans (5) (Final)"
+  }
+]

@@ -16,12 +16,12 @@ backend-build:
   script:
     - ./gradlew clean build
     - docker build -t springboot . # Docker 이미지 빌드
-  artifacts:
-    name: "springboot"
-    paths:
-      - ./backend/ssafyBigswing/build/libs/*.jar
-  tags:
-    - ssafy
+  # artifacts:
+  #   name: "springboot"
+  #   paths:
+  #     - ./backend/ssafyBigswing/build/libs/*.jar
+  # tags:
+  #   - ssafy
 
 frontend-build:
   stage: build
@@ -40,8 +40,8 @@ frontend-build:
   #   paths:
   #     - ./frontend/.next/
 
-  tags:
-    - ssafy
+  # tags:
+  #   - ssafy
 
 backend-check-container:
   stage: check_container

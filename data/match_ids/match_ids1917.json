@@ -1,0 +1,5014 @@
+[
+  {
+    "game_id": 89862,
+    "summary": "1917-04-11 - Cleveland Indians (6) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 89865,
+    "summary": "1917-04-11 - St. Louis Cardinals (1) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 89866,
+    "summary": "1917-04-11 - Washington Senators (3) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 89863,
+    "summary": "1917-04-11 - Philadelphia Phillies (6) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 89860,
+    "summary": "1917-04-11 - Boston Red Sox (10) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 89864,
+    "summary": "1917-04-11 - Pittsburgh Pirates (3) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 89861,
+    "summary": "1917-04-11 - Chicago White Sox (7) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 89868,
+    "summary": "1917-04-12 - Cleveland Indians (2) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 89871,
+    "summary": "1917-04-12 - St. Louis Cardinals (0) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 89872,
+    "summary": "1917-04-12 - Washington Senators (6) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 89869,
+    "summary": "1917-04-12 - New York Giants (6) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 89867,
+    "summary": "1917-04-12 - Boston Red Sox (6) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 89870,
+    "summary": "1917-04-12 - Pittsburgh Pirates (0) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 89875,
+    "summary": "1917-04-13 - St. Louis Cardinals (3) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 89874,
+    "summary": "1917-04-13 - Pittsburgh Pirates (1) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 89873,
+    "summary": "1917-04-13 - Chicago White Sox (3) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 89878,
+    "summary": "1917-04-14 - Cleveland Indians (2) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 89882,
+    "summary": "1917-04-14 - St. Louis Cardinals (2) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 89883,
+    "summary": "1917-04-14 - Washington Senators (4) @ Philadelphia Athletics (16) (Final)"
+  },
+  {
+    "game_id": 89880,
+    "summary": "1917-04-14 - Philadelphia Phillies (11) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 89879,
+    "summary": "1917-04-14 - New York Giants (6) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 89876,
+    "summary": "1917-04-14 - Boston Red Sox (2) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 89881,
+    "summary": "1917-04-14 - Pittsburgh Pirates (4) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 89877,
+    "summary": "1917-04-14 - Chicago White Sox (11) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 89886,
+    "summary": "1917-04-15 - Pittsburgh Pirates (2) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 89884,
+    "summary": "1917-04-15 - Chicago White Sox (6) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 89885,
+    "summary": "1917-04-15 - Cleveland Indians (4) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 89887,
+    "summary": "1917-04-15 - St. Louis Cardinals (5) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 89888,
+    "summary": "1917-04-16 - Boston Red Sox (6) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 89892,
+    "summary": "1917-04-16 - Pittsburgh Pirates (8) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 89890,
+    "summary": "1917-04-16 - New York Giants (5) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 89891,
+    "summary": "1917-04-16 - Philadelphia Phillies (1) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 89889,
+    "summary": "1917-04-16 - Chicago White Sox (4) @ Detroit Tigers (0) (Final)"
+  },
+  {
+    "game_id": 89893,
+    "summary": "1917-04-16 - St. Louis Cardinals (5) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 89894,
+    "summary": "1917-04-17 - Boston Red Sox (3) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 89898,
+    "summary": "1917-04-17 - Pittsburgh Pirates (2) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 89897,
+    "summary": "1917-04-17 - New York Giants (8) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 89895,
+    "summary": "1917-04-17 - Chicago White Sox (4) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 89899,
+    "summary": "1917-04-17 - Washington Senators (1) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 89896,
+    "summary": "1917-04-17 - Cleveland Indians (0) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 89900,
+    "summary": "1917-04-18 - Boston Red Sox (2) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 89903,
+    "summary": "1917-04-18 - Pittsburgh Pirates (5) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 89902,
+    "summary": "1917-04-18 - New York Giants (3) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 89905,
+    "summary": "1917-04-18 - Washington Senators (5) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 89901,
+    "summary": "1917-04-18 - Cleveland Indians (2) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 89904,
+    "summary": "1917-04-18 - St. Louis Cardinals (2) @ Chicago Cubs (9) (Final)"
+  },
+  {
+    "game_id": 89911,
+    "summary": "1917-04-19 - Philadelphia Phillies (3) @ Boston Braves (7) (Final)"
+  },
+  {
+    "game_id": 89912,
+    "summary": "1917-04-19 - Philadelphia Phillies (2) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 89909,
+    "summary": "1917-04-19 - Detroit Tigers (7) @ Cleveland Indians (8) (Final)"
+  },
+  {
+    "game_id": 89906,
+    "summary": "1917-04-19 - Boston Red Sox (3) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 89907,
+    "summary": "1917-04-19 - Chicago Cubs (10) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 89910,
+    "summary": "1917-04-19 - New York Giants (9) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 89914,
+    "summary": "1917-04-19 - Washington Senators (2) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 89908,
+    "summary": "1917-04-19 - Cincinnati Reds (1) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 89913,
+    "summary": "1917-04-19 - St. Louis Browns (6) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 89919,
+    "summary": "1917-04-20 - Detroit Tigers (7) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 89917,
+    "summary": "1917-04-20 - Chicago Cubs (1) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 89920,
+    "summary": "1917-04-20 - Philadelphia Athletics (6) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 89915,
+    "summary": "1917-04-20 - Brooklyn Robins (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 89916,
+    "summary": "1917-04-20 - Boston Braves (4) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 89918,
+    "summary": "1917-04-20 - Cincinnati Reds (6) @ St. Louis Cardinals (7) (Final)"
+  },
+  {
+    "game_id": 89921,
+    "summary": "1917-04-20 - St. Louis Browns (2) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 89926,
+    "summary": "1917-04-21 - Detroit Tigers (5) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 89924,
+    "summary": "1917-04-21 - Chicago Cubs (2) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 89928,
+    "summary": "1917-04-21 - Philadelphia Athletics (6) @ Washington Senators (11) (Final)"
+  },
+  {
+    "game_id": 89922,
+    "summary": "1917-04-21 - Brooklyn Robins (4) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 89923,
+    "summary": "1917-04-21 - Boston Braves (0) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 89927,
+    "summary": "1917-04-21 - New York Yankees (4) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 89925,
+    "summary": "1917-04-21 - Cincinnati Reds (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 89929,
+    "summary": "1917-04-21 - St. Louis Browns (0) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 89930,
+    "summary": "1917-04-22 - Chicago Cubs (4) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 89931,
+    "summary": "1917-04-22 - Detroit Tigers (3) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 89932,
+    "summary": "1917-04-22 - Pittsburgh Pirates (1) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 89933,
+    "summary": "1917-04-22 - St. Louis Browns (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 89935,
+    "summary": "1917-04-23 - Chicago Cubs (4) @ Cincinnati Reds (10) (Final)"
+  },
+  {
+    "game_id": 89937,
+    "summary": "1917-04-23 - Philadelphia Athletics (4) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 89934,
+    "summary": "1917-04-23 - Brooklyn Robins (3) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 89936,
+    "summary": "1917-04-23 - New York Yankees (9) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 89938,
+    "summary": "1917-04-23 - Pittsburgh Pirates (2) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 89940,
+    "summary": "1917-04-24 - Chicago Cubs (8) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 89945,
+    "summary": "1917-04-24 - St. Louis Browns (7) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 89943,
+    "summary": "1917-04-24 - Philadelphia Athletics (5) @ Washington Senators (8) (Final)"
+  },
+  {
+    "game_id": 89939,
+    "summary": "1917-04-24 - Boston Braves (2) @ New York Giants (8) (Final)"
+  },
+  {
+    "game_id": 89942,
+    "summary": "1917-04-24 - New York Yankees (2) @ Boston Red Sox (1) (Final)"
+  },
+  {
+    "game_id": 89944,
+    "summary": "1917-04-24 - Pittsburgh Pirates (1) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 89941,
+    "summary": "1917-04-24 - Cleveland Indians (0) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 89947,
+    "summary": "1917-04-25 - Chicago Cubs (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 89952,
+    "summary": "1917-04-25 - Washington Senators (4) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 89949,
+    "summary": "1917-04-25 - New York Giants (9) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 89946,
+    "summary": "1917-04-25 - Boston Braves @ Brooklyn Robins (Final: Tied)"
+  },
+  {
+    "game_id": 89950,
+    "summary": "1917-04-25 - Philadelphia Athletics (4) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 89951,
+    "summary": "1917-04-25 - Pittsburgh Pirates (10) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 89948,
+    "summary": "1917-04-25 - Cleveland Indians (4) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 89953,
+    "summary": "1917-04-26 - Chicago Cubs (4) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 89954,
+    "summary": "1917-04-26 - Cleveland Indians (3) @ Chicago White Sox (0) (Final)"
+  },
+  {
+    "game_id": 89958,
+    "summary": "1917-04-27 - St. Louis Browns (1) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 89955,
+    "summary": "1917-04-27 - Cincinnati Reds (5) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 89957,
+    "summary": "1917-04-27 - New York Giants (1) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 89956,
+    "summary": "1917-04-27 - Cleveland Indians (2) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 89964,
+    "summary": "1917-04-28 - St. Louis Browns (10) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 89960,
+    "summary": "1917-04-28 - Cincinnati Reds (0) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 89965,
+    "summary": "1917-04-28 - Washington Senators (1) @ Boston Red Sox (7) (Final)"
+  },
+  {
+    "game_id": 89962,
+    "summary": "1917-04-28 - New York Giants (1) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 89959,
+    "summary": "1917-04-28 - Boston Braves (2) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 89963,
+    "summary": "1917-04-28 - Philadelphia Athletics (1) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 89961,
+    "summary": "1917-04-28 - Detroit Tigers (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 89969,
+    "summary": "1917-04-29 - St. Louis Browns (6) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 89968,
+    "summary": "1917-04-29 - Pittsburgh Pirates (3) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 89966,
+    "summary": "1917-04-29 - Chicago Cubs (6) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 89967,
+    "summary": "1917-04-29 - Detroit Tigers (3) @ Chicago White Sox (0) (Final)"
+  },
+  {
+    "game_id": 89973,
+    "summary": "1917-04-30 - St. Louis Browns (4) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 89972,
+    "summary": "1917-04-30 - Philadelphia Athletics (3) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 89970,
+    "summary": "1917-04-30 - Boston Braves (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 89971,
+    "summary": "1917-04-30 - New York Yankees (4) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 89975,
+    "summary": "1917-05-01 - New York Yankees (2) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 89974,
+    "summary": "1917-05-01 - Chicago Cubs (9) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 89976,
+    "summary": "1917-05-02 - Brooklyn Robins @ New York Giants (Final: Tied)"
+  },
+  {
+    "game_id": 89982,
+    "summary": "1917-05-02 - St. Louis Cardinals (4) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 89977,
+    "summary": "1917-05-02 - Boston Braves (1) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 89978,
+    "summary": "1917-05-02 - Chicago White Sox (8) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 89981,
+    "summary": "1917-05-02 - New York Yankees (2) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 89979,
+    "summary": "1917-05-02 - Cincinnati Reds (1) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 89980,
+    "summary": "1917-05-02 - Detroit Tigers (2) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 89988,
+    "summary": "1917-05-03 - Philadelphia Athletics (0) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 89983,
+    "summary": "1917-05-03 - Brooklyn Robins (4) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 89989,
+    "summary": "1917-05-03 - St. Louis Cardinals (4) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 89984,
+    "summary": "1917-05-03 - Boston Braves (2) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 89985,
+    "summary": "1917-05-03 - Chicago White Sox (1) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 89987,
+    "summary": "1917-05-03 - New York Yankees (1) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 89986,
+    "summary": "1917-05-03 - Cincinnati Reds (3) @ Chicago Cubs (10) (Final)"
+  },
+  {
+    "game_id": 89990,
+    "summary": "1917-05-04 - Brooklyn Robins (3) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 89991,
+    "summary": "1917-05-04 - Cincinnati Reds (3) @ Chicago Cubs (11) (Final)"
+  },
+  {
+    "game_id": 89993,
+    "summary": "1917-05-05 - Cincinnati Reds (7) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 89992,
+    "summary": "1917-05-05 - Chicago White Sox (0) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 89994,
+    "summary": "1917-05-06 - Chicago White Sox (4) @ St. Louis Browns (8) (Final)"
+  },
+  {
+    "game_id": 89995,
+    "summary": "1917-05-06 - Chicago White Sox (0) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 89997,
+    "summary": "1917-05-06 - St. Louis Cardinals (4) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 89996,
+    "summary": "1917-05-06 - Pittsburgh Pirates (2) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90000,
+    "summary": "1917-05-07 - Cleveland Indians (4) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 89998,
+    "summary": "1917-05-07 - Boston Red Sox (1) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 90002,
+    "summary": "1917-05-07 - Philadelphia Phillies (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 89999,
+    "summary": "1917-05-07 - Brooklyn Robins (0) @ Boston Braves (7) (Final)"
+  },
+  {
+    "game_id": 90001,
+    "summary": "1917-05-07 - New York Yankees (9) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90003,
+    "summary": "1917-05-07 - Pittsburgh Pirates (1) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90005,
+    "summary": "1917-05-08 - Chicago White Sox (4) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 90006,
+    "summary": "1917-05-08 - Chicago White Sox (9) @ St. Louis Browns (7) (Final)"
+  },
+  {
+    "game_id": 90007,
+    "summary": "1917-05-08 - Cleveland Indians (5) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90009,
+    "summary": "1917-05-08 - Philadelphia Phillies (1) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90004,
+    "summary": "1917-05-08 - Brooklyn Robins (1) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90008,
+    "summary": "1917-05-08 - New York Yankees (4) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90014,
+    "summary": "1917-05-09 - Cleveland Indians (1) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90015,
+    "summary": "1917-05-09 - Cleveland Indians (1) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 90010,
+    "summary": "1917-05-09 - Boston Red Sox (4) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90011,
+    "summary": "1917-05-09 - Boston Red Sox (3) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90013,
+    "summary": "1917-05-09 - Chicago Cubs (7) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90012,
+    "summary": "1917-05-09 - Chicago White Sox (4) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90016,
+    "summary": "1917-05-10 - Boston Red Sox (3) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90017,
+    "summary": "1917-05-10 - Chicago Cubs (3) @ Brooklyn Robins (1) (Final)"
+  },
+  {
+    "game_id": 90018,
+    "summary": "1917-05-10 - Cincinnati Reds (2) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90023,
+    "summary": "1917-05-10 - Washington Senators (3) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90022,
+    "summary": "1917-05-10 - St. Louis Cardinals (0) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 90021,
+    "summary": "1917-05-10 - Pittsburgh Pirates (11) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 90020,
+    "summary": "1917-05-10 - Philadelphia Athletics (1) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90019,
+    "summary": "1917-05-10 - New York Yankees (1) @ Chicago White Sox (0) (Final)"
+  },
+  {
+    "game_id": 90024,
+    "summary": "1917-05-11 - Boston Red Sox (2) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90025,
+    "summary": "1917-05-11 - Chicago Cubs (8) @ Brooklyn Robins (6) (Final)"
+  },
+  {
+    "game_id": 90026,
+    "summary": "1917-05-11 - Cincinnati Reds (2) @ New York Giants (9) (Final)"
+  },
+  {
+    "game_id": 90031,
+    "summary": "1917-05-11 - Washington Senators (3) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90030,
+    "summary": "1917-05-11 - St. Louis Cardinals (0) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90029,
+    "summary": "1917-05-11 - Pittsburgh Pirates (2) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90028,
+    "summary": "1917-05-11 - Philadelphia Athletics (1) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90027,
+    "summary": "1917-05-11 - New York Yankees (6) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90032,
+    "summary": "1917-05-12 - Boston Red Sox (8) @ Detroit Tigers (0) (Final)"
+  },
+  {
+    "game_id": 90033,
+    "summary": "1917-05-12 - Chicago Cubs (1) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90034,
+    "summary": "1917-05-12 - Cincinnati Reds (3) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90038,
+    "summary": "1917-05-12 - Washington Senators (4) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90037,
+    "summary": "1917-05-12 - St. Louis Cardinals (1) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90036,
+    "summary": "1917-05-12 - Philadelphia Athletics (0) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90035,
+    "summary": "1917-05-12 - New York Yankees (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90039,
+    "summary": "1917-05-13 - Boston Red Sox (1) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90042,
+    "summary": "1917-05-13 - Washington Senators (0) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90041,
+    "summary": "1917-05-13 - Philadelphia Athletics (1) @ St. Louis Browns (8) (Final)"
+  },
+  {
+    "game_id": 90040,
+    "summary": "1917-05-13 - New York Yankees (0) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90043,
+    "summary": "1917-05-14 - Boston Red Sox (6) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90045,
+    "summary": "1917-05-14 - Cincinnati Reds (3) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90049,
+    "summary": "1917-05-14 - St. Louis Cardinals (3) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90050,
+    "summary": "1917-05-14 - Washington Senators (2) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90048,
+    "summary": "1917-05-14 - Pittsburgh Pirates (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90044,
+    "summary": "1917-05-14 - Chicago Cubs (6) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90047,
+    "summary": "1917-05-14 - Philadelphia Athletics (2) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 90046,
+    "summary": "1917-05-14 - New York Yankees (6) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90051,
+    "summary": "1917-05-15 - Boston Red Sox (6) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90053,
+    "summary": "1917-05-15 - Cincinnati Reds (2) @ Brooklyn Robins (6) (Final)"
+  },
+  {
+    "game_id": 90057,
+    "summary": "1917-05-15 - St. Louis Cardinals (5) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90058,
+    "summary": "1917-05-15 - Washington Senators (11) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90056,
+    "summary": "1917-05-15 - Pittsburgh Pirates (2) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 90052,
+    "summary": "1917-05-15 - Chicago Cubs (8) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90055,
+    "summary": "1917-05-15 - Philadelphia Athletics (0) @ Chicago White Sox (11) (Final)"
+  },
+  {
+    "game_id": 90054,
+    "summary": "1917-05-15 - New York Yankees (7) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90059,
+    "summary": "1917-05-16 - Boston Red Sox (5) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90064,
+    "summary": "1917-05-16 - Washington Senators (5) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90063,
+    "summary": "1917-05-16 - Pittsburgh Pirates (12) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90060,
+    "summary": "1917-05-16 - Chicago Cubs (8) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90062,
+    "summary": "1917-05-16 - Philadelphia Athletics (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90061,
+    "summary": "1917-05-16 - New York Yankees (5) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90065,
+    "summary": "1917-05-17 - Boston Red Sox (1) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90067,
+    "summary": "1917-05-17 - Cincinnati Reds (10) @ Brooklyn Robins (13) (Final)"
+  },
+  {
+    "game_id": 90071,
+    "summary": "1917-05-17 - St. Louis Cardinals (2) @ New York Giants (10) (Final)"
+  },
+  {
+    "game_id": 90072,
+    "summary": "1917-05-17 - Washington Senators (4) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90070,
+    "summary": "1917-05-17 - Pittsburgh Pirates (6) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 90066,
+    "summary": "1917-05-17 - Chicago Cubs (2) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90069,
+    "summary": "1917-05-17 - Philadelphia Athletics (0) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 90068,
+    "summary": "1917-05-17 - New York Yankees (7) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 90077,
+    "summary": "1917-05-18 - Pittsburgh Pirates (1) @ New York Giants (8) (Final)"
+  },
+  {
+    "game_id": 90078,
+    "summary": "1917-05-18 - St. Louis Cardinals (1) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90074,
+    "summary": "1917-05-18 - Chicago Cubs (1) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90075,
+    "summary": "1917-05-18 - Cincinnati Reds (4) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90076,
+    "summary": "1917-05-18 - New York Yankees (7) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90079,
+    "summary": "1917-05-18 - Washington Senators (8) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90073,
+    "summary": "1917-05-18 - Boston Red Sox (2) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 90084,
+    "summary": "1917-05-19 - Philadelphia Athletics (5) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90085,
+    "summary": "1917-05-19 - Pittsburgh Pirates (5) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90086,
+    "summary": "1917-05-19 - St. Louis Cardinals (1) @ Brooklyn Robins (6) (Final)"
+  },
+  {
+    "game_id": 90081,
+    "summary": "1917-05-19 - Chicago Cubs (4) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90082,
+    "summary": "1917-05-19 - Cincinnati Reds (1) @ Boston Braves (5) (Final)"
+  },
+  {
+    "game_id": 90083,
+    "summary": "1917-05-19 - New York Yankees @ Detroit Tigers (Final: Tied)"
+  },
+  {
+    "game_id": 90087,
+    "summary": "1917-05-19 - Washington Senators (9) @ St. Louis Browns (6) (Final)"
+  },
+  {
+    "game_id": 90080,
+    "summary": "1917-05-19 - Boston Red Sox (2) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 90090,
+    "summary": "1917-05-20 - Philadelphia Athletics (1) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90091,
+    "summary": "1917-05-20 - Philadelphia Athletics (2) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90089,
+    "summary": "1917-05-20 - New York Yankees (0) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90092,
+    "summary": "1917-05-20 - Washington Senators (3) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90088,
+    "summary": "1917-05-20 - Boston Red Sox (2) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90095,
+    "summary": "1917-05-21 - Pittsburgh Pirates (3) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90096,
+    "summary": "1917-05-21 - St. Louis Cardinals (6) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90093,
+    "summary": "1917-05-21 - Chicago Cubs (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90094,
+    "summary": "1917-05-21 - Cincinnati Reds (2) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90098,
+    "summary": "1917-05-22 - Philadelphia Athletics (3) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90099,
+    "summary": "1917-05-22 - Pittsburgh Pirates (2) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 90100,
+    "summary": "1917-05-22 - St. Louis Cardinals (1) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90097,
+    "summary": "1917-05-22 - Chicago Cubs (6) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 90102,
+    "summary": "1917-05-23 - Chicago Cubs (3) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90103,
+    "summary": "1917-05-23 - Cincinnati Reds (1) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90101,
+    "summary": "1917-05-23 - Boston Red Sox (8) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90104,
+    "summary": "1917-05-23 - Washington Senators (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90109,
+    "summary": "1917-05-24 - Philadelphia Athletics (3) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90110,
+    "summary": "1917-05-24 - Pittsburgh Pirates (0) @ Brooklyn Robins (6) (Final)"
+  },
+  {
+    "game_id": 90106,
+    "summary": "1917-05-24 - Chicago Cubs (4) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90107,
+    "summary": "1917-05-24 - Cincinnati Reds (19) @ Philadelphia Phillies (9) (Final)"
+  },
+  {
+    "game_id": 90111,
+    "summary": "1917-05-24 - St. Louis Cardinals (9) @ Boston Braves (7) (Final)"
+  },
+  {
+    "game_id": 90108,
+    "summary": "1917-05-24 - New York Yankees (0) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90105,
+    "summary": "1917-05-24 - Boston Red Sox (4) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 90112,
+    "summary": "1917-05-24 - Washington Senators (0) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90117,
+    "summary": "1917-05-25 - Philadelphia Athletics (10) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 90118,
+    "summary": "1917-05-25 - Pittsburgh Pirates (3) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90114,
+    "summary": "1917-05-25 - Chicago Cubs (6) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90115,
+    "summary": "1917-05-25 - Cincinnati Reds (2) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90119,
+    "summary": "1917-05-25 - St. Louis Cardinals (2) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 90116,
+    "summary": "1917-05-25 - New York Yankees (5) @ Cleveland Indians (6) (Final)"
+  },
+  {
+    "game_id": 90113,
+    "summary": "1917-05-25 - Boston Red Sox (3) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90120,
+    "summary": "1917-05-25 - Washington Senators (1) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90125,
+    "summary": "1917-05-26 - Philadelphia Athletics (8) @ Detroit Tigers (11) (Final)"
+  },
+  {
+    "game_id": 90126,
+    "summary": "1917-05-26 - Pittsburgh Pirates (1) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90122,
+    "summary": "1917-05-26 - Chicago Cubs (1) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90123,
+    "summary": "1917-05-26 - Cincinnati Reds (4) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 90127,
+    "summary": "1917-05-26 - St. Louis Cardinals (6) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90124,
+    "summary": "1917-05-26 - New York Yankees (4) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90121,
+    "summary": "1917-05-26 - Boston Red Sox (11) @ St. Louis Browns (7) (Final)"
+  },
+  {
+    "game_id": 90128,
+    "summary": "1917-05-26 - Washington Senators @ Chicago White Sox (Final: Tied)"
+  },
+  {
+    "game_id": 90130,
+    "summary": "1917-05-27 - New York Yankees (3) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90129,
+    "summary": "1917-05-27 - Boston Red Sox @ St. Louis Browns (Final: Tied)"
+  },
+  {
+    "game_id": 90131,
+    "summary": "1917-05-27 - Washington Senators (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90132,
+    "summary": "1917-05-29 - Boston Red Sox (2) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90133,
+    "summary": "1917-05-29 - Boston Red Sox (9) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 90135,
+    "summary": "1917-05-29 - New York Yankees (0) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90136,
+    "summary": "1917-05-29 - New York Yankees (3) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90134,
+    "summary": "1917-05-29 - Detroit Tigers (0) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90138,
+    "summary": "1917-05-29 - St. Louis Cardinals (7) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 90137,
+    "summary": "1917-05-29 - St. Louis Browns (2) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90145,
+    "summary": "1917-05-30 - Detroit Tigers (4) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90146,
+    "summary": "1917-05-30 - Detroit Tigers (5) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90143,
+    "summary": "1917-05-30 - Chicago Cubs (6) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90144,
+    "summary": "1917-05-30 - Chicago Cubs (1) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 90151,
+    "summary": "1917-05-30 - St. Louis Cardinals (1) @ Cincinnati Reds (8) (Final)"
+  },
+  {
+    "game_id": 90152,
+    "summary": "1917-05-30 - St. Louis Cardinals (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90139,
+    "summary": "1917-05-30 - Boston Red Sox (4) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90140,
+    "summary": "1917-05-30 - Boston Red Sox (3) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90149,
+    "summary": "1917-05-30 - Philadelphia Phillies (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90150,
+    "summary": "1917-05-30 - Philadelphia Phillies (1) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90141,
+    "summary": "1917-05-30 - Brooklyn Robins (0) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 90142,
+    "summary": "1917-05-30 - Brooklyn Robins (0) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90147,
+    "summary": "1917-05-30 - New York Yankees (6) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90148,
+    "summary": "1917-05-30 - New York Yankees (2) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90153,
+    "summary": "1917-05-31 - Cleveland Indians (1) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90156,
+    "summary": "1917-05-31 - St. Louis Cardinals (2) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 90155,
+    "summary": "1917-05-31 - Philadelphia Phillies (2) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90154,
+    "summary": "1917-05-31 - Detroit Tigers (2) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 90158,
+    "summary": "1917-06-01 - Cleveland Indians (3) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90161,
+    "summary": "1917-06-01 - St. Louis Browns (4) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90160,
+    "summary": "1917-06-01 - Philadelphia Phillies (9) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90157,
+    "summary": "1917-06-01 - Brooklyn Robins (5) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90159,
+    "summary": "1917-06-01 - New York Giants (2) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90165,
+    "summary": "1917-06-02 - Cleveland Indians (5) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90169,
+    "summary": "1917-06-02 - St. Louis Browns (0) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90168,
+    "summary": "1917-06-02 - Philadelphia Phillies (9) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90163,
+    "summary": "1917-06-02 - Boston Braves (4) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90164,
+    "summary": "1917-06-02 - Chicago White Sox (4) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90166,
+    "summary": "1917-06-02 - Detroit Tigers (4) @ New York Yankees (8) (Final)"
+  },
+  {
+    "game_id": 90162,
+    "summary": "1917-06-02 - Brooklyn Robins (3) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90167,
+    "summary": "1917-06-02 - New York Giants (5) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90171,
+    "summary": "1917-06-03 - Boston Braves (5) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 90173,
+    "summary": "1917-06-03 - New York Yankees (4) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90170,
+    "summary": "1917-06-03 - Brooklyn Robins (2) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90172,
+    "summary": "1917-06-03 - New York Giants (1) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90177,
+    "summary": "1917-06-04 - Cleveland Indians (1) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90181,
+    "summary": "1917-06-04 - St. Louis Browns (4) @ Washington Senators (7) (Final)"
+  },
+  {
+    "game_id": 90180,
+    "summary": "1917-06-04 - Philadelphia Phillies (1) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90175,
+    "summary": "1917-06-04 - Boston Braves (5) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90176,
+    "summary": "1917-06-04 - Chicago White Sox (4) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90178,
+    "summary": "1917-06-04 - Detroit Tigers (5) @ New York Yankees (6) (Final)"
+  },
+  {
+    "game_id": 90174,
+    "summary": "1917-06-04 - Brooklyn Robins (2) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90179,
+    "summary": "1917-06-04 - New York Giants (5) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90185,
+    "summary": "1917-06-05 - Detroit Tigers (1) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90186,
+    "summary": "1917-06-05 - Detroit Tigers (6) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90184,
+    "summary": "1917-06-05 - Cleveland Indians (4) @ Boston Red Sox (11) (Final)"
+  },
+  {
+    "game_id": 90187,
+    "summary": "1917-06-05 - New York Giants (5) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 90188,
+    "summary": "1917-06-05 - St. Louis Browns (6) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90183,
+    "summary": "1917-06-05 - Chicago White Sox (6) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90182,
+    "summary": "1917-06-05 - Boston Braves (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90192,
+    "summary": "1917-06-06 - Detroit Tigers (3) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90195,
+    "summary": "1917-06-06 - St. Louis Browns (6) @ Philadelphia Athletics (11) (Final)"
+  },
+  {
+    "game_id": 90193,
+    "summary": "1917-06-06 - New York Giants (3) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 90190,
+    "summary": "1917-06-06 - Chicago White Sox (0) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90191,
+    "summary": "1917-06-06 - Cleveland Indians (6) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90194,
+    "summary": "1917-06-06 - Philadelphia Phillies (4) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90189,
+    "summary": "1917-06-06 - Boston Braves (7) @ St. Louis Cardinals (8) (Final)"
+  },
+  {
+    "game_id": 90196,
+    "summary": "1917-06-07 - Brooklyn Robins (5) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90199,
+    "summary": "1917-06-07 - New York Giants (10) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 90198,
+    "summary": "1917-06-07 - Chicago White Sox (0) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90197,
+    "summary": "1917-06-07 - Boston Braves (4) @ St. Louis Cardinals (9) (Final)"
+  },
+  {
+    "game_id": 90204,
+    "summary": "1917-06-08 - Detroit Tigers (7) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 90207,
+    "summary": "1917-06-08 - St. Louis Browns (11) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90200,
+    "summary": "1917-06-08 - Brooklyn Robins (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90205,
+    "summary": "1917-06-08 - New York Giants (1) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90202,
+    "summary": "1917-06-08 - Chicago White Sox (11) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90203,
+    "summary": "1917-06-08 - Cleveland Indians (4) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 90206,
+    "summary": "1917-06-08 - Philadelphia Phillies (1) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90201,
+    "summary": "1917-06-08 - Boston Braves (1) @ St. Louis Cardinals (9) (Final)"
+  },
+  {
+    "game_id": 90212,
+    "summary": "1917-06-09 - Detroit Tigers (1) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90208,
+    "summary": "1917-06-09 - Brooklyn Robins (1) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90214,
+    "summary": "1917-06-09 - St. Louis Browns (1) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90209,
+    "summary": "1917-06-09 - Boston Braves (6) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90210,
+    "summary": "1917-06-09 - Chicago White Sox (5) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90211,
+    "summary": "1917-06-09 - Cleveland Indians (2) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 90213,
+    "summary": "1917-06-09 - New York Giants (4) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90215,
+    "summary": "1917-06-10 - Brooklyn Robins (4) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90216,
+    "summary": "1917-06-10 - Chicago White Sox (10) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90217,
+    "summary": "1917-06-10 - New York Giants (5) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 90218,
+    "summary": "1917-06-10 - Philadelphia Phillies (4) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90219,
+    "summary": "1917-06-11 - Brooklyn Robins (2) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90220,
+    "summary": "1917-06-11 - Boston Braves (2) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90221,
+    "summary": "1917-06-11 - New York Giants (8) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90222,
+    "summary": "1917-06-11 - Philadelphia Phillies (4) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90223,
+    "summary": "1917-06-12 - Brooklyn Robins (2) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 90227,
+    "summary": "1917-06-12 - Detroit Tigers (3) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90226,
+    "summary": "1917-06-12 - Cleveland Indians @ Washington Senators (Final: Tied)"
+  },
+  {
+    "game_id": 90224,
+    "summary": "1917-06-12 - Boston Braves (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90225,
+    "summary": "1917-06-12 - Chicago White Sox (3) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90228,
+    "summary": "1917-06-12 - New York Giants (10) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 90229,
+    "summary": "1917-06-12 - Philadelphia Phillies (4) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 90236,
+    "summary": "1917-06-13 - St. Louis Browns (0) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90237,
+    "summary": "1917-06-13 - St. Louis Browns (7) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90231,
+    "summary": "1917-06-13 - Cleveland Indians (5) @ Washington Senators (7) (Final)"
+  },
+  {
+    "game_id": 90232,
+    "summary": "1917-06-13 - Cleveland Indians @ Washington Senators (Final: Tied)"
+  },
+  {
+    "game_id": 90233,
+    "summary": "1917-06-13 - Detroit Tigers (2) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90234,
+    "summary": "1917-06-13 - New York Giants (7) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90235,
+    "summary": "1917-06-13 - Philadelphia Phillies (3) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90230,
+    "summary": "1917-06-13 - Chicago White Sox (6) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 90242,
+    "summary": "1917-06-14 - St. Louis Browns (3) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90240,
+    "summary": "1917-06-14 - New York Giants (2) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90241,
+    "summary": "1917-06-14 - Philadelphia Phillies (5) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 90238,
+    "summary": "1917-06-14 - Brooklyn Robins (4) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90239,
+    "summary": "1917-06-14 - Boston Braves (3) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90246,
+    "summary": "1917-06-15 - Cleveland Indians (2) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90247,
+    "summary": "1917-06-15 - Detroit Tigers (4) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90248,
+    "summary": "1917-06-15 - Philadelphia Phillies (12) @ Cincinnati Reds (8) (Final)"
+  },
+  {
+    "game_id": 90245,
+    "summary": "1917-06-15 - Chicago White Sox (8) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90249,
+    "summary": "1917-06-15 - St. Louis Browns (1) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90243,
+    "summary": "1917-06-15 - Brooklyn Robins (2) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90244,
+    "summary": "1917-06-15 - Boston Braves (6) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90253,
+    "summary": "1917-06-16 - Cleveland Indians (4) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90254,
+    "summary": "1917-06-16 - Cleveland Indians (7) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90256,
+    "summary": "1917-06-16 - New York Giants (4) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90255,
+    "summary": "1917-06-16 - Detroit Tigers (3) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90257,
+    "summary": "1917-06-16 - Philadelphia Phillies (1) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90252,
+    "summary": "1917-06-16 - Chicago White Sox (7) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90258,
+    "summary": "1917-06-16 - St. Louis Browns (4) @ New York Yankees (8) (Final)"
+  },
+  {
+    "game_id": 90250,
+    "summary": "1917-06-16 - Brooklyn Robins (7) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90251,
+    "summary": "1917-06-16 - Boston Braves (7) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90261,
+    "summary": "1917-06-17 - Philadelphia Athletics (9) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90262,
+    "summary": "1917-06-17 - Philadelphia Phillies (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 90263,
+    "summary": "1917-06-17 - St. Louis Browns (2) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90259,
+    "summary": "1917-06-17 - Brooklyn Robins (1) @ St. Louis Cardinals (7) (Final)"
+  },
+  {
+    "game_id": 90260,
+    "summary": "1917-06-17 - Boston Braves (5) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90264,
+    "summary": "1917-06-18 - Chicago White Sox (4) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90265,
+    "summary": "1917-06-18 - Chicago White Sox (7) @ Boston Red Sox (8) (Final)"
+  },
+  {
+    "game_id": 90266,
+    "summary": "1917-06-18 - Chicago Cubs (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90267,
+    "summary": "1917-06-18 - Detroit Tigers (1) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 90269,
+    "summary": "1917-06-18 - St. Louis Browns (1) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 90268,
+    "summary": "1917-06-18 - Pittsburgh Pirates (4) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 90271,
+    "summary": "1917-06-19 - Chicago Cubs (2) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 90272,
+    "summary": "1917-06-19 - Chicago Cubs (2) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 90273,
+    "summary": "1917-06-19 - Detroit Tigers (0) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90270,
+    "summary": "1917-06-19 - Brooklyn Robins (12) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90274,
+    "summary": "1917-06-19 - New York Giants (3) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90275,
+    "summary": "1917-06-19 - Pittsburgh Pirates (7) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90278,
+    "summary": "1917-06-20 - Brooklyn Robins (3) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 90279,
+    "summary": "1917-06-20 - Brooklyn Robins (2) @ Philadelphia Phillies (9) (Final)"
+  },
+  {
+    "game_id": 90282,
+    "summary": "1917-06-20 - New York Giants (4) @ Boston Braves (7) (Final)"
+  },
+  {
+    "game_id": 90283,
+    "summary": "1917-06-20 - New York Giants (1) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90276,
+    "summary": "1917-06-20 - Boston Red Sox (2) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 90277,
+    "summary": "1917-06-20 - Boston Red Sox (3) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90280,
+    "summary": "1917-06-20 - Chicago Cubs (4) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 90286,
+    "summary": "1917-06-20 - St. Louis Browns (3) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90284,
+    "summary": "1917-06-20 - Philadelphia Athletics (3) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 90285,
+    "summary": "1917-06-20 - Pittsburgh Pirates @ St. Louis Cardinals (Final: Tied)"
+  },
+  {
+    "game_id": 90281,
+    "summary": "1917-06-20 - Cleveland Indians (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90294,
+    "summary": "1917-06-21 - St. Louis Browns (4) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90289,
+    "summary": "1917-06-21 - Chicago Cubs (12) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90293,
+    "summary": "1917-06-21 - Philadelphia Athletics (3) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 90288,
+    "summary": "1917-06-21 - Brooklyn Robins (4) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90292,
+    "summary": "1917-06-21 - New York Giants (4) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90287,
+    "summary": "1917-06-21 - Boston Red Sox (4) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90290,
+    "summary": "1917-06-21 - Cincinnati Reds (7) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90291,
+    "summary": "1917-06-21 - Cleveland Indians (1) @ Chicago White Sox (0) (Final)"
+  },
+  {
+    "game_id": 90302,
+    "summary": "1917-06-22 - St. Louis Browns (3) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 90303,
+    "summary": "1917-06-22 - St. Louis Browns (2) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90297,
+    "summary": "1917-06-22 - Chicago Cubs (3) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90301,
+    "summary": "1917-06-22 - Philadelphia Athletics (5) @ Washington Senators (6) (Final)"
+  },
+  {
+    "game_id": 90296,
+    "summary": "1917-06-22 - Brooklyn Robins (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90300,
+    "summary": "1917-06-22 - New York Giants (3) @ Boston Braves (5) (Final)"
+  },
+  {
+    "game_id": 90295,
+    "summary": "1917-06-22 - Boston Red Sox (2) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90298,
+    "summary": "1917-06-22 - Cincinnati Reds (5) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90299,
+    "summary": "1917-06-22 - Cleveland Indians (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90306,
+    "summary": "1917-06-23 - Chicago Cubs (2) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90307,
+    "summary": "1917-06-23 - Chicago Cubs (6) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90313,
+    "summary": "1917-06-23 - Washington Senators (0) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 90314,
+    "summary": "1917-06-23 - Washington Senators (0) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90304,
+    "summary": "1917-06-23 - Boston Braves (0) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90305,
+    "summary": "1917-06-23 - Boston Braves (5) @ Brooklyn Robins (7) (Final)"
+  },
+  {
+    "game_id": 90311,
+    "summary": "1917-06-23 - Philadelphia Athletics (4) @ New York Yankees (10) (Final)"
+  },
+  {
+    "game_id": 90312,
+    "summary": "1917-06-23 - Philadelphia Athletics (1) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 90310,
+    "summary": "1917-06-23 - New York Giants (2) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 90308,
+    "summary": "1917-06-23 - Cincinnati Reds (1) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90309,
+    "summary": "1917-06-23 - Cleveland Indians (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90315,
+    "summary": "1917-06-24 - Cincinnati Reds (2) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90316,
+    "summary": "1917-06-24 - Cincinnati Reds (15) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90319,
+    "summary": "1917-06-24 - St. Louis Browns (2) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90318,
+    "summary": "1917-06-24 - Pittsburgh Pirates (1) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90317,
+    "summary": "1917-06-24 - Cleveland Indians (0) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90326,
+    "summary": "1917-06-25 - Washington Senators (4) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90327,
+    "summary": "1917-06-25 - Washington Senators (3) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 90320,
+    "summary": "1917-06-25 - Boston Braves (2) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90321,
+    "summary": "1917-06-25 - Boston Braves (2) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90323,
+    "summary": "1917-06-25 - Philadelphia Athletics (0) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90324,
+    "summary": "1917-06-25 - Philadelphia Athletics (5) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 90325,
+    "summary": "1917-06-25 - St. Louis Browns (6) @ Cleveland Indians (9) (Final)"
+  },
+  {
+    "game_id": 90322,
+    "summary": "1917-06-25 - New York Giants (0) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90338,
+    "summary": "1917-06-26 - St. Louis Browns (2) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90339,
+    "summary": "1917-06-26 - St. Louis Browns (2) @ Cleveland Indians (6) (Final)"
+  },
+  {
+    "game_id": 90335,
+    "summary": "1917-06-26 - New York Giants (4) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90336,
+    "summary": "1917-06-26 - New York Giants (5) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 90328,
+    "summary": "1917-06-26 - Boston Braves (6) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90329,
+    "summary": "1917-06-26 - Boston Braves (7) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90330,
+    "summary": "1917-06-26 - Chicago Cubs (5) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 90331,
+    "summary": "1917-06-26 - Chicago Cubs (8) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 90333,
+    "summary": "1917-06-26 - Detroit Tigers (9) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90334,
+    "summary": "1917-06-26 - Detroit Tigers (3) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90332,
+    "summary": "1917-06-26 - Cincinnati Reds (6) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90340,
+    "summary": "1917-06-26 - Washington Senators (3) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90337,
+    "summary": "1917-06-26 - Philadelphia Athletics (6) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 90342,
+    "summary": "1917-06-27 - Chicago Cubs (4) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90343,
+    "summary": "1917-06-27 - Chicago Cubs (3) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 90345,
+    "summary": "1917-06-27 - Detroit Tigers (2) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90346,
+    "summary": "1917-06-27 - Detroit Tigers (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90349,
+    "summary": "1917-06-27 - St. Louis Browns (4) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90344,
+    "summary": "1917-06-27 - Cincinnati Reds (6) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90350,
+    "summary": "1917-06-27 - Washington Senators (7) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90347,
+    "summary": "1917-06-27 - New York Giants (4) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90341,
+    "summary": "1917-06-27 - Boston Braves (3) @ Brooklyn Robins (7) (Final)"
+  },
+  {
+    "game_id": 90348,
+    "summary": "1917-06-27 - Philadelphia Athletics (3) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90357,
+    "summary": "1917-06-28 - Philadelphia Phillies (3) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90358,
+    "summary": "1917-06-28 - Philadelphia Phillies (1) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90355,
+    "summary": "1917-06-28 - New York Yankees (2) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 90356,
+    "summary": "1917-06-28 - New York Yankees (0) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90359,
+    "summary": "1917-06-28 - St. Louis Browns (5) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90353,
+    "summary": "1917-06-28 - Cincinnati Reds (2) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 90360,
+    "summary": "1917-06-28 - Washington Senators (4) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90351,
+    "summary": "1917-06-28 - Boston Braves (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90352,
+    "summary": "1917-06-28 - Chicago Cubs (1) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90354,
+    "summary": "1917-06-28 - Detroit Tigers (6) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90361,
+    "summary": "1917-06-29 - Boston Braves (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90362,
+    "summary": "1917-06-29 - Boston Braves (13) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 90364,
+    "summary": "1917-06-29 - Cincinnati Reds (1) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90368,
+    "summary": "1917-06-29 - Washington Senators (3) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90363,
+    "summary": "1917-06-29 - Chicago White Sox (3) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90366,
+    "summary": "1917-06-29 - New York Yankees (1) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90365,
+    "summary": "1917-06-29 - Detroit Tigers (19) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90367,
+    "summary": "1917-06-29 - St. Louis Cardinals (9) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90378,
+    "summary": "1917-06-30 - Washington Senators (6) @ Philadelphia Athletics (14) (Final)"
+  },
+  {
+    "game_id": 90379,
+    "summary": "1917-06-30 - Washington Senators (5) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 90375,
+    "summary": "1917-06-30 - Philadelphia Phillies (6) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90376,
+    "summary": "1917-06-30 - Philadelphia Phillies (8) @ Brooklyn Robins (9) (Final)"
+  },
+  {
+    "game_id": 90372,
+    "summary": "1917-06-30 - Detroit Tigers (3) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90373,
+    "summary": "1917-06-30 - Detroit Tigers (6) @ St. Louis Browns (5) (Final)"
+  },
+  {
+    "game_id": 90371,
+    "summary": "1917-06-30 - Cincinnati Reds (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90369,
+    "summary": "1917-06-30 - Boston Braves (2) @ New York Giants (8) (Final)"
+  },
+  {
+    "game_id": 90370,
+    "summary": "1917-06-30 - Chicago White Sox (1) @ Cleveland Indians (11) (Final)"
+  },
+  {
+    "game_id": 90374,
+    "summary": "1917-06-30 - New York Yankees (2) @ Boston Red Sox (9) (Final)"
+  },
+  {
+    "game_id": 90377,
+    "summary": "1917-06-30 - St. Louis Cardinals (0) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 90384,
+    "summary": "1917-07-01 - Pittsburgh Pirates (1) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 90385,
+    "summary": "1917-07-01 - Pittsburgh Pirates (1) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 90381,
+    "summary": "1917-07-01 - Detroit Tigers (5) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90382,
+    "summary": "1917-07-01 - Detroit Tigers (9) @ St. Louis Browns (15) (Final)"
+  },
+  {
+    "game_id": 90383,
+    "summary": "1917-07-01 - Philadelphia Phillies (2) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90380,
+    "summary": "1917-07-01 - Chicago White Sox (4) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90386,
+    "summary": "1917-07-01 - St. Louis Cardinals (4) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90393,
+    "summary": "1917-07-02 - St. Louis Cardinals (6) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90394,
+    "summary": "1917-07-02 - Washington Senators (6) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90392,
+    "summary": "1917-07-02 - Philadelphia Phillies (3) @ Brooklyn Robins (7) (Final)"
+  },
+  {
+    "game_id": 90387,
+    "summary": "1917-07-02 - Boston Braves (1) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90388,
+    "summary": "1917-07-02 - Chicago White Sox (4) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90391,
+    "summary": "1917-07-02 - New York Yankees @ Boston Red Sox (Final: Tied)"
+  },
+  {
+    "game_id": 90389,
+    "summary": "1917-07-02 - Cincinnati Reds (8) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90390,
+    "summary": "1917-07-02 - Detroit Tigers (5) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90398,
+    "summary": "1917-07-03 - Philadelphia Athletics (3) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90399,
+    "summary": "1917-07-03 - Philadelphia Athletics (1) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90400,
+    "summary": "1917-07-03 - St. Louis Cardinals (8) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 90395,
+    "summary": "1917-07-03 - Chicago White Sox (5) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90396,
+    "summary": "1917-07-03 - Cincinnati Reds (3) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 90397,
+    "summary": "1917-07-03 - Cleveland Indians (4) @ St. Louis Browns (5) (Final)"
+  },
+  {
+    "game_id": 90411,
+    "summary": "1917-07-04 - Philadelphia Athletics (3) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90412,
+    "summary": "1917-07-04 - Philadelphia Athletics (2) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90409,
+    "summary": "1917-07-04 - New York Giants (9) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90410,
+    "summary": "1917-07-04 - New York Giants (8) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90413,
+    "summary": "1917-07-04 - St. Louis Cardinals (4) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90414,
+    "summary": "1917-07-04 - St. Louis Cardinals (4) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90401,
+    "summary": "1917-07-04 - Boston Braves (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90402,
+    "summary": "1917-07-04 - Boston Braves (4) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90403,
+    "summary": "1917-07-04 - Chicago White Sox (4) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90404,
+    "summary": "1917-07-04 - Chicago White Sox (4) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90415,
+    "summary": "1917-07-04 - Washington Senators (6) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90416,
+    "summary": "1917-07-04 - Washington Senators (5) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90405,
+    "summary": "1917-07-04 - Cincinnati Reds (2) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90406,
+    "summary": "1917-07-04 - Cincinnati Reds (13) @ Chicago Cubs (10) (Final)"
+  },
+  {
+    "game_id": 90407,
+    "summary": "1917-07-04 - Cleveland Indians (2) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90408,
+    "summary": "1917-07-04 - Cleveland Indians (5) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90422,
+    "summary": "1917-07-05 - Philadelphia Athletics (3) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 90423,
+    "summary": "1917-07-05 - Philadelphia Athletics (2) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 90425,
+    "summary": "1917-07-05 - Washington Senators (2) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90426,
+    "summary": "1917-07-05 - Washington Senators (4) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90419,
+    "summary": "1917-07-05 - Cleveland Indians (5) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 90420,
+    "summary": "1917-07-05 - Cleveland Indians (1) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90421,
+    "summary": "1917-07-05 - New York Giants (3) @ Brooklyn Robins (6) (Final)"
+  },
+  {
+    "game_id": 90424,
+    "summary": "1917-07-05 - St. Louis Cardinals (9) @ Pittsburgh Pirates (6) (Final)"
+  },
+  {
+    "game_id": 90417,
+    "summary": "1917-07-05 - Boston Braves (3) @ Philadelphia Phillies (0) (Final)"
+  },
+  {
+    "game_id": 90418,
+    "summary": "1917-07-05 - Chicago White Sox (6) @ Detroit Tigers (11) (Final)"
+  },
+  {
+    "game_id": 90428,
+    "summary": "1917-07-06 - Chicago Cubs (3) @ Brooklyn Robins (1) (Final)"
+  },
+  {
+    "game_id": 90432,
+    "summary": "1917-07-06 - St. Louis Cardinals (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90431,
+    "summary": "1917-07-06 - Pittsburgh Pirates (8) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90429,
+    "summary": "1917-07-06 - Cincinnati Reds (2) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 90427,
+    "summary": "1917-07-06 - Chicago White Sox (1) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90430,
+    "summary": "1917-07-06 - Cleveland Indians (12) @ St. Louis Browns (6) (Final)"
+  },
+  {
+    "game_id": 90440,
+    "summary": "1917-07-07 - St. Louis Cardinals (3) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90441,
+    "summary": "1917-07-07 - St. Louis Cardinals (1) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90435,
+    "summary": "1917-07-07 - Cincinnati Reds (2) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90436,
+    "summary": "1917-07-07 - Cincinnati Reds (0) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90433,
+    "summary": "1917-07-07 - Boston Red Sox (1) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90434,
+    "summary": "1917-07-07 - Chicago Cubs (4) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90439,
+    "summary": "1917-07-07 - Pittsburgh Pirates (4) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 90438,
+    "summary": "1917-07-07 - Philadelphia Athletics (4) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90437,
+    "summary": "1917-07-07 - New York Yankees (0) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90442,
+    "summary": "1917-07-08 - Boston Red Sox (0) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90445,
+    "summary": "1917-07-08 - Washington Senators (10) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90444,
+    "summary": "1917-07-08 - Philadelphia Athletics (4) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 90443,
+    "summary": "1917-07-08 - New York Yankees (2) @ St. Louis Browns (8) (Final)"
+  },
+  {
+    "game_id": 90451,
+    "summary": "1917-07-09 - Washington Senators (8) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90452,
+    "summary": "1917-07-09 - Washington Senators (2) @ Detroit Tigers (10) (Final)"
+  },
+  {
+    "game_id": 90446,
+    "summary": "1917-07-09 - Boston Red Sox (3) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90450,
+    "summary": "1917-07-09 - St. Louis Cardinals (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90447,
+    "summary": "1917-07-09 - Cincinnati Reds (4) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90449,
+    "summary": "1917-07-09 - Philadelphia Athletics (5) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90448,
+    "summary": "1917-07-09 - New York Yankees (2) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90453,
+    "summary": "1917-07-10 - Chicago Cubs (1) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90454,
+    "summary": "1917-07-10 - Chicago Cubs (1) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90458,
+    "summary": "1917-07-10 - Washington Senators (4) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90455,
+    "summary": "1917-07-10 - Cincinnati Reds (10) @ Boston Braves (5) (Final)"
+  },
+  {
+    "game_id": 90457,
+    "summary": "1917-07-10 - Philadelphia Athletics (7) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90456,
+    "summary": "1917-07-10 - New York Yankees (7) @ St. Louis Browns (5) (Final)"
+  },
+  {
+    "game_id": 90459,
+    "summary": "1917-07-11 - Boston Red Sox (1) @ Detroit Tigers (0) (Final)"
+  },
+  {
+    "game_id": 90461,
+    "summary": "1917-07-11 - Washington Senators (0) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90460,
+    "summary": "1917-07-11 - Philadelphia Athletics (13) @ St. Louis Browns (5) (Final)"
+  },
+  {
+    "game_id": 90463,
+    "summary": "1917-07-12 - Cincinnati Reds (2) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90464,
+    "summary": "1917-07-12 - Cincinnati Reds (5) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90469,
+    "summary": "1917-07-12 - St. Louis Cardinals (7) @ Boston Braves (5) (Final)"
+  },
+  {
+    "game_id": 90470,
+    "summary": "1917-07-12 - St. Louis Cardinals (6) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90465,
+    "summary": "1917-07-12 - New York Yankees (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90466,
+    "summary": "1917-07-12 - New York Yankees (3) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90462,
+    "summary": "1917-07-12 - Boston Red Sox (0) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90468,
+    "summary": "1917-07-12 - Pittsburgh Pirates (2) @ Brooklyn Robins (1) (Final)"
+  },
+  {
+    "game_id": 90471,
+    "summary": "1917-07-12 - Washington Senators (0) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90467,
+    "summary": "1917-07-12 - Philadelphia Athletics (5) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90478,
+    "summary": "1917-07-13 - Pittsburgh Pirates (0) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90479,
+    "summary": "1917-07-13 - Pittsburgh Pirates (1) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90473,
+    "summary": "1917-07-13 - Chicago Cubs (0) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 90474,
+    "summary": "1917-07-13 - Chicago Cubs (1) @ Philadelphia Phillies (0) (Final)"
+  },
+  {
+    "game_id": 90472,
+    "summary": "1917-07-13 - Boston Red Sox (0) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90475,
+    "summary": "1917-07-13 - Cincinnati Reds (3) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90480,
+    "summary": "1917-07-13 - St. Louis Cardinals (7) @ Boston Braves (6) (Final)"
+  },
+  {
+    "game_id": 90477,
+    "summary": "1917-07-13 - Philadelphia Athletics (1) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90476,
+    "summary": "1917-07-13 - New York Yankees (6) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90487,
+    "summary": "1917-07-14 - Pittsburgh Pirates (3) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90488,
+    "summary": "1917-07-14 - Pittsburgh Pirates (0) @ Brooklyn Robins (1) (Final)"
+  },
+  {
+    "game_id": 90484,
+    "summary": "1917-07-14 - Cincinnati Reds (0) @ New York Giants (8) (Final)"
+  },
+  {
+    "game_id": 90485,
+    "summary": "1917-07-14 - Cincinnati Reds (7) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90491,
+    "summary": "1917-07-14 - Washington Senators (5) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90492,
+    "summary": "1917-07-14 - Washington Senators (3) @ Cleveland Indians (0) (Final)"
+  },
+  {
+    "game_id": 90482,
+    "summary": "1917-07-14 - Chicago Cubs (3) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90483,
+    "summary": "1917-07-14 - Chicago Cubs @ Philadelphia Phillies (Final: Tied)"
+  },
+  {
+    "game_id": 90489,
+    "summary": "1917-07-14 - St. Louis Cardinals (2) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90490,
+    "summary": "1917-07-14 - St. Louis Cardinals (2) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90481,
+    "summary": "1917-07-14 - Boston Red Sox (4) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90486,
+    "summary": "1917-07-14 - New York Yankees (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90495,
+    "summary": "1917-07-15 - New York Yankees (4) @ Cleveland Indians (0) (Final)"
+  },
+  {
+    "game_id": 90496,
+    "summary": "1917-07-15 - New York Yankees (8) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90493,
+    "summary": "1917-07-15 - Boston Red Sox (4) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90494,
+    "summary": "1917-07-15 - Boston Red Sox (6) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 90497,
+    "summary": "1917-07-15 - Philadelphia Athletics (2) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 90498,
+    "summary": "1917-07-15 - Washington Senators (6) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90503,
+    "summary": "1917-07-16 - Pittsburgh Pirates (7) @ Boston Braves (8) (Final)"
+  },
+  {
+    "game_id": 90504,
+    "summary": "1917-07-16 - Pittsburgh Pirates (2) @ Boston Braves (7) (Final)"
+  },
+  {
+    "game_id": 90500,
+    "summary": "1917-07-16 - Chicago Cubs (2) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90505,
+    "summary": "1917-07-16 - St. Louis Cardinals (3) @ Brooklyn Robins (1) (Final)"
+  },
+  {
+    "game_id": 90501,
+    "summary": "1917-07-16 - Cincinnati Reds (0) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 90502,
+    "summary": "1917-07-16 - New York Yankees (2) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90499,
+    "summary": "1917-07-16 - Boston Red Sox (0) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90510,
+    "summary": "1917-07-17 - Philadelphia Athletics (2) @ Detroit Tigers (9) (Final)"
+  },
+  {
+    "game_id": 90511,
+    "summary": "1917-07-17 - Philadelphia Athletics (3) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90514,
+    "summary": "1917-07-17 - Washington Senators (0) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90515,
+    "summary": "1917-07-17 - Washington Senators (2) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90507,
+    "summary": "1917-07-17 - Chicago Cubs (1) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90513,
+    "summary": "1917-07-17 - St. Louis Cardinals (1) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90508,
+    "summary": "1917-07-17 - Cincinnati Reds (3) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 90512,
+    "summary": "1917-07-17 - Pittsburgh Pirates (6) @ Boston Braves (10) (Final)"
+  },
+  {
+    "game_id": 90509,
+    "summary": "1917-07-17 - New York Yankees (1) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90506,
+    "summary": "1917-07-17 - Boston Red Sox (2) @ St. Louis Browns (3) (Final)"
+  },
+  {
+    "game_id": 90520,
+    "summary": "1917-07-18 - Philadelphia Athletics (1) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90521,
+    "summary": "1917-07-18 - Philadelphia Athletics (4) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90522,
+    "summary": "1917-07-18 - Pittsburgh Pirates (8) @ Boston Braves (6) (Final)"
+  },
+  {
+    "game_id": 90523,
+    "summary": "1917-07-18 - Pittsburgh Pirates (3) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90525,
+    "summary": "1917-07-18 - Washington Senators (0) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90526,
+    "summary": "1917-07-18 - Washington Senators (4) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 90517,
+    "summary": "1917-07-18 - Chicago Cubs (2) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90524,
+    "summary": "1917-07-18 - St. Louis Cardinals (1) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90518,
+    "summary": "1917-07-18 - Cincinnati Reds (1) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90519,
+    "summary": "1917-07-18 - New York Yankees (12) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90516,
+    "summary": "1917-07-18 - Boston Red Sox (1) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90529,
+    "summary": "1917-07-19 - Pittsburgh Pirates (6) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90528,
+    "summary": "1917-07-19 - New York Yankees (0) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90530,
+    "summary": "1917-07-19 - Washington Senators (2) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90527,
+    "summary": "1917-07-19 - Boston Red Sox (3) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90533,
+    "summary": "1917-07-20 - Cincinnati Reds (4) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90535,
+    "summary": "1917-07-20 - Philadelphia Athletics (6) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90536,
+    "summary": "1917-07-20 - Pittsburgh Pirates (0) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90537,
+    "summary": "1917-07-20 - St. Louis Cardinals (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90532,
+    "summary": "1917-07-20 - Chicago Cubs (0) @ Boston Braves (5) (Final)"
+  },
+  {
+    "game_id": 90534,
+    "summary": "1917-07-20 - New York Yankees (3) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90538,
+    "summary": "1917-07-20 - Washington Senators (2) @ St. Louis Browns (5) (Final)"
+  },
+  {
+    "game_id": 90531,
+    "summary": "1917-07-20 - Boston Red Sox (2) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90541,
+    "summary": "1917-07-21 - Cincinnati Reds (6) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90542,
+    "summary": "1917-07-21 - Cincinnati Reds (9) @ Brooklyn Robins (1) (Final)"
+  },
+  {
+    "game_id": 90547,
+    "summary": "1917-07-21 - St. Louis Cardinals (7) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90548,
+    "summary": "1917-07-21 - St. Louis Cardinals (5) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90543,
+    "summary": "1917-07-21 - New York Yankees (3) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90544,
+    "summary": "1917-07-21 - New York Yankees (2) @ Detroit Tigers (11) (Final)"
+  },
+  {
+    "game_id": 90545,
+    "summary": "1917-07-21 - Philadelphia Athletics (1) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90546,
+    "summary": "1917-07-21 - Pittsburgh Pirates (3) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90540,
+    "summary": "1917-07-21 - Chicago Cubs (1) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90549,
+    "summary": "1917-07-21 - Washington Senators (5) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90539,
+    "summary": "1917-07-21 - Boston Red Sox @ Chicago White Sox (Final: Tied)"
+  },
+  {
+    "game_id": 90553,
+    "summary": "1917-07-22 - Washington Senators (0) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90554,
+    "summary": "1917-07-22 - Washington Senators (5) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90552,
+    "summary": "1917-07-22 - Philadelphia Athletics (6) @ Cleveland Indians (20) (Final)"
+  },
+  {
+    "game_id": 90551,
+    "summary": "1917-07-22 - New York Yankees (7) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90550,
+    "summary": "1917-07-22 - Boston Red Sox (0) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90557,
+    "summary": "1917-07-23 - Cincinnati Reds (5) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90558,
+    "summary": "1917-07-23 - Pittsburgh Pirates (1) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 90559,
+    "summary": "1917-07-23 - St. Louis Cardinals (5) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90556,
+    "summary": "1917-07-23 - Chicago Cubs (2) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90555,
+    "summary": "1917-07-23 - Boston Red Sox (3) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90561,
+    "summary": "1917-07-24 - Cincinnati Reds (6) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90563,
+    "summary": "1917-07-24 - Pittsburgh Pirates (2) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90562,
+    "summary": "1917-07-24 - Cleveland Indians (1) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90564,
+    "summary": "1917-07-24 - St. Louis Cardinals (3) @ Philadelphia Phillies (0) (Final)"
+  },
+  {
+    "game_id": 90560,
+    "summary": "1917-07-24 - Chicago Cubs (3) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90566,
+    "summary": "1917-07-25 - Chicago White Sox (4) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90567,
+    "summary": "1917-07-25 - Chicago White Sox (5) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90569,
+    "summary": "1917-07-25 - St. Louis Browns (4) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90568,
+    "summary": "1917-07-25 - Detroit Tigers (3) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 90565,
+    "summary": "1917-07-25 - Brooklyn Robins (4) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90580,
+    "summary": "1917-07-26 - St. Louis Browns (2) @ Boston Red Sox (11) (Final)"
+  },
+  {
+    "game_id": 90581,
+    "summary": "1917-07-26 - St. Louis Browns (3) @ Boston Red Sox (8) (Final)"
+  },
+  {
+    "game_id": 90576,
+    "summary": "1917-07-26 - Detroit Tigers (6) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90577,
+    "summary": "1917-07-26 - Detroit Tigers (2) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90570,
+    "summary": "1917-07-26 - Brooklyn Robins (1) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90571,
+    "summary": "1917-07-26 - Brooklyn Robins (5) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90574,
+    "summary": "1917-07-26 - Cleveland Indians (1) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90575,
+    "summary": "1917-07-26 - Cleveland Indians (5) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90579,
+    "summary": "1917-07-26 - Philadelphia Phillies (2) @ Cincinnati Reds (5) (Final)"
+  },
+  {
+    "game_id": 90573,
+    "summary": "1917-07-26 - Chicago White Sox (5) @ New York Yankees (6) (Final)"
+  },
+  {
+    "game_id": 90578,
+    "summary": "1917-07-26 - New York Giants (1) @ Chicago Cubs (7) (Final)"
+  },
+  {
+    "game_id": 90572,
+    "summary": "1917-07-26 - Boston Braves (0) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90585,
+    "summary": "1917-07-27 - Cleveland Indians (3) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90586,
+    "summary": "1917-07-27 - Cleveland Indians (2) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 90587,
+    "summary": "1917-07-27 - Detroit Tigers (11) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90582,
+    "summary": "1917-07-27 - Brooklyn Robins (1) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90589,
+    "summary": "1917-07-27 - Philadelphia Phillies (4) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 90584,
+    "summary": "1917-07-27 - Chicago White Sox (9) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90588,
+    "summary": "1917-07-27 - New York Giants (3) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 90583,
+    "summary": "1917-07-27 - Boston Braves (3) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90600,
+    "summary": "1917-07-28 - St. Louis Browns (2) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 90601,
+    "summary": "1917-07-28 - St. Louis Browns (2) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 90596,
+    "summary": "1917-07-28 - Detroit Tigers (5) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90597,
+    "summary": "1917-07-28 - Detroit Tigers (5) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 90590,
+    "summary": "1917-07-28 - Brooklyn Robins (6) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 90591,
+    "summary": "1917-07-28 - Brooklyn Robins (4) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 90593,
+    "summary": "1917-07-28 - Chicago White Sox (4) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90594,
+    "summary": "1917-07-28 - Chicago White Sox (3) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90595,
+    "summary": "1917-07-28 - Cleveland Indians (4) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 90599,
+    "summary": "1917-07-28 - Philadelphia Phillies (6) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90598,
+    "summary": "1917-07-28 - New York Giants (5) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 90592,
+    "summary": "1917-07-28 - Boston Braves (4) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90605,
+    "summary": "1917-07-29 - Washington Senators (9) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90604,
+    "summary": "1917-07-29 - Philadelphia Phillies (1) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 90603,
+    "summary": "1917-07-29 - New York Giants (6) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90602,
+    "summary": "1917-07-29 - Boston Braves (3) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90606,
+    "summary": "1917-07-30 - Brooklyn Robins (7) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90609,
+    "summary": "1917-07-30 - Cleveland Indians (6) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90611,
+    "summary": "1917-07-30 - New York Giants (3) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90610,
+    "summary": "1917-07-30 - Detroit Tigers (16) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90608,
+    "summary": "1917-07-30 - Chicago White Sox (1) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 90613,
+    "summary": "1917-07-30 - St. Louis Browns (2) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 90612,
+    "summary": "1917-07-30 - Philadelphia Phillies (3) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90607,
+    "summary": "1917-07-30 - Boston Braves (1) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90620,
+    "summary": "1917-07-31 - New York Giants (11) @ Pittsburgh Pirates (7) (Final)"
+  },
+  {
+    "game_id": 90621,
+    "summary": "1917-07-31 - New York Giants (9) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90622,
+    "summary": "1917-07-31 - Philadelphia Phillies (6) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 90623,
+    "summary": "1917-07-31 - Philadelphia Phillies (2) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90615,
+    "summary": "1917-07-31 - Boston Braves (6) @ Chicago Cubs (9) (Final)"
+  },
+  {
+    "game_id": 90616,
+    "summary": "1917-07-31 - Boston Braves (8) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 90614,
+    "summary": "1917-07-31 - Brooklyn Robins (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90618,
+    "summary": "1917-07-31 - Cleveland Indians (8) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 90619,
+    "summary": "1917-07-31 - Detroit Tigers (8) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90617,
+    "summary": "1917-07-31 - Chicago White Sox (2) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90624,
+    "summary": "1917-07-31 - St. Louis Browns (1) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90625,
+    "summary": "1917-08-01 - Brooklyn Robins (6) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90627,
+    "summary": "1917-08-01 - Cleveland Indians (6) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 90629,
+    "summary": "1917-08-01 - New York Giants (3) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90628,
+    "summary": "1917-08-01 - Detroit Tigers (4) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 90626,
+    "summary": "1917-08-01 - Chicago White Sox (4) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90630,
+    "summary": "1917-08-01 - Philadelphia Phillies (2) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90639,
+    "summary": "1917-08-02 - St. Louis Browns (3) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 90640,
+    "summary": "1917-08-02 - St. Louis Browns (1) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 90632,
+    "summary": "1917-08-02 - Boston Braves (4) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 90633,
+    "summary": "1917-08-02 - Boston Braves (4) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90631,
+    "summary": "1917-08-02 - Brooklyn Robins (6) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90635,
+    "summary": "1917-08-02 - Cleveland Indians (4) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 90637,
+    "summary": "1917-08-02 - New York Giants (7) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90636,
+    "summary": "1917-08-02 - Detroit Tigers (2) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90634,
+    "summary": "1917-08-02 - Chicago White Sox (7) @ Boston Red Sox (1) (Final)"
+  },
+  {
+    "game_id": 90638,
+    "summary": "1917-08-02 - Philadelphia Phillies (6) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 90644,
+    "summary": "1917-08-03 - Cleveland Indians (2) @ Boston Red Sox (1) (Final)"
+  },
+  {
+    "game_id": 90646,
+    "summary": "1917-08-03 - New York Giants (10) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90648,
+    "summary": "1917-08-03 - St. Louis Browns (5) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90642,
+    "summary": "1917-08-03 - Boston Braves (5) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 90643,
+    "summary": "1917-08-03 - Chicago White Sox (4) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90645,
+    "summary": "1917-08-03 - Detroit Tigers (10) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 90641,
+    "summary": "1917-08-03 - Brooklyn Robins (3) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90647,
+    "summary": "1917-08-03 - Philadelphia Phillies (0) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90651,
+    "summary": "1917-08-04 - Chicago White Sox (7) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90652,
+    "summary": "1917-08-04 - Chicago White Sox (4) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90653,
+    "summary": "1917-08-04 - Cleveland Indians (2) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 90655,
+    "summary": "1917-08-04 - New York Giants (1) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 90657,
+    "summary": "1917-08-04 - St. Louis Browns (3) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 90650,
+    "summary": "1917-08-04 - Boston Braves (6) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90654,
+    "summary": "1917-08-04 - Detroit Tigers (3) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 90649,
+    "summary": "1917-08-04 - Brooklyn Robins (0) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90656,
+    "summary": "1917-08-04 - Philadelphia Phillies (1) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90658,
+    "summary": "1917-08-05 - Brooklyn Robins (9) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90659,
+    "summary": "1917-08-05 - Brooklyn Robins (1) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90660,
+    "summary": "1917-08-05 - New York Giants (7) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90661,
+    "summary": "1917-08-05 - Philadelphia Phillies (6) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90664,
+    "summary": "1917-08-06 - Cleveland Indians (2) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90667,
+    "summary": "1917-08-06 - St. Louis Browns (0) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90663,
+    "summary": "1917-08-06 - Chicago White Sox (4) @ Philadelphia Athletics (5) (Final)"
+  },
+  {
+    "game_id": 90665,
+    "summary": "1917-08-06 - Detroit Tigers (3) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90662,
+    "summary": "1917-08-06 - Brooklyn Robins (0) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90666,
+    "summary": "1917-08-06 - Philadelphia Phillies (3) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90669,
+    "summary": "1917-08-07 - Cleveland Indians (6) @ Boston Red Sox (8) (Final)"
+  },
+  {
+    "game_id": 90671,
+    "summary": "1917-08-07 - New York Giants (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90672,
+    "summary": "1917-08-07 - St. Louis Browns (2) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90668,
+    "summary": "1917-08-07 - Chicago White Sox (1) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 90670,
+    "summary": "1917-08-07 - Detroit Tigers (1) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 90674,
+    "summary": "1917-08-08 - Boston Braves (2) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 90675,
+    "summary": "1917-08-08 - Boston Braves (0) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90677,
+    "summary": "1917-08-08 - Cleveland Indians (2) @ New York Yankees (8) (Final)"
+  },
+  {
+    "game_id": 90678,
+    "summary": "1917-08-08 - Cleveland Indians (2) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90679,
+    "summary": "1917-08-08 - Detroit Tigers (6) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 90681,
+    "summary": "1917-08-08 - St. Louis Browns (5) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 90676,
+    "summary": "1917-08-08 - Chicago White Sox (0) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90673,
+    "summary": "1917-08-08 - Brooklyn Robins (0) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 90680,
+    "summary": "1917-08-08 - New York Giants (4) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90687,
+    "summary": "1917-08-09 - St. Louis Browns (2) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90686,
+    "summary": "1917-08-09 - Philadelphia Phillies (1) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90683,
+    "summary": "1917-08-09 - Chicago White Sox (3) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90684,
+    "summary": "1917-08-09 - Cleveland Indians (5) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 90682,
+    "summary": "1917-08-09 - Brooklyn Robins (5) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90685,
+    "summary": "1917-08-09 - New York Giants (4) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90692,
+    "summary": "1917-08-10 - Detroit Tigers (4) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90693,
+    "summary": "1917-08-10 - Detroit Tigers (1) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90696,
+    "summary": "1917-08-10 - St. Louis Browns (0) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 90695,
+    "summary": "1917-08-10 - Philadelphia Phillies (0) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90689,
+    "summary": "1917-08-10 - Boston Braves (0) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 90690,
+    "summary": "1917-08-10 - Chicago White Sox (0) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90691,
+    "summary": "1917-08-10 - Cleveland Indians (8) @ New York Yankees (7) (Final)"
+  },
+  {
+    "game_id": 90688,
+    "summary": "1917-08-10 - Brooklyn Robins (4) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90694,
+    "summary": "1917-08-10 - New York Giants (7) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90701,
+    "summary": "1917-08-11 - Detroit Tigers (2) @ Boston Red Sox (7) (Final)"
+  },
+  {
+    "game_id": 90702,
+    "summary": "1917-08-11 - Detroit Tigers (5) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90706,
+    "summary": "1917-08-11 - St. Louis Browns (2) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 90707,
+    "summary": "1917-08-11 - St. Louis Browns (4) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90704,
+    "summary": "1917-08-11 - Philadelphia Phillies (4) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90705,
+    "summary": "1917-08-11 - Philadelphia Phillies (3) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 90698,
+    "summary": "1917-08-11 - Boston Braves (5) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 90699,
+    "summary": "1917-08-11 - Chicago White Sox (2) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90700,
+    "summary": "1917-08-11 - Cleveland Indians (4) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90697,
+    "summary": "1917-08-11 - Brooklyn Robins (3) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90703,
+    "summary": "1917-08-11 - New York Giants (1) @ St. Louis Cardinals (3) (Final)"
+  },
+  {
+    "game_id": 90709,
+    "summary": "1917-08-12 - Cincinnati Reds (7) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 90710,
+    "summary": "1917-08-12 - Cincinnati Reds (7) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 90712,
+    "summary": "1917-08-12 - St. Louis Browns (0) @ Detroit Tigers (8) (Final)"
+  },
+  {
+    "game_id": 90708,
+    "summary": "1917-08-12 - Chicago White Sox (4) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90711,
+    "summary": "1917-08-12 - Pittsburgh Pirates (2) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90720,
+    "summary": "1917-08-13 - St. Louis Browns (10) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90721,
+    "summary": "1917-08-13 - St. Louis Browns (6) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 90714,
+    "summary": "1917-08-13 - Brooklyn Robins (3) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90715,
+    "summary": "1917-08-13 - Brooklyn Robins (2) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90713,
+    "summary": "1917-08-13 - Boston Red Sox (5) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90718,
+    "summary": "1917-08-13 - Philadelphia Phillies (3) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90717,
+    "summary": "1917-08-13 - New York Yankees (5) @ Washington Senators (9) (Final)"
+  },
+  {
+    "game_id": 90719,
+    "summary": "1917-08-13 - Pittsburgh Pirates (3) @ Chicago Cubs (7) (Final)"
+  },
+  {
+    "game_id": 90716,
+    "summary": "1917-08-13 - Cincinnati Reds (5) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 90723,
+    "summary": "1917-08-14 - Brooklyn Robins (4) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90724,
+    "summary": "1917-08-14 - Brooklyn Robins (3) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90725,
+    "summary": "1917-08-14 - Chicago White Sox (3) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90726,
+    "summary": "1917-08-14 - Chicago White Sox (2) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90727,
+    "summary": "1917-08-14 - New York Yankees (0) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90728,
+    "summary": "1917-08-14 - New York Yankees (1) @ Washington Senators (10) (Final)"
+  },
+  {
+    "game_id": 90731,
+    "summary": "1917-08-14 - St. Louis Browns (6) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90722,
+    "summary": "1917-08-14 - Boston Red Sox (1) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 90729,
+    "summary": "1917-08-14 - Philadelphia Phillies (1) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90730,
+    "summary": "1917-08-14 - Pittsburgh Pirates (2) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90733,
+    "summary": "1917-08-15 - Brooklyn Robins (3) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90734,
+    "summary": "1917-08-15 - Brooklyn Robins (1) @ New York Giants (7) (Final)"
+  },
+  {
+    "game_id": 90732,
+    "summary": "1917-08-15 - Boston Red Sox (4) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90736,
+    "summary": "1917-08-15 - Cincinnati Reds (2) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90737,
+    "summary": "1917-08-15 - Philadelphia Phillies (0) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90735,
+    "summary": "1917-08-15 - Chicago White Sox (5) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90740,
+    "summary": "1917-08-16 - Pittsburgh Pirates (3) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90741,
+    "summary": "1917-08-16 - Pittsburgh Pirates (0) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90739,
+    "summary": "1917-08-16 - Cincinnati Reds (3) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90742,
+    "summary": "1917-08-16 - St. Louis Cardinals (3) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90738,
+    "summary": "1917-08-16 - Chicago Cubs (4) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90746,
+    "summary": "1917-08-17 - Pittsburgh Pirates (0) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90747,
+    "summary": "1917-08-17 - Pittsburgh Pirates (3) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 90743,
+    "summary": "1917-08-17 - Boston Red Sox (3) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90748,
+    "summary": "1917-08-17 - St. Louis Cardinals (5) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90749,
+    "summary": "1917-08-17 - Washington Senators (9) @ Detroit Tigers (6) (Final)"
+  },
+  {
+    "game_id": 90745,
+    "summary": "1917-08-17 - Philadelphia Athletics (9) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 90744,
+    "summary": "1917-08-17 - New York Yankees (4) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90750,
+    "summary": "1917-08-18 - Boston Red Sox (1) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90751,
+    "summary": "1917-08-18 - Boston Red Sox (9) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90754,
+    "summary": "1917-08-18 - Cincinnati Reds (5) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90755,
+    "summary": "1917-08-18 - Cincinnati Reds (2) @ Brooklyn Robins (9) (Final)"
+  },
+  {
+    "game_id": 90759,
+    "summary": "1917-08-18 - St. Louis Cardinals (1) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90760,
+    "summary": "1917-08-18 - St. Louis Cardinals (5) @ New York Giants (4) (Final)"
+  },
+  {
+    "game_id": 90752,
+    "summary": "1917-08-18 - Chicago Cubs (4) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90753,
+    "summary": "1917-08-18 - Chicago Cubs (0) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90761,
+    "summary": "1917-08-18 - Washington Senators (5) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90758,
+    "summary": "1917-08-18 - Pittsburgh Pirates (2) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90757,
+    "summary": "1917-08-18 - Philadelphia Athletics (4) @ Chicago White Sox (5) (Final)"
+  },
+  {
+    "game_id": 90756,
+    "summary": "1917-08-18 - New York Yankees (1) @ St. Louis Browns (7) (Final)"
+  },
+  {
+    "game_id": 90762,
+    "summary": "1917-08-19 - Boston Red Sox (2) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90763,
+    "summary": "1917-08-19 - Cincinnati Reds (5) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 90765,
+    "summary": "1917-08-19 - Philadelphia Athletics (6) @ Chicago White Sox (14) (Final)"
+  },
+  {
+    "game_id": 90764,
+    "summary": "1917-08-19 - New York Yankees (1) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90766,
+    "summary": "1917-08-20 - Boston Red Sox (0) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 90767,
+    "summary": "1917-08-20 - Boston Red Sox (3) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90770,
+    "summary": "1917-08-20 - Philadelphia Athletics (4) @ Cleveland Indians (5) (Final)"
+  },
+  {
+    "game_id": 90771,
+    "summary": "1917-08-20 - Pittsburgh Pirates (1) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90768,
+    "summary": "1917-08-20 - Chicago Cubs (4) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90772,
+    "summary": "1917-08-20 - St. Louis Cardinals (7) @ Boston Braves (6) (Final)"
+  },
+  {
+    "game_id": 90769,
+    "summary": "1917-08-20 - New York Yankees (2) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90773,
+    "summary": "1917-08-20 - Washington Senators (1) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90775,
+    "summary": "1917-08-21 - Chicago Cubs (0) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 90776,
+    "summary": "1917-08-21 - Chicago Cubs (4) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 90779,
+    "summary": "1917-08-21 - Philadelphia Athletics (3) @ Cleveland Indians (16) (Final)"
+  },
+  {
+    "game_id": 90780,
+    "summary": "1917-08-21 - Pittsburgh Pirates @ Brooklyn Robins (Final: Tied)"
+  },
+  {
+    "game_id": 90777,
+    "summary": "1917-08-21 - Cincinnati Reds (7) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90781,
+    "summary": "1917-08-21 - St. Louis Cardinals (1) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90778,
+    "summary": "1917-08-21 - New York Yankees (3) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90774,
+    "summary": "1917-08-21 - Boston Red Sox (0) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90789,
+    "summary": "1917-08-22 - Washington Senators (2) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90790,
+    "summary": "1917-08-22 - Washington Senators (4) @ St. Louis Browns (9) (Final)"
+  },
+  {
+    "game_id": 90786,
+    "summary": "1917-08-22 - Philadelphia Athletics (5) @ Cleveland Indians (6) (Final)"
+  },
+  {
+    "game_id": 90787,
+    "summary": "1917-08-22 - Pittsburgh Pirates (5) @ Brooklyn Robins (6) (Final)"
+  },
+  {
+    "game_id": 90784,
+    "summary": "1917-08-22 - Cincinnati Reds (0) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90783,
+    "summary": "1917-08-22 - Chicago Cubs (0) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90788,
+    "summary": "1917-08-22 - St. Louis Cardinals (1) @ Boston Braves (6) (Final)"
+  },
+  {
+    "game_id": 90785,
+    "summary": "1917-08-22 - New York Yankees (0) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90782,
+    "summary": "1917-08-22 - Boston Red Sox (5) @ Chicago White Sox (1) (Final)"
+  },
+  {
+    "game_id": 90794,
+    "summary": "1917-08-23 - Philadelphia Athletics (3) @ Detroit Tigers (7) (Final)"
+  },
+  {
+    "game_id": 90792,
+    "summary": "1917-08-23 - Chicago Cubs @ New York Giants (Final: Tied)"
+  },
+  {
+    "game_id": 90796,
+    "summary": "1917-08-23 - St. Louis Cardinals (7) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90795,
+    "summary": "1917-08-23 - Pittsburgh Pirates (1) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90793,
+    "summary": "1917-08-23 - New York Yankees (2) @ Cleveland Indians (4) (Final)"
+  },
+  {
+    "game_id": 90791,
+    "summary": "1917-08-23 - Boston Red Sox (4) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90797,
+    "summary": "1917-08-23 - Washington Senators (0) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 90798,
+    "summary": "1917-08-24 - Chicago Cubs (1) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90799,
+    "summary": "1917-08-24 - Chicago Cubs (12) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90800,
+    "summary": "1917-08-24 - Cincinnati Reds (5) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 90801,
+    "summary": "1917-08-24 - Cincinnati Reds (6) @ Philadelphia Phillies (7) (Final)"
+  },
+  {
+    "game_id": 90802,
+    "summary": "1917-08-24 - Philadelphia Athletics (8) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90803,
+    "summary": "1917-08-24 - Pittsburgh Pirates (1) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90805,
+    "summary": "1917-08-25 - Chicago Cubs (1) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90806,
+    "summary": "1917-08-25 - Chicago Cubs (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90812,
+    "summary": "1917-08-25 - St. Louis Cardinals (0) @ Brooklyn Robins (12) (Final)"
+  },
+  {
+    "game_id": 90813,
+    "summary": "1917-08-25 - St. Louis Cardinals (0) @ Brooklyn Robins (4) (Final)"
+  },
+  {
+    "game_id": 90807,
+    "summary": "1917-08-25 - Cincinnati Reds (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90808,
+    "summary": "1917-08-25 - Cincinnati Reds (1) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90810,
+    "summary": "1917-08-25 - Philadelphia Athletics (2) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90811,
+    "summary": "1917-08-25 - Pittsburgh Pirates (0) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90809,
+    "summary": "1917-08-25 - New York Yankees (3) @ Cleveland Indians (0) (Final)"
+  },
+  {
+    "game_id": 90804,
+    "summary": "1917-08-25 - Boston Red Sox (3) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90814,
+    "summary": "1917-08-25 - Washington Senators (1) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90817,
+    "summary": "1917-08-26 - Philadelphia Athletics (5) @ St. Louis Browns (6) (Final)"
+  },
+  {
+    "game_id": 90818,
+    "summary": "1917-08-26 - Philadelphia Athletics (5) @ St. Louis Browns (9) (Final)"
+  },
+  {
+    "game_id": 90815,
+    "summary": "1917-08-26 - Boston Red Sox (6) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90819,
+    "summary": "1917-08-26 - Washington Senators (1) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 90816,
+    "summary": "1917-08-26 - New York Yankees (3) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 90820,
+    "summary": "1917-08-27 - Boston Red Sox (1) @ Detroit Tigers (5) (Final)"
+  },
+  {
+    "game_id": 90821,
+    "summary": "1917-08-27 - Chicago Cubs (1) @ Brooklyn Robins (7) (Final)"
+  },
+  {
+    "game_id": 90825,
+    "summary": "1917-08-27 - Pittsburgh Pirates (1) @ New York Giants (0) (Final)"
+  },
+  {
+    "game_id": 90827,
+    "summary": "1917-08-27 - Washington Senators (11) @ Cleveland Indians (9) (Final)"
+  },
+  {
+    "game_id": 90826,
+    "summary": "1917-08-27 - St. Louis Cardinals (4) @ Philadelphia Phillies (6) (Final)"
+  },
+  {
+    "game_id": 90822,
+    "summary": "1917-08-27 - Cincinnati Reds (4) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90824,
+    "summary": "1917-08-27 - Philadelphia Athletics (8) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90823,
+    "summary": "1917-08-27 - New York Yankees (0) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90828,
+    "summary": "1917-08-28 - Chicago Cubs (2) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90832,
+    "summary": "1917-08-28 - Pittsburgh Pirates (3) @ New York Giants (7) (Final)"
+  },
+  {
+    "game_id": 90833,
+    "summary": "1917-08-28 - St. Louis Cardinals (6) @ Philadelphia Phillies (5) (Final)"
+  },
+  {
+    "game_id": 90829,
+    "summary": "1917-08-28 - Cincinnati Reds (9) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90831,
+    "summary": "1917-08-28 - Philadelphia Athletics (1) @ St. Louis Browns (2) (Final)"
+  },
+  {
+    "game_id": 90830,
+    "summary": "1917-08-28 - New York Yankees (3) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90838,
+    "summary": "1917-08-29 - St. Louis Browns (0) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 90839,
+    "summary": "1917-08-29 - St. Louis Browns (1) @ Chicago White Sox (11) (Final)"
+  },
+  {
+    "game_id": 90836,
+    "summary": "1917-08-29 - Detroit Tigers (15) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90834,
+    "summary": "1917-08-29 - Chicago Cubs (1) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90837,
+    "summary": "1917-08-29 - Pittsburgh Pirates (5) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90840,
+    "summary": "1917-08-29 - St. Louis Cardinals (5) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90835,
+    "summary": "1917-08-29 - Cincinnati Reds (5) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 90841,
+    "summary": "1917-08-30 - Boston Braves (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90842,
+    "summary": "1917-08-30 - Boston Braves (3) @ Philadelphia Phillies (0) (Final)"
+  },
+  {
+    "game_id": 90843,
+    "summary": "1917-08-30 - Detroit Tigers (4) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90844,
+    "summary": "1917-08-30 - Philadelphia Athletics @ Boston Red Sox (Final: Tied)"
+  },
+  {
+    "game_id": 90845,
+    "summary": "1917-08-30 - St. Louis Browns (4) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 90851,
+    "summary": "1917-08-31 - Philadelphia Athletics (3) @ Boston Red Sox (5) (Final)"
+  },
+  {
+    "game_id": 90852,
+    "summary": "1917-08-31 - Philadelphia Athletics (2) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90849,
+    "summary": "1917-08-31 - New York Giants (4) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 90850,
+    "summary": "1917-08-31 - New York Giants @ Brooklyn Robins (Final: Tied)"
+  },
+  {
+    "game_id": 90854,
+    "summary": "1917-08-31 - St. Louis Cardinals (0) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 90855,
+    "summary": "1917-08-31 - St. Louis Cardinals (1) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90856,
+    "summary": "1917-08-31 - Washington Senators (4) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90857,
+    "summary": "1917-08-31 - Washington Senators (6) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 90847,
+    "summary": "1917-08-31 - Chicago Cubs @ Cincinnati Reds (Final: Tied)"
+  },
+  {
+    "game_id": 90848,
+    "summary": "1917-08-31 - Detroit Tigers (0) @ Cleveland Indians (1) (Final)"
+  },
+  {
+    "game_id": 90846,
+    "summary": "1917-08-31 - Boston Braves (3) @ Philadelphia Phillies (4) (Final)"
+  },
+  {
+    "game_id": 90853,
+    "summary": "1917-08-31 - St. Louis Browns (2) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 90858,
+    "summary": "1917-09-01 - Chicago Cubs (1) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 90859,
+    "summary": "1917-09-01 - Chicago Cubs (1) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90864,
+    "summary": "1917-09-01 - St. Louis Cardinals (1) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90865,
+    "summary": "1917-09-01 - St. Louis Cardinals (1) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90860,
+    "summary": "1917-09-01 - Detroit Tigers (2) @ Cleveland Indians (3) (Final)"
+  },
+  {
+    "game_id": 90862,
+    "summary": "1917-09-01 - Philadelphia Athletics (1) @ Boston Red Sox (6) (Final)"
+  },
+  {
+    "game_id": 90861,
+    "summary": "1917-09-01 - New York Giants (3) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 90863,
+    "summary": "1917-09-01 - St. Louis Browns (6) @ Chicago White Sox (3) (Final)"
+  },
+  {
+    "game_id": 90866,
+    "summary": "1917-09-02 - Chicago Cubs (5) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90867,
+    "summary": "1917-09-02 - Chicago Cubs (2) @ St. Louis Cardinals (4) (Final)"
+  },
+  {
+    "game_id": 90868,
+    "summary": "1917-09-02 - Detroit Tigers (2) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 90869,
+    "summary": "1917-09-02 - Detroit Tigers (5) @ Chicago White Sox (6) (Final)"
+  },
+  {
+    "game_id": 90871,
+    "summary": "1917-09-02 - St. Louis Browns (4) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90870,
+    "summary": "1917-09-02 - Pittsburgh Pirates (8) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 90884,
+    "summary": "1917-09-03 - St. Louis Browns (3) @ Cleveland Indians (9) (Final)"
+  },
+  {
+    "game_id": 90885,
+    "summary": "1917-09-03 - St. Louis Browns (6) @ Cleveland Indians (7) (Final)"
+  },
+  {
+    "game_id": 90876,
+    "summary": "1917-09-03 - Cincinnati Reds (0) @ Pittsburgh Pirates (8) (Final)"
+  },
+  {
+    "game_id": 90877,
+    "summary": "1917-09-03 - Cincinnati Reds (3) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90886,
+    "summary": "1917-09-03 - Washington Senators (4) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 90887,
+    "summary": "1917-09-03 - Washington Senators (2) @ Philadelphia Athletics (9) (Final)"
+  },
+  {
+    "game_id": 90882,
+    "summary": "1917-09-03 - Philadelphia Phillies (5) @ Brooklyn Robins (0) (Final)"
+  },
+  {
+    "game_id": 90883,
+    "summary": "1917-09-03 - Philadelphia Phillies (9) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 90872,
+    "summary": "1917-09-03 - Boston Braves (0) @ New York Giants (7) (Final)"
+  },
+  {
+    "game_id": 90873,
+    "summary": "1917-09-03 - Boston Braves (6) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90880,
+    "summary": "1917-09-03 - New York Yankees (1) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90881,
+    "summary": "1917-09-03 - New York Yankees (4) @ Boston Red Sox (1) (Final)"
+  },
+  {
+    "game_id": 90874,
+    "summary": "1917-09-03 - Chicago Cubs (6) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90875,
+    "summary": "1917-09-03 - Chicago Cubs (0) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90878,
+    "summary": "1917-09-03 - Detroit Tigers (5) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 90879,
+    "summary": "1917-09-03 - Detroit Tigers (8) @ Chicago White Sox (14) (Final)"
+  },
+  {
+    "game_id": 90891,
+    "summary": "1917-09-04 - New York Yankees (2) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 90892,
+    "summary": "1917-09-04 - New York Yankees (7) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 90890,
+    "summary": "1917-09-04 - Cincinnati Reds (4) @ Pittsburgh Pirates (5) (Final)"
+  },
+  {
+    "game_id": 90895,
+    "summary": "1917-09-04 - Washington Senators (1) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 90893,
+    "summary": "1917-09-04 - Philadelphia Phillies @ Brooklyn Robins (Final: Tied)"
+  },
+  {
+    "game_id": 90888,
+    "summary": "1917-09-04 - Boston Braves (3) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90894,
+    "summary": "1917-09-04 - St. Louis Cardinals (5) @ Chicago Cubs (12) (Final)"
+  },
+  {
+    "game_id": 90889,
+    "summary": "1917-09-04 - Chicago White Sox (13) @ St. Louis Browns (6) (Final)"
+  },
+  {
+    "game_id": 90901,
+    "summary": "1917-09-05 - Philadelphia Phillies (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90902,
+    "summary": "1917-09-05 - Philadelphia Phillies (1) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 90897,
+    "summary": "1917-09-05 - Brooklyn Robins (8) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90898,
+    "summary": "1917-09-05 - Brooklyn Robins (1) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90896,
+    "summary": "1917-09-05 - Boston Red Sox (2) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90900,
+    "summary": "1917-09-05 - New York Yankees (0) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90903,
+    "summary": "1917-09-05 - St. Louis Cardinals (9) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90899,
+    "summary": "1917-09-05 - Chicago White Sox (4) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90906,
+    "summary": "1917-09-06 - Philadelphia Phillies (5) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90907,
+    "summary": "1917-09-06 - Philadelphia Phillies (0) @ New York Giants (7) (Final)"
+  },
+  {
+    "game_id": 90904,
+    "summary": "1917-09-06 - Boston Red Sox (3) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90905,
+    "summary": "1917-09-06 - Detroit Tigers (2) @ St. Louis Browns (5) (Final)"
+  },
+  {
+    "game_id": 90908,
+    "summary": "1917-09-06 - St. Louis Cardinals (4) @ Chicago Cubs (3) (Final)"
+  },
+  {
+    "game_id": 90915,
+    "summary": "1917-09-07 - Philadelphia Phillies (4) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90916,
+    "summary": "1917-09-07 - Philadelphia Phillies (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90910,
+    "summary": "1917-09-07 - Brooklyn Robins (0) @ Boston Braves (5) (Final)"
+  },
+  {
+    "game_id": 90911,
+    "summary": "1917-09-07 - Brooklyn Robins (2) @ Boston Braves (8) (Final)"
+  },
+  {
+    "game_id": 90913,
+    "summary": "1917-09-07 - New York Yankees (0) @ Washington Senators (6) (Final)"
+  },
+  {
+    "game_id": 90914,
+    "summary": "1917-09-07 - New York Yankees (4) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90909,
+    "summary": "1917-09-07 - Boston Red Sox (5) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90912,
+    "summary": "1917-09-07 - Chicago Cubs (2) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90922,
+    "summary": "1917-09-08 - Philadelphia Phillies (3) @ Boston Braves (4) (Final)"
+  },
+  {
+    "game_id": 90923,
+    "summary": "1917-09-08 - Philadelphia Phillies (5) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90920,
+    "summary": "1917-09-08 - New York Yankees (2) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 90921,
+    "summary": "1917-09-08 - New York Yankees (0) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90917,
+    "summary": "1917-09-08 - Chicago Cubs (6) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 90919,
+    "summary": "1917-09-08 - Detroit Tigers (1) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90918,
+    "summary": "1917-09-08 - Cleveland Indians (0) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 90928,
+    "summary": "1917-09-09 - St. Louis Cardinals (6) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90929,
+    "summary": "1917-09-09 - St. Louis Cardinals (2) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 90925,
+    "summary": "1917-09-09 - Detroit Tigers (7) @ St. Louis Browns (0) (Final)"
+  },
+  {
+    "game_id": 90926,
+    "summary": "1917-09-09 - Detroit Tigers (2) @ St. Louis Browns (6) (Final)"
+  },
+  {
+    "game_id": 90927,
+    "summary": "1917-09-09 - Pittsburgh Pirates (0) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 90924,
+    "summary": "1917-09-09 - Cleveland Indians @ Chicago White Sox (Forfeit: Final)"
+  },
+  {
+    "game_id": 90932,
+    "summary": "1917-09-10 - Brooklyn Robins (13) @ New York Giants (6) (Final)"
+  },
+  {
+    "game_id": 90933,
+    "summary": "1917-09-10 - Brooklyn Robins (2) @ New York Giants (1) (Final)"
+  },
+  {
+    "game_id": 90930,
+    "summary": "1917-09-10 - Boston Red Sox (1) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90931,
+    "summary": "1917-09-10 - Boston Red Sox (4) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 90936,
+    "summary": "1917-09-10 - Philadelphia Phillies (5) @ Boston Braves (2) (Final)"
+  },
+  {
+    "game_id": 90937,
+    "summary": "1917-09-10 - Philadelphia Phillies (2) @ Boston Braves (12) (Final)"
+  },
+  {
+    "game_id": 90934,
+    "summary": "1917-09-10 - New York Yankees (10) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90935,
+    "summary": "1917-09-10 - New York Yankees (5) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90938,
+    "summary": "1917-09-10 - Pittsburgh Pirates (1) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90940,
+    "summary": "1917-09-11 - Brooklyn Robins (2) @ New York Giants (3) (Final)"
+  },
+  {
+    "game_id": 90941,
+    "summary": "1917-09-11 - Brooklyn Robins (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90947,
+    "summary": "1917-09-11 - Philadelphia Phillies (1) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90948,
+    "summary": "1917-09-11 - Philadelphia Phillies (5) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90945,
+    "summary": "1917-09-11 - New York Yankees (1) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 90946,
+    "summary": "1917-09-11 - New York Yankees (4) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90942,
+    "summary": "1917-09-11 - Cincinnati Reds (5) @ Chicago Cubs (6) (Final)"
+  },
+  {
+    "game_id": 90943,
+    "summary": "1917-09-11 - Cincinnati Reds (1) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 90949,
+    "summary": "1917-09-11 - Pittsburgh Pirates (3) @ St. Louis Cardinals (0) (Final)"
+  },
+  {
+    "game_id": 90950,
+    "summary": "1917-09-11 - Pittsburgh Pirates (2) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 90944,
+    "summary": "1917-09-11 - Cleveland Indians (1) @ Detroit Tigers (0) (Final)"
+  },
+  {
+    "game_id": 90939,
+    "summary": "1917-09-11 - Boston Red Sox (3) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90955,
+    "summary": "1917-09-12 - Cleveland Indians (8) @ Detroit Tigers (2) (Final)"
+  },
+  {
+    "game_id": 90956,
+    "summary": "1917-09-12 - Cleveland Indians (3) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90952,
+    "summary": "1917-09-12 - Brooklyn Robins (0) @ New York Giants (9) (Final)"
+  },
+  {
+    "game_id": 90953,
+    "summary": "1917-09-12 - Brooklyn Robins (1) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 90951,
+    "summary": "1917-09-12 - Boston Red Sox @ Washington Senators (Final: Tied)"
+  },
+  {
+    "game_id": 90958,
+    "summary": "1917-09-12 - Philadelphia Phillies (6) @ Boston Braves (3) (Final)"
+  },
+  {
+    "game_id": 90957,
+    "summary": "1917-09-12 - New York Yankees (1) @ Philadelphia Athletics (7) (Final)"
+  },
+  {
+    "game_id": 90954,
+    "summary": "1917-09-12 - Cincinnati Reds (6) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90959,
+    "summary": "1917-09-12 - Pittsburgh Pirates (2) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90961,
+    "summary": "1917-09-13 - Brooklyn Robins (0) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 90962,
+    "summary": "1917-09-13 - Brooklyn Robins (7) @ Philadelphia Phillies (3) (Final)"
+  },
+  {
+    "game_id": 90963,
+    "summary": "1917-09-13 - New York Giants (0) @ Boston Braves (7) (Final)"
+  },
+  {
+    "game_id": 90964,
+    "summary": "1917-09-13 - New York Giants (2) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90965,
+    "summary": "1917-09-13 - Philadelphia Athletics (1) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 90960,
+    "summary": "1917-09-13 - Boston Red Sox (7) @ New York Yankees (13) (Final)"
+  },
+  {
+    "game_id": 90966,
+    "summary": "1917-09-13 - Pittsburgh Pirates (2) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 90971,
+    "summary": "1917-09-14 - Philadelphia Athletics (2) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 90970,
+    "summary": "1917-09-14 - New York Giants (5) @ Boston Braves (0) (Final)"
+  },
+  {
+    "game_id": 90968,
+    "summary": "1917-09-14 - Chicago White Sox (7) @ Detroit Tigers (3) (Final)"
+  },
+  {
+    "game_id": 90967,
+    "summary": "1917-09-14 - Boston Red Sox (6) @ New York Yankees (5) (Final)"
+  },
+  {
+    "game_id": 90969,
+    "summary": "1917-09-14 - Cleveland Indians (6) @ St. Louis Browns (1) (Final)"
+  },
+  {
+    "game_id": 90977,
+    "summary": "1917-09-15 - Philadelphia Athletics (0) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 90978,
+    "summary": "1917-09-15 - Philadelphia Athletics (0) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 90973,
+    "summary": "1917-09-15 - Chicago White Sox (3) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90974,
+    "summary": "1917-09-15 - Chicago White Sox (2) @ Detroit Tigers (1) (Final)"
+  },
+  {
+    "game_id": 90979,
+    "summary": "1917-09-15 - Pittsburgh Pirates (6) @ Cincinnati Reds (7) (Final)"
+  },
+  {
+    "game_id": 90976,
+    "summary": "1917-09-15 - New York Giants (5) @ Boston Braves (1) (Final)"
+  },
+  {
+    "game_id": 90972,
+    "summary": "1917-09-15 - Boston Red Sox (8) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 90975,
+    "summary": "1917-09-15 - Cleveland Indians (5) @ St. Louis Browns (4) (Final)"
+  },
+  {
+    "game_id": 90980,
+    "summary": "1917-09-15 - St. Louis Cardinals (1) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 90982,
+    "summary": "1917-09-16 - Pittsburgh Pirates (2) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 90983,
+    "summary": "1917-09-16 - Pittsburgh Pirates (2) @ Cincinnati Reds (3) (Final)"
+  },
+  {
+    "game_id": 90981,
+    "summary": "1917-09-16 - Cleveland Indians (8) @ Detroit Tigers (4) (Final)"
+  },
+  {
+    "game_id": 90985,
+    "summary": "1917-09-16 - St. Louis Cardinals (6) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90984,
+    "summary": "1917-09-16 - St. Louis Browns (3) @ Chicago White Sox (4) (Final)"
+  },
+  {
+    "game_id": 90989,
+    "summary": "1917-09-17 - Philadelphia Phillies (4) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 90987,
+    "summary": "1917-09-17 - Boston Braves (4) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 90986,
+    "summary": "1917-09-17 - Boston Red Sox (6) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 90988,
+    "summary": "1917-09-17 - New York Giants (5) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 90992,
+    "summary": "1917-09-18 - Boston Braves (5) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 90993,
+    "summary": "1917-09-18 - Boston Braves (1) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 90990,
+    "summary": "1917-09-18 - Brooklyn Robins (0) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 90991,
+    "summary": "1917-09-18 - Brooklyn Robins (4) @ St. Louis Cardinals (12) (Final)"
+  },
+  {
+    "game_id": 90998,
+    "summary": "1917-09-18 - St. Louis Browns (3) @ Washington Senators (9) (Final)"
+  },
+  {
+    "game_id": 90997,
+    "summary": "1917-09-18 - Philadelphia Phillies (0) @ Cincinnati Reds (1) (Final)"
+  },
+  {
+    "game_id": 90994,
+    "summary": "1917-09-18 - Chicago White Sox (6) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 90995,
+    "summary": "1917-09-18 - Cleveland Indians (5) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 90996,
+    "summary": "1917-09-18 - New York Giants (4) @ Chicago Cubs (0) (Final)"
+  },
+  {
+    "game_id": 91003,
+    "summary": "1917-09-19 - Detroit Tigers (5) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 91004,
+    "summary": "1917-09-19 - Detroit Tigers (1) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 90999,
+    "summary": "1917-09-19 - Boston Braves (1) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 91000,
+    "summary": "1917-09-19 - Boston Braves (6) @ Pittsburgh Pirates (4) (Final)"
+  },
+  {
+    "game_id": 91006,
+    "summary": "1917-09-19 - St. Louis Browns (4) @ Washington Senators (6) (Final)"
+  },
+  {
+    "game_id": 91001,
+    "summary": "1917-09-19 - Chicago White Sox (1) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 91002,
+    "summary": "1917-09-19 - Cleveland Indians (2) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 91005,
+    "summary": "1917-09-19 - New York Giants (3) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 91009,
+    "summary": "1917-09-20 - Detroit Tigers (1) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 91010,
+    "summary": "1917-09-20 - New York Giants @ Pittsburgh Pirates (Final: Tied)"
+  },
+  {
+    "game_id": 91011,
+    "summary": "1917-09-20 - St. Louis Browns (4) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 91007,
+    "summary": "1917-09-20 - Chicago White Sox (5) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 91008,
+    "summary": "1917-09-20 - Cleveland Indians (6) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 91013,
+    "summary": "1917-09-21 - Cleveland Indians (5) @ Philadelphia Athletics (3) (Final)"
+  },
+  {
+    "game_id": 91015,
+    "summary": "1917-09-21 - New York Giants (3) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 91014,
+    "summary": "1917-09-21 - Detroit Tigers (7) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 91012,
+    "summary": "1917-09-21 - Chicago White Sox (2) @ Boston Red Sox (1) (Final)"
+  },
+  {
+    "game_id": 91017,
+    "summary": "1917-09-21 - St. Louis Browns (6) @ New York Yankees (9) (Final)"
+  },
+  {
+    "game_id": 91016,
+    "summary": "1917-09-21 - Philadelphia Phillies (4) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 91021,
+    "summary": "1917-09-22 - Cleveland Indians (3) @ Philadelphia Athletics (0) (Final)"
+  },
+  {
+    "game_id": 91022,
+    "summary": "1917-09-22 - Cleveland Indians (2) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 91024,
+    "summary": "1917-09-22 - New York Giants (2) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 91025,
+    "summary": "1917-09-22 - New York Giants (0) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 91028,
+    "summary": "1917-09-22 - St. Louis Browns (4) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 91029,
+    "summary": "1917-09-22 - St. Louis Browns (3) @ New York Yankees (0) (Final)"
+  },
+  {
+    "game_id": 91026,
+    "summary": "1917-09-22 - Philadelphia Phillies (2) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 91027,
+    "summary": "1917-09-22 - Philadelphia Phillies (4) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 91018,
+    "summary": "1917-09-22 - Brooklyn Robins (2) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 91023,
+    "summary": "1917-09-22 - Detroit Tigers (4) @ Washington Senators (0) (Final)"
+  },
+  {
+    "game_id": 91020,
+    "summary": "1917-09-22 - Chicago White Sox (1) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 91019,
+    "summary": "1917-09-22 - Boston Braves @ St. Louis Cardinals (Final: Tied)"
+  },
+  {
+    "game_id": 91030,
+    "summary": "1917-09-23 - Brooklyn Robins (5) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 91031,
+    "summary": "1917-09-23 - Brooklyn Robins (0) @ Cincinnati Reds (8) (Final)"
+  },
+  {
+    "game_id": 91034,
+    "summary": "1917-09-23 - Philadelphia Phillies (4) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 91035,
+    "summary": "1917-09-23 - Philadelphia Phillies (11) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 91032,
+    "summary": "1917-09-23 - Boston Braves (5) @ St. Louis Cardinals (11) (Final)"
+  },
+  {
+    "game_id": 91033,
+    "summary": "1917-09-23 - Boston Braves (7) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 91040,
+    "summary": "1917-09-24 - Detroit Tigers (8) @ Washington Senators (3) (Final)"
+  },
+  {
+    "game_id": 91041,
+    "summary": "1917-09-24 - Detroit Tigers (0) @ Washington Senators (2) (Final)"
+  },
+  {
+    "game_id": 91039,
+    "summary": "1917-09-24 - Cleveland Indians (5) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 91043,
+    "summary": "1917-09-24 - Philadelphia Phillies (2) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 91037,
+    "summary": "1917-09-24 - Boston Braves @ Cincinnati Reds (Final: Tied)"
+  },
+  {
+    "game_id": 91038,
+    "summary": "1917-09-24 - Chicago White Sox (0) @ Boston Red Sox (3) (Final)"
+  },
+  {
+    "game_id": 91036,
+    "summary": "1917-09-24 - Brooklyn Robins (2) @ Chicago Cubs (4) (Final)"
+  },
+  {
+    "game_id": 91042,
+    "summary": "1917-09-24 - New York Giants (2) @ St. Louis Cardinals (1) (Final)"
+  },
+  {
+    "game_id": 91045,
+    "summary": "1917-09-25 - Boston Braves (13) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 91046,
+    "summary": "1917-09-25 - Boston Braves @ Cincinnati Reds (Final: Tied)"
+  },
+  {
+    "game_id": 91048,
+    "summary": "1917-09-25 - Cleveland Indians (3) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 91052,
+    "summary": "1917-09-25 - St. Louis Browns (4) @ Philadelphia Athletics (2) (Final)"
+  },
+  {
+    "game_id": 91051,
+    "summary": "1917-09-25 - Philadelphia Phillies (0) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 91047,
+    "summary": "1917-09-25 - Chicago White Sox (7) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 91049,
+    "summary": "1917-09-25 - Detroit Tigers (4) @ New York Yankees (2) (Final)"
+  },
+  {
+    "game_id": 91044,
+    "summary": "1917-09-25 - Brooklyn Robins (3) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 91050,
+    "summary": "1917-09-25 - New York Giants (3) @ St. Louis Cardinals (5) (Final)"
+  },
+  {
+    "game_id": 91054,
+    "summary": "1917-09-26 - Boston Braves (1) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 91055,
+    "summary": "1917-09-26 - Boston Braves (3) @ Cincinnati Reds (0) (Final)"
+  },
+  {
+    "game_id": 91057,
+    "summary": "1917-09-26 - Cleveland Indians (2) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 91061,
+    "summary": "1917-09-26 - St. Louis Browns (0) @ Philadelphia Athletics (4) (Final)"
+  },
+  {
+    "game_id": 91060,
+    "summary": "1917-09-26 - Philadelphia Phillies (5) @ Pittsburgh Pirates (0) (Final)"
+  },
+  {
+    "game_id": 91056,
+    "summary": "1917-09-26 - Chicago White Sox (4) @ Washington Senators (5) (Final)"
+  },
+  {
+    "game_id": 91058,
+    "summary": "1917-09-26 - Detroit Tigers (5) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 91053,
+    "summary": "1917-09-26 - Brooklyn Robins (0) @ Chicago Cubs (1) (Final)"
+  },
+  {
+    "game_id": 91059,
+    "summary": "1917-09-26 - New York Giants (1) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 91065,
+    "summary": "1917-09-27 - St. Louis Browns (5) @ Philadelphia Athletics (6) (Final)"
+  },
+  {
+    "game_id": 91062,
+    "summary": "1917-09-27 - Brooklyn Robins (2) @ Pittsburgh Pirates (10) (Final)"
+  },
+  {
+    "game_id": 91063,
+    "summary": "1917-09-27 - Boston Braves (4) @ Cincinnati Reds (6) (Final)"
+  },
+  {
+    "game_id": 91064,
+    "summary": "1917-09-27 - Chicago White Sox (6) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 91069,
+    "summary": "1917-09-28 - St. Louis Browns (2) @ Boston Red Sox (1) (Final)"
+  },
+  {
+    "game_id": 91068,
+    "summary": "1917-09-28 - Detroit Tigers (6) @ Philadelphia Athletics (1) (Final)"
+  },
+  {
+    "game_id": 91066,
+    "summary": "1917-09-28 - Brooklyn Robins (3) @ Pittsburgh Pirates (1) (Final)"
+  },
+  {
+    "game_id": 91067,
+    "summary": "1917-09-28 - Cleveland Indians (3) @ Washington Senators (1) (Final)"
+  },
+  {
+    "game_id": 91081,
+    "summary": "1917-09-29 - St. Louis Browns (5) @ Boston Red Sox (13) (Final)"
+  },
+  {
+    "game_id": 91082,
+    "summary": "1917-09-29 - St. Louis Browns (0) @ Boston Red Sox (11) (Final)"
+  },
+  {
+    "game_id": 91077,
+    "summary": "1917-09-29 - Detroit Tigers (4) @ Philadelphia Athletics (8) (Final)"
+  },
+  {
+    "game_id": 91078,
+    "summary": "1917-09-29 - Detroit Tigers (11) @ Philadelphia Athletics (12) (Final)"
+  },
+  {
+    "game_id": 91070,
+    "summary": "1917-09-29 - Brooklyn Robins (3) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 91071,
+    "summary": "1917-09-29 - Brooklyn Robins (7) @ Pittsburgh Pirates (3) (Final)"
+  },
+  {
+    "game_id": 91075,
+    "summary": "1917-09-29 - Cleveland Indians (2) @ Washington Senators (11) (Final)"
+  },
+  {
+    "game_id": 91076,
+    "summary": "1917-09-29 - Cleveland Indians (3) @ Washington Senators (4) (Final)"
+  },
+  {
+    "game_id": 91073,
+    "summary": "1917-09-29 - Chicago White Sox (8) @ New York Yankees (12) (Final)"
+  },
+  {
+    "game_id": 91074,
+    "summary": "1917-09-29 - Chicago White Sox (3) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 91079,
+    "summary": "1917-09-29 - New York Giants (4) @ Cincinnati Reds (2) (Final)"
+  },
+  {
+    "game_id": 91080,
+    "summary": "1917-09-29 - Philadelphia Phillies (2) @ St. Louis Cardinals (7) (Final)"
+  },
+  {
+    "game_id": 91072,
+    "summary": "1917-09-29 - Boston Braves (8) @ Chicago Cubs (5) (Final)"
+  },
+  {
+    "game_id": 91084,
+    "summary": "1917-09-30 - New York Giants (5) @ Cincinnati Reds (9) (Final)"
+  },
+  {
+    "game_id": 91085,
+    "summary": "1917-09-30 - New York Giants (0) @ Cincinnati Reds (4) (Final)"
+  },
+  {
+    "game_id": 91086,
+    "summary": "1917-09-30 - Philadelphia Phillies (11) @ St. Louis Cardinals (2) (Final)"
+  },
+  {
+    "game_id": 91087,
+    "summary": "1917-09-30 - Philadelphia Phillies (10) @ St. Louis Cardinals (6) (Final)"
+  },
+  {
+    "game_id": 91088,
+    "summary": "1917-09-30 - Washington Senators (1) @ Cleveland Indians (2) (Final)"
+  },
+  {
+    "game_id": 91083,
+    "summary": "1917-09-30 - Boston Braves (9) @ Chicago Cubs (2) (Final)"
+  },
+  {
+    "game_id": 91089,
+    "summary": "1917-10-01 - Boston Braves (0) @ Pittsburgh Pirates (2) (Final)"
+  },
+  {
+    "game_id": 91090,
+    "summary": "1917-10-01 - Chicago White Sox (2) @ New York Yankees (4) (Final)"
+  },
+  {
+    "game_id": 91095,
+    "summary": "1917-10-02 - Washington Senators (9) @ Boston Red Sox (7) (Final)"
+  },
+  {
+    "game_id": 91096,
+    "summary": "1917-10-02 - Washington Senators (1) @ Boston Red Sox (2) (Final)"
+  },
+  {
+    "game_id": 91092,
+    "summary": "1917-10-02 - New York Giants (5) @ Philadelphia Phillies (2) (Final)"
+  },
+  {
+    "game_id": 91093,
+    "summary": "1917-10-02 - New York Giants (2) @ Philadelphia Phillies (8) (Final)"
+  },
+  {
+    "game_id": 91091,
+    "summary": "1917-10-02 - Boston Braves (6) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 91094,
+    "summary": "1917-10-02 - Philadelphia Athletics (2) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 91099,
+    "summary": "1917-10-03 - New York Giants (11) @ Philadelphia Phillies (1) (Final)"
+  },
+  {
+    "game_id": 91100,
+    "summary": "1917-10-03 - New York Giants (6) @ Philadelphia Phillies (0) (Final)"
+  },
+  {
+    "game_id": 91097,
+    "summary": "1917-10-03 - Boston Braves (9) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 91098,
+    "summary": "1917-10-03 - Boston Braves (1) @ Brooklyn Robins (3) (Final)"
+  },
+  {
+    "game_id": 91101,
+    "summary": "1917-10-03 - Philadelphia Athletics (3) @ New York Yankees (1) (Final)"
+  },
+  {
+    "game_id": 91102,
+    "summary": "1917-10-03 - Philadelphia Athletics (2) @ New York Yankees (3) (Final)"
+  },
+  {
+    "game_id": 91103,
+    "summary": "1917-10-03 - Washington Senators (6) @ Boston Red Sox (0) (Final)"
+  },
+  {
+    "game_id": 91104,
+    "summary": "1917-10-04 - Boston Braves (1) @ Brooklyn Robins (5) (Final)"
+  },
+  {
+    "game_id": 91105,
+    "summary": "1917-10-04 - Boston Braves (4) @ Brooklyn Robins (2) (Final)"
+  },
+  {
+    "game_id": 91106,
+    "summary": "1917-10-04 - Washington Senators (5) @ Boston Red Sox (4) (Final)"
+  },
+  {
+    "game_id": 67292,
+    "summary": "1917-10-06 - New York Giants (1) @ Chicago White Sox (2) (Final)"
+  },
+  {
+    "game_id": 67293,
+    "summary": "1917-10-07 - New York Giants (2) @ Chicago White Sox (7) (Final)"
+  },
+  {
+    "game_id": 67294,
+    "summary": "1917-10-10 - Chicago White Sox (0) @ New York Giants (2) (Final)"
+  },
+  {
+    "game_id": 67295,
+    "summary": "1917-10-11 - Chicago White Sox (0) @ New York Giants (5) (Final)"
+  },
+  {
+    "game_id": 67296,
+    "summary": "1917-10-13 - New York Giants (5) @ Chicago White Sox (8) (Final)"
+  },
+  {
+    "game_id": 67297,
+    "summary": "1917-10-15 - Chicago White Sox (4) @ New York Giants (2) (Final)"
+  }
+]
