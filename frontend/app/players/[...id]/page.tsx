@@ -326,7 +326,7 @@ const PlayerDetailPage = () => {
               onChange={(e) => setComparisonName(e.target.value)}
             />
           </div>
-          <div>
+          <div style={{ display: "flex" }}>
             <div>
               {/* <label>팀 이름</label> */}
               <div
@@ -377,80 +377,95 @@ const PlayerDetailPage = () => {
           </div>
           {exceptionModal1 && <div>{exceptionModal1Message}</div>}
           <br />
-          <div className="players-container">
-            {hitters?.map((player: any) => (
-              <div
-                key={player.playerId}
-                onClick={() =>
-                  comparisonHitter(
-                    player.korName,
-                    player.image,
-                    player.batting_avg,
-                    player.ops
-                  )
-                }
-                className="player-card"
-              >
-                <div className="player_match">
-                  <div style={{ textAlign: "center" }}>{player.korName}</div>
-                  <div className="player-image-container">
-                    <div className="face">
+          <div>
+            <div className="players-container">
+              {hitters?.map((player: any) => (
+                <div
+                  key={player.playerId}
+                  onClick={() =>
+                    comparisonHitter(
+                      player.korName,
+                      player.image,
+                      player.batting_avg,
+                      player.ops
+                    )
+                  }
+                  className="player-card"
+                >
+                  <div className="player_match">
+                    <div style={{ textAlign: "center" }}>{player.korName}</div>
+                    <div className="player-image-container">
                       <Image
                         src={player.image}
                         alt="이미지"
                         style={{ width: "100px" }}
+                        className="face"
                       />
                     </div>
                   </div>
                 </div>
+              ))}
+              <br />
+              <div style={{ display: "flex" }}>
+                {pitchers?.map((player: any) => (
+                  <div
+                    key={player.playerId}
+                    onClick={() =>
+                      comparisonPitcher(
+                        player.korName,
+                        player.image,
+                        player.era,
+                        player.whip
+                      )
+                    }
+                    className="player-card"
+                  >
+                    <div className="player_match">
+                      <div style={{ textAlign: "center", fontSize: "13px" }}>
+                        {player.korName}
+                      </div>
+                      <div className="player-image-container">
+                        <img
+                          src={player.image}
+                          alt="이미지"
+                          style={{ width: "100px" }}
+                          className="face"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-            <br />
-            {pitchers?.map((player: any) => (
-              <div
-                key={player.playerId}
-                onClick={() =>
-                  comparisonPitcher(
-                    player.korName,
-                    player.image,
-                    player.era,
-                    player.whip
-                  )
-                }
-                className="player-card"
-              >
-                <div className="player_match">
-                  <div style={{ textAlign: "center" }}>{player.korName}</div>
-                  <div className="player-image-container">
-                    <img src={player.image} alt="이미지" className="face" />
+              <br />
+              {twoways?.map((player: any) => (
+                <div
+                  key={player.playerId}
+                  onClick={() =>
+                    comparisonTwoway(
+                      player.korName,
+                      player.image,
+                      player.era,
+                      player.whip,
+                      player.batting_avg,
+                      player.ops
+                    )
+                  }
+                  className="player-card"
+                >
+                  <div className="player_match">
+                    <div style={{ textAlign: "center" }}>{player.korName}</div>
+                    <div className="player-image-container">
+                      <img
+                        src={player.image}
+                        alt="이미지"
+                        style={{ width: "100px" }}
+                        className="face"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-            <br />
-            {twoways?.map((player: any) => (
-              <div
-                key={player.playerId}
-                onClick={() =>
-                  comparisonTwoway(
-                    player.korName,
-                    player.image,
-                    player.era,
-                    player.whip,
-                    player.batting_avg,
-                    player.ops
-                  )
-                }
-                className="player-card"
-              >
-                <div className="player_match">
-                  <div style={{ textAlign: "center" }}>{player.korName}</div>
-                  <div className="player-image-container">
-                    <img src={player.image} alt="이미지" className="face" />
-                  </div>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </Modal>
