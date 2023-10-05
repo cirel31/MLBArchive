@@ -1,0 +1,18 @@
+[
+  { "id": 133, "name": "Philadelphia Athletics" },
+  { "id": 134, "name": "Pittsburgh Pirates" },
+  { "id": 137, "name": "New York Giants" },
+  { "id": 138, "name": "St. Louis Cardinals" },
+  { "id": 142, "name": "Washington Senators" },
+  { "id": 110, "name": "St. Louis Browns" },
+  { "id": 143, "name": "Philadelphia Phillies" },
+  { "id": 111, "name": "Boston Red Sox" },
+  { "id": 144, "name": "Boston Braves" },
+  { "id": 112, "name": "Chicago Cubs" },
+  { "id": 145, "name": "Chicago White Sox" },
+  { "id": 113, "name": "Cincinnati Reds" },
+  { "id": 114, "name": "Cleveland Naps" },
+  { "id": 147, "name": "New York Highlanders" },
+  { "id": 116, "name": "Detroit Tigers" },
+  { "id": 119, "name": "Brooklyn Dodgers" }
+]
