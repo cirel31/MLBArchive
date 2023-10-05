@@ -125,7 +125,7 @@ const MatchLineScore = () => {
     <>
       {gameData && (
         <div>
-          <div className="team_name_match2">경기일: {gameData.game_date}</div>
+          <div className="team_name_match2"> {gameData.game_date}</div>
           <Image src={game} alt="경기" style={{ margin: "0 auto" }} />
           {/* <div>전체 이닝: {lineScore.currentInning}</div> */}
           <div>

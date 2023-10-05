@@ -56,7 +56,7 @@ const PlayerInfoTable: React.FC<Props> = ({ playerData }) => {
   return (
     <div
       style={{
-        width: "100%",
+        width: "700px",
         border: "5px solid rgb(6, 31, 77)",
         borderRadius: "10px",
         marginLeft: "20px",
