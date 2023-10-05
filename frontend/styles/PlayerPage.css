@@ -62,7 +62,7 @@
 }
 
 body {
-  color: black;
+  color: black !important;
 }
 
 .player_match {
@@ -78,7 +78,7 @@ body {
 }
 
 .face {
-  width: 100px;
+  width: 100px !important;
   height: 130px;
   padding: 10px;
 }

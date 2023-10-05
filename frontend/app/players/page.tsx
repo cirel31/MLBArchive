@@ -111,7 +111,7 @@ const AllPlayers = () => {
     const lp = Math.abs(Math.floor((100 / w) * l) - 100);
     const tp = Math.abs(Math.floor((100 / h) * t) - 100);
     const bg = `background-position: ${lp}% ${tp}%;`;
-    const style: any = `.card.active:before { ${bg} }`;
+    const style: any = `.card1.active:before { ${bg} }`;
 
     setActiveCard(cardIndex);
     setBackgroundStyle(style);
@@ -155,7 +155,7 @@ const AllPlayers = () => {
           searchLetter.map((player: any) => (
             <div
               key={player.id}
-              style={{cursor: 'pointer'}}
+              style={{ cursor: "pointer" }}
               className="playerContent"
               onClick={() => handleDetailPage(player.id)}
             >
@@ -164,13 +164,13 @@ const AllPlayers = () => {
                 <p>{player.number}</p>
                 <main id="app">
                   <div
-                    className={`card ${isFlipped ? "flipped" : ""}`}
+                    className={`card1 ${isFlipped ? "flipped" : ""}`}
                     onClick={handleCardFlip}
                   >
                     <div className="face face-front">
                       {/* <div className="card charizard"> */}
-                      <div className="playerCard">
-                        <div className="container">
+                      <div className="playerCard10">
+                        <div className="container5">
                           <div className="circle2">
                             {player.backnumber === -1 ? "-" : player.backnumber}
                           </div>
@@ -180,17 +180,17 @@ const AllPlayers = () => {
                             className="playerFace2"
                             style={{ zIndex: "99999" }}
                           />
-                          <div className="rectangle">
+                          <div className="rectangle5">
                             <div className="rectangle2"></div>
                             <div>
                               <div className="position2">{player.name}</div>
                               <div>
-                                <div className="position">
+                                <div className="position10">
                                   {player.height}cm / {player.weight}kg
                                 </div>
                               </div>
                             </div>
-                            <div className="position">
+                            <div className="position10">
                               POSITION : {player.mainPosition}
                             </div>
                           </div>
