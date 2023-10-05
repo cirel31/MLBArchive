@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Table } from "antd";
 // import "@/styles/MatchLineScore.css";
+import game from "@/assets/game.png";
+import Image from "next/image";
 
 const MatchLineScore = () => {
   const gameData = useSelector((state) => state.match.matchLineScore);
@@ -124,6 +126,7 @@ const MatchLineScore = () => {
       {gameData && (
         <div>
           <div className="team_name_match2">경기일: {gameData.game_date}</div>
+          <Image src={game} alt="경기" style={{ margin: "0 auto" }} />
           {/* <div>전체 이닝: {lineScore.currentInning}</div> */}
           <div>
             {/* 점수 표시 */}

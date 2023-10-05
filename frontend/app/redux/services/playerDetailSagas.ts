@@ -11,7 +11,6 @@ import {
   fetchPlayerHittingDataAPI,
   fetchPlayerPitchingDataAPI
 } from "@/app/redux/api/playerAPI";
-import Swal from "sweetalert2";
 
 function* fetchPlayerDetailSaga(action: PayloadAction<any>): Generator<PutEffect | CallEffect, void, any> {
   try {
@@ -19,7 +18,6 @@ function* fetchPlayerDetailSaga(action: PayloadAction<any>): Generator<PutEffect
     const season = action.payload.season
     const response = yield call(fetchPlayerDetailDataAPI, playerId);
     yield put(fetchPlayerDataSuccess(response.resultData));
-    console.log("fetchPlayerDetailSaga 작동 확인")
     const response_hitting = yield call(fetchPlayerHittingDataAPI, playerId, season);
     console.log(response_hitting)
     const response_pitching = yield call(fetchPlayerPitchingDataAPI, playerId, season);

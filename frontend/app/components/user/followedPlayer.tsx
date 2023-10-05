@@ -1,6 +1,7 @@
 "use client";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
+import { wrap } from "module";
 
 const FollowedPlayer = () => {
   const followList = useSelector((state: any) => state.user.followList);
@@ -11,7 +12,13 @@ const FollowedPlayer = () => {
       <div>
         {followList?.PlayerList ? (
           <div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
               {followList.PlayerList.map((player: any) => (
                 <div
                   key={player.playerId}

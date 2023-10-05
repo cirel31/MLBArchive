@@ -80,7 +80,7 @@ const SearchPlayer = () => {
         </div>
         <div>
           {/* MyTable 컴포넌트를 렌더링하면서 playerResult와 router를 속성(props)으로 전달 */}
-          <PlayerTable playerResult={playerResult} router={router} />
+          <PlayerTable />
         </div>
 
         {/* {playerResult?.length > 0 ? (

@@ -39,7 +39,6 @@ const LoginPage = () => {
   const KAKAO_URL = `${BASE_URL}${REDIRECT_URI_KAKAO}`
   const OAUTH_KAKAO = `https://kauth.kakao.com/oauth/authorize?client_id=${API_KEY_KAKAO}&redirect_uri=${KAKAO_URL}&response_type=code&state=${STATE}`;
 
-
   const API_KEY_GOOGLE = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
   const REDIRECT_URI_GOOGLE = process.env.NEXT_PUBLIC_OAUTH_GOOGLE_URL;
   const OAUTH_GOOGLE = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${API_KEY_GOOGLE}&redirect_uri=${BASE_URL}${REDIRECT_URI_GOOGLE}&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email`;

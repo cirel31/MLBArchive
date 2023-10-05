@@ -8,6 +8,7 @@ backend-build:
   only:
     - develop
     - master
+
   before_script:
     - echo 'backend build starts'
     - cd ./backend/ssafyBigswing/
@@ -27,6 +28,7 @@ frontend-build:
   only:
     - develop
     - master
+
   before_script:
     - echo 'frontend build starts'
     - cd ./frontend
@@ -45,6 +47,7 @@ backend-check-container:
   stage: check_container
   only:
     - master
+
   script:
     - |
       if docker ps -a --format '{{.Names}}' | grep -q "nextjs-app"; then
@@ -52,6 +55,9 @@ backend-check-container:
         docker stop nextjs-app  # 컨테이너 중지
         docker rm nextjs-app    # 컨테이너 삭제
       fi
+  tags:
+    - ssafy
+
 frontend-check-container:
   stage: check_container
   only:
@@ -63,6 +69,9 @@ frontend-check-container:
         docker stop springboot-app  # 컨테이너 중지
         docker rm springboot-app    # 컨테이너 삭제
       fi
+  tags:
+    - ssafy
+
 backend-deploy:
   stage: deploy
   only:
@@ -78,6 +87,7 @@ backend-deploy:
 frontend-deploy:
   stage: deploy
   only:
+
     - master
   before_script:
     - echo "frontend deploy start"

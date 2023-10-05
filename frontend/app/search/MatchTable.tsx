@@ -1,7 +1,8 @@
+"use client"
 import { Table } from "antd";
-// import "antd/dist/antd.css"; // Ant Design 스타일 시트를 불러옵니다.
-
-// ... (다른 import 및 컴포넌트 코드)
+import {useDispatch, useSelector} from "react-redux";
+import {requestDetailMatchData} from "@/app/redux/features/matchSlice";
+import {useRouter} from "next/navigation";
 
 const columns = [
   {
@@ -36,22 +37,30 @@ const columns = [
   },
 ];
 
-const MyTable = ({ matchList, searchDetailMatch }) => {
-  const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "2-digit", day: "2-digit" };
+const MyTable = () => {
+  const matchList = useSelector((state: any) => state.match?.matchData);
+  const dispatch = useDispatch()
+  const router = useRouter()
+  const searchDetailMatch = (id: string) => {
+    dispatch(requestDetailMatchData(id));
+    router.push(`/match/${id}`);
+  };
+  const formatDate = (dateString:any) => {
+    const options:any = { year: "numeric", month: "2-digit", day: "2-digit" };
     return new Date(dateString).toLocaleDateString(undefined, options);
   };
   return (
     <Table
-      dataSource={matchList.map((match) => ({
+      dataSource={matchList.map((match:any) => ({
         id: match.id,
         homeName: match.homeName,
         awayName: match.awayName,
-        matchDate: formatDate(match.matchDate), // 날짜 형식으로 변환
+        matchDate: formatDate(match.matchDate),
         homeScore: match.homeScore,
         awayScore: match.awayScore,
       }))}
       columns={columns}
+      rowKey={(record) => record.id}
       onRow={(record) => ({
         onClick: () => {
           searchDetailMatch(String(record.id));
