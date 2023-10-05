@@ -108,6 +108,10 @@ const MyPage = () => {
                   <div>{content.matchDate.slice(0, 10)}</div>
                   <div style={{ fontWeight: "bold" }}>
                     {content.awayName} vs {content.homeName}
+                    <div>
+                      {" "}
+                      {content.awayScore} : {content.homeScore}{" "}
+                    </div>
                   </div>
                 </div>
               ))
