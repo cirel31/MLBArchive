@@ -7,7 +7,6 @@ import { selectLogo } from "@/app/components/team/teamData";
 import { Table } from "antd";
 import type { ColumnsType, TableProps } from "antd/es/table";
 import Link from "next/link";
-import { Color } from "three/src/Three.js";
 
 type RecordType = {
   wins: number;
@@ -91,7 +90,8 @@ const TeamRank = () => {
           value: "내셔널 리그",
         },
       ],
-      onFilter: (value: string, record:League) => record.leagueId.indexOf(value) === 0,
+      onFilter: (value: string, record: League) =>
+        record.leagueId.indexOf(value) === 0,
 
       render: (text: string, record: League, index: number) => (
         <p key={index}>{record.leagueId}</p>
