@@ -13,7 +13,6 @@ export const searchTeamSlice = createSlice({
       fetchTeamDataRequest: (state,action: PayloadAction<any>) => {
         state.loading = true;
         state.error = null;
-        console.log(action)
       },
       fetchTeamDataSuccess: (state, action: PayloadAction<any>) => {
         state.loading = false;
@@ -22,8 +21,6 @@ export const searchTeamSlice = createSlice({
       fetchTeamDataError: (state, action: PayloadAction<Error>) => {
         state.loading = false;
         state.error = action.payload;
-        console.log("실패")
-        console.log(state.error)
       }
     }
 })

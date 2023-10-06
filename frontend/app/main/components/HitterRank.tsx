@@ -23,16 +23,13 @@ const HitterRank = () => {
     const fetchData = async () => {
       try {
         const response: Promise<PromiseResult> = fetchHittingRankerDataAPI();
-        console.log(response);
         response
           .then((response) => {
             setHitter(response.resultData);
           })
-          .catch((error) => {
-            console.log(error);
+          .catch(() => {
           });
       } catch (error) {
-        console.log(error);
       }
     };
     fetchData();

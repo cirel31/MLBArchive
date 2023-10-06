@@ -30,16 +30,15 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     fetchUserData: (state, action: PayloadAction<FetchUserDataPayload>) => {
-      state.isLoading = true;
     },
-    fetchReUserData: (state) => {},
+    fetchReUserData: (state) => {
+    },
     fetchUserDataSuccess: (state, action: PayloadAction<any>) => {
-      console.log(action.payload);
       const email = action.payload.email;
       const nickname = action.payload.nickname;
       const image = action.payload.profileImage;
       const userId = email.split("@")[0];
-      state.isLoading = false;
+      state.isLoading = true;
       state.isLoggedIn = true;
       state.userData = {
         userId: userId,
@@ -56,7 +55,7 @@ export const userSlice = createSlice({
       const nickname = action.payload.resultData.nickname;
       const image = action.payload.resultData.profileImage;
       const userId = email.split("@")[0];
-      state.isLoading = false;
+      state.isLoading = true;
       state.isLoggedIn = true;
       state.userData = {
         userId: userId,

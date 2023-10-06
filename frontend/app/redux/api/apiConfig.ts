@@ -45,7 +45,6 @@ apiGet.interceptors.response.use(
   },
   error => {
     if (error.response && error.response.status === 401) {
-      console.log("추가할 예외 처리 로직")
     }
     return Promise.reject(error);
   }
@@ -70,7 +69,6 @@ apiPostJson.interceptors.response.use(
   },
   error => {
     if (error.response && error.response.status === 401) {
-      console.log("추가할 예외 처리 로직")
     }
     return Promise.reject(error);
   }
@@ -96,7 +94,6 @@ apiFormType.interceptors.response.use(
   },
   error => {
     if (error.response && error.response.status === 401) {
-      console.log("추가할 예외 처리 로직")
     }
     return Promise.reject(error);
   }

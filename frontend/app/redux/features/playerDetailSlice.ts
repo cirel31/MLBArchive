@@ -32,7 +32,6 @@ export const playerDetailSlice = createSlice({
   initialState,
   reducers: {
     fetchPlayerDetailData: (state, action: PayloadAction<any>) => {
-      console.log(action.payload)
     },
     fetchPlayerDataSuccess: (state, action: PayloadAction<any>) => {
       const {activeYears, ...restData} = action.payload
@@ -43,11 +42,9 @@ export const playerDetailSlice = createSlice({
       else {
         state.playerActive = null
       }
-      console.log("스테이트 저장 확인", state.playerData)
     },
     fetchPlayerScoreDataSuccess: (state, action: PayloadAction<any>) => {
       state.playerScore = action.payload
-      console.log('저장된 정보', state.playerScore)
     },
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
     },

@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
-import LoadingPage from "@/app/components/LoadingPage";
 import Loading from "@/app/Loading";
 
 const KakaoLoginPage = () => {
@@ -22,13 +21,11 @@ const KakaoLoginPage = () => {
         state : state ?? "",
         kind: 'kakao',
       }
-      console.log("useEffect")
       dispatch(fetchUserData(accessKey))
     }
   }, [code])
   const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
   useEffect(() => {
-    console.log(isLoggedIn)
     if (isLoggedIn) {
       router.push("/main");
     }

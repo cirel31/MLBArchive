@@ -21,7 +21,6 @@ const PitcherRank = () => {
         const result = await response;
         setPitcher(result.resultData);
       } catch (error) {
-        console.log(error);
       }
     };
     fetchData();

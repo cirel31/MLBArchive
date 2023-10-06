@@ -10,7 +10,6 @@ export const searchPlayerResultSlice: any = createSlice({
   initialState,
   reducers: {
     fetchPlayerWordData: (state, action: PayloadAction<any>) => {
-      console.log(action.payload)
     },
     fetchPlayerWordDataSuccess: (state, action: PayloadAction<any>) => {
       state.wordParseResult = action.payload
@@ -22,7 +21,6 @@ export const searchPlayerResultSlice: any = createSlice({
       state.firstLetterList = action.payload
     },
     fetchPlayerDataError: (state, action: PayloadAction<Error>) => {
-      console.log(action.payload)
     },
     pageCheck: (state, action) => {
       state.totalPage = action.payload

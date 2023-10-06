@@ -19,11 +19,8 @@ function* fetchPlayerDetailSaga(action: PayloadAction<any>): Generator<PutEffect
     const response = yield call(fetchPlayerDetailDataAPI, playerId);
     yield put(fetchPlayerDataSuccess(response.resultData));
     const response_hitting = yield call(fetchPlayerHittingDataAPI, playerId, season);
-    console.log(response_hitting)
     const response_pitching = yield call(fetchPlayerPitchingDataAPI, playerId, season);
-    console.log(response_pitching)
     const response_fielding = yield call(fetchPlayerFieldingDataAPI, playerId, season);
-    console.log(response_fielding)
     const responseScore = {
       playerHitting : response_hitting.resultData,
       playerPitching : response_pitching.resultData,

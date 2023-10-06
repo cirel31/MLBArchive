@@ -4,7 +4,6 @@ import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
-import LoadingPage from "@/app/components/LoadingPage";
 import Loading from "@/app/Loading";
 
 const NaverLoginPage = () => {
@@ -27,7 +26,6 @@ const NaverLoginPage = () => {
   const isLoggedIn = useSelector((state:any) => !!state.user?.isLoggedIn)
   const userId = useSelector((state:any) => state.user.userData?.userId)
   useEffect(() => {
-    console.log(isLoggedIn)
     if (isLoggedIn) {
       router.push("/main");
     }

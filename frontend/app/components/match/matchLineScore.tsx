@@ -22,7 +22,6 @@ const MatchLineScore = () => {
       : []
   );
 
-  console.log(gameData);
 
   // away 팀의 이닝 득점 합계 계산
   const awayRunsTotal = innings.reduce(

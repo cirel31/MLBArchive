@@ -11,7 +11,6 @@ const MatchPage = () => {
   const matchData = useSelector((state:any) => state.match.matchDetailData)
   useEffect(() => {
     const parsing = window.location.href.split("match/")[1];
-    console.log(parsing)
     dispatch(requestDetailMatchData(parsing));
   }, [])
   return (
