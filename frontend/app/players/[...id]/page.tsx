@@ -299,7 +299,7 @@ const PlayerDetailPage = () => {
       <Modal
         title="비교할 선수를 검색해주세요!"
         width={1000}
-        bodyStyle={{ height: "400px" }}
+        bodyStyle={{ height: "100%" }}
         open={isModal}
         onOk={() =>
           comparisonSearch(playerId, comparisonName, teamName, comparisonSeason)
@@ -406,7 +406,13 @@ const PlayerDetailPage = () => {
                 </div>
               ))}
               <br />
-              <div style={{ display: "flex" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
                 {pitchers?.map((player: any) => (
                   <div
                     key={player.playerId}
@@ -545,7 +551,7 @@ const PlayerDetailPage = () => {
                     <p> 타율 : {battingAvg}</p>
                   ))}
                 {playerScore.playerHitting &&
-                  (playerScore.playerHitting.ops > ops ? (
+                  (playerScore.playerHitting.ops < ops ? (
                     <p className="red-text"> OPS : {ops}</p>
                   ) : (
                     <p> OPS : {ops}</p>

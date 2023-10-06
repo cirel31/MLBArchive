@@ -13,7 +13,6 @@ import {
   userPlayerFollowAPI,
   userTeamFollowAPI
 } from "@/app/redux/api/userAPI";
-import {useRouter} from "next/navigation";
 
 // ./features/userSlice.ts
 interface UserData {
@@ -98,9 +97,7 @@ function* addFollowTeamSaga(action: PayloadAction<any>): Generator<CallEffect | 
     const data = {
       teamId: action.payload
     }
-    console.log("제대로 보내는지 확인" ,data)
     const response: AxiosResponse<any> = yield call(addTeamFollowAPI, data)
-    console.log("응답", response)
     if (response) {
       yield call(fetchFollowDataSaga);
     }

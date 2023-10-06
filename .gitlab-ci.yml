@@ -35,13 +35,13 @@ frontend-build:
   script:
     - docker build -t nextjs -f ./Dockerfile . # Docker 이미지 빌드
 
-  # artifacts:
-  #   name: "nextjs"
-  #   paths:
-  #     - ./frontend/.next/
+#   # artifacts:
+#   #   name: "nextjs"
+#   #   paths:
+#   #     - ./frontend/.next/
 
-  # tags:
-  #   - ssafy
+#   # tags:
+#   #   - ssafy
 
 frontend-check-container:
   stage: check_container

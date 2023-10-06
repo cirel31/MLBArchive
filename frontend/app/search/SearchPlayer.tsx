@@ -40,7 +40,6 @@ const SearchPlayer = () => {
   };
 
   const searchPlayer = () => {
-    console.log(searchData);
     if (searchData.length < 2) {
       Swal.fire({
         title: "경 고",

@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchUserData} from "@/app/redux/features/userSlice";
 import {useRouter} from "next/navigation";
-import LoadingPage from "@/app/components/LoadingPage";
 import Loading from "@/app/Loading";
 const GoogleLoginPage = () => {
   const router = useRouter()
@@ -15,7 +14,6 @@ const GoogleLoginPage = () => {
     scope = window.location.href.split("scope=")[1]?.split("&")[0];
     state = window.location.href.split("state=")[1]?.split("&")[0];
   }
-  console.log("code : ", code, "scope : ", scope)
   const dispatch = useDispatch()
   useEffect(() => {
     const accessKey = {

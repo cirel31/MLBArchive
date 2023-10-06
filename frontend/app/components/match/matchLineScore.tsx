@@ -5,34 +5,37 @@ import { Table } from "antd";
 import game from "@/assets/game.png";
 import Image from "next/image";
 
+type ReducedType = {
+  [key: string]: any;
+}
+
 const MatchLineScore = () => {
-  const gameData = useSelector((state) => state.match.matchLineScore);
+  const gameData = useSelector((state:any) => state.match.matchLineScore);
   const lineScore = useSelector(
-    (state) => state.match.matchLineScore?.linescore
+    (state:any) => state.match.matchLineScore?.linescore
   );
-  const innings = useSelector((state) =>
+  const innings = useSelector((state:any) =>
     state.match.matchLineScore?.linescore?.innings
       ? Object.values(state.match.matchLineScore.linescore.innings)
       : []
   );
 
-  const teams = useSelector((state) =>
+  const teams:any = useSelector((state:any) =>
     state.match.matchLineScore?.linescore?.teams
       ? Object.values(state.match.matchLineScore.linescore.teams)
       : []
   );
 
-  console.log(gameData);
 
   // away 팀의 이닝 득점 합계 계산
   const awayRunsTotal = innings.reduce(
-    (total, inning) => total + inning.away.runs,
+    (total, inning:any) => total + inning.away.runs,
     0
   );
 
   // home 팀의 이닝 득점 합계 계산
   const homeRunsTotal = innings.reduce(
-    (total, inning) => total + inning.home.runs,
+    (total, inning:any) => total + inning.home.runs,
     0
   );
 
@@ -58,7 +61,7 @@ const MatchLineScore = () => {
       title: "R",
       dataIndex: "runs",
       key: "runs",
-      render: (text, record) => {
+      render: (text:string, record:any) => {
         if (record.key === "away") {
           return awayRunsTotal;
         } else if (record.key === "home") {
@@ -71,7 +74,7 @@ const MatchLineScore = () => {
       title: "H",
       dataIndex: "hits",
       key: "hits",
-      render: (text, record) => {
+      render: (text:string, record:any) => {
         if (record.key === "away") {
           return teams[0].hits;
         } else if (record.key === "home") {
@@ -84,7 +87,7 @@ const MatchLineScore = () => {
       title: "E",
       dataIndex: "errors",
       key: "errors",
-      render: (text, record) => {
+      render: (text:string, record:any) => {
         if (record.key === "away") {
           return teams[0].errors;
         } else if (record.key === "home") {
@@ -100,7 +103,7 @@ const MatchLineScore = () => {
     {
       key: "away",
       inning: "away",
-      ...innings.reduce((data, inning, index) => {
+      ...innings.reduce<ReducedType>((data, inning:any, index:number) => {
         data[`inning_${index}`] = inning.away.runs;
         data[`runs`] = awayRunsTotal; // away 팀의 이닝 득점 합계
         data[`hits`] = awayHits; // away 팀의 안타
@@ -111,7 +114,7 @@ const MatchLineScore = () => {
     {
       key: "home",
       inning: "home",
-      ...innings.reduce((data, inning, index) => {
+      ...innings.reduce<ReducedType>((data, inning:any, index) => {
         data[`inning_${index}`] = inning.home.runs;
         data[`runs`] = homeRunsTotal; // home 팀의 이닝 득점 합계
         data[`hits`] = homeHits; // home 팀의 안타

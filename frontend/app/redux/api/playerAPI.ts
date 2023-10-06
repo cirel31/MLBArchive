@@ -11,29 +11,23 @@ const DATA_URL_FIELDING = '/api/fielding/detail'
 const comparisonURL = '/api/simulation/playersearch'
 
 export const fetchPlayerWordDataAPI = async (word: string, page: string, size: string): Promise<AxiosResponse> => {
-  console.log('API 경로 확인 : ', `${baseURL}${wordURL}/${word}?page=${page}&size=${size}`)
   return await apiGet.get(`${wordURL}/${word}?page=${page}&size=${size}`)
 }
 
 export const fetchPlayerLetterDataAPI = async (letter: string, page: string, size: string) => {
-  console.log('API 경로 확인 : ', `${baseURL}${letterURL}/letter=${letter}?page=${page}&size=${size}`)
   return await apiGet.get(`${letterURL}/${letter}?page=${page}&size=${size}`)
 }
 
 export const fetchPlayerDetailDataAPI = async (id: string): Promise<AxiosResponse> => {
-  console.log('API 경로 확인 : ', `${baseURL}${DATA_URL_INFO}/${id}`)
   return await apiGet.get(`${DATA_URL_INFO}/${id}`)
 }
 export const fetchPlayerHittingDataAPI = async (id: string, season: string): Promise<AxiosResponse> => {
-  console.log('API 경로 확인 : ', `${baseURL}${DATA_URL_HITTING}?playerId=${id}&season=${season}`)
   return await apiGet.get(`${DATA_URL_HITTING}?playerId=${id}&season=${season}`)
 }
 export const fetchPlayerPitchingDataAPI = async (id: string, season: string): Promise<AxiosResponse> => {
-  console.log('API 경로 확인 : ', `${baseURL}${DATA_URL_PITCHING}?playerId=${id}&season=${season}`)
   return await apiGet.get(`${DATA_URL_PITCHING}?playerId=${id}&season=${season}`)
 }
 export const fetchPlayerFieldingDataAPI = async (id: string, season: string): Promise<AxiosResponse> => {
-  console.log('API 경로 확인 : ', `${baseURL}${DATA_URL_FIELDING}?playerId=${id}&season=${season}`)
   return await apiGet.get(`${DATA_URL_FIELDING}?playerId=${id}&season=${season}`)
 }
 

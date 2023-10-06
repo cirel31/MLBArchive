@@ -18,3 +18,4 @@ logs/
 *.log
 *.out
 .env
+.gitlab-ci.yml

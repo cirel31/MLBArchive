@@ -22,7 +22,6 @@ function* fetchTeamStatDataSaga(action: PayloadAction<any>): Generator<PutEffect
     const id = action.payload.id
     const season = action.payload.season
     const response = yield call(fetchTeamStatDataAPI, id, season);
-    console.log(response)
     yield put(teamStatDataSuccess(response.resultData));
   } catch (error) {
   }
@@ -33,7 +32,6 @@ function* fetchTeamRosterDataSaga(action: PayloadAction<any>): Generator<PutEffe
     const id = action.payload.id
     const season = action.payload.season
     const response = yield call(fetchTeamRosterDataAPI, id, season);
-    console.log(response)
     yield put(teamRosterDataSuccess(response.resultData));
   } catch (error) {
   }

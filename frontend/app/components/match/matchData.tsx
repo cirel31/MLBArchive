@@ -32,7 +32,6 @@ const MatchData = () => {
       const homePlayers = Object.values(homePlayerList);
       setAwayPlayerArray(Object.values(awayPlayerList));
       setHomePlayerArray(Object.values(homePlayerList));
-      console.log(matchData);
 
       const awayBattingPlayers = awayPlayers.filter((player: any) =>
         awayBattings.includes(player.person.id)
@@ -46,11 +45,6 @@ const MatchData = () => {
       const homePitchingPlayers = homePlayers.filter((player: any) =>
         homePitchers.includes(player.person.id)
       );
-      console.log("중간결과");
-      console.log(awayBattingPlayers);
-      console.log(awayPitchingPlayers);
-      console.log(homeBattingPlayers);
-      console.log(homePitchingPlayers);
 
       setAwayHitterArray(awayBattingPlayers);
       setAwayPitcherArray(awayPitchingPlayers);

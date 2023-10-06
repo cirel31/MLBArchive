@@ -26,7 +26,6 @@ export const matchSlice = createSlice({
     },
     successMatchLineScore: (state, action) => {
       state.matchLineScore = action.payload
-      console.log(action.payload)
     },
     errorDetailMatchData: (state, action) => {
 

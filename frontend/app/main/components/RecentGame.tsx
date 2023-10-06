@@ -10,10 +10,8 @@ const RecentGame = () => {
     response
       .then((response) => {
         setMatchList(response.resultData);
-        console.log(response);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
       });
   }, []);
 

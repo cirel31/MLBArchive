@@ -6,7 +6,6 @@ import "@/styles/TeamRosterPlayer.scss";
 
 const TeamRoster = (props: any) => {
   const { teamId, season } = props;
-  console.log(season);
   const router = useRouter();
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,7 +14,6 @@ const TeamRoster = (props: any) => {
         id: teamId,
         season: season,
       };
-      console.log(data);
       dispatch(teamRosterData(data));
     }
   }, [teamId, season]);

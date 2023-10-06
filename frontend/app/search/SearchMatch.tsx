@@ -43,7 +43,6 @@ const SearchMatch = () => {
       nowPage: 0,
       articlePerPage: 30,
     };
-    console.log(action);
     dispatch(requestMatchData(action));
   };
   const searchQuery = (x: number) => {
