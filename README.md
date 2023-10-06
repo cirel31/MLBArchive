@@ -1,6 +1,6 @@
 # 🚀 MLB Archive : MLB 야구인들을 위한 진정한 정보 사이트 🚀
 
-<img src="./assets/images/main_logo.png" width="600">
+<img src="./frontend/assets/intro/intro_pull.png" width="600">
 
 <br/>
 
@@ -18,46 +18,58 @@ MLB Archive와 함께 야구의 재미를 함께해 보세요!
 
 SNS로그인으로 쉽게 MLB Archive에 참여하세요. 안전하게 정보를 보호하며, 쉽고 빠르게 가입하고 로그인할 수 있습니다.
 
-<img src="./assets/gif/un_regist.gif" width="300">
-<img src="./assets/gif/un_login.gif" width="300">
+<img src="./assets/images/login.PNG" width="600">
+
 
 ### 📹 메인 페이지
 
 언제나 야구 일정과 팀 순위, 개인 순위를 확인해보세요!
 
-<img src="./assets/gif/un_randomchat.gif" width="600">
+<img src="./assets/images/main.PNG" width="600">
 
 ### 👤 마이 페이지
 
 개인화된 정보와 설정, 여러분의 활동 내역을 한 눈에 확인하실 수 있습니다. 나만의 팀과 선수를 확인해 보세요!
 
-<img src="./assets/gif/un_mypage.gif" width="600">
+<img src="./assets/images/mypage.PNG" width="600">
 
 ### 🍱 선수 검색
 
 궁금한 선수가 있으신가요? 한글이든 영어든 쉽게 검색해보세요! 
 
-<img src="./assets/gif/un_lunch.gif" width="600">
+<img src="./assets/images/player.PNG" width="600">
+<img src="./assets/images/searchplayer.PNG" width="600">
 
 ### 🎉 경기 검색
 
 궁금하거나 혹은 기록을 보고 싶은 경기가 있으신가요? 날짜와 팀을 골라 찾아보세요!
 
-<img src="./assets/gif/un_ads.gif" width="600">
+<img src="./assets/images/searchmatch.PNG" width="600">
+
+### 🎉 경기 상세 페이지
+
+경기의 자세한 기록을 보고 싶은신가요? 직접 확인해보세요!
+
+<img src="./assets/images/matchdetail1.PNG" width="600">
+
 
 ### 📝 선수 상세 페이지
 
 선수의 자세한 스탯이 궁금하신가요? 시즌별 스탯을 쉽게 확인해 보세요!
 
-<img src="./assets/gif/un_article.gif" width="300">
-<img src="./assets/gif/un_comment.gif" width="300">
+<img src="./assets/images/playerdetail.PNG" width="600">
 
 ### 📝 팀 상세 페이지
 
 팀의 역사와 자세한 스탯이 궁금하신가요? 시즌별 스탯을 쉽게 확인해 보세요!
 
-<img src="./assets/gif/un_article.gif" width="300">
-<img src="./assets/gif/un_comment.gif" width="300">
+<img src="./assets/images/teamdetail.PNG" width="600">
+
+### 📝 선수 비교 페이지
+
+선수의 스탯을 비교 해보고 싶으신가요? 선위 중요 스탯쉽게 확인해 보세요!
+
+<img src="./assets/images/bigyo.PNG" width="600">
 
 <br />
 
@@ -92,7 +104,6 @@ SNS로그인으로 쉽게 MLB Archive에 참여하세요. 안전하게 정보를
   - React 18.2.0, React-redux 8.1.1, React-router-dom 6.14.1
   - axios 1.4.0, Material-UI, bootstrap 5.3.0
   - Node.js , npm, env-cmd 10.1.0
-  - Web RTC, openvidu-browser
 - ETC
   - nginx 1.25.1
   - redix:latest
@@ -106,17 +117,8 @@ SNS로그인으로 쉽게 MLB Archive에 참여하세요. 안전하게 정보를
 
 ### 서비스 아키텍처
 
-<img src="./assets/images/stack.png" width="600">
+<img src="./assets/images/archi.PNG" width="600">
 
-### 요구 사항 정의서
-
-<img src="./assets/images/requirements spec1.PNG" width="600">
-<img src="./assets/images/requirements spec2.PNG" width="600">
-
-
-### 화면 설계서
-
-<img src="./assets//images/figma.PNG" width="600">
 
 ### Git 컨벤션
 
@@ -131,15 +133,6 @@ SNS로그인으로 쉽게 MLB Archive에 참여하세요. 안전하게 정보를
 
 ### ERD
 
-<img src="./assets/images/ERD.png" width="600">
+<img src="./assets/images/erd.PNG" width="600">
 
-### EC2 포트 정리
 
-| 포트 | 내용 |
-| ---- | -------------------- |
-| 80   | nginx HTTP 기본 포트  |
-| 443  | nginx HTTPS          |
-
-### 팀원 역할
-
-<img src="./assets/images/teammates.PNG" width="600">
