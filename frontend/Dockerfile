@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json /app
 RUN npm i -f
-RUN npm run build
+
 # API KEY & SECRETE KEY
 ENV NEXT_PUBLIC_NAVER_CLIENT_ID jzQ_Z_TqlmAVqPcgNCwr
 ENV NEXT_PUBLIC_NAVER_CLIENT_SECRET eseJBAMxn2
@@ -38,7 +38,7 @@ ENV NEXT_PUBLIC_SERVER_LOGOUT_URL /logout
 ENV NEXT_PUBLIC_SERVER_SEARCH_URL /search
 
 COPY ./ /app
-
+RUN npm run build
 EXPOSE 3000
 
 CMD ["npm","run","start"]
