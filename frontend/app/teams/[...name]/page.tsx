@@ -17,13 +17,10 @@ import {
   Select,
   Button,
 } from "antd";
-import type { CollapseProps } from "antd";
-import News from "./news";
 import { teamDetailData } from "@/app/redux/features/teamSlice";
 import TeamStat from "@/app/components/team/teamStat";
 import TeamRoster from "@/app/components/team/teamRoster";
-import TeamInfo from "./TeamInfo";
-import { addFollowPlayer, addFollowTeam } from "@/app/redux/features/userSlice";
+import { addFollowTeam } from "@/app/redux/features/userSlice";
 import Loading from "@/app/Loading";
 
 const { Header, Footer, Sider, Content } = Layout;
